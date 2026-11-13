@@ -2,7 +2,10 @@
 
 error_reporting(E_ALL);
 set_error_handler(function ($severity, $message) {
-    if ($severity === E_DEPRECATED && strpos($message, 'Serializable interface') !== false) {
+    if ($severity === E_DEPRECATED && (
+        strpos($message, 'Serializable interface') !== false
+        || strpos($message, 'Bitpay\\PublicKey::generate(): Implicitly marking parameter') !== false
+    )) {
         throw new RuntimeException($message);
     }
 
@@ -51,6 +54,26 @@ foreach (array('Bitpay\\PrivateKey', 'Bitpay\\PublicKey', 'Bitpay\\SinKey') as $
             $class . ' round trip failed'
         );
     }
+}
+
+$publicKey = new Bitpay\PublicKey();
+foreach (array(array(), array(null)) as $arguments) {
+    try {
+        call_user_func_array(array($publicKey, 'generate'), $arguments);
+        throw new RuntimeException('Generating without a private key should fail');
+    } catch (Exception $error) {
+        check($error->getMessage() === 'Please `setPrivateKey` before you generate a public key', 'Unexpected missing key error');
+    }
+}
+
+$privateKey = new Bitpay\PrivateKey();
+$publicKey->__unserialize($keyValues);
+check($publicKey->generate($privateKey) === $publicKey, 'Generating with a private key failed');
+
+try {
+    $publicKey->generate(new stdClass());
+    throw new RuntimeException('An invalid private key should be rejected');
+} catch (TypeError $error) {
 }
 
 echo "BitPay serialization tests passed\n";

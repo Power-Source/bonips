@@ -67,11 +67,11 @@ class PublicKey extends Key
     /**
      * Generates an uncompressed and compressed EC public key.
      *
-     * @param \Bitpay\PrivateKey $privateKey
+     * @param \Bitpay\PrivateKey|null $privateKey
      *
      * @return Bitpay\PublicKey
      */
-    public function generate(PrivateKey $privateKey = null)
+    public function generate(?PrivateKey $privateKey = null)
     {
         if ($privateKey instanceof PrivateKey) {
             $this->setPrivateKey($privateKey);
