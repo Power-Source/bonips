@@ -160,6 +160,7 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 			var $core           = '';
 			var $bonips_type    = BONIPS_DEFAULT_TYPE_KEY;
 			var $cost           = 0;
+			var $user_id        = 0;
 			var $transaction_id = '';
 
 			/**

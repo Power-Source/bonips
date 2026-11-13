@@ -45,10 +45,14 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 		 */
 		public $is_main_type = true;
 
+		public $now          = 0;
+
 		/**
 		 * Construct
 		 */
 		public function __construct( $args = array(), $hook_prefs = NULL, $type = BONIPS_DEFAULT_TYPE_KEY ) {
+
+			$this->now = current_time( 'timestamp' );
 
 			if ( ! empty( $args ) ) {
 				foreach ( $args as $key => $value ) {

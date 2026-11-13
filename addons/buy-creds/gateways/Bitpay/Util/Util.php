@@ -190,7 +190,7 @@ class Util
         return $dec;
     }
 
-    public static function doubleAndAdd($hex, PointInterface $point, CurveParameterInterface $parameters = null)
+    public static function doubleAndAdd($hex, PointInterface $point, ?CurveParameterInterface $parameters = null)
     {
         if (null === $parameters) {
             $parameters = new Secp256k1();
@@ -256,7 +256,7 @@ class Util
      * @param CurveParameterInterface
      * @return PointInterface
      */
-    public static function pointDouble(PointInterface $point, CurveParameterInterface $parameters = null)
+    public static function pointDouble(PointInterface $point, ?CurveParameterInterface $parameters = null)
     {
         if ($point->isInfinity()) {
             return $point;

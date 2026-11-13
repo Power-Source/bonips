@@ -16,6 +16,16 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 		class WC_Gateway_boniPS extends WC_Payment_Gateway {
 
 			public $bonips;
+			public $bonips_type;
+			public $exchange_rate;
+			public $log_template;
+			public $log_template_refund;
+			public $profit_sharing_refund_log;
+			public $show_total;
+			public $total_label;
+			public $balance_format;
+			public $profit_sharing_percent;
+			public $profit_sharing_log;
 
 			/**
 			 * Constructor

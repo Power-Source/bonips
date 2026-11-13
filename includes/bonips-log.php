@@ -11,6 +11,7 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 	class boniPS_Query_Log {
 
 		public $args;
+		public $diff;
 		public $request;
 		public $prep;
 		public $num_rows;

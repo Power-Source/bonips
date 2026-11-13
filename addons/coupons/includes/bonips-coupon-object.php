@@ -75,6 +75,7 @@ if ( ! class_exists( 'boniPS_Coupon' ) ) :
 		 * Expiraion UNIX timestamp
 		 */
 		public $expires_unix      = 0;
+		public $settings;
 
 		/**
 		 * Construct

@@ -23,6 +23,7 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 		// Service Prefs
 		public $prefs        = array();
 		public $now          = 0;
+		public $defaults     = array();
 
 		/**
 		 * Construct

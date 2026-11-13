@@ -30,6 +30,9 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 		 */
 		public $point_colors = array();
 
+		public $multi_type;
+		public $references;
+
 		/**
 		 * Date Format
 		 */

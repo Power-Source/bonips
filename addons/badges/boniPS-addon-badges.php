@@ -35,6 +35,8 @@ require_once BONIPS_BADGE_INCLUDES_DIR . 'bonips-badge-secondary.php';
 if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 	class boniPS_Badge_Module extends boniPS_Module {
 
+		public $badges;
+
 		/**
 		 * Construct
 		 */

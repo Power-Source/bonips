@@ -15,6 +15,7 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		public $render_mode    = true;
 		public $args           = array();
 		public $request        = '';
+		public $prep;
 		public $num_rows       = 0;
 		public $max_num_pages  = 1;
 		public $total_rows     = 0;

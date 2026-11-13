@@ -17,6 +17,8 @@ define( 'boniPS_NOTE_VERSION', '1.0.0' );
 if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 	class boniPS_Notifications_Module extends boniPS_Module {
 
+		public $notifications;
+
 		/**
 		 * Construct
 		 */

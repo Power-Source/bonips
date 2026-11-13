@@ -35,6 +35,8 @@ function bonips_load_badgeos_hook() {
 
 	class boniPS_Hook_BadgeOS extends boniPS_Hook {
 
+		public $metakey;
+
 		/**
 		 * Construct
 		 */

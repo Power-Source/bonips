@@ -18,6 +18,7 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 			var $admin_name = 'boniPS';
 			var $public_name = 'boniPS';
 			var $bonips_type = 'bonips_default';
+			var $bonips;
 			var $method_img_url = '';
 			var $method_button_img_url = '';
 			var $force_ssl = false;

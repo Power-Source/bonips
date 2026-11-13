@@ -8,7 +8,6 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Module' ) ) :
-	#[\AllowDynamicProperties]
 	abstract class boniPS_Module {
 
 		// Module ID (unique)
@@ -67,6 +66,9 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		// Capability key (string)
 		public $cap = 'plugin';
+
+		public $active;
+		public $installed;
 
 		/**
 		 * Construct

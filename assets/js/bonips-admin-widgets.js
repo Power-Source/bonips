@@ -498,7 +498,7 @@ wpWidgets = {
 		var title = $('input[id*="-title"]', widget).val() || '';
 
 		if ( title ) {
-			title = ': ' + title.replace(/<[^<>]+>/g, '');
+			title = ': ' + title;
 		}
 
 		$(widget).children('.widget-top').children('.widget-title').children()

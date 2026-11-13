@@ -131,5 +131,4 @@ Du möchtest PSOURCE unterstützen? Auf der [Unterstützungsseite](https://psour
 = 1.0.0 =
 
 * Erste öffentliche Version.
-* Fehler bei der Registrierung von Beitragstypen und eine PHP-Deprecated-Meldung zu erforderlichen Parametern behoben.
 

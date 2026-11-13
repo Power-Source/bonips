@@ -13,6 +13,7 @@ if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 		public $id;
 		public $ctypes;
 		public $dates;
+		public $now;
 
 		public $args;
 		public $core;

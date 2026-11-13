@@ -17,5 +17,5 @@ interface NetworkAwareInterface
      *
      * @param NetworkInterface $network
      */
-    public function setNetwork(NetworkInterface $network = null);
+    public function setNetwork(?NetworkInterface $network = null);
 }

@@ -20,7 +20,7 @@ abstract class NetworkAware implements NetworkAwareInterface
     /**
      * @inheritdoc
      */
-    public function setNetwork(NetworkInterface $network = null)
+    public function setNetwork(?NetworkInterface $network = null)
     {
         $this->network = $network;
     }

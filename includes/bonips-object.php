@@ -38,6 +38,11 @@ if ( ! class_exists( 'boniPS_Account' ) ) :
 		 */
 		public $history       = array();
 
+		public $badges;
+		public $badge_ids;
+		public $ranks;
+		public $email_block;
+
 		/**
 		 * Construct
 		 */
@@ -139,6 +144,11 @@ if ( ! class_exists( 'boniPS_Balance' ) ) :
 		 */
 		public $history     = false;
 
+		public $rank;
+		public $lowest;
+		public $minimum;
+		public $usable;
+
 		/**
 		 * Construct
 		 */
@@ -226,6 +236,9 @@ if ( ! class_exists( 'boniPS_Point_Type' ) ) :
 		 */
 		public $sql_format   = '%d';
 
+		public $color;
+		public $core;
+
 		/**
 		 * Construct
 		 */
@@ -243,6 +256,7 @@ if ( ! class_exists( 'boniPS_Point_Type' ) ) :
 		protected function populate( $type_id = BONIPS_DEFAULT_TYPE_KEY ) {
 
 			$bonips = bonips( $type_id );
+			$this->core = $bonips->core;
 
 			$this->set( 'cred_id',      $type_id );
 			$this->set( 'singular',     $bonips->singular() );

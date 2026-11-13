@@ -12,6 +12,7 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		public $cron_compound_key = '';
 		public $cron_payout_key   = '';
 		public $compound_meta_key = '';
+		public $log_reference     = '';
 
 		/**
 		 * Construct

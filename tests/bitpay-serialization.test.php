@@ -2,10 +2,7 @@
 
 error_reporting(E_ALL);
 set_error_handler(function ($severity, $message) {
-    if ($severity === E_DEPRECATED && (
-        strpos($message, 'Serializable interface') !== false
-        || strpos($message, 'Bitpay\\PublicKey::generate(): Implicitly marking parameter') !== false
-    )) {
+    if ($severity === E_DEPRECATED) {
         throw new RuntimeException($message);
     }
 
@@ -76,4 +73,33 @@ try {
 } catch (TypeError $error) {
 }
 
-echo "BitPay serialization tests passed\n";
+$infinity = new Bitpay\Point(Bitpay\PointInterface::INFINITY, Bitpay\PointInterface::INFINITY);
+check(Bitpay\Util\Util::pointDouble($infinity) === $infinity, 'Point doubling must accept omitted curve parameters');
+check(Bitpay\Util\Util::pointDouble($infinity, null) === $infinity, 'Point doubling must accept explicit null curve parameters');
+
+$networkAware = new class() extends Bitpay\Network\NetworkAware {
+    public function getNetwork()
+    {
+        return $this->network;
+    }
+};
+$network = new Bitpay\Network\Testnet();
+$networkAware->setNetwork($network);
+check($networkAware->getNetwork() === $network, 'Network assignment failed');
+foreach (array(array(), array(null)) as $arguments) {
+    $networkAware->setNetwork($network);
+    call_user_func_array(array($networkAware, 'setNetwork'), $arguments);
+    check($networkAware->getNetwork() === null, 'Network reset must accept omitted or null networks');
+}
+
+$bitpay = new class(array('test' => true), null) extends Bitpay\Bitpay {
+    public $initializedConfig;
+
+    protected function initializeContainer($config)
+    {
+        $this->initializedConfig = $config;
+    }
+};
+check($bitpay->initializedConfig === array('test' => true), 'Null containers must retain automatic initialization');
+
+echo "BitPay compatibility tests passed\n";

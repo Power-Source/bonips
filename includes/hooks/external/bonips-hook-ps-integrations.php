@@ -11,6 +11,7 @@ add_filter( 'bonips_setup_hooks', function( $installed ) {
 add_action( 'bonips_load_hooks', function() {
 	if ( ! class_exists( 'boniPS_External_Event_Hook' ) ) {
 		abstract class boniPS_External_Event_Hook extends boniPS_Hook {
+			public $labels = array();
 			protected function award( $setting, $reference, $user_id, $entry_id ) {
 				$user_id = absint( $user_id );
 				if ( ! $user_id || ! $entry_id || $this->core->exclude_user( $user_id ) || $this->over_hook_limit( $setting, $reference, $user_id ) || $this->core->has_entry( $reference, $entry_id, $user_id ) ) return;

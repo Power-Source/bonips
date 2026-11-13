@@ -10,6 +10,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 	class boniPS_buyCRED_Module extends boniPS_Module {
 
 		public $purchase_log = '';
+		public $gateways;
+		public $gateway_prefs;
 
 		/**
 		 * Construct

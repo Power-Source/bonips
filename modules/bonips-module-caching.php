@@ -9,6 +9,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 	class boniPS_Caching_Module extends boniPS_Module {
 
+		public $caching;
+
 		/**
 		 * Construct
 		 */

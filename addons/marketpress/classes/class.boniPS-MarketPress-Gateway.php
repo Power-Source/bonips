@@ -13,6 +13,7 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 		var $admin_name            = BONIPS_DEFAULT_LABEL;
 		var $public_name           = BONIPS_DEFAULT_LABEL;
 		var $bonips_type           = BONIPS_DEFAULT_TYPE_KEY;
+		var $bonips;
 		var $method_img_url        = '';
 		var $method_button_img_url = '';
 		var $force_ssl             = false;

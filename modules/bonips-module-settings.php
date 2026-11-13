@@ -9,6 +9,9 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 	class boniPS_Settings_Module extends boniPS_Module {
 
+		public $general;
+		public $accordion_tabs;
+
 		/**
 		 * Construct
 		 */

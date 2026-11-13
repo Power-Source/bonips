@@ -27,6 +27,10 @@ require_once boniPS_BANK_SERVICES_DIR . 'bonips-service-payouts.php';
 if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 	class boniPS_Banking_Module extends boniPS_Module {
 
+		public $banking;
+		public $services;
+		public $service_prefs;
+
 		/**
 		 * Constructor
 		 */

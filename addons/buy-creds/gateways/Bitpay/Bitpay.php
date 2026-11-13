@@ -39,7 +39,7 @@ class Bitpay
      * @param array|string       $config
      * @param ContainerInterface $container
      */
-    public function __construct($config = array(), ContainerInterface $container = null)
+    public function __construct($config = array(), ?ContainerInterface $container = null)
     {
         $this->container = $container;
 

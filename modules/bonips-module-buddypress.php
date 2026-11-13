@@ -12,6 +12,9 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 		protected $hooks;
 		protected $settings;
 
+		public $buddypress;
+		public $selected_type;
+
 		/**
 		 * Constructor
 		 */

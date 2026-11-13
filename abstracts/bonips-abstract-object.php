@@ -83,7 +83,7 @@ if ( ! class_exists( 'boniPS_Object' ) ) :
 					// Example 2: array( 'total' )
 					// $this->total
 					elseif ( isset( $this->$array_value ) )
-						$this->$value = $new_value;
+						$this->$array_value = $new_value;
 
 				}
 

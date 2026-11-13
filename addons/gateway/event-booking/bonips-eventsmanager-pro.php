@@ -19,6 +19,11 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 
 		public $registered_timer = 0;
 
+		public $prefs;
+		public $core;
+		public $label;
+		public $booking_cols;
+
 		/**
 		 * Construct 
 		 */

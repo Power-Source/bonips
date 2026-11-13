@@ -9,6 +9,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 	class boniPS_Importer_Log_Entires extends WP_Importer {
 
+		public $time;
+
 		var $id            = '';
 		var $file_url      = '';
 		var $import_page   = '';

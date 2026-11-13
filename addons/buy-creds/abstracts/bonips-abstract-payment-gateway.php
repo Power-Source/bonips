@@ -101,6 +101,15 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		 */
 		public $buycred_limit     = array();
 
+		public $now;
+		public $defaults          = array();
+		public $documentation;
+		public $transaction_id;
+		public $post_id;
+		public $cost;
+		public $currency;
+		public $maximum;
+
 		protected $response;
 		protected $request;
 		protected $status;
@@ -192,9 +201,9 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 				$this->errors[] = __( 'Ein Betragswert ist erforderlich.', 'bonips' );
 			}
 
-			elseif ( ! empty( $this->bonips_limit['max'] ) && $this->amount > floatval( $this->bonips_limit['max'] ) ){
+			elseif ( ! empty( $this->buycred_limit['max'] ) && $this->amount > floatval( $this->buycred_limit['max'] ) ){
 				$valid = false;
-				$this->errors[] = sprintf( __( 'Der Betrag muss kleiner als %d sein.', 'bonips' ), $this->bonips_limit['max'] );
+				$this->errors[] = sprintf( __( 'Der Betrag muss kleiner als %d sein.', 'bonips' ), $this->buycred_limit['max'] );
 			}
 
 			elseif ( $this->exceeds_limit() ){
@@ -1542,7 +1551,7 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 			$gateway = str_replace( '-', '_', $this->id );
 			$gateway_id = 'buy_creds_with_' . $gateway;
 
-			$check = $wpdb->get_results( $wpdb->prepare( $sql, $gateway_id, "%:\"" . $transaction_id . "\";%", $this->bonips_type ) );
+			$check = $wpdb->get_results( $wpdb->prepare( $sql, $gateway_id, "%:\"" . $transaction_id . "\";%", $this->point_type ) );
 			if ( $wpdb->num_rows > 0 ) return false;
 
 			return true;

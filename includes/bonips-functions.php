@@ -55,7 +55,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 */
 		public $core                = array();
 
-		// Settings properties (populated dynamically from get_point_type_settings)
+		// Stored point type settings.
 		public $format      = array();
 		public $name        = array();
 		public $before      = '';
@@ -65,6 +65,19 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		public $exclude     = array();
 		public $frequency   = array();
 		public $delete_user = 0;
+
+		public $badges;
+		public $buddypress;
+		public $caching;
+		public $coupons;
+		public $emailnotices;
+		public $export;
+		public $gateways;
+		public $notifications;
+		public $rank;
+		public $sell_content;
+		public $stats;
+		public $transfers;
 
 		/**
 		 * Construct

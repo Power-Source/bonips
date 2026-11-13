@@ -29,6 +29,9 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		public $errors = '';
 		public $import_ok = false;
+		public $import;
+		public $imports;
+		public $skipped;
 
 		/**
 		 * Construct

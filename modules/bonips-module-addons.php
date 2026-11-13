@@ -9,6 +9,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 	class boniPS_Addons_Module extends boniPS_Module {
 
+		public $addons;
+
 		/**
 		 * Construct
 		 */

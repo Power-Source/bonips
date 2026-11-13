@@ -10,6 +10,8 @@ if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 	class boniPS_Hooks_Module extends boniPS_Module {
 
 		public $setup;
+		public $hooks;
+		public $hook_prefs;
 
 		/**
 		 * Construct

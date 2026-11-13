@@ -12,6 +12,7 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 		public $user        = NULL;
 		public $screen      = NULL;
 		public $log_columns = array();
+		public $log;
 
 		/**
 		 * Construct

@@ -408,7 +408,7 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 		 * @since 1.0.0
 		 * @version 1.0.0
 		 */
-		public function add_pay_button( $cancel_link = '', $EM_Booking ) {
+		public function add_pay_button( $cancel_link, $EM_Booking ) {
 
 			global $bonips_em_pay;
 

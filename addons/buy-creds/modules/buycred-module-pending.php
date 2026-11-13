@@ -338,7 +338,7 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 						echo 'ID: ' . $from;
 
 				break;
-				case 'amount';
+				case 'amount':
 
 					$type   = bonips_get_post_meta( $post_id, 'point_type', true );
 					$amount = bonips_get_post_meta( $post_id, 'amount', true );
@@ -347,7 +347,7 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 					echo $bonips->format_creds( $amount );
 
 				break;
-				case 'cost';
+				case 'cost':
 
 					$cost     = bonips_get_post_meta( $post_id, 'cost', true );
 					$currency = bonips_get_post_meta( $post_id, 'currency', true );
@@ -355,7 +355,7 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 					echo $cost . ' ' . $currency;
 
 				break;
-				case 'gateway';
+				case 'gateway':
 
 					$gateway   = bonips_get_post_meta( $post_id, 'gateway', true );
 					$installed = $bonips_modules['solo']['buycred']->get();
@@ -366,7 +366,7 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 						echo $gateway;
 
 				break;
-				case 'ctype';
+				case 'ctype':
 
 					$type = bonips_get_post_meta( $post_id, 'point_type', true );
 
