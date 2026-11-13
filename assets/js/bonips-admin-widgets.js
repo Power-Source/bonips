@@ -222,11 +222,7 @@ wpWidgets = {
 
 				if ( addNew ) {
 					if ( 'multi' === addNew ) {
-						$widget.html(
-							$widget.html().replace( /<[^<>]+>/g, function( tag ) {
-								return tag.replace( /__i__|%i%/g, widgetNumber );
-							})
-						);
+						wpWidgets.replaceWidgetPlaceholders( $widget, widgetNumber );
 
 						$widget.attr( 'id', id.replace( '__i__', widgetNumber ) );
 						widgetNumber++;
@@ -502,12 +498,32 @@ wpWidgets = {
 		var title = $('input[id*="-title"]', widget).val() || '';
 
 		if ( title ) {
-			title = ': ' + title.replace(/<[^<>]+>/g, '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+			title = ': ' + title.replace(/<[^<>]+>/g, '');
 		}
 
 		$(widget).children('.widget-top').children('.widget-title').children()
-				.children('.in-widget-title').html(title);
+				.children('.in-widget-title').text(title);
 
+	},
+
+	replaceWidgetPlaceholders : function( widget, number ) {
+		widget.find( '*' ).each( function() {
+			var element = this;
+			Array.prototype.slice.call( element.attributes ).forEach( function( attribute ) {
+				var name = attribute.name.replace( /__i__|%i%/g, number ),
+					value = attribute.value.replace( /__i__|%i%/g, number );
+
+				if ( name !== attribute.name ) {
+					element.removeAttribute( attribute.name );
+				}
+				if ( name !== attribute.name || value !== attribute.value ) {
+					element.setAttribute( name, value );
+					if ( name === 'value' && typeof element.value === 'string' ) {
+						element.value = element.value.replace( /__i__|%i%/g, number );
+					}
+				}
+			} );
+		} );
 	},
 
 	close : function(widget) {
@@ -530,11 +546,7 @@ wpWidgets = {
 		widget.find('.widgets-chooser').remove();
 
 		if ( 'multi' === add ) {
-			widget.html(
-				widget.html().replace( /<[^<>]+>/g, function(m) {
-					return m.replace( /__i__|%i%/g, n );
-				})
-			);
+			wpWidgets.replaceWidgetPlaceholders( widget, n );
 
 			widget.attr( 'id', widgetId.replace( '__i__', n ) );
 			n++;

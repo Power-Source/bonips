@@ -52,11 +52,13 @@ jQuery(function($){
 
 				activeForm             = $(this);
 
-				var targeturl          = $(this).attr( 'href' );
-				var formdata           = JSON.parse( '{"' + decodeURI( targeturl ).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}' );
+				var targeturl          = new URL( $(this).attr( 'href' ), window.location.href );
+				var formdata           = Object.create( null );
+				targeturl.searchParams.forEach(function( value, key ){
+					formdata[ key ] = value;
+				});
 				formdata['ajax']       = 1;
 				formdata['bonips_buy'] = $(this).data( 'gateway' );
-console.log( formdata );
 				buycred_send_call( formdata );
 
 			}
