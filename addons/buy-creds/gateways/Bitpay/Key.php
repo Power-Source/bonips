@@ -78,15 +78,7 @@ abstract class Key extends Point implements KeyInterface
      */
     public function serialize()
     {
-        return serialize(
-            array(
-                $this->id,
-                $this->x,
-                $this->y,
-                $this->hex,
-                $this->dec,
-            )
-        );
+        return serialize($this->__serialize());
     }
 
     /**
@@ -94,13 +86,35 @@ abstract class Key extends Point implements KeyInterface
      */
     public function unserialize($data)
     {
+        $this->__unserialize(unserialize($data));
+    }
+
+    /**
+     * @return array
+     */
+    public function __serialize()
+    {
+        return array(
+            $this->id,
+            $this->x,
+            $this->y,
+            $this->hex,
+            $this->dec,
+        );
+    }
+
+    /**
+     * @param array $data
+     */
+    public function __unserialize(array $data)
+    {
         list(
             $this->id,
             $this->x,
             $this->y,
             $this->hex,
             $this->dec
-        ) = unserialize($data);
+        ) = $data;
     }
     
     /**

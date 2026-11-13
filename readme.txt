@@ -133,8 +133,3 @@ Du möchtest PSOURCE unterstützen? Auf der [Unterstützungsseite](https://psour
 * Erste öffentliche Version.
 * Fehler bei der Registrierung von Beitragstypen und eine PHP-Deprecated-Meldung zu erforderlichen Parametern behoben.
 
-== Übersetzungen ==
-
-Die Ausgangssprache ist Deutsch. Mit installiertem WP-CLI aktualisiert
-`sh scripts/update-translations.sh` die POT-Datei sowie die englischen PO- und
-MO-Dateien. Alle Einträge im aktuellen Katalog sind ins Englische übersetzt.

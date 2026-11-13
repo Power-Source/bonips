@@ -78,7 +78,7 @@ class Point implements PointInterface
      */
     public function serialize()
     {
-        return serialize(array($this->x, $this->y));
+        return serialize($this->__serialize());
     }
 
     /**
@@ -86,9 +86,25 @@ class Point implements PointInterface
      */
     public function unserialize($data)
     {
+        $this->__unserialize(unserialize($data));
+    }
+
+    /**
+     * @return array
+     */
+    public function __serialize()
+    {
+        return array($this->x, $this->y);
+    }
+
+    /**
+     * @param array $data
+     */
+    public function __unserialize(array $data)
+    {
         list(
             $this->x,
             $this->y
-        ) = unserialize($data);
+        ) = $data;
     }
 }
