@@ -23,7 +23,7 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 			parent::__construct( array(
 				'id'               => 'bank',
 				'label'            => 'Bank Transfer',
-				'documentation'    => 'http://codex.bonips.me/chapter-iii/buycred/payment-gateways/bank-transfers/',
+				'documentation'    => 'https://psource.eimen.net/wiki/bonipress-kreditkauf/',
 				'gateway_logo_url' => '',
 				'defaults'         => array(
 					'title'            => '',

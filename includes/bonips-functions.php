@@ -786,7 +786,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 			if ( in_array( 'widget', $available ) )
 				$template_tags[] = array(
 					'title' => __( 'Widget-bezogen', 'bonips' ),
-					'url'   => 'https://n3rds.work/gruppen/psource-piestingtal-source-development-team/docs/?folder=34271'
+					'url'   => 'https://psource.eimen.net/gruppen/psource-piestingtal-source-development-team/docs/?folder=34271'
 				);
 
 			// Amount
@@ -800,7 +800,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 			if ( in_array( 'video', $available ) )
 				$template_tags[] = array(
 					'title' => __( 'Video bezogen', 'bonips' ),
-					'url'   => 'https://n3rds.work/gruppen/psource-piestingtal-source-development-team/docs/?folder=34271'
+					'url'   => 'https://psource.eimen.net/gruppen/psource-piestingtal-source-development-team/docs/?folder=34271'
 				);
 
 			if ( ! empty( $template_tags ) ) {

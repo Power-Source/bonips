@@ -14,7 +14,7 @@ function bonips_register_events_manager_light_hook( $installed ) {
 	$installed['eventsmanager'] = array(
 		'title'         => __( 'Events Manager', 'bonips' ),
 		'description'   => __( 'Vergibt %_plural% für Benutzer, die an Veranstaltungen teilnehmen.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/event-attendance/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_Hook_Events_Manager' )
 	);
 

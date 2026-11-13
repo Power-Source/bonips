@@ -20,8 +20,8 @@ function bonips_about_header() {
 <div class="wp-badge" id="bonips-badge">Version <?php echo boniPS_VERSION; ?></div>
 <h2 class="nav-tab-wrapper wp-clearfix">
 	<a class="nav-tab nav-tab-active" href="#"><?php esc_html_e( 'Neuigkeiten', 'bonips' ); ?></a>
-	<a class="nav-tab" href="https://n3rds.work/gruppen/psource-communityhub/docs/?folder=33146" target="_blank"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a>
-	<a class="nav-tab" href="https://n3rds.work/shop/artikel/category/bonips-erweiterungen/" target="_blank"><?php esc_html_e( 'Shop', 'bonips' ); ?></a>
+	<a class="nav-tab" href="https://psource.eimen.net/wiki/bonipress-einstellungen/" target="_blank"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a>
+	<a class="nav-tab" href="https://psource.eimen.net/shop/artikel/category/bonips-erweiterungen/" target="_blank"><?php esc_html_e( 'Shop', 'bonips' ); ?></a>
 </h2>
 <?php
 
@@ -49,12 +49,12 @@ function bonips_about_page() {
 			<div class="col">
 				<h3><?php esc_html_e( 'Statistiken', 'bonips' ); ?></h3>
 				<p><?php esc_html_e( 'Das Statistik-Add-on wurde vollständig überarbeitet und unterstützt die Anzeige von Diagrammen und statistischen Daten auf Deiner Website. Vordefinierte Daten lassen sich als Tabelle, als Diagramm oder in beiden Formen anzeigen.', 'bonips' ); ?></p>
-				<a href="https://bonips.me/guides/1-8-guide-statistics-add-on/"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a>
+				<a href="https://psource.eimen.net/wiki/bonipress-erweiterungen/"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a>
 			</div>
 			<div class="col">
 				<h3><?php esc_html_e( 'Neuer Kaufabschluss für buyCRED', 'bonips' ); ?></h3>
 				<p><?php esc_html_e( 'Der Kaufabschluss für buyCRED wurde überarbeitet und lässt sich leichter anpassen. Du kannst die integrierte Vorlage über Dein Theme ersetzen und die Seite nach Deinen Wünschen gestalten.', 'bonips' ); ?></p>
-				<p><a href="https://bonips.me/guides/1-8-guide-buycred-add-on-updates/"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a></p>
+				<p><a href="https://psource.eimen.net/wiki/bonipress-kreditkauf/"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a></p>
 			</div>
 			<div class="col">	
 				<img src="<?php echo plugins_url( 'assets/images/buycred-checkout-page.png', boniPS_THIS ); ?>" alt="" />							

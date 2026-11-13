@@ -802,7 +802,7 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		<?php do_action( 'bonips_after_buycreds_page', $this ); ?>
 
-		<p><?php submit_button( __( 'Update Einstellungen', 'bonips' ), 'primary large', 'submit', false ); ?> <?php if ( BONIPS_SHOW_PREMIUM_ADDONS ) : ?><a href="https://n3rds.work/shop/artikel/category/bonips-erweiterungen/" class="button button-secondary button-large" target="_blank"><?php esc_html_e( 'Mehr Erweiterungen', 'bonips' ); ?></a><?php endif; ?></p>
+		<p><?php submit_button( __( 'Update Einstellungen', 'bonips' ), 'primary large', 'submit', false ); ?> <?php if ( BONIPS_SHOW_PREMIUM_ADDONS ) : ?><a href="https://psource.eimen.net/shop/artikel/category/bonips-erweiterungen/" class="button button-secondary button-large" target="_blank"><?php esc_html_e( 'Mehr Erweiterungen', 'bonips' ); ?></a><?php endif; ?></p>
 
 	</form>
 

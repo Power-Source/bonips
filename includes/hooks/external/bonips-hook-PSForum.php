@@ -14,7 +14,7 @@ function bonips_register_psforum_hook( $installed ) {
 	$installed['hook_psforum'] = array(
 		'title'         => 'PSForum',
 		'description'   => __( 'Vergibt %_plural% für PSForum-Aktionen.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/psforum-actions/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_PSForum' )
 	);
 

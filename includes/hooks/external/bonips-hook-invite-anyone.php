@@ -14,7 +14,7 @@ function bonips_register_invite_anyone_hook( $installed ) {
 	$installed['invite_anyone'] = array(
 		'title'         => __( 'Invite-Anyone-Plugin', 'bonips' ),
 		'description'   => __( 'Vergibt %_plural% für das Senden von Einladungen und/oder %_plural%, wenn die Einladung angenommen wird.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/inviting-users/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_Invite_Anyone' )
 	);
 

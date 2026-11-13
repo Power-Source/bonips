@@ -1258,7 +1258,7 @@ var BadgeRequirement   = '<?php echo $js_requirement_clone; ?>';
 				</div>
 				<?php else : ?>
 					<input type="hidden" name="<?php echo $this->field_name( 'psforum' ); ?>" id="<?php echo $this->field_id( 'psforum' ); ?>" value="" />
-					<p><span class="description"><?php _e( '<a href="https://n3rds.work/piestingtal_source/ps-forum-plugin/" target="_blank">PS Forum</a> ist nicht installiert', 'bonips' ); ?></span></p>
+					<p><span class="description"><?php _e( '<a href="https://psource.eimen.net/piestingtal_source/ps-forum-plugin/" target="_blank">PS Forum</a> ist nicht installiert', 'bonips' ); ?></span></p>
 				<?php endif; ?>
 			</div>
 		</div>

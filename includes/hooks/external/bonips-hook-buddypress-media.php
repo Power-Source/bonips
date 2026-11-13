@@ -14,7 +14,7 @@ function bonips_register_buddypress_media_hook( $installed ) {
 	$installed['rtmedia'] = array(
 		'title'         => __( 'rtMedia-Galerien', 'bonips' ),
 		'description'   => __( 'Vergibt oder zieht %_plural% ab, wenn Benutzer Alben erstellen oder Fotos hochladen.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/rtmedia-uploads/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_rtMedia' )
 	);
 

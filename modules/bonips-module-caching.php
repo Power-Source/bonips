@@ -298,7 +298,7 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 				<p><span class="description"><?php _e( 'Protokoll deaktiviert', 'bonips' ); ?></span></p>
 				<?php else : ?>
 				<input type="text" name="<?php echo $this->field_name( array( 'caching', 'autodelete' ) ); ?>" id="<?php echo $this->field_id( 'auto-delete' ); ?>" value="<?php echo esc_attr( $this->caching['autodelete'] ); ?>" placeholder="<?php esc_attr_e( 'Tage', 'bonips' ); ?>" class="form-control" />
-				<p><span class="description"><?php printf( _x( "Option zum automatischen Löschen von Protokolleinträgen nach einer bestimmten Anzahl von Tagen. Bitte lese die %s, bevor Du diese Funktion verwendest, da ihre Verwendung Konsequenzen hat! Verwende zum Deaktivieren Null.", 'Dokumentation', 'bonips' ), sprintf( '<a href="https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-bestenlisten-caching/" target="_blank">%s</a>', __( 'Dokumentation', 'bonips' ) ) ); ?></span></p>
+				<p><span class="description"><?php printf( _x( "Option zum automatischen Löschen von Protokolleinträgen nach einer bestimmten Anzahl von Tagen. Bitte lese die %s, bevor Du diese Funktion verwendest, da ihre Verwendung Konsequenzen hat! Verwende zum Deaktivieren Null.", 'Dokumentation', 'bonips' ), sprintf( '<a href="https://psource.eimen.net/wiki/bonipress-optimierung/" target="_blank">%s</a>', __( 'Dokumentation', 'bonips' ) ) ); ?></span></p>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -312,7 +312,7 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 				<p><span class="description"><?php _e( 'Protokoll deaktiviert', 'bonips' ); ?></span></p>
 				<?php else : ?>
 				<input type="text" name="<?php echo $this->field_name( array( 'caching', 'autodelete' ) ); ?>" id="<?php echo $this->field_id( 'auto-delete' ); ?>" value="<?php echo esc_attr( $this->caching['autodelete'] ); ?>" placeholder="<?php esc_attr_e( 'Tage', 'bonips' ); ?>" class="form-control" />
-				<p><span class="description"><?php printf( _x( "Option zum automatischen Löschen von Protokolleinträgen nach einer bestimmten Anzahl von Tagen. Bitte lese die %s, bevor Du diese Funktion verwendest, da ihre Verwendung Konsequenzen hat! Verwende zum Deaktivieren Null.", 'Dokumentation', 'bonips' ), sprintf( '<a href="https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-bestenlisten-caching/" target="_blank">%s</a>', __( 'Dokumentation', 'bonips' ) ) ); ?></span></p>
+				<p><span class="description"><?php printf( _x( "Option zum automatischen Löschen von Protokolleinträgen nach einer bestimmten Anzahl von Tagen. Bitte lese die %s, bevor Du diese Funktion verwendest, da ihre Verwendung Konsequenzen hat! Verwende zum Deaktivieren Null.", 'Dokumentation', 'bonips' ), sprintf( '<a href="https://psource.eimen.net/wiki/bonipress-optimierung/" target="_blank">%s</a>', __( 'Dokumentation', 'bonips' ) ) ); ?></span></p>
 				<?php endif; ?>
 			</div>
 		</div>

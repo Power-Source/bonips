@@ -14,7 +14,7 @@ function bonips_register_wp_favorite_posts_hook( $installed ) {
 	$installed['wpfavorite'] = array(
 		'title'         => __( 'WP Favorite Posts', 'bonips' ),
 		'description'   => __( 'Vergibt %_plural% für Benutzer, die Beiträge zu ihren Favoriten hinzufügen.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/wp-favorite-posts-actions/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_Hook_WPFavorite' )
 	);
 

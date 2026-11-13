@@ -404,7 +404,7 @@ function bonips_register_woocommerce_hook( $installed ) {
 	$installed['wooreview'] = array(
 		'title'         => __( 'WooCommerce-Produktbewertungen', 'bonips' ),
 		'description'   => __( 'Vergibt %_plural% für Bewertungen Deiner WooCommerce-Produkte.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/product-reviews/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_Hook_WooCommerce_Reviews' )
 	);
 

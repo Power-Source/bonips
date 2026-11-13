@@ -35,7 +35,7 @@ msgstr ""
 
 #. Author URI of the plugin
 #: bonips.php
-msgid "https://n3rds.work"
+msgid "https://psource.eimen.net"
 msgstr ""
 
 #: abstracts/bonips-abstract-hook.php:109
@@ -562,7 +562,7 @@ msgid "In Profil- und Forumantworten anzeigen"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:1261
-msgid "<a href=\"https://n3rds.work/piestingtal_source/ps-forum-plugin/\" target=\"_blank\">PS Forum</a> ist nicht installiert"
+msgid "<a href=\"https://psource.eimen.net/piestingtal_source/ps-forum-plugin/\" target=\"_blank\">PS Forum</a> ist nicht installiert"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:1267

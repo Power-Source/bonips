@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name: BoniPress
- * Plugin URI: 
+ * Plugin URI: https://psource.eimen.net/psource/bonipress/
  * Description: Ein adaptives Punkteverwaltungssystem für WordPress-basierte Webseiten.
  * Version: 1.0.0
  * Tags: point, credit, loyalty program, engagement, reward, woocommerce rewards
  * Author: DerN3rd
- * Author URI: https://n3rds.work
+ * Author URI: https://psource.eimen.net
  * Requires at least: WP 4.8
  * Tested up to: WP 5.1
  * Text Domain: bonips
@@ -1078,7 +1078,7 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 			}
 
 			// Usefull links
-			$links[] = '<a href="http://codex.bonips.me/" target="_blank">Documentation</a>';
+			$links[] = '<a href="https://psource.eimen.net/wiki/bonipress-einstellungen/" target="_blank">Documentation</a>';
 			$links[] = '<a href="https://bonips.me/store/" target="_blank">Store</a>';
 
 			return $links;

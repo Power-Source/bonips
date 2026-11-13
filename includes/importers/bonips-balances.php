@@ -26,7 +26,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 
 			$this->import_page   = BONIPS_SLUG . '-import-balance';
 			$this->delimiter     = empty( $_POST['delimiter'] ) ? ',' : (string) strip_tags(trim($_POST['delimiter']) );
-			$this->documentation = 'http://codex.bonips.me/chapter-ii/import-data/importing-balances/';
+			$this->documentation = 'https://psource.eimen.net/wiki/bonipress-import/';
 
 		}
 

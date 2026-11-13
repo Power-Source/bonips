@@ -14,7 +14,7 @@ function bonips_register_badgeos_hook( $installed ) {
 	$installed['badgeos'] = array(
 		'title'         => __( 'BadgeOS', 'bonips' ),
 		'description'   => __( 'Standardeinstellungen für jeden BadgeOS-Erfolgstyp. Sie können für einzelne Erfolgstypen überschrieben werden.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/badgeos-achievements/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_Hook_BadgeOS' )
 	);
 

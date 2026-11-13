@@ -288,8 +288,8 @@ msgstr "DerN3rd"
 
 #. Author URI of the plugin
 #: bonips.php
-msgid "https://n3rds.work"
-msgstr "https://n3rds.work"
+msgid "https://psource.eimen.net"
+msgstr "https://psource.eimen.net"
 
 #: addons/badges/boniPS-addon-badges.php:154
 #: addons/badges/boniPS-addon-badges.php:160
@@ -8495,8 +8495,8 @@ msgid "ODER"
 msgstr "OR"
 
 #: addons/badges/boniPS-addon-badges.php:1261
-msgid "<a href=\"https://n3rds.work/piestingtal_source/ps-forum-plugin/\" target=\"_blank\">PS Forum</a> ist nicht installiert"
-msgstr "<a href=\"https://n3rds.work/piestingtal_source/ps-forum-plugin/\" target=\"_blank\">PS Forum</a> is not installed"
+msgid "<a href=\"https://psource.eimen.net/piestingtal_source/ps-forum-plugin/\" target=\"_blank\">PS Forum</a> ist nicht installiert"
+msgstr "<a href=\"https://psource.eimen.net/piestingtal_source/ps-forum-plugin/\" target=\"_blank\">PS Forum</a> is not installed"
 
 #: includes/bonips-functions.php:3547
 #, php-format

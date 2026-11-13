@@ -14,7 +14,7 @@ function bonips_register_affiliatewp_hook( $installed ) {
 	$installed['affiliatewp'] = array(
 		'title'         => __( 'AffiliateWP', 'bonips' ),
 		'description'   => __( 'Vergibt %_plural% für Partnerregistrierungen, geworbene Besucher und vermittelte Shop-Verkäufe.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/affiliatewp-actions/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_AffiliateWP' )
 	);
 

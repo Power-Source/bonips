@@ -522,7 +522,7 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 ?>
 <div class="wrap bonips-metabox" id="boniPS-wrap">
-	<h1><?php _e( 'Einstellungen', 'bonips' ); if ( BONIPS_DEFAULT_LABEL === 'boniPS' ) : ?> <a href="https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-dokumentation/" target="_blank" class="page-title-action"><?php _e( 'Dokumentation', 'bonips' ); ?></a><?php endif; ?></h1>
+	<h1><?php _e( 'Einstellungen', 'bonips' ); if ( BONIPS_DEFAULT_LABEL === 'boniPS' ) : ?> <a href="https://psource.eimen.net/wiki/bonipress-einstellungen/" target="_blank" class="page-title-action"><?php _e( 'Dokumentation', 'bonips' ); ?></a><?php endif; ?></h1>
 
 	<?php $this->update_notice(); ?>
 

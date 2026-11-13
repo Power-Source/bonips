@@ -14,7 +14,7 @@ function bonips_register_simplepress_hook( $installed ) {
 	$installed['hook_simplepress'] = array(
 		'title'         => 'Simple:Press',
 		'description'   => __( 'Vergibt %_plural% für Simple:Press-Aktionen.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/simplepress-actions/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_SimplePress' )
 	);
 

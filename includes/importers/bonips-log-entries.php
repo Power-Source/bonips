@@ -26,7 +26,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 			$this->import_page   = BONIPS_SLUG . '-import-log';
 			$this->delimiter     = empty( $_POST['delimiter'] ) ? ',' : (string) strip_tags(trim($_POST['delimiter']) );
-			$this->documentation = 'http://codex.bonips.me/chapter-ii/import-data/importing-log-entries/';
+			$this->documentation = 'https://psource.eimen.net/wiki/bonipress-import/';
 
 		}
 

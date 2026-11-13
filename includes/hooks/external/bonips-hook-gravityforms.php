@@ -14,7 +14,7 @@ function bonips_register_gravity_forms_hook( $installed ) {
 	$installed['gravityform'] = array(
 		'title'         => __( 'Gravity-Forms-Einreichungen', 'bonips' ),
 		'description'   => __( 'Vergibt %_plural% für erfolgreiche Formulareinreichungen.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/submitting-gravity-forms/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_Gravity_Forms' )
 	);
 

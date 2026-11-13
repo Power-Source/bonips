@@ -53,7 +53,7 @@ if ( ! function_exists( 'bonips_get_buycred_gateways' ) ) :
 		// PayPal Standard
 		$installed['paypal-standard'] = array(
 			'title'         => 'PayPal Payments Standard',
-			'documentation' => 'http://codex.bonips.me/chapter-iii/buycred/payment-gateways/paypal/',
+			'documentation' => 'https://psource.eimen.net/wiki/bonipress-kreditkauf/',
 			'callback'      => array( 'boniPS_PayPal_Standard' ),
 			'icon'          => 'dashicons-admin-generic',
 			'sandbox'       => true,
@@ -64,7 +64,7 @@ if ( ! function_exists( 'bonips_get_buycred_gateways' ) ) :
 		// BitPay
 		$installed['bitpay'] = array(
 			'title'         => 'BitPay (Bitcoins)',
-			'documentation' => 'http://codex.bonips.me/chapter-iii/buycred/payment-gateways/bitpay/',
+			'documentation' => 'https://psource.eimen.net/wiki/bonipress-kreditkauf/',
 			'callback'      => array( 'boniPS_Bitpay' ),
 			'icon'          => 'dashicons-admin-generic',
 			'sandbox'       => true,
@@ -76,7 +76,7 @@ if ( ! function_exists( 'bonips_get_buycred_gateways' ) ) :
 		$installed['netbilling'] = array(
 			'title'         => 'NETBilling',
 			'callback'      => array( 'boniPS_NETbilling' ),
-			'documentation' => 'http://codex.bonips.me/chapter-iii/buycred/payment-gateways/netbilling/',
+			'documentation' => 'https://psource.eimen.net/wiki/bonipress-kreditkauf/',
 			'icon'          => 'dashicons-admin-generic',
 			'sandbox'       => true,
 			'external'      => true,
@@ -87,7 +87,7 @@ if ( ! function_exists( 'bonips_get_buycred_gateways' ) ) :
 		$installed['skrill'] = array(
 			'title'         => 'Skrill (Moneybookers)',
 			'callback'      => array( 'boniPS_Skrill' ),
-			'documentation' => 'http://codex.bonips.me/chapter-iii/buycred/payment-gateways/skrill/',
+			'documentation' => 'https://psource.eimen.net/wiki/bonipress-kreditkauf/',
 			'icon'          => 'dashicons-admin-generic',
 			'sandbox'       => true,
 			'external'      => true,
@@ -97,7 +97,7 @@ if ( ! function_exists( 'bonips_get_buycred_gateways' ) ) :
 		// Bank Transfers
 		$installed['bank'] = array(
 			'title'         => __( 'Banküberweisung', 'bonips' ),
-			'documentation' => 'http://codex.bonips.me/chapter-iii/buycred/payment-gateways/bank-transfers/',
+			'documentation' => 'https://psource.eimen.net/wiki/bonipress-kreditkauf/',
 			'callback'      => array( 'boniPS_Bank_Transfer' ),
 			'icon'          => 'dashicons-admin-generic',
 			'sandbox'       => false,

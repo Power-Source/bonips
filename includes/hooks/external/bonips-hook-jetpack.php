@@ -14,7 +14,7 @@ function bonips_register_jetpack_hook( $installed ) {
 	$installed['jetpack'] = array(
 		'title'         => __( 'Jetpack-Abonnements', 'bonips' ),
 		'description'   => __( 'Vergibt %_plural% für Benutzer, die Website- oder Kommentarbenachrichtigungen über Jetpack abonnieren.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/jetpack-subscriptions/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_Hook_Jetpack' )
 	);
 

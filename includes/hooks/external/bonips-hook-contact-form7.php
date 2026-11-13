@@ -14,7 +14,7 @@ function bonips_register_contact_form_seven_hook( $installed ) {
 	$installed['contact_form7'] = array(
 		'title'         => __( 'Contact-Form-7-Formulareinreichungen', 'bonips' ),
 		'description'   => __( 'Vergibt %_plural% für erfolgreiche Formulareinreichungen angemeldeter Benutzer.', 'bonips' ),
-		'documentation' => 'http://codex.bonips.me/hooks/submitting-contact-form-7-forms/',
+		'documentation' => 'https://psource.eimen.net/wiki/bonipress-integrationen/',
 		'callback'      => array( 'boniPS_Contact_Form7' )
 	);
 
