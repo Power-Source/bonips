@@ -97,13 +97,13 @@ if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 					$screen_id .= '_' . $this->args['ctypes'];
 
 				$url = add_query_arg( array( 'page' => $screen_id ), admin_url( 'admin.php' ) );
-				$buttons[] = '<a href="' . esc_url( $url ) . '" class="button button-secondary button-large">' . __( 'View Log', 'bonips' ) . '</a>';
+				$buttons[] = '<a href="' . esc_url( $url ) . '" class="button button-secondary button-large">' . __( 'Protokoll ansehen', 'bonips' ) . '</a>';
 
 				$url = add_query_arg( array( 'page' => $screen_id . '-hooks' ), admin_url( 'admin.php' ) );
 				$buttons[] = '<a href="' . esc_url( $url ) . '" class="button button-secondary button-large">' . __( 'Hooks', 'bonips' ) . '</a>';
 
 				$url = add_query_arg( array( 'page' => $screen_id . '-settings' ), admin_url( 'admin.php' ) );
-				$buttons[] = '<a href="' . esc_url( $url ) . '" class="button button-secondary button-large">' . __( 'Settings', 'bonips' ) . '</a>';
+				$buttons[] = '<a href="' . esc_url( $url ) . '" class="button button-secondary button-large">' . __( 'Einstellungen', 'bonips' ) . '</a>';
 
 			}
 

@@ -370,7 +370,7 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 						}
 
 						elseif ( $row->type == 'amount' ) {
-							$label = ( $this->multi_type ) ? __( 'Amount', 'bonips' ) : $this->point_types[ BONIPS_DEFAULT_TYPE_KEY ]->color['positive'];
+							$label = ( $this->multi_type ) ? __( 'Betrag', 'bonips' ) : $this->point_types[ BONIPS_DEFAULT_TYPE_KEY ]->color['positive'];
 						}
 
 						elseif ( $row->type == 'reference' ) {

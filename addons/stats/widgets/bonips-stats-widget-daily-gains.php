@@ -115,16 +115,16 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Gains' ) ) :
 		 */
 		function widget() {
 
-			$label = __( 'Most common ways your users have gained points during this period.', 'bonips' );
+			$label = __( 'Die häufigsten Arten, wie Deine Benutzer in diesem Zeitraum Punkte erhalten haben.', 'bonips' );
 			if ( $this->args['ctypes'] != 'all' )
-				$label = $this->core->template_tags_general( __( 'Most common ways your users have gained %_plural% during this period.', 'bonips' ) );
+				$label = $this->core->template_tags_general( __( 'Die häufigsten Arten, wie Deine Benutzer in diesem Zeitraum %_plural% erhalten haben.', 'bonips' ) );
 
 			$ten_day_gain = $this->get_data();
 			$earned = $this->get_gains();
 
 ?>
 <div id="" class="clear clearfix">
-	<h1><?php _e( 'Gains in the last 10 days', 'bonips' ); ?></h1>
+	<h1><?php _e( 'Gewinne der letzten 10 Tage', 'bonips' ); ?></h1>
 	<p><span class="description"><?php echo $label; ?></span></p>
 <?php
 
@@ -148,7 +148,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Gains' ) ) :
 ?>
 <li>
 	<strong style="color:<?php echo $this->colors[ $item->type ]['positive']; ?>;"><?php echo $label; ?></strong>
-	<span class="view"><a href="<?php echo esc_url( $url ); ?>"><?php _e( 'View', 'bonips' ); ?></a></span>
+	<span class="view"><a href="<?php echo esc_url( $url ); ?>"><?php _e( 'Ansehen', 'bonips' ); ?></a></span>
 	<ul>
 		<li><?php echo number_format( $item->total, 0, '.', ' ' ); ?></li>
 		<li><?php echo $item->count; ?></li>
@@ -163,7 +163,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Gains' ) ) :
 
 			}
 			else {
-				echo '<div class="bonips-empty-widget"><p>' . __( 'No data found', 'bonips' ) . '</p></div>';
+				echo '<div class="bonips-empty-widget"><p>' . __( 'Keine Daten gefunden', 'bonips' ) . '</p></div>';
 			}
 
 ?>

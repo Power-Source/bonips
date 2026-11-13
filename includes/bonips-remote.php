@@ -582,14 +582,14 @@ if ( ! function_exists( 'bonips_remote_activate_row' ) ) :
 
 		if ( ! get_option( 'permalink_structure' ) ) {
 			$block            = ' disabled="disabled"';
-			$disabled_message = __( 'This feature requires WordPress Permalinks to be setup and enabled!', 'bonips' );
+			$disabled_message = __( 'Für diese Funktion müssen WordPress-Permalinks eingerichtet und aktiviert sein!', 'bonips' );
 		}
 
 		elseif ( ! $settings['enabled'] )
-			$disabled_message = __( 'Click Update Settings to load the Remote API settings.', 'bonips' );
+			$disabled_message = __( 'Klicke auf „Einstellungen aktualisieren“, um die Remote-API-Einstellungen zu laden.', 'bonips' );
 
 ?>
-<label class="subheader" for=""><?php _e( 'Allow Remote Access', 'bonips' ); ?></label>
+<label class="subheader" for=""><?php _e( 'Fernzugriff erlauben', 'bonips' ); ?></label>
 <ol id="boniPS-actions-cred">
 	<li>
 		<input type="checkbox" name="bonips_pref_core[allow_remote]" id="boniPS-General-remote"<?php if ( $settings['enabled'] ) echo ' checked="checked"'; echo $block; ?> value="1" /> <?php if ( ! empty( $disabled_message ) ) { ?><span class="description"><?php echo $disabled_message; ?></span><?php } ?></li>
@@ -614,36 +614,36 @@ if ( ! function_exists( 'bonips_remote_settings_page' ) ) :
 		$key_length = strlen( $settings['key'] );
 
 ?>
-<h4><span class="dashicons dashicons-cloud <?php if ( empty( $settings['key'] ) ) echo 'static'; else echo 'active'; ?>"></span><?php _e( 'Remote Access', 'bonips' ); ?></h4>
+<h4><span class="dashicons dashicons-cloud <?php if ( empty( $settings['key'] ) ) echo 'static'; else echo 'active'; ?>"></span><?php _e( 'Fernzugriff', 'bonips' ); ?></h4>
 <div class="body" style="display:none;">
-	<label class="subheader"><?php _e( 'API Key', 'bonips' ); ?></label>
+	<label class="subheader"><?php _e( 'API-Schlüssel', 'bonips' ); ?></label>
 	<ol id="boniPS-remote-api-key" class="inline">
 		<li>
-			<label><?php _e( 'Key', 'bonips' ); ?></label>
-			<div class="h2"><input type="text" name="bonips_pref_core[remote][key]" id="boniPS-remote-key" value="<?php echo esc_attr( $settings['key'] ); ?>" style="width:90%;" placeholder="<?php _e( '16, 24 or 32 characters', 'bonips' ); ?>" /></div>
-			<span class="description"><?php _e( 'Required for this feature to work!<br />Minimum 12 characters.', 'bonips' ); ?></span>
+			<label><?php _e( 'Schlüssel', 'bonips' ); ?></label>
+			<div class="h2"><input type="text" name="bonips_pref_core[remote][key]" id="boniPS-remote-key" value="<?php echo esc_attr( $settings['key'] ); ?>" style="width:90%;" placeholder="<?php _e( '16, 24 oder 32 Zeichen', 'bonips' ); ?>" /></div>
+			<span class="description"><?php _e( 'Für diese Funktion erforderlich!<br />Mindestens 12 Zeichen.', 'bonips' ); ?></span>
 		</li>
 		<li>
-			<label><?php _e( 'Key Length', 'bonips' ); ?></label>
+			<label><?php _e( 'Schlüssellänge', 'bonips' ); ?></label>
 			<div class="h2" style="line-height: 30px; color:<?php if ( $key_length == 0 ) echo 'gray'; elseif ( $key_length >= 12 ) echo 'green'; ?>">(<span id="bonips-length-counter"><?php echo $key_length; ?></span>)</span></div>
 		</li>
 		<li>
 			<label>&nbsp;</label><br />
-			<input type="button" id="bonips-generate-api-key" value="<?php _e( 'Generate New Key', 'bonips' ); ?>" class="button button-large button-primary" />
+			<input type="button" id="bonips-generate-api-key" value="<?php _e( 'Neuen Schlüssel erzeugen', 'bonips' ); ?>" class="button button-large button-primary" />
 		</li>
-		<li class="block"><p><strong><?php _e( 'Warning!', 'bonips' ); ?></strong> <?php echo $bonips_general->core->template_tags_general( __( 'Keep this key safe! Those you share this key with will be able to remotely deduct / add / transfer %plural%!', 'bonips' ) ); ?></p></li>
+		<li class="block"><p><strong><?php _e( 'Warnung!', 'bonips' ); ?></strong> <?php echo $bonips_general->core->template_tags_general( __( 'Bewahre diesen Schlüssel sicher auf! Wer diesen Schlüssel erhält, kann %plural% aus der Ferne abziehen, hinzufügen oder übertragen!', 'bonips' ) ); ?></p></li>
 	</ol>
-	<label class="subheader"><?php _e( 'Incoming URI', 'bonips' ); ?></label>
+	<label class="subheader"><?php _e( 'Eingehende URI', 'bonips' ); ?></label>
 	<ol id="boniPS-remote-api-uri">
 		<li>
 			<div class="h2"><?php echo site_url() . '/'; ?> <input type="text" name="bonips_pref_core[remote][uri]" id="boniPS-remote-uri" value="<?php echo esc_attr( $settings['uri'] ); ?>" /> /</div>
-			<span class="description"><?php _e( 'The incoming call address. Remote calls made to any other URL will be ignored.', 'bonips' ); ?></span>
+			<span class="description"><?php _e( 'Adresse für eingehende Aufrufe. Fernaufrufe an andere URLs werden ignoriert.', 'bonips' ); ?></span>
 		</li>
 	</ol>
-	<label class="subheader" for=""><?php _e( 'Debug Mode', 'bonips' ); ?></label>
+	<label class="subheader" for=""><?php _e( 'Debug-Modus', 'bonips' ); ?></label>
 	<ol id="boniPS-remote-api-debug-mode">
 		<li>
-			<input type="checkbox" name="bonips_pref_core[remote][debug]" id="boniPS-remote-debug-mode"<?php if ( $settings['debug'] ) echo ' checked="checked"'; ?> value="1" /> <span class="description"><?php _e( 'Remember to disable when not used to prevent mischievous calls from learning about your setup!', 'bonips' ); ?></span></li>
+			<input type="checkbox" name="bonips_pref_core[remote][debug]" id="boniPS-remote-debug-mode"<?php if ( $settings['debug'] ) echo ' checked="checked"'; ?> value="1" /> <span class="description"><?php _e( 'Deaktiviere den Modus, wenn er nicht benötigt wird, damit unerwünschte Aufrufe keine Informationen über Deine Einrichtung erhalten!', 'bonips' ); ?></span></li>
 	</ol>
 
 	<?php do_action( 'bonips_after_remote_prefs', $bonips_general ); ?>

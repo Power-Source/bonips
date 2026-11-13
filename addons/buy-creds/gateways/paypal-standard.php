@@ -142,19 +142,19 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 
 						// Check amount paid
 						if ( $_POST['mc_gross'] != $pending_payment->cost ) {
-							$new_call[] = sprintf( __( 'Price mismatch. Expected: %s Received: %s', 'bonips' ), $pending_payment->cost, $_POST['mc_gross'] );
+							$new_call[] = sprintf( __( 'Der Preis stimmt nicht überein. Erwartet: %s Erhalten: %s', 'bonips' ), $pending_payment->cost, $_POST['mc_gross'] );
 							$errors     = true;
 						}
 
 						// Check currency
 						if ( $_POST['mc_currency'] != $pending_payment->currency ) {
-							$new_call[] = sprintf( __( 'Currency mismatch. Expected: %s Received: %s', 'bonips' ), $pending_payment->currency, $_POST['mc_currency'] );
+							$new_call[] = sprintf( __( 'Die Währung stimmt nicht überein. Erwartet: %s Erhalten: %s', 'bonips' ), $pending_payment->currency, $_POST['mc_currency'] );
 							$errors     = true;
 						}
 
 						// Check status
 						if ( $_POST['payment_status'] != 'Completed' ) {
-							$new_call[] = sprintf( __( 'Payment not completed. Received: %s', 'bonips' ), $_POST['payment_status'] );
+							$new_call[] = sprintf( __( 'Die Zahlung wurde nicht abgeschlossen. Erhalten: %s', 'bonips' ), $_POST['payment_status'] );
 							$errors     = true;
 						}
 
@@ -165,7 +165,7 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 							if ( $this->complete_payment( $pending_payment, $_POST['txn_id'] ) )
 								$this->trash_pending_payment( $pending_post_id );
 							else
-								$new_call[] = __( 'Failed to credit users account.', 'bonips' );
+								$new_call[] = __( 'Das Benutzerkonto konnte nicht gutgeschrieben werden.', 'bonips' );
 
 						}
 
@@ -189,8 +189,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 		public function returning() {
 
 			if ( isset( $_REQUEST['tx'] ) && isset( $_REQUEST['st'] ) && $_REQUEST['st'] == 'Completed' ) {
-				$this->get_page_header( __( 'Success', 'bonips' ), $this->get_thankyou() );
-				echo '<h1 style="text-align:center;">' . __( 'Thank you for your purchase', 'bonips' ) . '</h1>';
+				$this->get_page_header( __( 'Erfolg', 'bonips' ), $this->get_thankyou() );
+				echo '<h1 style="text-align:center;">' . __( 'Vielen Dank für Deinen Kauf', 'bonips' ) . '</h1>';
 				$this->get_page_footer();
 				exit;
 			}
@@ -285,28 +285,28 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<h3><?php _e( 'Details', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'account' ); ?>"><?php _e( 'Account Email', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'account' ); ?>"><?php _e( 'Konto-E-Mail', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'account' ); ?>" id="<?php echo $this->field_id( 'account' ); ?>" value="<?php echo esc_attr( $prefs['account'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'item_name' ); ?>"><?php _e( 'Item Name', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'item_name' ); ?>"><?php _e( 'Artikelname', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'item_name' ); ?>" id="<?php echo $this->field_id( 'item_name' ); ?>" value="<?php echo esc_attr( $prefs['item_name'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo URL', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo-URL', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'logo_url' ); ?>" id="<?php echo $this->field_id( 'logo_url' ); ?>" value="<?php echo esc_attr( $prefs['logo_url'] ); ?>" class="form-control" />
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-		<h3><?php _e( 'Setup', 'bonips' ); ?></h3>
+		<h3><?php _e( 'Einrichtung', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'currency' ); ?>"><?php _e( 'Currency', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'currency' ); ?>"><?php _e( 'Währung', 'bonips' ); ?></label>
 
 			<?php $this->currencies_dropdown( 'currency', 'bonips-gateway-paypal-standard-currency' ); ?>
 
 		</div>
 		<div class="form-group">
-			<label><?php _e( 'Exchange Rates', 'bonips' ); ?></label>
+			<label><?php _e( 'Wechselkurse', 'bonips' ); ?></label>
 
 			<?php $this->exchange_rate_setup(); ?>
 

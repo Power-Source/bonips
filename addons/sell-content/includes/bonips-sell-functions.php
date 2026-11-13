@@ -567,7 +567,7 @@ if ( ! function_exists( 'bonips_sell_content_new_purchase' ) ) :
 
 				// Insufficient funds (not free)
 				if ( $price > 0 && $balance < $price )
-					$result = __( 'Insufficient funds.', 'bonips' );
+					$result = __( 'Unzureichendes Guthaben.', 'bonips' );
 
 				// Content is not free
 				elseif ( $price > 0 ) {

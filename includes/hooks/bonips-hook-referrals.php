@@ -663,7 +663,7 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 	<div class="row">
 		<div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label><?php _e( 'Title', 'bonips' ); ?></label><br />
+				<label><?php _e( 'Titel', 'bonips' ); ?></label><br />
 				<input type="text" name="<?php echo $this->field_name( array( 'buddypress' => 'title' ) ); ?>" id="<?php echo $this->field_id( array( 'buddypress' => 'title' ) ); ?>" value="<?php echo esc_attr( $prefs['buddypress']['title'] ); ?>" class="form-control" />
 				<span class="description"><?php _e( 'Leave empty to hide.', 'bonips' ); ?></span>
 			</div>

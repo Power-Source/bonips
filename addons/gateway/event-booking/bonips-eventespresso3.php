@@ -23,13 +23,13 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 			$defaults = array(
 				'labels'   => array(
 					'gateway'  => $this->label,
-					'payment'  => $this->label . ' ' . __( 'Payments', 'bonips' ),
-					'button'   => __( 'Pay Now', 'bonips' )
+					'payment'  => $this->label . ' ' . __( 'Zahlungen', 'bonips' ),
+					'button'   => __( 'Jetzt bezahlen', 'bonips' )
 				),
 				'type'     => BONIPS_DEFAULT_TYPE_KEY,
 				'rate'     => 100,
 				'share'    => 0,
-				'log'      => __( 'Payment for Event Registration', 'bonips' ),
+				'log'      => __( 'Zahlung für Veranstaltungsanmeldung', 'bonips' ),
 				'messages' => array(
 					'solvent'   => 'Click "Pay Now" to pay using your %plural%.',
 					'insolvent' => 'Unfortunately you do not have enough %plural% to pay for this event.',
@@ -304,15 +304,15 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 			<h4 id="bonips_title" class="payment_type_title section-heading"><?php echo $this->prefs['labels']['payment']; ?></h4>
 			<table style="width:100%;">
 				<tr>
-					<td class="info"><?php _e( 'Current Balance', 'bonips' ); ?></td>
+					<td class="info"><?php _e( 'Aktuelles Guthaben', 'bonips' ); ?></td>
 					<td class="amount"><?php echo $this->core->format_creds( $balance ); ?></td>
 				</tr>
 				<tr>
-					<td class="info"><?php _e( 'Total Cost', 'bonips' ); ?></td>
+					<td class="info"><?php _e( 'Gesamtkosten', 'bonips' ); ?></td>
 					<td class="amount"><?php echo $this->core->format_creds( $event_cost ); ?></td>
 				</tr>
 				<tr>
-					<td class="info"><?php _e( 'Balance After Purchase', 'bonips' ); ?></td>
+					<td class="info"><?php _e( 'Guthaben nach dem Kauf', 'bonips' ); ?></td>
 					<td class="amount"><?php echo $this->core->format_creds( $after_purchase ); ?></td>
 				</tr>
 			</table>
@@ -329,15 +329,15 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 			<h4 id="bonips_title" class="payment_type_title section-heading"><?php echo $this->prefs['labels']['payment']; ?></h4>
 			<table style="width:100%;">
 				<tr class="current">
-					<td class="info"><?php _e( 'Current Balance', 'bonips' ); ?></td>
+					<td class="info"><?php _e( 'Aktuelles Guthaben', 'bonips' ); ?></td>
 					<td class="amount"><?php echo $this->core->format_creds( $balance ); ?></td>
 				</tr>
 				<tr class="cost">
-					<td class="info"><?php _e( 'Total Cost', 'bonips' ); ?></td>
+					<td class="info"><?php _e( 'Gesamtkosten', 'bonips' ); ?></td>
 					<td class="amount"><?php echo $this->core->format_creds( $event_cost ); ?></td>
 				</tr>
 				<tr class="after-purchase">
-					<td class="info"><?php _e( 'Balance After Purchase', 'bonips' ); ?></td>
+					<td class="info"><?php _e( 'Guthaben nach dem Kauf', 'bonips' ); ?></td>
 					<td class="amount" style="color:red;"><?php echo $this->core->format_creds( $after_purchase ); ?></td>
 				</tr>
 			</table>
@@ -377,7 +377,7 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 			}
 
 			$activate_url    = admin_url( 'admin.php?page=payment_gateways&activate_bonips_payment=true' );
-			$activate_text   = sprintf( __( 'Activate %s', 'bonips' ), $this->label );
+			$activate_text   = sprintf( __( '%s aktivieren', 'bonips' ), $this->label );
 
 			// deactivate
 			if ( ! empty( $_REQUEST['deactivate_check_payment'] ) ) {
@@ -386,7 +386,7 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 			}
 
 			$deactivate_url  = admin_url( 'admin.php?page=payment_gateways&deactivate_bonips_payment=true' );
-			$deactivate_text = sprintf( __( 'Deactivate %s', 'bonips' ), $this->label );
+			$deactivate_text = sprintf( __( '%s deaktivieren', 'bonips' ), $this->label );
 
 			//Open or close the postbox div
 			$postbox_style   = 'closed';
@@ -399,7 +399,7 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 	<div class="postbox <?php echo $postbox_style; ?>">
 		<div title="Click to toggle" class="handlediv"><br /></div>
 		<h3 class="hndle">
-			<?php echo $this->label . ' ' . __( 'Gateway Settings', 'bonips' ); ?>
+			<?php echo $this->label . ' ' . __( 'Gateway-Einstellungen', 'bonips' ); ?>
 		</h3>
 		<div class="inside">
 			<div class="padding">
@@ -439,7 +439,7 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 			global $org_options;
 
 			$exchange_message = sprintf(
-				__( 'How many %s is 1 %s worth?', 'bonips' ),
+				__( 'Wie viele %s ist 1 %s wert?', 'bonips' ),
 				$this->core->plural(),
 				$org_options['currency_symbol']
 			);
@@ -448,7 +448,7 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 ?>
 <?php if ( $this->update ) : ?>
-<h2 style="color: green;"><?php _e( 'Settings Updated', 'bonips' ); ?></h2>
+<h2 style="color: green;"><?php _e( 'Einstellungen aktualisiert', 'bonips' ); ?></h2>
 <?php endif; ?>
 <form method="post" action="<?php echo $_SERVER['REQUEST_URI'] ?>#bonips-gate">
 
@@ -457,22 +457,22 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 	<table width="99%" border="0" cellspacing="5" cellpadding="5">
 		<tr>
 			<td valign="top">
-				<h4><?php _e( 'Labels', 'bonips' ); ?></h4>
+				<h4><?php _e( 'Beschriftungen', 'bonips' ); ?></h4>
 				<ul>
 					<li>
-						<label for="bonips-prefs-gateway-labels"><?php _e( 'Gateway Title', 'bonips' ); ?></label>
+						<label for="bonips-prefs-gateway-labels"><?php _e( 'Gateway-Titel', 'bonips' ); ?></label>
 						<input type="text" name="bonips_prefs[labels][gateway]" id="bonips-prefs-gateway-labels" size="30" value="<?php echo $this->prefs['labels']['gateway']; ?>" /><br />
-						<span class="description"><?php _e( 'Title to show on Payment page', 'bonips' ); ?>.</span>
+						<span class="description"><?php _e( 'Titel auf der Zahlungsseite', 'bonips' ); ?>.</span>
 					</li>
 					<li>
-						<label for="bonips-prefs-payment-labels"><?php _e( 'Payment Type', 'bonips' ); ?></label>
+						<label for="bonips-prefs-payment-labels"><?php _e( 'Zahlungsart', 'bonips' ); ?></label>
 						<input type="text" name="bonips_prefs[labels][payment]" id="bonips-prefs-payment-labels" size="30" value="<?php echo $this->prefs['labels']['payment']; ?>" /><br />
-						<span class="description"><?php _e( 'Title to show on receipts and logs', 'bonips' ); ?>.</span>
+						<span class="description"><?php _e( 'Titel auf Belegen und in Protokollen', 'bonips' ); ?>.</span>
 					</li>
 					<li>
-						<label for="bonips-prefs-button-labels"><?php _e( 'Button Label', 'bonips' ); ?></label>
+						<label for="bonips-prefs-button-labels"><?php _e( 'Schaltflächenbeschriftung', 'bonips' ); ?></label>
 						<input type="text" name="bonips_prefs[labels][button]" id="bonips-prefs-button-labels" size="30" value="<?php echo $this->prefs['labels']['button']; ?>" /><br />
-						<span class="description"><?php _e( 'Pay Button', 'bonips' ); ?></span>
+						<span class="description"><?php _e( 'Bezahlen-Schaltfläche', 'bonips' ); ?></span>
 					</li>
 				</ul>
 
@@ -480,7 +480,7 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 				<ul>
 					<li>
-						<label for="bonips-prefs-payment-type"><?php _e( 'Point Type', 'bonips' ); ?></label>
+						<label for="bonips-prefs-payment-type"><?php _e( 'Punktetyp', 'bonips' ); ?></label>
 						<?php bonips_types_select_from_dropdown( 'bonips_prefs[type]', 'bonips-prefs-payment-type', $this->prefs['type'] ); ?>
 
 					</li>
@@ -492,52 +492,52 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 				<?php endif; ?>
 
-				<h4><?php _e( 'Price', 'bonips' ); ?></h4>
+				<h4><?php _e( 'Preis', 'bonips' ); ?></h4>
 				<ul>
 					<li id="bonips-event-exchange-box">
-						<label for="bonips-prefs-price-x-rate"><?php _e( 'Exchange Rate', 'bonips' ); ?></label>
+						<label for="bonips-prefs-price-x-rate"><?php _e( 'Wechselkurs', 'bonips' ); ?></label>
 						<input type="text" name="bonips_prefs[rate]" id="bonips-prefs-price-x-rate" size="30" value="<?php echo $this->prefs['rate']; ?>" /><br />
 						<span class="description"><?php echo $exchange_message; ?></span>
 					</li>
 					<li>
-						<p><strong><?php _e( 'Important!', 'bonips' ); ?></strong></p>
+						<p><strong><?php _e( 'Wichtig!', 'bonips' ); ?></strong></p>
 						<ol>
-							<li><?php _e( 'You can disable purchases using this gateway by adding a custom Event Meta: <code>bonips_no_sale</code>', 'bonips' ); ?></li>
-							<li><?php _e( 'Users must be logged in to use this gateway!', 'bonips' ); ?></li>
+							<li><?php _e( 'Du kannst Käufe über dieses Gateway deaktivieren, indem Du das benutzerdefinierte Veranstaltungs-Metafeld <code>bonips_no_sale</code> hinzufügst.', 'bonips' ); ?></li>
+							<li><?php _e( 'Benutzer müssen angemeldet sein, um dieses Gateway zu verwenden!', 'bonips' ); ?></li>
 						</ol>
 					</li>
 					<li id="bonips-event-profit-sharing">
-						<label for="bonips-prefs-profit-share"><?php _e( 'Profit Sharing', 'bonips' ); ?></label>
+						<label for="bonips-prefs-profit-share"><?php _e( 'Gewinnbeteiligung', 'bonips' ); ?></label>
 						<input type="text" name="bonips_prefs[share]" id="bonips-prefs-profit-share" size="5" value="<?php echo $this->prefs['share']; ?>" /> %<br />
-						<span class="description"><?php _e( 'Option to share sales with the product owner. Use zero to disable.', 'bonips' ); ?></span>
+						<span class="description"><?php _e( 'Option, Verkäufe mit dem Produktbesitzer zu teilen. Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 					</li>
 				</ul>
-				<h4><?php _e( 'Log', 'bonips' ); ?></h4>
+				<h4><?php _e( 'Protokoll', 'bonips' ); ?></h4>
 				<ul>
 					<li>
-						<label for="bonips-prefs-log"><?php _e( 'Log Entry', 'bonips' ); ?></label>
+						<label for="bonips-prefs-log"><?php _e( 'Protokolleintrag', 'bonips' ); ?></label>
 						<input type="text" name="bonips_prefs[log]" id="bonips-prefs-log" size="30" value="<?php echo $this->prefs['log']; ?>" /><br />
 						<span class="description"><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
 					</li>
 				</ul>
 			</td>
 			<td valign="top">
-				<h4><?php _e( 'Templates', 'bonips' ); ?></h4>
+				<h4><?php _e( 'Vorlagen', 'bonips' ); ?></h4>
 				<ul>
 					<li>
-						<label for="bonips-prefs-message-solvent"><?php _e( 'Solvent users', 'bonips' ); ?></label>
+						<label for="bonips-prefs-message-solvent"><?php _e( 'Benutzer mit ausreichendem Guthaben', 'bonips' ); ?></label>
 						<textarea name="bonips_prefs[messages][solvent]" id="bonips-prefs-message-solvent" style="width: 90%; max-width: 90%; min-height: 90px;"><?php echo stripslashes( $this->prefs['messages']['solvent'] ); ?></textarea><br />
-						<span class="description"><?php _e( 'Message to show users on the payment page before they are charged. Leave empty to hide.', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
+						<span class="description"><?php _e( 'Nachricht auf der Zahlungsseite, bevor Benutzer belastet werden. Leer lassen, um sie auszublenden.', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
 					</li>
 					<li>
-						<label for="bonips-prefs-message-insolvent"><?php _e( 'Insolvent users', 'bonips' ); ?></label>
+						<label for="bonips-prefs-message-insolvent"><?php _e( 'Benutzer mit unzureichendem Guthaben', 'bonips' ); ?></label>
 						<textarea name="bonips_prefs[messages][insolvent]" id="bonips-prefs-message-solvent" style="width: 90%; max-width: 90%; min-height: 90px;"><?php echo stripslashes( $this->prefs['messages']['insolvent'] ); ?></textarea><br />
-						<span class="description"><?php _e( 'Message to show users who do not have enough points to pay.', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
+						<span class="description"><?php _e( 'Nachricht für Benutzer, die nicht genügend Punkte für die Zahlung haben.', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
 					</li>
 					<li>
-						<label for="bonips-prefs-message-insolvent"><?php _e( 'Visitors', 'bonips' ); ?></label>
+						<label for="bonips-prefs-message-insolvent"><?php _e( 'Besucher', 'bonips' ); ?></label>
 						<textarea name="bonips_prefs[messages][visitors]" id="bonips-prefs-message-visitors" style="width: 90%; max-width: 90%; min-height: 90px;"><?php echo stripslashes( $this->prefs['messages']['visitors'] ); ?></textarea><br />
-						<span class="description"><?php _e( 'Message to show visitors (users not logged in) on the payment page.', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
+						<span class="description"><?php _e( 'Nachricht für Besucher, die nicht angemeldet sind, auf der Zahlungsseite.', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
 					</li>
 				</ul>
 			</td>
@@ -548,7 +548,7 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 	<input type="hidden" name="bonips-gateway-action" value="update-settings" />
 	<input type="hidden" name="bonips-gateway-token" value="<?php echo wp_create_nonce( 'bonips-espresso-update' ); ?>" />
-	<p><input class="button-primary" type="submit" name="Submit" value="<?php _e( 'Update Settings', 'bonips' ); ?>" /></p>
+	<p><input class="button-primary" type="submit" name="Submit" value="<?php _e( 'Einstellungen aktualisieren', 'bonips' ); ?>" /></p>
 </form>
 <?php
 

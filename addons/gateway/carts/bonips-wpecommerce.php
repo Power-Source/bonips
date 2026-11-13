@@ -17,14 +17,14 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 		global $nzshpcrt_gateways, $bonips_wpecom_settings;
 
 		$bonips_wpecom_settings = shortcode_atts( array(
-			'log'       => __( 'Payment for Order: #%order_id%', 'bonips' ),
+			'log'       => __( 'Zahlung für Bestellung: #%order_id%', 'bonips' ),
 			'type'      => BONIPS_DEFAULT_TYPE_KEY,
 			'share'     => 0,
-			'share_log' => __( 'Store sale', 'bonips' ),
+			'share_log' => __( 'Shop-Verkauf', 'bonips' ),
 			'rate'      => 1,
-			'visitor'   => __( 'You must be logged in to use this gateway', 'bonips' ),
-			'low_funds' => __( 'Insufficient Funds.', 'bonips' ),
-			'message'   => __( 'Deduct the amount from your balance.', 'bonips' )
+			'visitor'   => __( 'Du musst angemeldet sein, um dieses Gateway zu verwenden', 'bonips' ),
+			'low_funds' => __( 'Unzureichendes Guthaben.', 'bonips' ),
+			'message'   => __( 'Ziehe den Betrag von Deinem Guthaben ab.', 'bonips' )
 		), (array) get_option( 'bonips_wpecom_settings', '' ) );
 
 		// Add gateway
@@ -104,7 +104,7 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 				if ( ! is_user_logged_in() )
 					return '<tr><td>' . $this->core->template_tags_general( $this->prefs['visitor'] ) . '</td></tr>';
 
-				$output .= '<tr><td><table width="100%"><thead><th class="cart-item">' . __( 'Item', 'bonips' ) . '</th><th class="cart-item-qt"></th><th class="cart-item-cost">' . $this->core->plural() . '</th></thead><tbody>';
+				$output .= '<tr><td><table width="100%"><thead><th class="cart-item">' . __( 'Artikel', 'bonips' ) . '</th><th class="cart-item-qt"></th><th class="cart-item-cost">' . $this->core->plural() . '</th></thead><tbody>';
 				
 				$total   = 0;
 				while ( wpsc_have_cart_items() ) : wpsc_the_cart_item();
@@ -117,7 +117,7 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 
 				endwhile;
 				
-				$output .= '<tr><td colspan="2">' . __( 'Total Cost', 'bonips' ) . '</td><td class="cart-item-cost">' . $this->core->format_creds( $total ) . '</td></tr>';
+				$output .= '<tr><td colspan="2">' . __( 'Gesamtkosten', 'bonips' ) . '</td><td class="cart-item-cost">' . $this->core->format_creds( $total ) . '</td></tr>';
 				$balance = $this->core->get_users_balance( get_current_user_id(), $this->bonips_type );
 				
 				if ( $balance < $total )
@@ -125,7 +125,7 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 				else
 					$highlight = '';
 
-				$output .= '<tr><td class="cart-item" colspan="2">' . __( 'Your current balance', 'bonips' ) . '</td><td class="cart-item-cost"' . $highlight . '>' . $this->core->format_creds( $balance ) . '</td></tr></tdody></table></tr>';
+				$output .= '<tr><td class="cart-item" colspan="2">' . __( 'Dein aktuelles Guthaben', 'bonips' ) . '</td><td class="cart-item-cost"' . $highlight . '>' . $this->core->format_creds( $balance ) . '</td></tr></tdody></table></tr>';
 
 				if ( ! empty( $this->prefs['message'] ) )
 					$output .= '<tr><td>' . $this->core->template_tags_general( $this->prefs['message'] ) . '</td></tr>';
@@ -199,7 +199,7 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 
 				// Else if user is excluded
 				elseif ( $this->core->exclude_user( $user_id ) )
-					$error = __( 'You can not use this gateway.', 'bonips' );
+					$error = __( 'Du kannst dieses Gateway nicht verwenden.', 'bonips' );
 
 				// Else check balance
 				else {
@@ -367,10 +367,10 @@ if ( ! function_exists( 'bonips_wpecom_gateway_settings' ) ) :
 
 		$output = '
 <tr>
-	<td colspan="2"><strong>' . __( 'General', 'bonips' ) . '</strong></td>
+	<td colspan="2"><strong>' . __( 'Allgemein', 'bonips' ) . '</strong></td>
 </tr>
 <tr>
-	<td width="150">' . __( 'Protokollvorlage for Payments', 'bonips' ) . '</td>
+	<td width="150">' . __( 'Protokollvorlage für Zahlungen', 'bonips' ) . '</td>
 	<td><input type="text" name="bonips_gateway[log]" value="' . esc_attr( $bonips_wpecom_settings['log'] ) . '" style="width:50%;" /><br /><span class="description">' . $bonips->available_template_tags( array( 'general' ), '%order_id%' ) . '</span></td>
 </tr>';
 
@@ -380,40 +380,40 @@ if ( ! function_exists( 'bonips_wpecom_gateway_settings' ) ) :
 		else
 			$output .= '
 <tr>
-	<td width="150">' . __( 'Point Type', 'bonips' ) . '</td>
+	<td width="150">' . __( 'Punktetyp', 'bonips' ) . '</td>
 	<td>' . bonips_types_select_from_dropdown( 'bonips_gateway[type]', 'bonips-point-type', $type, true ) . '</td>
 </tr>';
 
 		$output .= '
 <tr>
-	<td width="150">' . __( 'Exchange Rate', 'bonips' ) . '</td>
-	<td><input type="text" name="bonips_gateway[rate]" value="' . esc_attr( $bonips_wpecom_settings['rate'] ) . '" style="width:50px;" /><br /><span class="description">' . sprintf( __( 'How much is 1 %s worth in %s', 'bonips' ), $selected_currency, $bonips->plural() ) . '</span></td>
+	<td width="150">' . __( 'Wechselkurs', 'bonips' ) . '</td>
+	<td><input type="text" name="bonips_gateway[rate]" value="' . esc_attr( $bonips_wpecom_settings['rate'] ) . '" style="width:50px;" /><br /><span class="description">' . sprintf( __( 'Wie viel ist 1 %s in %s wert', 'bonips' ), $selected_currency, $bonips->plural() ) . '</span></td>
 </tr>
 <tr>
-	<td colspan="2"><strong>' . __( 'Profit Sharing', 'bonips' ) . '</strong></td>
+	<td colspan="2"><strong>' . __( 'Gewinnbeteiligung', 'bonips' ) . '</strong></td>
 </tr>
 <tr>
-	<td width="150">' . __( 'Payout', 'bonips' ) . '</td>
-	<td><input type="text" name="bonips_gateway[share]" value="' . esc_attr( $bonips_wpecom_settings['share'] ) . '" style="width:50px;" /> %<br /><span class="description">' . __( 'Option to share sales with the product owner. Use zero to disable.', 'bonips' ) . '</span></td>
+	<td width="150">' . __( 'Auszahlung', 'bonips' ) . '</td>
+	<td><input type="text" name="bonips_gateway[share]" value="' . esc_attr( $bonips_wpecom_settings['share'] ) . '" style="width:50px;" /> %<br /><span class="description">' . __( 'Option, Verkäufe mit dem Produktbesitzer zu teilen. Verwende null zum Deaktivieren.', 'bonips' ) . '</span></td>
 </tr>
 <tr>
 	<td width="150">' . __( 'Protokollvorlage', 'bonips' ) . '</td>
 	<td><input type="text" name="bonips_gateway[share_log]" value="' . esc_attr( $bonips_wpecom_settings['share_log'] ) . '" style="width:50%;" /><br /><span class="description">' . $bonips->available_template_tags( array( 'general', 'post' ) ) . '</span></td>
 </tr>
 <tr>
-	<td colspan="2"><strong>' . __( 'Messages', 'bonips' ) . '</strong></td>
+	<td colspan="2"><strong>' . __( 'Nachrichten', 'bonips' ) . '</strong></td>
 </tr>
 <tr>
-	<td width="150">' . __( 'Instructions', 'bonips' ) . '</td>
-	<td><input type="text" name="bonips_gateway[message]" value="' . esc_attr( $bonips_wpecom_settings['message'] ) . '" style="width:50%;" /><br /><span class="description">' . __( 'Optional instructions to show users when selecting this gateway. Leave empty to hide.', 'bonips' ) . '</span></td>
+	<td width="150">' . __( 'Anweisungen', 'bonips' ) . '</td>
+	<td><input type="text" name="bonips_gateway[message]" value="' . esc_attr( $bonips_wpecom_settings['message'] ) . '" style="width:50%;" /><br /><span class="description">' . __( 'Optionale Hinweise für Benutzer, die dieses Gateway auswählen. Leer lassen, um sie auszublenden.', 'bonips' ) . '</span></td>
 </tr>
 <tr>
-	<td width="150">' . __( 'Visitors', 'bonips' ) . '</td>
-	<td><input type="text" name="bonips_gateway[visitor]" value="' . esc_attr( $bonips_wpecom_settings['visitor'] ) . '" style="width:50%;" /><br /><span class="description">' . __( 'Message to show visitors who are not logged in.', 'bonips' ) . '</span></td>
+	<td width="150">' . __( 'Besucher', 'bonips' ) . '</td>
+	<td><input type="text" name="bonips_gateway[visitor]" value="' . esc_attr( $bonips_wpecom_settings['visitor'] ) . '" style="width:50%;" /><br /><span class="description">' . __( 'Nachricht für Besucher, die nicht angemeldet sind.', 'bonips' ) . '</span></td>
 </tr>
 <tr>
-	<td width="150">' . __( 'Insufficient Funds', 'bonips' ) . '</td>
-	<td><input type="text" name="bonips_gateway[low_funds]" value="' . esc_attr( $bonips_wpecom_settings['low_funds'] ) . '" style="width:50%;" /><br /><span class="description">' . $bonips->template_tags_general( __( 'Message to show when users does not have enough %plural% to pay using this gateway.', 'bonips' ) ) . '</span></td>
+	<td width="150">' . __( 'Unzureichendes Guthaben', 'bonips' ) . '</td>
+	<td><input type="text" name="bonips_gateway[low_funds]" value="' . esc_attr( $bonips_wpecom_settings['low_funds'] ) . '" style="width:50%;" /><br /><span class="description">' . $bonips->template_tags_general( __( 'Nachricht, wenn Benutzer nicht genügend %plural% für eine Zahlung über dieses Gateway haben.', 'bonips' ) ) . '</span></td>
 </tr>';
 
 		return apply_filters( 'bonips_wpecom_settings', $output );

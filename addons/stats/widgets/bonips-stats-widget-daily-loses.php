@@ -115,16 +115,16 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Loses' ) ) :
 		 */
 		function widget() {
 
-			$lose_label = __( 'Most common ways your users have lost or spent points during this period.', 'bonips' );
+			$lose_label = __( 'Die häufigsten Arten, wie Deine Benutzer in diesem Zeitraum Punkte verloren oder ausgegeben haben.', 'bonips' );
 			if ( $this->args['ctypes'] != 'all' )
-				$lose_label = $this->core->template_tags_general( __( 'Most common ways your users have lost or spent %_plural% during this period.', 'bonips' ) );
+				$lose_label = $this->core->template_tags_general( __( 'Die häufigsten Arten, wie Deine Benutzer in diesem Zeitraum %_plural% verloren oder ausgegeben haben.', 'bonips' ) );
 
 			$ten_day_lose = $this->get_data();
 			$spending = $this->get_spending();
 
 ?>
 <div id="" class="clear clearfix">
-	<h1><?php _e( 'Loses in the last 10 days', 'bonips' ); ?></h1>
+	<h1><?php _e( 'Verluste der letzten 10 Tage', 'bonips' ); ?></h1>
 	<p><span class="description"><?php echo $lose_label; ?></span></p>
 <?php
 
@@ -148,7 +148,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Loses' ) ) :
 ?>
 <li>
 	<strong style="color:<?php echo $this->colors[ $item->type ]['negative']; ?>;"><?php echo $label; ?></strong>
-	<span class="view"><a href="<?php echo esc_url( $url ); ?>"><?php _e( 'View', 'bonips' ); ?></a></span>
+	<span class="view"><a href="<?php echo esc_url( $url ); ?>"><?php _e( 'Ansehen', 'bonips' ); ?></a></span>
 	<ul>
 		<li><?php echo number_format( $item->total, 0, '.', ' ' ); ?></li>
 		<li><?php echo $item->count; ?></li>
@@ -163,7 +163,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Loses' ) ) :
 
 			}
 			else {
-				echo '<div class="bonips-empty-widget"><p>' . __( 'No data found', 'bonips' ) . '</p></div>';
+				echo '<div class="bonips-empty-widget"><p>' . __( 'Keine Daten gefunden', 'bonips' ) . '</p></div>';
 			}
 
 ?>

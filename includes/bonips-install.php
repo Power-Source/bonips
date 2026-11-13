@@ -60,22 +60,22 @@ if ( ! class_exists( 'boniPS_Install' ) ) :
 			// WordPress check
 			$wp_version = $GLOBALS['wp_version'];
 			if ( version_compare( $wp_version, '4.0', '<' ) && BONIPS_FOR_OLDER_WP === false )
-				$message[] = __( 'boniPS requires WordPress 4.0 or higher. Version detected:', 'bonips' ) . ' ' . $wp_version;
+				$message[] = __( 'BoniPress benötigt WordPress 4.0 oder höher. Erkannte Version:', 'bonips' ) . ' ' . $wp_version;
 
 			// PHP check
 			$php_version = phpversion();
 			if ( version_compare( $php_version, '5.3', '<' ) )
-				$message[] = __( 'boniPS requires PHP 5.3 or higher. Version detected: ', 'bonips' ) . ' ' . $php_version;
+				$message[] = __( 'BoniPress benötigt PHP 5.3 oder höher. Erkannte Version: ', 'bonips' ) . ' ' . $php_version;
 
 			// SQL check
 			$sql_version = $wpdb->db_version();
 			if ( version_compare( $sql_version, '5.0', '<' ) )
-				$message[] = __( 'boniPS requires SQL 5.0 or higher. Version detected: ', 'bonips' ) . ' ' . $sql_version;
+				$message[] = __( 'BoniPress benötigt SQL 5.0 oder höher. Erkannte Version: ', 'bonips' ) . ' ' . $sql_version;
 
 			// Not empty $message means there are issues
 			if ( ! empty( $message ) ) {
 
-				die( __( 'Sorry but your WordPress installation does not reach the minimum requirements for running boniPS. The following errors were given:', 'bonips' ) . "\n" . implode( "\n", $message ) );
+				die( __( 'Deine WordPress-Installation erfüllt nicht die Mindestanforderungen für BoniPress. Folgende Fehler wurden gemeldet:', 'bonips' ) . "\n" . implode( "\n", $message ) );
 
 			}
 

@@ -30,18 +30,18 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 				'rate'     => 100,
 				'share'    => 0,
 				'log'      => array(
-					'purchase' => __( 'Payment for tickets to %link_with_title%', 'bonips' ),
-					'refund'   => __( 'Ticket refund for %link_with_title%', 'bonips' )
+					'purchase' => __( 'Zahlung für Tickets zu %link_with_title%', 'bonips' ),
+					'refund'   => __( 'Ticket-Erstattung für %link_with_title%', 'bonips' )
 				),
 				'refund'   => 0,
 				'labels'   => array(
-					'header' => __( 'Pay using your %_plural% balance', 'bonips' ),
-					'button' => __( 'Pay Now', 'bonips' ),
-					'link'   => __( 'Pay', 'bonips' )
+					'header' => __( 'Mit Deinem %_plural%-Guthaben bezahlen', 'bonips' ),
+					'button' => __( 'Jetzt bezahlen', 'bonips' ),
+					'link'   => __( 'Bezahlen', 'bonips' )
 				),
 				'messages' => array(
-					'success' => __( 'Thank you for your payment!', 'bonips' ),
-					'error'   => __( "I'm sorry but you can not pay for these tickets using %_plural%", 'bonips' )
+					'success' => __( 'Vielen Dank für Deine Zahlung!', 'bonips' ),
+					'error'   => __( 'Du kannst diese Tickets leider nicht mit %_plural% bezahlen', 'bonips' )
 				)
 			);
 
@@ -131,16 +131,16 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 				unset( $columns['type'] );
 				unset( $columns['spaces'] );
 
-				$columns['type'] = __( 'Ticket Type', 'bonips' );
+				$columns['type'] = __( 'Tickettyp', 'bonips' );
 
 				if ( $this->single_currency() ) {
-					$columns['bonips'] = __( 'Price', 'bonips' );
+					$columns['bonips'] = __( 'Preis', 'bonips' );
 				}
 				else {
-					$columns['price'] = __( 'Price', 'bonips' );
+					$columns['price'] = __( 'Preis', 'bonips' );
 					$columns['bonips'] = $this->core->plural();
 				}
-				$columns['spaces'] = __( 'Spaces', 'bonips' );
+				$columns['spaces'] = __( 'Plätze', 'bonips' );
 			}
 
 			$this->booking_cols = count( $columns );
@@ -225,7 +225,7 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 					
 					// User is excluded from using this gateway
 					if ( $this->core->exclude_user( $EM_Booking->person->ID ) ) {
-						$EM_Booking->add_error( __( 'You can not pay using this gateway.', 'bonips' ) );
+						$EM_Booking->add_error( __( 'Du kannst nicht über dieses Gateway bezahlen.', 'bonips' ) );
 						$ok = false;
 					}
 					// User can not afford to pay
@@ -367,16 +367,16 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 					'reject'    => '<a class="em-bookings-reject" href="' . em_add_get_params( $url, array(
 						'action'     => 'bookings_reject',
 						'booking_id' => $EM_Booking->booking_id
-					) ) . '">' . __( 'Reject', 'bonips' ) . '</a>',
+					) ) . '">' . __( 'Ablehnen', 'bonips' ) . '</a>',
 					'delete'    => '<span class="trash"><a class="em-bookings-delete" href="' . em_add_get_params( $url, array(
 						'action'     => 'bookings_delete',
 						'booking_id' => $EM_Booking->booking_id
-					) ) . '">' . __( 'Delete', 'bonips' ) . '</a></span>',
+					) ) . '">' . __( 'Löschen', 'bonips' ) . '</a></span>',
 					'edit'      => '<a class="em-bookings-edit" href="' . em_add_get_params( $EM_Booking->get_event()->get_bookings_url(), array(
 						'booking_id' => $EM_Booking->booking_id,
 						'em_ajax'    => null,
 						'em_obj'     => null
-					) ) . '">' . __( 'Edit/View', 'bonips' ) . '</a>'
+					) ) . '">' . __( 'Bearbeiten/Ansehen', 'bonips' ) . '</a>'
 				);
 			}
 			
@@ -446,7 +446,7 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 				$box = 'display: none;';
 
 			$exchange_message = sprintf(
-				__( 'How many %s is 1 %s worth?', 'bonips' ),
+				__( 'Wie viele %s ist 1 %s wert?', 'bonips' ),
 				$this->core->plural(),
 				em_get_currency_symbol()
 			);
@@ -455,12 +455,12 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 
 			do_action( 'bonips_em_before_settings', $this ); ?>
 
-<h4><?php _e( 'Setup', 'bonips' ); ?></h4>
+<h4><?php _e( 'Einrichtung', 'bonips' ); ?></h4>
 <table class="form-table">
 	<?php if ( count( $bonips_types ) > 1 ) : ?>
 
 	<tr>
-		<th scope="row"><?php _e( 'Point Type', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Punktetyp', 'bonips' ); ?></th>
 		<td>
 			<?php bonips_types_select_from_dropdown( 'bonips_gateway[type]', 'bonips-gateway-type', $this->prefs['type'] ); ?>
 
@@ -472,48 +472,48 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 	<?php endif; ?>
 
 	<tr>
-		<th scope="row"><?php _e( 'Payments', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Zahlungen', 'bonips' ); ?></th>
 		<td>
-			<input type="radio" name="bonips_gateway[setup]" id="bonips-gateway-setup-off" value="off"<?php checked( $this->prefs['setup'], 'off' ); ?> /> <label for="bonips-gateway-setup-off"><?php echo $this->core->template_tags_general( __( 'Disabled - Users CAN NOT pay for tickets using %plural%.', 'bonips' ) ); ?></label><br />
-			<input type="radio" name="bonips_gateway[setup]" id="bonips-gateway-setup-single" value="single"<?php checked( $this->prefs['setup'], 'single' ); ?> /> <label for="bonips-gateway-setup-single"><?php echo $this->core->template_tags_general( __( 'Single - Users can ONLY pay for tickets using %plural%.', 'bonips' ) ); ?></label><br />
-			<input type="radio" name="bonips_gateway[setup]" id="bonips-gateway-setup-multi" value="multi"<?php checked( $this->prefs['setup'], 'multi' ); ?> /> <label for="bonips-gateway-setup-multi"><?php echo $this->core->template_tags_general( __( 'Multi - Users can pay for tickets using other gateways or %plural%.', 'bonips' ) ); ?></label>
+			<input type="radio" name="bonips_gateway[setup]" id="bonips-gateway-setup-off" value="off"<?php checked( $this->prefs['setup'], 'off' ); ?> /> <label for="bonips-gateway-setup-off"><?php echo $this->core->template_tags_general( __( 'Deaktiviert – Benutzer können Tickets NICHT mit %plural% bezahlen.', 'bonips' ) ); ?></label><br />
+			<input type="radio" name="bonips_gateway[setup]" id="bonips-gateway-setup-single" value="single"<?php checked( $this->prefs['setup'], 'single' ); ?> /> <label for="bonips-gateway-setup-single"><?php echo $this->core->template_tags_general( __( 'Einzeln – Benutzer können Tickets NUR mit %plural% bezahlen.', 'bonips' ) ); ?></label><br />
+			<input type="radio" name="bonips_gateway[setup]" id="bonips-gateway-setup-multi" value="multi"<?php checked( $this->prefs['setup'], 'multi' ); ?> /> <label for="bonips-gateway-setup-multi"><?php echo $this->core->template_tags_general( __( 'Mehrfach – Benutzer können Tickets über andere Gateways oder mit %plural% bezahlen.', 'bonips' ) ); ?></label>
 		</td>
 	</tr>
 	<tr>
-		<th scope="row"><?php _e( 'Refunds', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Erstattungen', 'bonips' ); ?></th>
 		<td>
 			<input name="bonips_gateway[refund]" type="text" id="bonips-gateway-log-refund" value="<?php echo $this->prefs['refund']; ?>" size="5" /> %<br />
-			<span class="description"><?php _e( 'The percentage of the paid amount to refund if a user cancels their booking. Use zero for no refunds. No refunds are given to "Rejected" bookings!', 'bonips' ); ?></span>
+			<span class="description"><?php _e( 'Prozentsatz des bezahlten Betrags, der bei Stornierung einer Buchung erstattet wird. Verwende null, um Erstattungen zu deaktivieren. Für abgelehnte Buchungen gibt es keine Erstattungen!', 'bonips' ); ?></span>
 		</td>
 	</tr>
 	<tr>
-		<th scope="row"><?php _e( 'Profit Sharing', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Gewinnbeteiligung', 'bonips' ); ?></th>
 		<td>
 			<input name="bonips_gateway[share]" type="text" id="bonips-gateway-profit-sharing" value="<?php echo $this->prefs['share']; ?>" size="5" /> %<br />
-			<span class="description"><?php _e( 'Option to share sales with the product owner. Use zero to disable.', 'bonips' ); ?></span>
+			<span class="description"><?php _e( 'Option, Verkäufe mit dem Produktbesitzer zu teilen. Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 		</td>
 	</tr>
 </table>
 <table class="form-table" id="bonips-exchange-rate" style="<?php echo $box; ?>">
 	<tr>
-		<th scope="row"><?php _e( 'Exchange Rate', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Wechselkurs', 'bonips' ); ?></th>
 		<td>
 			<input name="bonips_gateway[rate]" type="text" id="bonips-gateway-rate" size="6" value="<?php echo $this->prefs['rate']; ?>" /><br />
 			<span class="description"><?php echo $exchange_message; ?></span>
 		</td>
 	</tr>
 </table>
-<h4><?php _e( 'Protokollvorlages', 'bonips' ); ?></h4>
+<h4><?php _e( 'Protokollvorlagen', 'bonips' ); ?></h4>
 <table class="form-table">
 	<tr>
-		<th scope="row"><?php _e( 'Purchases', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Käufe', 'bonips' ); ?></th>
 		<td>
 			<input name="bonips_gateway[log][purchase]" type="text" id="bonips-gateway-log-purchase" style="width: 95%;" value="<?php echo $this->prefs['log']['purchase']; ?>" size="45" /><br />
 			<span class="description"><?php echo $this->core->available_template_tags( array( 'general', 'post' ) ); ?>></span>
 		</td>
 	</tr>
 	<tr>
-		<th scope="row"><?php _e( 'Refunds', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Erstattungen', 'bonips' ); ?></th>
 		<td>
 			<input name="bonips_gateway[log][refund]" type="text" id="bonips-gateway-log-refund" style="width: 95%;" value="<?php echo $this->prefs['log']['refund']; ?>" size="45" /><br />
 			<span class="description"><?php echo $this->core->available_template_tags( array( 'general', 'post' ) ); ?></span>
@@ -532,44 +532,44 @@ jQuery(function($){
 	});
 });
 </script>
-<h4><?php _e( 'Labels', 'bonips' ); ?></h4>
+<h4><?php _e( 'Beschriftungen', 'bonips' ); ?></h4>
 <table class="form-table">
 	<tr valign="top">
-		<th scope="row"><?php _e( 'Payment Link Label', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Beschriftung des Zahlungslinks', 'bonips' ); ?></th>
 		<td>
 			<input name="bonips_gateway[labels][link]" type="text" id="bonips-gateway-labels-link" style="width: 95%" value="<?php echo $this->prefs['labels']['link']; ?>" size="45" /><br />
-			<span class="description"><?php _e( 'The payment link shows / hides the payment form under "My Bookings". No HTML allowed.', 'bonips' ); ?></span>
+			<span class="description"><?php _e( 'Der Zahlungslink zeigt oder verbirgt das Zahlungsformular unter „Meine Buchungen“. Kein HTML erlaubt.', 'bonips' ); ?></span>
 		</td>
 	</tr>
 	<tr valign="top">
-		<th scope="row"><?php _e( 'Payment Header', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Zahlungsüberschrift', 'bonips' ); ?></th>
 		<td>
 			<input name="bonips_gateway[labels][header]" type="text" id="bonips-gateway-labels-header" style="width: 95%" value="<?php echo $this->prefs['labels']['header']; ?>" size="45" /><br />
-			<span class="description"><?php _e( 'Shown on top of the payment form. No HTML allowed.', 'bonips' ); ?></span>
+			<span class="description"><?php _e( 'Wird über dem Zahlungsformular angezeigt. Kein HTML erlaubt.', 'bonips' ); ?></span>
 		</td>
 	</tr>
 	<tr valign="top">
-		<th scope="row"><?php _e( 'Button Label', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Schaltflächenbeschriftung', 'bonips' ); ?></th>
 		<td>
 			<input name="bonips_gateway[labels][button]" type="text" id="bonips-gateway-labels-button" style="width: 95%" value="<?php echo $this->prefs['labels']['button']; ?>" size="45" /><br />
-			<span class="description"><?php _e( 'The button label for payments. No HTML allowed!', 'bonips' ); ?></span>
+			<span class="description"><?php _e( 'Beschriftung der Zahlungsschaltfläche. Kein HTML erlaubt!', 'bonips' ); ?></span>
 		</td>
 	</tr>
 </table>
-<h4><?php _e( 'Messages', 'bonips' ); ?></h4>
+<h4><?php _e( 'Nachrichten', 'bonips' ); ?></h4>
 <table class='form-table'>
 	<tr valign="top">
-		<th scope="row"><?php _e( 'Successful Payments', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Erfolgreiche Zahlungen', 'bonips' ); ?></th>
 		<td>
 			<input type="text" name="bonips_gateway[messages][success]" id="bonips-gateway-messages-success" style="width: 95%;" value="<?php echo stripslashes( $this->prefs['messages']['success'] ); ?>" /><br />
-			<span class="description"><?php _e( 'No HTML allowed!', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
+			<span class="description"><?php _e( 'Kein HTML erlaubt!', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
 		</td>
 	</tr>
 	<tr valign="top">
-		<th scope="row"><?php _e( 'Insufficient Funds', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Unzureichendes Guthaben', 'bonips' ); ?></th>
 		<td>
 			<input type="text" name="bonips_gateway[messages][error]" id="bonips-gateway-messages-error" style="width: 95%;" value="<?php echo stripslashes( $this->prefs['messages']['error'] ); ?>" /><br />
-			<span class="description"><?php _e( 'No HTML allowed!', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
+			<span class="description"><?php _e( 'Kein HTML erlaubt!', 'bonips' ); ?><br /><?php echo $this->core->available_template_tags( array( 'general' ) ); ?></span>
 		</td>
 	</tr>
 </table>

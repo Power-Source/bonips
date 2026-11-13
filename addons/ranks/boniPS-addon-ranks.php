@@ -248,7 +248,7 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 			if ( isset( $_GET['ctype'] ) && array_key_exists( $_GET['ctype'], $this->point_types ) && isset( $_GET['post_type'] ) && $_GET['post_type'] == BONIPS_RANK_KEY )
 				$name = sprintf( __( 'Ränge für %s', 'bonips' ), $this->point_types[ $_GET['ctype'] ] );
 			else
-				$name = __( 'Ranks', 'bonips' );
+				$name = __( 'Ränge', 'bonips' );
 
 			$labels = array(
 				'name'                  => $name,
@@ -1301,12 +1301,12 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 				$min = bonips_get_post_meta( $post_id, 'bonips_rank_min', true );
 				if ( empty( $min ) && (int) $min !== 0 )
-					$min = __( 'Any Value', 'bonips' );
+					$min = __( 'Beliebiger Wert', 'bonips' );
 
 				$min = $bonips->template_tags_general( __( 'Minimum %plural%', 'bonips' ) ) . ': ' . $min;
 				$max = bonips_get_post_meta( $post_id, 'bonips_rank_max', true );
 				if ( empty( $max ) )
-					$max = __( 'Any Value', 'bonips' );
+					$max = __( 'Beliebiger Wert', 'bonips' );
 
 				$max = $bonips->template_tags_general( __( 'Maximum %plural%', 'bonips' ) ) . ': ' . $max;
 				echo $min . '<br />' . $max;
@@ -1566,7 +1566,7 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 					<label><input type="checkbox" value="1" checked="checked" disabled="disabled" /> <?php _e( 'Rang-Logo', 'bonips' ); ?></label>
 				</div>
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( array( 'support' => 'content' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'support' => 'content' ) ); ?>" id="<?php echo $this->field_id( array( 'support' => 'content' ) ); ?>" <?php checked( $prefs['support']['content'], 1 ); ?> value="1" /> <?php _e( 'Content', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'support' => 'content' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'support' => 'content' ) ); ?>" id="<?php echo $this->field_id( array( 'support' => 'content' ) ); ?>" <?php checked( $prefs['support']['content'], 1 ); ?> value="1" /> <?php _e( 'Inhalt', 'bonips' ); ?></label>
 				</div>
 				<div class="checkbox">
 					<label for="<?php echo $this->field_id( array( 'support' => 'excerpt' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'support' => 'excerpt' ) ); ?>" id="<?php echo $this->field_id( array( 'support' => 'excerpt' ) ); ?>" <?php checked( $prefs['support']['excerpt'], 1 ); ?> value="1" /> <?php _e( 'Auszug', 'bonips' ); ?></label>

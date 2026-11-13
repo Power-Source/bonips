@@ -152,7 +152,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 						'token'      => wp_create_nonce( 'bonips-buy-this-content' ),
 						'working'    => esc_js( $this->sell_content['working'] ),
 						'reload'     => $this->sell_content['reload'],
-						'sweeterror' => __( 'Error', 'bonips' )
+						'sweeterror' => __( 'Fehler', 'bonips' )
 					)
 				);
 
@@ -487,13 +487,13 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 			if ( empty( $available_options ) ) return;
 
 ?>
-<p class="bonips-p"><?php _e( 'Users profit share when their content is purchased.', 'bonips' ); ?></p>
+<p class="bonips-p"><?php _e( 'Gewinnbeteiligung für Benutzer, wenn ihre Inhalte gekauft werden.', 'bonips' ); ?></p>
 <table class="form-table bonips-inline-table">
 	<tr>
-		<th scope="row"><?php _e( 'Profit Share', 'bonips' ); ?></th>
+		<th scope="row"><?php _e( 'Gewinnbeteiligung', 'bonips' ); ?></th>
 		<td>
 			<fieldset id="bonips-badge-list" class="badge-list">
-				<legend class="screen-reader-text"><span><?php _e( 'Profit Share', 'bonips' ); ?></span></legend>
+				<legend class="screen-reader-text"><span><?php _e( 'Gewinnbeteiligung', 'bonips' ); ?></span></legend>
 <?php
 
 			foreach ( $available_options as $point_type => $data ) {
@@ -505,8 +505,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 				<div class="bonips-wrapper buycred-wrapper disabled-option color-option">
 					<div><?php printf( _x( '%s Profit Share', 'Points Name', 'bonips' ), $data['name'] ); ?></div>
 					<div class="balance-row">
-						<div class="balance-view"><?php _e( 'Disabled', 'bonips' ); ?></div>
-						<div class="balance-desc"><em><?php _e( 'Not accepted as payment.', 'bonips' ); ?></em></div>
+						<div class="balance-view"><?php _e( 'Deaktiviert', 'bonips' ); ?></div>
+						<div class="balance-desc"><em><?php _e( 'Wird nicht als Zahlungsmittel akzeptiert.', 'bonips' ); ?></em></div>
 					</div>
 				</div>
 <?php
@@ -520,7 +520,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 				<div class="bonips-wrapper buycred-wrapper disabled-option color-option">
 					<div><?php printf( _x( '%s Profit Share', 'Points Name', 'bonips' ), $data['name'] ); ?></div>
 					<div class="balance-row">
-						<div class="balance-view"><?php _e( 'Excluded', 'bonips' ); ?></div>
+						<div class="balance-view"><?php _e( 'Ausgeschlossen', 'bonips' ); ?></div>
 						<div class="balance-desc"><em><?php printf( _x( 'User can not pay using %s', 'Points Name', 'bonips' ), $data['name'] ); ?></em></div>
 					</div>
 				</div>
@@ -536,7 +536,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 					<div><?php printf( _x( '%s Profit Share', 'Buying Points', 'bonips' ), $data['name'] ); ?></div>
 					<div class="balance-row">
 						<div class="balance-view"><input type="text" size="8" name="bonips_sell_this[<?php echo $point_type; ?>]" class="half" placeholder="<?php echo esc_attr( $data['default'] ); ?>" value="<?php if ( $data['override'] ) echo esc_attr( $data['custom'] ); ?>" /> %</div>
-						<div class="balance-desc"><em><?php _e( 'Leave empty to use the default.', 'bonips' ); ?></em></div>
+						<div class="balance-desc"><em><?php _e( 'Leer lassen, um den Standardwert zu verwenden.', 'bonips' ); ?></em></div>
 					</div>
 				</div>
 <?php
@@ -589,8 +589,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 		protected function enabled_options( $selected = '' ) {
 
 			$options = array(
-				'disabled' => __( 'Disabled', 'bonips' ),
-				'enabled'  => __( 'Enabled', 'bonips' )
+				'disabled' => __( 'Deaktiviert', 'bonips' ),
+				'enabled'  => __( 'Aktiviert', 'bonips' )
 			);
 
 			$output = '';
@@ -617,11 +617,11 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 			$point_types    = bonips_get_types( true );
 
 ?>
-<h4><span class="dashicons dashicons-admin-plugins static"></span><?php _e( 'Sell Content', 'bonips' ); ?></h4>
+<h4><span class="dashicons dashicons-admin-plugins static"></span><?php _e( 'Inhalt verkaufen', 'bonips' ); ?></h4>
 <div class="body" style="display:none;">
 
-	<h3><?php _e( 'Post Types', 'bonips' ); ?></h3>
-	<p><?php _e( 'Which post type(s) content field do you want to sell access to?', 'bonips' ); ?></p>
+	<h3><?php _e( 'Beitragstypen', 'bonips' ); ?></h3>
+	<p><?php _e( 'Für welche Beitragstypen möchtest Du den Zugriff auf das Inhaltsfeld verkaufen?', 'bonips' ); ?></p>
 	<div id="bonips-sell-this-post-type-filter">
 <?php
 
@@ -690,8 +690,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 ?>
 	</div>
 
-	<h3><?php _e( 'Point Types', 'bonips' ); ?></h3>
-	<p><?php _e( 'Which point type(s) can be used as payment for accessing content?', 'bonips' ); ?></p>
+	<h3><?php _e( 'Punktetypen', 'bonips' ); ?></h3>
+	<p><?php _e( 'Welche Punktearten können für den Zugriff auf Inhalte als Zahlungsmittel verwendet werden?', 'bonips' ); ?></p>
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <?php
@@ -744,15 +744,15 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 						'log_sale'       => 'Sale of %link_with_title%'
 					) );
 
-					$expiration_label = apply_filters( 'bonips_sell_exp_title', __( 'Hour(s)', 'bonips' ), $point_type );
+					$expiration_label = apply_filters( 'bonips_sell_exp_title', __( 'Stunde(n)', 'bonips' ), $point_type );
 
 ?>
 	<div id="bonips-sell-<?php echo $point_type; ?>-wrap" style="display: <?php echo $selected; ?>;">
-		<h3><?php printf( __( '%s Setup', 'bonips' ), $point_type_label ); ?></h3>
+		<h3><?php printf( __( '%s-Einrichtung', 'bonips' ), $point_type_label ); ?></h3>
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-status' ) ); ?>"><?php _e( 'Default Status', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-status' ) ); ?>"><?php _e( 'Standardstatus', 'bonips' ); ?></label>
 					<select name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[status]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-status' ) ); ?>" class="form-control">
 						<?php echo $this->enabled_options( $type_setup['status'] ); ?>
 					</select>
@@ -760,53 +760,53 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-price' ) ); ?>"><?php _e( 'Default Price', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-price' ) ); ?>"><?php _e( 'Standardpreis', 'bonips' ); ?></label>
 					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[price]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-price' ) ); ?>" class="form-control" value="<?php echo esc_attr( $type_setup['price'] ); ?>" />
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-expire' ) ); ?>"><?php _e( 'Expiration', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-expire' ) ); ?>"><?php _e( 'Ablauf', 'bonips' ); ?></label>
 					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[expire]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-expire' ) ); ?>" class="form-control" value="<?php echo esc_attr( $type_setup['expire'] ); ?>" />
-					<p><span class="description"><?php printf( __( 'Option to automatically expire purchases after certain number of %s. Use zero to disable.', 'bonips' ), $expiration_label ); ?></span></p>
+					<p><span class="description"><?php printf( __( 'Option, Käufe nach einer bestimmten Anzahl von %s automatisch ablaufen zu lassen. Verwende null zum Deaktivieren.', 'bonips' ), $expiration_label ); ?></span></p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-profit-share' ) ); ?>"><?php _e( 'Profit Share', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-profit-share' ) ); ?>"><?php _e( 'Gewinnbeteiligung', 'bonips' ); ?></label>
 					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[profit_share]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-profit-share' ) ); ?>" class="form-control" value="<?php echo esc_attr( $type_setup['profit_share'] ); ?>" />
-					<p><span class="description"><?php printf( __( 'Option to pay a percentage of each sale with the content author.', 'bonips' ), $expiration_label ); ?></span></p>
+					<p><span class="description"><?php printf( __( 'Option, einen Prozentsatz jedes Verkaufs an den Inhaltsautor auszuzahlen.', 'bonips' ), $expiration_label ); ?></span></p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-button' ) ); ?>"><?php _e( 'Button Label', 'bonips' ); ?></label>
-					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[button_label]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-button' ) ); ?>" class="form-control" placeholder="<?php _e( 'Required', 'bonips' ); ?>" value="<?php echo esc_attr( $type_setup['button_label'] ); ?>" />
+					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-button' ) ); ?>"><?php _e( 'Schaltflächenbeschriftung', 'bonips' ); ?></label>
+					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[button_label]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-button' ) ); ?>" class="form-control" placeholder="<?php _e( 'Erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $type_setup['button_label'] ); ?>" />
 					<p><span class="description"><?php echo $this->core->available_template_tags( array(), '%price%' ); ?></span></p>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-css' ) ); ?>"><?php _e( 'Button CSS Classes', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-css' ) ); ?>"><?php _e( 'CSS-Klassen der Schaltfläche', 'bonips' ); ?></label>
 					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[button_classes]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-css' ) ); ?>" class="form-control" value="<?php echo esc_attr( $type_setup['button_classes'] ); ?>" />
 				</div>
 			</div>
 		</div>
-		<h3><?php _e( 'Protokollvorlages', 'bonips' ); ?></h3>
+		<h3><?php _e( 'Protokollvorlagen', 'bonips' ); ?></h3>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-log-pay' ) ); ?>"><?php _e( 'Payment log entry template', 'bonips' ); ?></label>
-					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[log_payment]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-log-pay' ) ); ?>" class="form-control" placeholder="<?php _e( 'Required', 'bonips' ); ?>" value="<?php echo esc_attr( $type_setup['log_payment'] ); ?>" />
+					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-log-pay' ) ); ?>"><?php _e( 'Protokolleintragsvorlage für Zahlungen', 'bonips' ); ?></label>
+					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[log_payment]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-log-pay' ) ); ?>" class="form-control" placeholder="<?php _e( 'Erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $type_setup['log_payment'] ); ?>" />
 					<p><span class="description"><?php echo $this->core->available_template_tags( array( 'general', 'post' ) ); ?></span></p>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-log-share' ) ); ?>"><?php _e( 'Profit Share payout log entry template', 'bonips' ); ?></label>
-					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[log_sale]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-log-share' ) ); ?>" class="form-control" placeholder="<?php _e( 'Required', 'bonips' ); ?>" value="<?php echo esc_attr( $type_setup['log_sale'] ); ?>" />
+					<label for="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-log-share' ) ); ?>"><?php _e( 'Protokolleintragsvorlage für Gewinnbeteiligungen', 'bonips' ); ?></label>
+					<input type="text" name="<?php echo $this->field_name( array( 'post_type_setup' => $point_type ) ); ?>[log_sale]" id="<?php echo $this->field_id( array( 'post_type_setup' => $point_type . '-log-share' ) ); ?>" class="form-control" placeholder="<?php _e( 'Erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $type_setup['log_sale'] ); ?>" />
 					<p><span class="description"><?php echo $this->core->available_template_tags( array( 'general', 'post' ) ); ?></span></p>
 				</div>
 			</div>
@@ -819,26 +819,26 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 ?>
 
-	<h3><?php _e( 'Transactions', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Transaktionen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="checkbox">
-				<label for="<?php echo $this->field_id( 'reload' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'reload' ); ?>" id="<?php echo $this->field_id( 'reload' ); ?>" <?php checked( $this->sell_content['reload'], 1 ); ?> value="1" /> <?php _e( 'Reload page after successful payments.', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( 'reload' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'reload' ); ?>" id="<?php echo $this->field_id( 'reload' ); ?>" <?php checked( $this->sell_content['reload'], 1 ); ?> value="1" /> <?php _e( 'Seite nach erfolgreichen Zahlungen neu laden.', 'bonips' ); ?></label>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( 'working' ); ?>"><?php _e( 'Button Label', 'bonips' ); ?></label>
-				<input type="text" name="<?php echo $this->field_name( 'working' ); ?>" id="<?php echo $this->field_id( 'working' ); ?>" class="form-control" placeholder="<?php _e( 'Required', 'bonips' ); ?>" value="<?php echo esc_attr( $this->sell_content['working'] ); ?>" />
-				<p><span class="description"><?php _e( 'Option to show a custom button label while the payment is being processed. HTML is allowed.', 'bonips' ); ?></span></p>
+				<label for="<?php echo $this->field_id( 'working' ); ?>"><?php _e( 'Schaltflächenbeschriftung', 'bonips' ); ?></label>
+				<input type="text" name="<?php echo $this->field_name( 'working' ); ?>" id="<?php echo $this->field_id( 'working' ); ?>" class="form-control" placeholder="<?php _e( 'Erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $this->sell_content['working'] ); ?>" />
+				<p><span class="description"><?php _e( 'Option, während der Zahlungsverarbeitung eine benutzerdefinierte Schaltflächenbeschriftung anzuzeigen. HTML ist erlaubt.', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3><?php _e( 'Purchase Template', 'bonips' ); ?></h3>
-			<p><span class="description"><?php _e( 'The content will be replaced with this template when viewed by a user that has not paid for the content but can afford to pay.', 'bonips' ); ?></span></p>
+			<h3><?php _e( 'Kaufvorlage', 'bonips' ); ?></h3>
+			<p><span class="description"><?php _e( 'Der Inhalt wird durch diese Vorlage ersetzt, wenn ein Benutzer ihn noch nicht bezahlt hat, sich die Zahlung aber leisten kann.', 'bonips' ); ?></span></p>
 <?php
 
 			wp_editor( $this->sell_content['templates']['members'], $this->field_id( array( 'templates' => 'members' ) ), array(
@@ -854,8 +854,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3><?php _e( 'Insufficient Funds Template', 'bonips' ); ?></h3>
-			<p><span class="description"><?php _e( 'The content will be replaced with this template when viewed by a user that has not paid for the content and can not afford to pay.', 'bonips' ); ?></span></p>
+			<h3><?php _e( 'Vorlage für unzureichendes Guthaben', 'bonips' ); ?></h3>
+			<p><span class="description"><?php _e( 'Der Inhalt wird durch diese Vorlage ersetzt, wenn ein Benutzer ihn noch nicht bezahlt hat und sich die Zahlung nicht leisten kann.', 'bonips' ); ?></span></p>
 <?php
 
 			wp_editor( $this->sell_content['templates']['cantafford'], $this->field_id( array( 'templates' => 'cantafford' ) ), array(
@@ -871,8 +871,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3><?php _e( 'Visitors Template', 'bonips' ); ?></h3>
-			<p><span class="description"><?php _e( 'The content will be replaced with this template when viewed by someone who is not logged in on your website.', 'bonips' ); ?></span></p>
+			<h3><?php _e( 'Vorlage für Besucher', 'bonips' ); ?></h3>
+			<p><span class="description"><?php _e( 'Der Inhalt wird durch diese Vorlage ersetzt, wenn ihn jemand ansieht, der auf Deiner Website nicht angemeldet ist.', 'bonips' ); ?></span></p>
 <?php
 
 			wp_editor( $this->sell_content['templates']['visitors'], $this->field_id( array( 'templates' => 'visitors' ) ), array(
@@ -1109,7 +1109,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 			add_meta_box(
 				'bonips-sell-content-setup',
-				apply_filters( 'bonips_sell_this_label', __( 'Sell Content', 'bonips' ), $this ),
+				apply_filters( 'bonips_sell_this_label', __( 'Inhalt verkaufen', 'bonips' ), $this ),
 				array( $this, 'metabox' ),
 				$post->post_type,
 				'side',
@@ -1128,7 +1128,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 		public function metabox( $post ) {
 
 			$settings   = bonips_sell_content_settings();
-			$expiration = apply_filters( 'bonips_sell_exp_title', __( 'Hour(s)', 'bonips' ) );
+			$expiration = apply_filters( 'bonips_sell_exp_title', __( 'Stunde(n)', 'bonips' ) );
 			$is_author  = ( ( $post->post_author == $this->current_user_id ) ? true : false );
 
 ?>
@@ -1168,7 +1168,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 						'expire' => 0 
 					), $sale_setup[0] );
 
-					$expiration_description = __( 'Never expires', 'bonips' );
+					$expiration_description = __( 'Läuft nie ab', 'bonips' );
 					if ( absint( $sale_setup['expire'] ) > 0 )
 						$expiration_description = $sale_setup['expire'] . ' ' . $expiration;
 
@@ -1177,7 +1177,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 		<div class="row row-narrow">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="form-group slim">
-					<label for="bonips-sell-this-<?php echo $point_type; ?>-status" class="slim"><input type="checkbox" name="bonips_sell_this[<?php echo $point_type; ?>][status]" id="bonips-sell-this-<?php echo $point_type; ?>-status"<?php if ( $sale_setup['status'] === 'enabled' ) echo ' checked="checked"'; ?> value="enabled" class="toggle-setup" data-type="<?php echo $point_type; ?>" /> <?php printf( __( 'Sell using %s', 'Point types name', 'bonips' ), $bonips->plural() ); ?></label>
+					<label for="bonips-sell-this-<?php echo $point_type; ?>-status" class="slim"><input type="checkbox" name="bonips_sell_this[<?php echo $point_type; ?>][status]" id="bonips-sell-this-<?php echo $point_type; ?>-status"<?php if ( $sale_setup['status'] === 'enabled' ) echo ' checked="checked"'; ?> value="enabled" class="toggle-setup" data-type="<?php echo $point_type; ?>" /> <?php printf( _x( 'Mit %s verkaufen', 'Name der Punkteart', 'bonips' ), $bonips->plural() ); ?></label>
 				</div>
 			</div>
 		</div>
@@ -1185,13 +1185,13 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 			<div class="row row-narrow padded-row bonips-sell-setup-container" id="bonips-sell-content-<?php echo $point_type; ?>-wrap" style="display: <?php if ( $sale_setup['status'] === 'enabled' ) echo 'block'; else echo 'none'; ?>;">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<div class="form-group slim">
-						<label for="bonips-sell-this-<?php echo $point_type; ?>-price"><?php _e( 'Price', 'bonips' ); ?></label>
+						<label for="bonips-sell-this-<?php echo $point_type; ?>-price"><?php _e( 'Preis', 'bonips' ); ?></label>
 						<input type="text" name="bonips_sell_this[<?php echo $point_type; ?>][price]" id="bonips-sell-this-<?php echo $point_type; ?>-price" class="form-control" value="<?php echo esc_attr( $sale_setup['price'] ); ?>" />
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<div class="form-group slim">
-						<label for="bonips-sell-this-<?php echo $point_type; ?>-expire"><?php _e( 'Expiration', 'bonips' ); ?></label>
+						<label for="bonips-sell-this-<?php echo $point_type; ?>-expire"><?php _e( 'Ablauf', 'bonips' ); ?></label>
 						<input type="text" name="bonips_sell_this[<?php echo $point_type; ?>][expire]" id="bonips-sell-this-<?php echo $point_type; ?>-expire" class="form-control" value="<?php echo absint( $sale_setup['expire'] ); ?>" />
 					</div>
 				</div>

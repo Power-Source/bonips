@@ -280,7 +280,7 @@ if ( ! function_exists( 'bonips_display_badge_requirement' ) ) :
 					if ( $requirement['by'] == 'count' )
 						$rendered_row = sprintf( _x( '%s für "%s" x %d', '"Punkte“ für "Referenz“ x mal', 'bonips' ), $bonips->plural(), $requirement['ref'], $requirement['amount'] );
 					else
-						$rendered_row = sprintf( _x( '%s %s für "%s"', '"Gewinnt/Verloren" "x Punkte" für "Referenz"', 'bonips' ), ( ( $requirement['amount'] < 0 ) ? __( 'Lost', 'bonips' ) : __( 'Gained', 'bonips' ) ), $bonips->format_creds( $requirement['amount'] ), $requirement['ref'] );
+						$rendered_row = sprintf( _x( '%s %s für "%s"', '"Gewinnt/Verloren" "x Punkte" für "Referenz"', 'bonips' ), ( ( $requirement['amount'] < 0 ) ? __( 'Verloren', 'bonips' ) : __( 'Erhalten', 'bonips' ) ), $bonips->format_creds( $requirement['amount'] ), $requirement['ref'] );
 
 					$compare = _x( 'OR', 'Comparison of badge requirements. A OR B', 'bonips' );
 					if ( $setup['compare'] === 'AND' )

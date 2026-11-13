@@ -189,7 +189,7 @@ if ( ! function_exists( 'bonips_get_stat_dates' ) ) :
 						$new_start = $start + ( WEEK_IN_SECONDS * $i );
 
 					$results[] = array(
-						'label' => sprintf( __( 'Week %d', 'bonips' ), date_i18n( 'W', $new_start ) ),
+						'label' => sprintf( __( 'Woche %d', 'bonips' ), date_i18n( 'W', $new_start ) ),
 						'from'  => $new_start,
 						'until' => ( $new_start + WEEK_IN_SECONDS )
 					);
@@ -400,11 +400,11 @@ if ( ! function_exists( 'bonips_get_stats_cache_times' ) ) :
 	function bonips_get_stats_cache_times() {
 
 		$options = array(
-			'off'       => __( 'Disabled', 'bonips' ),
-			'hourly'    => __( 'Clear data once an hour', 'bonips' ),
-			'sixhours'  => __( 'Clear data every six hours', 'bonips' ),
-			'twiceaday' => __( 'Clear data twice a day', 'bonips' ),
-			'daily'     => __( 'Clear data once a day', 'bonips' )
+			'off'       => __( 'Deaktiviert', 'bonips' ),
+			'hourly'    => __( 'Daten einmal pro Stunde löschen', 'bonips' ),
+			'sixhours'  => __( 'Daten alle sechs Stunden löschen', 'bonips' ),
+			'twiceaday' => __( 'Daten zweimal täglich löschen', 'bonips' ),
+			'daily'     => __( 'Daten einmal täglich löschen', 'bonips' )
 		);
 
 		return apply_filters( 'bonips_stats_cache_times', $options );
@@ -632,7 +632,7 @@ if ( ! function_exists( 'bonips_get_gains_vs_losses_data' ) ) :
 
 			$row          = new StdClass();
 			$row->value   = $type_object->number( ( isset( $query->gains ) && $query->gains !== NULL ) ? $query->gains : 0 );
-			$row->label   = __( 'Gains', 'bonips' );
+			$row->label   = __( 'Gewinne', 'bonips' );
 			$row->type    = 'comp';
 			$row->color   = $color['positive'];
 
@@ -640,7 +640,7 @@ if ( ! function_exists( 'bonips_get_gains_vs_losses_data' ) ) :
 
 			$row          = new StdClass();
 			$row->value   = $type_object->number( ( isset( $query->losses ) && $query->losses !== NULL ) ? abs( $query->losses ) : 0 );
-			$row->label   = __( 'Losses', 'bonips' );
+			$row->label   = __( 'Verluste', 'bonips' );
 			$row->type    = 'comp';
 			$row->color   = $color['negative'];
 

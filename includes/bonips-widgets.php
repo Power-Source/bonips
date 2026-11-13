@@ -390,7 +390,7 @@ if ( ! class_exists( 'boniPS_Widget_Leaderboard' ) ) :
 <p class="boniPS-widget-field">
 	<label for="<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"><?php _e( 'Offset', 'bonips' ); ?>:</label>
 	<input id="<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'offset' ) ); ?>" type="text" value="<?php echo absint( $offset ); ?>" size="3" class="widefat" />
-	<small><?php _e( 'Optional offset of order. Use zero to return the first in the list.', 'bonips' ); ?></small>
+	<small><?php _e( 'Optionaler Versatz der Reihenfolge. Verwende null, um den ersten Eintrag der Liste zurückzugeben.', 'bonips' ); ?></small>
 </p>
 <p class="boniPS-widget-field">
 	<label for="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>"><?php _e( 'Sortierung', 'bonips' ); ?>:</label> 

@@ -163,22 +163,22 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<h3><?php _e( 'Details', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'title' ); ?>"><?php _e( 'Title', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'title' ); ?>"><?php _e( 'Titel', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'title' ); ?>" id="<?php echo $this->field_id( 'title' ); ?>" value="<?php echo esc_attr( $prefs['title'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo URL', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo-URL', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'logo_url' ); ?>" id="<?php echo $this->field_id( 'logo_url' ); ?>" value="<?php echo esc_attr( $prefs['logo_url'] ); ?>" class="form-control" />
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-		<h3><?php _e( 'Setup', 'bonips' ); ?></h3>
+		<h3><?php _e( 'Einrichtung', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'currency' ); ?>"><?php _e( 'Currency', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'currency' ); ?>"><?php _e( 'Währung', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'currency' ); ?>" id="<?php echo $this->field_id( 'currency' ); ?>" value="<?php echo esc_attr( $prefs['currency'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label><?php _e( 'Exchange Rates', 'bonips' ); ?></label>
+			<label><?php _e( 'Wechselkurse', 'bonips' ); ?></label>
 
 			<?php $this->exchange_rate_setup(); ?>
 
@@ -188,7 +188,7 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 <div class="row">
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="form-group">
-			<label for="buycredbanktransferaccount"><?php _e( 'Bank Account Information', 'bonips' ); ?></label>
+			<label for="buycredbanktransferaccount"><?php _e( 'Bankkontodaten', 'bonips' ); ?></label>
 			<?php wp_editor( $prefs['account'], 'buycredbanktransferaccount', array( 'textarea_name' => $this->field_name( 'account' ), 'textarea_rows' => 10 ) ); ?>
 		</div>
 	</div>

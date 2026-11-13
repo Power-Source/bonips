@@ -374,7 +374,7 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 
 			$metabox->add_field( 'select', array(
 				'name'          => $this->get_field_name( 'type' ),
-				'label'         => array( 'text' => __( 'Point Type', 'bonips' ) ),
+				'label'         => array( 'text' => __( 'Punktetyp', 'bonips' ) ),
 				'options'       => bonips_get_types(),
 				'desc'          => __( 'Wähle den Punkttyp aus, den Du als Zahlung in Deinem Shop akzeptieren möchtest. Wenn dieser Shop nur Punkte als Zahlungsmittel akzeptiert, stelle sicher, dass Du denselben Punktetyp auswählst, den Du als Geschäftswährung festgelegt hast!', 'bonips' )
 			) );

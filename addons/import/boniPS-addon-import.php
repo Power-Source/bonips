@@ -10,7 +10,7 @@
 // Translate Header (by Dan bp-fr)
 $bonips_addon_header_translate = array(
 	__( 'Import', 'bonips' ),
-	__( 'With the Import add-on you can import CSV files, CubePoints or existing points under any custom user meta values.', 'bonips' )
+	__( 'Mit dem Import-Add-on kannst Du CSV-Dateien, CubePoints oder vorhandene Punkte aus benutzerdefinierten Benutzer-Metadaten importieren.', 'bonips' )
 );
 
 if ( !defined( 'boniPS_VERSION' ) ) exit;
@@ -88,16 +88,16 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 		public function get( $save = false ) {
 			// Defaults
 			$installed['csv'] = array(
-				'title'        => __( 'CSV File', 'bonips' ),
-				'description'  => __( 'Import %_plural% from a comma-separated values (CSV) file.', 'bonips' )
+				'title'        => __( 'CSV-Datei', 'bonips' ),
+				'description'  => __( 'Importiere %_plural% aus einer CSV-Datei mit kommagetrennten Werten.', 'bonips' )
 			);
 			$installed['cubepoints'] = array(
 				'title'       => __( 'CubePoints', 'bonips' ),
-				'description' => __( 'Import CubePoints', 'bonips' )
+				'description' => __( 'CubePoints importieren', 'bonips' )
 			);
 			$installed['custom'] = array(
-				'title'       => __( 'Custom User Meta', 'bonips' ),
-				'description' => __( 'Import %_plural% from pre-existing custom user meta.', 'bonips' )
+				'title'       => __( 'Benutzerdefinierte Benutzer-Metadaten', 'bonips' ),
+				'description' => __( 'Importiere %_plural% aus vorhandenen benutzerdefinierten Benutzer-Metadaten.', 'bonips' )
 			);
 			$installed = apply_filters( 'bonips_setup_imports', $installed );
 
@@ -214,7 +214,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 		public function import_csv() {
 			// We need a file. or else...
 			if ( !isset( $_FILES['bonips_csv'] ) || empty( $_FILES['bonips_csv']['tmp_name'] ) ) {
-				$this->errors = __( 'No file selected. Please select your CSV file and try again.', 'bonips' );
+				$this->errors = __( 'Keine Datei ausgewählt. Bitte wähle Deine CSV-Datei aus und versuche es erneut.', 'bonips' );
 				return;
 			}
 
@@ -229,7 +229,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 			// Failed to load file
 			if ( !$csv->load( $file ) ) {
-				$this->errors = __( 'Failed to load file.', 'bonips' );
+				$this->errors = __( 'Die Datei konnte nicht geladen werden.', 'bonips' );
 				return;
 			}
 
@@ -250,7 +250,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 			// Throw an error if there were no imports just skipps
 			if ( $this->imports == 0 && $this->skipped != 0 ) {
 				$this->errors = sprintf(
-					__( 'Zero rows imported! Skipped %d entries. Import completed in %.2f seconds.', 'bonips' ),
+					__( 'Keine Zeilen importiert! %d Einträge übersprungen. Der Import wurde in %.2f Sekunden abgeschlossen.', 'bonips' ),
 					$this->skipped,
 					$exec_time
 				);
@@ -259,13 +259,13 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 			// Throw an error if there were no imports and no skipps
 			elseif ( $this->imports == 0 && $this->skipped == 0 ) {
-				$this->errors = __( 'No valid records found in file. Make sure you have selected the correct way to identify users in the bonips_user column!', 'bonips' );
+				$this->errors = __( 'Keine gültigen Datensätze in der Datei gefunden. Stelle sicher, dass Du die richtige Art zur Identifizierung der Benutzer in der Spalte bonips_user ausgewählt hast!', 'bonips' );
 				return;
 			}
 
 			// The joy of success
 			$this->import_ok = sprintf(
-				__( 'Import successfully completed. A total of %d users were effected and %d entires were skipped. Import completed in %.2f seconds.', 'bonips' ),
+				__( 'Import erfolgreich abgeschlossen. Insgesamt waren %d Benutzer betroffen und %d Einträge wurden übersprungen. Der Import wurde in %.2f Sekunden abgeschlossen.', 'bonips' ),
 				$this->imports,
 				$this->skipped,
 				$exec_time
@@ -299,7 +299,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 			// No results
 			if ( $wpdb->num_rows == 0 ) {
-				$this->errors = __( 'No CubePoints found.', 'bonips' );
+				$this->errors = __( 'Keine CubePoints gefunden.', 'bonips' );
 				return;
 			}
 
@@ -333,7 +333,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 			// Throw an error if there were no imports just skipps
 			if ( $this->imports == 0 && $this->skipped != 0 ) {
 				$this->errors = sprintf(
-					__( 'Zero CubePoints imported! Skipped %d entries. Import completed in %.2f seconds.', 'bonips' ),
+					__( 'Keine CubePoints importiert! %d Einträge übersprungen. Der Import wurde in %.2f Sekunden abgeschlossen.', 'bonips' ),
 					$this->skipped,
 					$exec_time
 				);
@@ -342,13 +342,13 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 			// Throw an error if there were no imports and no skipps
 			elseif ( $this->imports == 0 && $this->skipped == 0 ) {
-				$this->errors = __( 'No valid CubePoints founds.', 'bonips' );
+				$this->errors = __( 'Keine gültigen CubePoints gefunden.', 'bonips' );
 				return;
 			}
 
 			// The joy of success
 			$this->import_ok = sprintf(
-				__( 'Import successfully completed. A total of %d users were effected and %d entires were skipped. Import completed in %.2f seconds.', 'bonips' ),
+				__( 'Import erfolgreich abgeschlossen. Insgesamt waren %d Benutzer betroffen und %d Einträge wurden übersprungen. Der Import wurde in %.2f Sekunden abgeschlossen.', 'bonips' ),
 				$this->imports,
 				$this->skipped,
 				$exec_time
@@ -368,7 +368,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 		 */
 		public function import_custom() {
 			if ( !isset( $_POST['meta_key'] ) || empty( $_POST['meta_key'] ) ) {
-				$this->errors = __( 'Missing meta key. Not sure what I should be looking for.', 'bonips' );
+				$this->errors = __( 'Der Metaschlüssel fehlt. Der gesuchte Wert ist nicht bekannt.', 'bonips' );
 				return;
 			}
 
@@ -387,7 +387,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 			// No results
 			if ( $wpdb->num_rows == 0 ) {
-				$this->errors = sprintf( __( 'No rows found for the <strong>%s</strong> meta key.', 'bonips' ), $meta_key );
+				$this->errors = sprintf( __( 'Keine Zeilen für den Metaschlüssel <strong>%s</strong> gefunden.', 'bonips' ), $meta_key );
 				return;
 			}
 
@@ -420,7 +420,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 			// Throw an error if there were no imports just skipps
 			if ( $this->imports == 0 && $this->skipped != 0 ) {
 				$this->errors = sprintf(
-					__( 'Zero rows imported! Skipped %d entries. Import completed in %.2f seconds.', 'bonips' ),
+					__( 'Keine Zeilen importiert! %d Einträge übersprungen. Der Import wurde in %.2f Sekunden abgeschlossen.', 'bonips' ),
 					$this->skipped,
 					$exec_time
 				);
@@ -429,13 +429,13 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 			// Throw an error if there were no imports and no skipps
 			elseif ( $this->imports == 0 && $this->skipped == 0 ) {
-				$this->errors = __( 'No valid records founds.', 'bonips' );
+				$this->errors = __( 'Keine gültigen Datensätze gefunden.', 'bonips' );
 				return;
 			}
 
 			// The joy of success
 			$this->import_ok = sprintf(
-				__( 'Import successfully completed. A total of %d users were effected and %d entires were skipped. Import completed in %.2f seconds.', 'bonips' ),
+				__( 'Import erfolgreich abgeschlossen. Insgesamt waren %d Benutzer betroffen und %d Einträge wurden übersprungen. Der Import wurde in %.2f Sekunden abgeschlossen.', 'bonips' ),
 				$this->imports,
 				$this->skipped,
 				$exec_time
@@ -455,7 +455,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 		 */
 		public function admin_page() {
 			// Security
-			if ( !$this->core->can_edit_plugin( get_current_user_id() ) ) wp_die( __( 'Access Denied', 'bonips' ) );
+			if ( !$this->core->can_edit_plugin( get_current_user_id() ) ) wp_die( __( 'Zugriff verweigert', 'bonips' ) );
 
 			// Available Imports
 			if ( empty( $this->installed ) )
@@ -463,7 +463,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 	<div class="wrap list" id="boniPS-wrap">
 		<div id="icon-boniPS" class="icon32"><br /></div>
-		<h2><?php echo sprintf( __( '%s Import', 'bonips' ), bonips_label() ); ?></h2>
+		<h2><?php echo sprintf( __( '%s-Import', 'bonips' ), bonips_label() ); ?></h2>
 <?php
 			// Errors
 			if ( !empty( $this->errors ) ) {
@@ -475,7 +475,7 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 				echo '<div class="updated"><p>' . $this->import_ok . '</p></div>';
 			} ?>
 
-		<p><?php _e( 'Remember to de-activate this add-on once you are done importing!', 'bonips' ); ?></p>
+		<p><?php _e( 'Denke daran, dieses Add-on nach dem Import zu deaktivieren!', 'bonips' ); ?></p>
 			<div class="list-items expandable-li" id="accordion">
 <?php
 			if ( !empty( $this->installed ) ) {
@@ -506,55 +506,55 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 					<form class="add:the-list: validate" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="selected-import" value="csv" />
 						<p><?php echo nl2br( $this->core->template_tags_general( $data['description'] ) ); ?></p>
-						<label class="subheader" for="bonips-csv-file"><?php _e( 'File', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-csv-file"><?php _e( 'Datei', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div><input type="file" name="bonips_csv" id="bonips-csv-file" value="" aria-required="true" /></div>
-								<span class="description"><?php echo __( 'Maximum allowed upload size is ', 'bonips' ) . $upload_mb . ' Mb<br />' . __( 'Required columns: <code>bonips_user</code> and <code>bonips_amount</code>. Optional columns: <code>bonips_log</code>.', 'bonips' ); ?></span>
+								<span class="description"><?php echo __( 'Die maximal zulässige Uploadgröße beträgt ', 'bonips' ) . $upload_mb . ' Mb<br />' . __( 'Erforderliche Spalten: <code>bonips_user</code> und <code>bonips_amount</code>. Optionale Spalte: <code>bonips_log</code>.', 'bonips' ); ?></span>
 							</li>
 						</ol>
-						<label class="subheader"><?php _e( 'Identify Users By', 'bonips' ); ?></label>
+						<label class="subheader"><?php _e( 'Benutzer identifizieren anhand von', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<input type="radio" name="id_user_by" id="bonips-csv-by-id" value="id" checked="checked" /><label for="bonips-csv-by-id"><?php _e( 'ID', 'bonips' ); ?></label><br />
-								<input type="radio" name="id_user_by" id="bonips-csv-by-login" value="login" /><label for="bonips-csv-by-login"><?php _e( 'Username', 'bonips' ); ?></label><br />
-								<input type="radio" name="id_user_by" id="bonips-csv-by-email" value="email" /><label for="bonips-csv-by-email"><?php _e( 'Email', 'bonips' ); ?></label>
+								<input type="radio" name="id_user_by" id="bonips-csv-by-login" value="login" /><label for="bonips-csv-by-login"><?php _e( 'Benutzername', 'bonips' ); ?></label><br />
+								<input type="radio" name="id_user_by" id="bonips-csv-by-email" value="email" /><label for="bonips-csv-by-email"><?php _e( 'E-Mail', 'bonips' ); ?></label>
 							</li>
 						</ol>
-						<label class="subheader" for="bonips-csv-xrate"><?php _e( 'Exchange Rate', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-csv-xrate"><?php _e( 'Wechselkurs', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div class="h2"><input type="text" name="xrate" id="bonips-csv-xrate" value="<?php echo $this->core->format_number( 1 ); ?>" class="short" /> = <?php echo $this->core->format_creds( 1 ); ?></div>
-								<span class="description"><?php _e( 'How much is 1 imported value worth?', 'bonips' ); ?></span>
+								<span class="description"><?php _e( 'Wie viel ist 1 importierter Wert wert?', 'bonips' ); ?></span>
 							</li>
 						</ol>
 						<ol class="inline">
 							<li>
-								<label><?php _e( 'Round', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-csv-round-none" value="none" checked="checked" /> <label for="bonips-csv-round-none"><?php _e( 'None', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-csv-round-up" value="up" /> <label for="bonips-csv-round-up"><?php _e( 'Round Up', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-csv-round-down" value="down" /> <label for="bonips-csv-round-down"><?php _e( 'Round Down', 'bonips' ); ?></label>
+								<label><?php _e( 'Runden', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-csv-round-none" value="none" checked="checked" /> <label for="bonips-csv-round-none"><?php _e( 'Keine', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-csv-round-up" value="up" /> <label for="bonips-csv-round-up"><?php _e( 'Aufrunden', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-csv-round-down" value="down" /> <label for="bonips-csv-round-down"><?php _e( 'Abrunden', 'bonips' ); ?></label>
 							</li>
 							<?php if ( $this->core->format['decimals'] > 0 ) { ?>
 
 							<li>
-								<label for="bonips-csv-precision"><?php _e( 'Precision', 'bonips' ); ?></label>
+								<label for="bonips-csv-precision"><?php _e( 'Genauigkeit', 'bonips' ); ?></label>
 								<div class="h2"><input type="text" name="precision" id="bonips-csv-precision" value="1" class="short" /></div>
-								<span class="description"><?php echo __( 'The optional number of decimal digits to round to. Use zero to round the nearest whole number.', 'bonips' ); ?></span>
+								<span class="description"><?php echo __( 'Optionale Anzahl der Dezimalstellen für die Rundung. Verwende null, um auf die nächste ganze Zahl zu runden.', 'bonips' ); ?></span>
 							</li>
 							<?php } ?>
 
 						</ol>
-						<label class="subheader" for="bonips-csv-log-template"><?php _e( 'Log Entry', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-csv-log-template"><?php _e( 'Protokolleintrag', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div class="h2"><input type="text" name="log_template" id="bonips-csv-log-template" value="" class="long" /></div>
-								<span class="description"><?php _e( 'See the help tab for available template tags. Leave blank to disable.', 'bonips' ); ?></span>
+								<span class="description"><?php _e( 'Verfügbare Vorlagen-Tags findest Du im Hilfe-Tab. Leer lassen zum Deaktivieren.', 'bonips' ); ?></span>
 							</li>
 						</ol>
 						<ol>
 							<li>
-								<input type="submit" name="submit" id="bonips-csv-submit" value="<?php _e( 'Run Import', 'bonips' ); ?>" class="button button-primary button-large" />
+								<input type="submit" name="submit" id="bonips-csv-submit" value="<?php _e( 'Import starten', 'bonips' ); ?>" class="button button-primary button-large" />
 							</li>
 						</ol>
 					</form>
@@ -581,16 +581,16 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 						<p><?php
 
 			if ( $cp_users > 0 )
-				echo sprintf( __( 'Found %d users with CubePoints.', 'bonips' ), $cp_users );
+				echo sprintf( __( '%d Benutzer mit CubePoints gefunden.', 'bonips' ), $cp_users );
 			else
-				_e( 'No CubePoints found.', 'bonips' ); ?></p>
-						<label class="subheader" for="bonips-cubepoints-user-meta-key"><?php _e( 'Meta Key', 'bonips' ); ?></label>
+				_e( 'Keine CubePoints gefunden.', 'bonips' ); ?></p>
+						<label class="subheader" for="bonips-cubepoints-user-meta-key"><?php _e( 'Metaschlüssel', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div class="h2"><input type="text" name="meta_key" id="bonips-cubepoints-user-meta-key" value="cpoints" class="disabled medium" disabled="disabled" /></div>
 							</li>
 						</ol>
-						<label class="subheader" for="bonips-cubepoints-xrate"><?php _e( 'Exchange Rate', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-cubepoints-xrate"><?php _e( 'Wechselkurs', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div class="h2"><input type="text" name="xrate" id="bonips-cubepoints-xrate" value="<?php echo $this->core->format_number( 1 ); ?>" class="short" /><?php echo 'CubePoint'; ?> = <?php echo $this->core->format_creds( 1 ); ?></div>
@@ -598,37 +598,37 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 						</ol>
 						<ol class="inline">
 							<li>
-								<label><?php _e( 'Round', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-cubepoints-round-none" value="none" checked="checked" /> <label for="bonips-cubepoints-round-none"><?php _e( 'Do not round', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-cubepoints-round-up" value="up" /> <label for="bonips-cubepoints-round-up"><?php _e( 'Round Up', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-cubepoints-round-down" value="down" /> <label for="bonips-cubepoints-round-down"><?php _e( 'Round Down', 'bonips' ); ?></label>
+								<label><?php _e( 'Runden', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-cubepoints-round-none" value="none" checked="checked" /> <label for="bonips-cubepoints-round-none"><?php _e( 'Nicht runden', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-cubepoints-round-up" value="up" /> <label for="bonips-cubepoints-round-up"><?php _e( 'Aufrunden', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-cubepoints-round-down" value="down" /> <label for="bonips-cubepoints-round-down"><?php _e( 'Abrunden', 'bonips' ); ?></label>
 							</li>
 							<?php if ( $this->core->format['decimals'] > 0 ) { ?>
 
 							<li>
-								<label for="bonips-cubepoints-precision"><?php _e( 'Precision', 'bonips' ); ?></label>
+								<label for="bonips-cubepoints-precision"><?php _e( 'Genauigkeit', 'bonips' ); ?></label>
 								<div class="h2"><input type="text" name="precision" id="bonips-cubepoints-precision" value="1" class="short" /></div>
-								<span class="description"><?php echo __( 'The optional number of decimal digits to round to. Use zero to round the nearest whole number.', 'bonips' ); ?></span>
+								<span class="description"><?php echo __( 'Optionale Anzahl der Dezimalstellen für die Rundung. Verwende null, um auf die nächste ganze Zahl zu runden.', 'bonips' ); ?></span>
 							</li>
 							<?php } ?>
 
 						</ol>
-						<label class="subheader" for="bonips-cubepoints-delete"><?php _e( 'After Import', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-cubepoints-delete"><?php _e( 'Nach dem Import', 'bonips' ); ?></label>
 						<ol>
 							<li>
-								<input type="checkbox" name="delete" id="bonips-cubepoints-delete" value="no" /> <label for="bonips-cubepoints-delete"><?php _e( 'Delete users CubePoints balance.', 'bonips' ); ?></label>
+								<input type="checkbox" name="delete" id="bonips-cubepoints-delete" value="no" /> <label for="bonips-cubepoints-delete"><?php _e( 'CubePoints-Guthaben der Benutzer löschen.', 'bonips' ); ?></label>
 							</li>
 						</ol>
-						<label class="subheader" for="bonips-cubepoints-log-template"><?php _e( 'Log Entry', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-cubepoints-log-template"><?php _e( 'Protokolleintrag', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div class="h2"><input type="text" name="log_template" id="bonips-cubepoints-log-template" value="" class="long" /></div>
-								<span class="description"><?php _e( 'See the help tab for available template tags. Leave blank to disable.', 'bonips' ); ?></span>
+								<span class="description"><?php _e( 'Verfügbare Vorlagen-Tags findest Du im Hilfe-Tab. Leer lassen zum Deaktivieren.', 'bonips' ); ?></span>
 							</li>
 						</ol>
 						<ol>
 							<li>
-								<input type="submit" name="submit" id="bonips-cubepoints-submit" value="<?php _e( 'Run Import', 'bonips' ); ?>" class="button button-primary button-large" />
+								<input type="submit" name="submit" id="bonips-cubepoints-submit" value="<?php _e( 'Import starten', 'bonips' ); ?>" class="button button-primary button-large" />
 							</li>
 						</ol>
 					</form>
@@ -648,13 +648,13 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 					<form class="add:the-list: validate" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="selected-import" value="custom" />
 						<p><?php echo nl2br( $this->core->template_tags_general( $data['description'] ) ); ?></p>
-						<label class="subheader" for="bonips-custom-user-meta-key"><?php _e( 'Meta Key', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-custom-user-meta-key"><?php _e( 'Metaschlüssel', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div class="h2"><input type="text" name="meta_key" id="bonips-custom-user-meta-key" value="" class="medium" /></div>
 							</li>
 						</ol>
-						<label class="subheader" for="bonips-custom-xrate"><?php _e( 'Exchange Rate', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-custom-xrate"><?php _e( 'Wechselkurs', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div class="h2"><input type="text" name="xrate" id="bonips-custom-xrate" value="<?php echo $this->core->format_number( 1 ); ?>" class="short" /> = <?php echo $this->core->format_creds( 1 ); ?></div>
@@ -662,37 +662,37 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 						</ol>
 						<ol class="inline">
 							<li>
-								<label><?php _e( 'Round', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-custom-round-none" value="none" checked="checked" /> <label for="bonips-custom-round-none"><?php _e( 'Do not round', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-custom-round-up" value="up" /> <label for="bonips-custom-round-up"><?php _e( 'Round Up', 'bonips' ); ?></label><br />
-								<input type="radio" name="round" id="bonips-custom-round-down" value="down" /> <label for="bonips-custom-round-down"><?php _e( 'Round Down', 'bonips' ); ?></label>
+								<label><?php _e( 'Runden', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-custom-round-none" value="none" checked="checked" /> <label for="bonips-custom-round-none"><?php _e( 'Nicht runden', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-custom-round-up" value="up" /> <label for="bonips-custom-round-up"><?php _e( 'Aufrunden', 'bonips' ); ?></label><br />
+								<input type="radio" name="round" id="bonips-custom-round-down" value="down" /> <label for="bonips-custom-round-down"><?php _e( 'Abrunden', 'bonips' ); ?></label>
 							</li>
 							<?php if ( $this->core->format['decimals'] > 0 ) { ?>
 
 							<li>
-								<label for="bonips-custom-precision"><?php _e( 'Precision', 'bonips' ); ?></label>
+								<label for="bonips-custom-precision"><?php _e( 'Genauigkeit', 'bonips' ); ?></label>
 								<div class="h2"><input type="text" name="precision" id="bonips-custom-precision" value="1" class="short" /></div>
-								<span class="description"><?php echo __( 'The optional number of decimal digits to round to. Use zero to round the nearest whole number.', 'bonips' ); ?></span>
+								<span class="description"><?php echo __( 'Optionale Anzahl der Dezimalstellen für die Rundung. Verwende null, um auf die nächste ganze Zahl zu runden.', 'bonips' ); ?></span>
 							</li>
 							<?php } ?>
 
 						</ol>
-						<label class="subheader" for="bonips-custom-log-template"><?php _e( 'Log Entry', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-custom-log-template"><?php _e( 'Protokolleintrag', 'bonips' ); ?></label>
 						<ol>
 							<li>
 								<div class="h2"><input type="text" name="log_template" id="bonips-custom-log-template" value="" class="long" /></div>
-								<span class="description"><?php _e( 'See the help tab for available template tags. Leave blank to disable.', 'bonips' ); ?></span>
+								<span class="description"><?php _e( 'Verfügbare Vorlagen-Tags findest Du im Hilfe-Tab. Leer lassen zum Deaktivieren.', 'bonips' ); ?></span>
 							</li>
 						</ol>
-						<label class="subheader" for="bonips-custom-delete"><?php _e( 'After Import', 'bonips' ); ?></label>
+						<label class="subheader" for="bonips-custom-delete"><?php _e( 'Nach dem Import', 'bonips' ); ?></label>
 						<ol>
 							<li>
-								<input type="checkbox" name="delete" id="bonips-custom-delete" value="no" /> <label for="bonips-custom-delete"><?php _e( 'Delete the old value.', 'bonips' ); ?></label>
+								<input type="checkbox" name="delete" id="bonips-custom-delete" value="no" /> <label for="bonips-custom-delete"><?php _e( 'Den alten Wert löschen.', 'bonips' ); ?></label>
 							</li>
 						</ol>
 						<ol>
 							<li>
-								<input type="submit" name="submit" id="bonips-custom-submit" value="<?php _e( 'Run Import', 'bonips' ); ?>" class="button button-primary button-large" />
+								<input type="submit" name="submit" id="bonips-custom-submit" value="<?php _e( 'Import starten', 'bonips' ); ?>" class="button button-primary button-large" />
 							</li>
 						</ol>
 					</form>
@@ -715,12 +715,12 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 					$contents = file_get_contents( $fname );
 					if ( false === $contents ) {
-						trigger_error( __( 'Failed to get file contents.', 'bonips' ), E_USER_WARNING );
+						trigger_error( __( 'Der Dateiinhalt konnte nicht gelesen werden.', 'bonips' ), E_USER_WARNING );
 					}
 					$contents = substr( $contents, 3 );
 					$success = file_put_contents( $fname, $contents );
 					if ( false === $success ) {
-						trigger_error( __( 'Failed to put file contents.', 'bonips' ), E_USER_WARNING );
+						trigger_error( __( 'Der Dateiinhalt konnte nicht geschrieben werden.', 'bonips' ), E_USER_WARNING );
 					}
 				} else {
 					fclose( $res );
@@ -740,37 +740,37 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 				'id'		=> 'bonips-import',
 				'title'		=> __( 'Import', 'bonips' ),
 				'content'	=> '
-<p>' . $this->core->template_tags_general( __( 'This add-on lets you import %_plural% either though a CSV-file or from your database. Remember that the import can take time depending on your file size or the number of users being imported.', 'bonips' ) ) . '</p>'
+<p>' . $this->core->template_tags_general( __( 'Mit diesem Add-on kannst Du %_plural% aus einer CSV-Datei oder Deiner Datenbank importieren. Je nach Dateigröße oder Anzahl der Benutzer kann der Import einige Zeit dauern.', 'bonips' ) ) . '</p>'
 			) );
 			$screen->add_help_tab( array(
 				'id'		=> 'bonips-import-csv',
-				'title'		=> __( 'CSV File', 'bonips' ),
+				'title'		=> __( 'CSV-Datei', 'bonips' ),
 				'content'	=> '
-<p><strong>' . __( 'CSV Import', 'bonips' ) . '</strong></p>
-<p>' . __( 'Imports using a comma-separated values file requires the following columns:', 'bonips' ) . '</p>
-<p><code>bonips_user</code> ' . __( 'Column identifing the user. All rows must identify the user the same way, either using an ID, Username (user_login) or email. Users that can not be found will be ignored.', 'bonips' ) . '<br />
-<code>bonips_amount</code> ' . __( 'Column with the amount to be imported. If set, an exchange rate is applied to this value before import.', 'bonips' ) . '</p>
-<p>' . __( 'Optionally you can also use the <code>bonips_log</code> column to pre-define the log entry for each import.', 'bonips' ) . '</p>'
+<p><strong>' . __( 'CSV-Import', 'bonips' ) . '</strong></p>
+<p>' . __( 'Für den Import aus einer CSV-Datei mit kommagetrennten Werten sind folgende Spalten erforderlich:', 'bonips' ) . '</p>
+<p><code>bonips_user</code> ' . __( 'Spalte zur Identifizierung des Benutzers. Alle Zeilen müssen Benutzer auf dieselbe Weise identifizieren: anhand der ID, des Benutzernamens (user_login) oder der E-Mail-Adresse. Nicht gefundene Benutzer werden ignoriert.', 'bonips' ) . '<br />
+<code>bonips_amount</code> ' . __( 'Spalte mit dem zu importierenden Betrag. Falls festgelegt, wird vor dem Import ein Wechselkurs auf diesen Wert angewendet.', 'bonips' ) . '</p>
+<p>' . __( 'Optional kannst Du die Spalte <code>bonips_log</code> verwenden, um den Protokolleintrag für jeden Import vorzugeben.', 'bonips' ) . '</p>'
 			) );
 			$screen->add_help_tab( array(
 				'id'		=> 'bonips-import-cube',
 				'title'		=> __( 'Cubepoints', 'bonips' ),
 				'content'	=> '
-<p><strong>' . __( 'Cubepoints Import', 'bonips' ) . '</strong></p>
-<p>' . __( 'When this page loads, the importer will automatically check if you have been using Cubepoints. If you have, you can import these with the option to delete the original Cubepoints once completed to help keep your database clean.', 'bonips' ) . '</p>
-<p>' . __( 'Before a value is imported, you can apply an exchange rate. To import without changing the value, use 1 as the exchange rate.', 'bonips' ) . '</p>
-<p>' . __( 'You can select to add a log entry for each import or leave the template empty to skip.', 'bonips' ) . '</p>
-<p>' . __( 'The Cubepoints importer will automatically disable itself if no Cubepoints installation exists.', 'bonips' ) . '</p>'
+<p><strong>' . __( 'CubePoints-Import', 'bonips' ) . '</strong></p>
+<p>' . __( 'Beim Laden dieser Seite prüft der Importer automatisch, ob Du CubePoints verwendet hast. Falls ja, kannst Du diese importieren und anschließend optional die ursprünglichen CubePoints löschen.', 'bonips' ) . '</p>
+<p>' . __( 'Vor dem Import eines Werts kannst Du einen Wechselkurs anwenden. Verwende 1 als Wechselkurs, um den Wert unverändert zu importieren.', 'bonips' ) . '</p>
+<p>' . __( 'Du kannst für jeden Import einen Protokolleintrag hinzufügen oder die Vorlage leer lassen, um ihn zu überspringen.', 'bonips' ) . '</p>
+<p>' . __( 'Der CubePoints-Importer deaktiviert sich automatisch, wenn keine CubePoints-Installation vorhanden ist.', 'bonips' ) . '</p>'
 			) );
 			$screen->add_help_tab( array(
 				'id'		=> 'bonips-import-custom',
-				'title'		=> __( 'Custom User Meta', 'bonips' ),
+				'title'		=> __( 'Benutzerdefinierte Benutzer-Metadaten', 'bonips' ),
 				'content'	=> '
-<p><strong>' . __( 'Custom User Meta Import', 'bonips' ) . '</strong></p>
-<p>' . __( 'You can import any type of points that have previously been saved in your database. All you need is the meta key under which it has been saved.', 'bonips' ) . '</p>
-<p>' . __( 'Before a value is imported, you can apply an exchange rate. To import without changing the value, use 1 as the exchange rate.', 'bonips' ) . '</p>
-<p>' . __( 'You can select to add a log entry for each import or leave the template empty to skip.', 'bonips' ) . '</p>
-<p>' . __( 'Please note that the meta key is case sensitive and can not contain whitespaces!', 'bonips' ) . '</p>'
+<p><strong>' . __( 'Import benutzerdefinierter Benutzer-Metadaten', 'bonips' ) . '</strong></p>
+<p>' . __( 'Du kannst beliebige Punkte importieren, die bereits in Deiner Datenbank gespeichert sind. Du benötigst nur den Metaschlüssel, unter dem sie gespeichert wurden.', 'bonips' ) . '</p>
+<p>' . __( 'Vor dem Import eines Werts kannst Du einen Wechselkurs anwenden. Verwende 1 als Wechselkurs, um den Wert unverändert zu importieren.', 'bonips' ) . '</p>
+<p>' . __( 'Du kannst für jeden Import einen Protokolleintrag hinzufügen oder die Vorlage leer lassen, um ihn zu überspringen.', 'bonips' ) . '</p>
+<p>' . __( 'Beachte, dass beim Metaschlüssel Groß- und Kleinschreibung unterschieden wird und keine Leerzeichen erlaubt sind!', 'bonips' ) . '</p>'
 			) );
 		}
 	}

@@ -1412,7 +1412,7 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 			} else {
 				$page_links[] = sprintf( "<a class='first-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 					esc_url( remove_query_arg( 'paged', $current_url ) ),
-					__( 'Erste Seite' ),
+					__( 'Erste Seite', 'bonips' ),
 					'&laquo;'
 				);
 			}
@@ -1422,30 +1422,30 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 			} else {
 				$page_links[] = sprintf( "<a class='prev-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 					esc_url( add_query_arg( 'paged', max( 1, $current-1 ), $current_url ) ),
-					__( 'Vorherige Seite' ),
+					__( 'Vorherige Seite', 'bonips' ),
 					'&lsaquo;'
 				);
 			}
 	
 			if ( 'bottom' === $location ) {
 				$html_current_page  = $current;
-				$total_pages_before = '<span class="screen-reader-text">' . __( 'Aktuelle Seite' ) . '</span><span id="table-paging" class="paging-input">';
+				$total_pages_before = '<span class="screen-reader-text">' . __( 'Aktuelle Seite', 'bonips' ) . '</span><span id="table-paging" class="paging-input">';
 			} else {
 				$html_current_page = sprintf( "%s<input class='current-page' id='current-page-selector' type='text' name='paged' value='%s' size='%d' aria-describedby='table-paging' />",
-					'<label for="current-page-selector" class="screen-reader-text">' . __( 'Aktuelle Seite' ) . '</label>',
+					'<label for="current-page-selector" class="screen-reader-text">' . __( 'Aktuelle Seite', 'bonips' ) . '</label>',
 					$current,
 					strlen( $total_pages )
 				);
 			}
 			$html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
-			$page_links[]     = $total_pages_before . sprintf( _x( '%1$s von %2$s', 'paging' ), $html_current_page, $html_total_pages ) . $total_pages_after;
+			$page_links[]     = $total_pages_before . sprintf( _x( '%1$s von %2$s', 'paging', 'bonips' ), $html_current_page, $html_total_pages ) . $total_pages_after;
 	
 			if ( $disable_next ) {
 				$page_links[] = '<span class="tablenav-pages-navspan" aria-hidden="true">&rsaquo;</span>';
 			} else {
 				$page_links[] = sprintf( "<a class='next-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 					esc_url( add_query_arg( 'paged', min( $total_pages, $current+1 ), $current_url ) ),
-					__( 'Nächste Seite' ),
+					__( 'Nächste Seite', 'bonips' ),
 					'&rsaquo;'
 				);
 			}
@@ -1455,7 +1455,7 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 			} else {
 				$page_links[] = sprintf( "<a class='last-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 					esc_url( add_query_arg( 'paged', $total_pages, $current_url ) ),
-					__( 'Letzte Seite' ),
+					__( 'Letzte Seite', 'bonips' ),
 					'&raquo;'
 				);
 			}

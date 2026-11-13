@@ -73,7 +73,7 @@ if ( ! class_exists( 'boniPS_Nav_Menu' ) ) :
 				</div>
 				<p class="button-controls">
 					<span class="add-to-menu">
-						<input type="submit"<?php if ( function_exists( 'wp_nav_menu_disabled_check' ) ) : wp_nav_menu_disabled_check( $nav_menu_selected_id ); endif; ?> class="button-secondary submit-add-to-menu right" value="<?php esc_attr_e( 'Add to Menu', 'bonips' ); ?>" name="add-custom-menu-item" id="submit-bonips-menu" />
+						<input type="submit"<?php if ( function_exists( 'wp_nav_menu_disabled_check' ) ) : wp_nav_menu_disabled_check( $nav_menu_selected_id ); endif; ?> class="button-secondary submit-add-to-menu right" value="<?php esc_attr_e( 'Zum Menü hinzufügen', 'bonips' ); ?>" name="add-custom-menu-item" id="submit-bonips-menu" />
 						<span class="spinner"></span>
 					</span>
 				</p>

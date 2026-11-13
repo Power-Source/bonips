@@ -71,30 +71,30 @@ if ( ! function_exists( 'bonips_get_email_instances' ) ) :
 
 		$instances = array();
 
-		if ( $none ) $instances[''] = __( 'Select', 'bonips' );
+		if ( $none ) $instances[''] = __( 'Auswählen', 'bonips' );
 
-		$instances['any']      = __( 'users balance changes', 'bonips' );
-		$instances['positive'] = __( 'users balance increases', 'bonips' );
-		$instances['negative'] = __( 'users balance decreases', 'bonips' );
-		$instances['zero']     = __( 'users balance reaches zero', 'bonips' );
-		$instances['minus']    = __( 'users balance goes negative', 'bonips' );
+		$instances['any']      = __( 'sich das Guthaben eines Benutzers ändert', 'bonips' );
+		$instances['positive'] = __( 'das Guthaben eines Benutzers steigt', 'bonips' );
+		$instances['negative'] = __( 'das Guthaben eines Benutzers sinkt', 'bonips' );
+		$instances['zero']     = __( 'das Guthaben eines Benutzers null erreicht', 'bonips' );
+		$instances['minus']    = __( 'das Guthaben eines Benutzers negativ wird', 'bonips' );
 
 		if ( class_exists( 'boniPS_Badge_Module' ) ) {
-			$instances['badge_new'] = __( 'user gains a badge', 'bonips' );
-			$instances['badge_level'] = __( 'user gains a new badge level', 'bonips' );
+			$instances['badge_new'] = __( 'ein Benutzer ein Abzeichen erhält', 'bonips' );
+			$instances['badge_level'] = __( 'ein Benutzer eine neue Abzeichenstufe erreicht', 'bonips' );
 		}
 
 		if ( class_exists( 'boniPS_Ranks_Module' ) ) {
-			$instances['rank_up']   = __( 'user is promoted to a higher rank', 'bonips' );
-			$instances['rank_down'] = __( 'user is demoted to a lower rank', 'bonips' );
+			$instances['rank_up']   = __( 'ein Benutzer einen höheren Rang erreicht', 'bonips' );
+			$instances['rank_down'] = __( 'ein Benutzer auf einen niedrigeren Rang zurückgestuft wird', 'bonips' );
 		}
 
 		if ( class_exists( 'boniPS_Transfer_Module' ) ) {
-			$instances['transfer_out'] = __( 'user sends a transfer', 'bonips' );
-			$instances['transfer_in']  = __( 'user receives a transfer', 'bonips' );
+			$instances['transfer_out'] = __( 'ein Benutzer eine Überweisung sendet', 'bonips' );
+			$instances['transfer_in']  = __( 'ein Benutzer eine Überweisung erhält', 'bonips' );
 		}
 
-		$instances['custom']  = __( 'a custom event occurs', 'bonips' );
+		$instances['custom']  = __( 'ein benutzerdefiniertes Ereignis eintritt', 'bonips' );
 
 		return apply_filters( 'bonips_email_instances', $instances );
 

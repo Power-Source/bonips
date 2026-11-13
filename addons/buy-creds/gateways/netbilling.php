@@ -90,13 +90,13 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 
 						// Check amount paid
 						if ( $_REQUEST['Ecom_Cost_Total'] != $pending_payment->cost ) {
-							$new_call[] = sprintf( __( 'Price mismatch. Expected: %s Received: %s', 'bonips' ), $pending_payment->cost, $_REQUEST['Ecom_Cost_Total'] );
+							$new_call[] = sprintf( __( 'Der Preis stimmt nicht überein. Erwartet: %s Erhalten: %s', 'bonips' ), $pending_payment->cost, $_REQUEST['Ecom_Cost_Total'] );
 							$errors     = true;
 						}
 
 						// Check status
 						if ( $_REQUEST['Ecom_Ezic_Response_StatusCode'] != 1 ) {
-							$new_call[] = sprintf( __( 'Payment not completed. Received: %s', 'bonips' ), $_REQUEST['Ecom_Ezic_Response_StatusCode'] );
+							$new_call[] = sprintf( __( 'Die Zahlung wurde nicht abgeschlossen. Erhalten: %s', 'bonips' ), $_REQUEST['Ecom_Ezic_Response_StatusCode'] );
 							$errors     = true;
 						}
 
@@ -107,7 +107,7 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 							if ( $this->complete_payment( $pending_payment, $_REQUEST['Ecom_Ezic_Response_TransactionID'] ) )
 								$this->trash_pending_payment( $pending_post_id );
 							else
-								$new_call[] = __( 'Failed to credit users account.', 'bonips' );
+								$new_call[] = __( 'Das Benutzerkonto konnte nicht gutgeschrieben werden.', 'bonips' );
 
 						}
 
@@ -219,43 +219,43 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<h3><?php _e( 'Details', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'account' ); ?>"><?php _e( 'Account ID', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'account' ); ?>"><?php _e( 'Konto-ID', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'account' ); ?>" id="<?php echo $this->field_id( 'account' ); ?>" value="<?php echo esc_attr( $prefs['account'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'site_tag' ); ?>"><?php _e( 'Site Tag', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'site_tag' ); ?>"><?php _e( 'Website-Tag', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'site_tag' ); ?>" id="<?php echo $this->field_id( 'site_tag' ); ?>" value="<?php echo esc_attr( $prefs['site_tag'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'cryptokey' ); ?>"><?php _e( 'Order Integrity Key', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'cryptokey' ); ?>"><?php _e( 'Integritätsschlüssel der Bestellung', 'bonips' ); ?></label>
 			<input type="password" name="<?php echo $this->field_name( 'cryptokey' ); ?>" id="<?php echo $this->field_id( 'cryptokey' ); ?>" value="<?php echo esc_attr( $prefs['cryptokey'] ); ?>" class="form-control" />
-			<p><span class="description"><?php _e( 'Found under Step 12 on the Fraud Defense page.', 'bonips' ); ?></span></p>
+			<p><span class="description"><?php _e( 'Unter Schritt 12 auf der Fraud-Defense-Seite zu finden.', 'bonips' ); ?></span></p>
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'item_name' ); ?>"><?php _e( 'Item Name', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'item_name' ); ?>"><?php _e( 'Artikelname', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'item_name' ); ?>" id="<?php echo $this->field_id( 'item_name' ); ?>" value="<?php echo esc_attr( $prefs['item_name'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo URL', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo-URL', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'logo_url' ); ?>" id="<?php echo $this->field_id( 'logo_url' ); ?>" value="<?php echo esc_attr( $prefs['logo_url'] ); ?>" class="form-control" />
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-		<h3><?php _e( 'Setup', 'bonips' ); ?></h3>
+		<h3><?php _e( 'Einrichtung', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label><?php _e( 'Currency', 'bonips' ); ?></label>
+			<label><?php _e( 'Währung', 'bonips' ); ?></label>
 			<input type="text" readonly="readonly" class="form-control" name="<?php echo $this->field_name( 'currency' ); ?>" value="USD" />
 		</div>
 		<div class="form-group">
-			<label><?php _e( 'Exchange Rates', 'bonips' ); ?></label>
+			<label><?php _e( 'Wechselkurse', 'bonips' ); ?></label>
 
 			<?php $this->exchange_rate_setup(); ?>
 
 		</div>
 		<div class="form-group">
-			<label><?php _e( 'Postback CGI URL', 'bonips' ); ?></label>
+			<label><?php _e( 'Postback-CGI-URL', 'bonips' ); ?></label>
 			<code style="padding: 12px;display:block;"><?php echo $this->callback_url(); ?></code>
-			<p><?php _e( 'For this gateway to work, you must login to your NETbilling account and edit your site. Under "Default payment form settings" make sure the Postback CGI URL is set to the above address and "Return method" is set to POST.', 'bonips' ); ?></p>
+			<p><?php _e( 'Damit dieses Gateway funktioniert, melde Dich bei Deinem NETbilling-Konto an und bearbeite Deine Website. Stelle unter „Default payment form settings“ sicher, dass die Postback-CGI-URL auf die obige Adresse und „Return method“ auf POST gesetzt ist.', 'bonips' ); ?></p>
 		</div>
 	</div>
 </div>

@@ -81,7 +81,7 @@ if ( ! function_exists( 'bonips_render_shortcode_hook_table' ) ) :
 		<thead>
 			<tr>
 				<th class="column-instance" style="width: 60%;"><?php _e( 'Instance', 'bonips' ); ?></th>
-				<th class="column-amount" style="width: 20%;"><?php _e( 'Amount', 'bonips' ); ?></th>
+				<th class="column-amount" style="width: 20%;"><?php _e( 'Betrag', 'bonips' ); ?></th>
 				<th class="column-limit" style="width: 20%;"><?php _e( 'Limit', 'bonips' ); ?></th>
 			</tr>
 		</thead>

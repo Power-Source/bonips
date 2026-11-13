@@ -192,32 +192,32 @@ if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 			$prefs = $this->notifications;
 
 ?>
-<h4><span class="dashicons dashicons-admin-plugins static"></span><?php _e( 'Notifications', 'bonips' ); ?></h4>
+<h4><span class="dashicons dashicons-admin-plugins static"></span><?php _e( 'Benachrichtigungen', 'bonips' ); ?></h4>
 <div class="body" style="display:none;">
 
-	<h3><?php _e( 'Setup', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Einrichtung', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( 'template' ); ?>"><?php _e( 'Template', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( 'template' ); ?>"><?php _e( 'Vorlage', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( 'template' ); ?>" id="<?php echo $this->field_id( 'template' ); ?>" value="<?php echo esc_attr( $prefs['template'] ); ?>" class="form-control" />
-				<p><span class="description"><?php _e( 'Use %entry% to show the log entry in the notice and %amount% for the amount.', 'bonips' ); ?></span> <a href="javascript:void(0);" id="retore-default-notice"><?php _e( 'Restore to default', 'bonips' ); ?></a></p>
+				<p><span class="description"><?php _e( 'Verwende %entry% für den Protokolleintrag in der Benachrichtigung und %amount% für den Betrag.', 'bonips' ); ?></span> <a href="javascript:void(0);" id="retore-default-notice"><?php _e( 'Standard wiederherstellen', 'bonips' ); ?></a></p>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( 'life' ); ?>"><?php _e( 'Transient Lifespan', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( 'life' ); ?>"><?php _e( 'Lebensdauer des Transients', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( 'life' ); ?>" id="<?php echo $this->field_id( 'life' ); ?>" value="<?php echo absint( $prefs['life'] ); ?>" class="form-control" />
-				<p><span class="description"><?php _e( 'The number of days a users notification is saved before being automatically deleted.', 'bonips' ); ?></span></p>
+				<p><span class="description"><?php _e( 'Anzahl der Tage, die eine Benutzerbenachrichtigung vor dem automatischen Löschen gespeichert wird.', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( 'duration' ); ?>"><?php _e( 'Duration', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( 'duration' ); ?>"><?php _e( 'Dauer', 'bonips' ); ?></label>
 				<input type="number" name="<?php echo $this->field_name( 'duration' ); ?>" id="<?php echo $this->field_id( 'duration' ); ?>" value="<?php echo absint( $prefs['duration'] ); ?>" class="form-control" min="0" max="60" />
-				<p><span class="description"><?php _e( 'Number of seconds before a notice is automatically removed after being shown to user. Use zero to disable.', 'bonips' ); ?></span></p>
+				<p><span class="description"><?php _e( 'Anzahl der Sekunden, nach denen eine angezeigte Benachrichtigung automatisch entfernt wird. Verwende null zum Deaktivieren.', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 	</div>
@@ -225,7 +225,7 @@ if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( 'use_css' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'use_css' ); ?>" id="<?php echo $this->field_id( 'use_css' ); ?>" <?php checked( $prefs['use_css'], 1 ); ?> value="1" /> <?php _e( 'Use the included CSS Styling for notifications.', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( 'use_css' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'use_css' ); ?>" id="<?php echo $this->field_id( 'use_css' ); ?>" <?php checked( $prefs['use_css'], 1 ); ?> value="1" /> <?php _e( 'Verwende das mitgelieferte CSS-Styling für Benachrichtigungen.', 'bonips' ); ?></label>
 				</div>
 			</div>
 		</div>

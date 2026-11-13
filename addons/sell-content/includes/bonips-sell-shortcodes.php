@@ -65,9 +65,9 @@ if ( ! function_exists( 'bonips_render_sell_this' ) ) :
 			elseif ( ! bonips_post_is_for_sale( $post ) ) {
 
 				if ( $is_admin || $is_owner )
-					return '<p>' . sprintf( '%s %s', __( 'This shortcode can not be used in content that has not been set for sale!', 'bonips' ), '<a href="' . get_edit_post_link( $post_id ) ) . '">' . __( 'Edit', 'bonips' ) . '</a></p>';
+					return '<p>' . sprintf( '%s %s', __( 'Dieser Shortcode kann nicht in Inhalten verwendet werden, die nicht zum Verkauf stehen!', 'bonips' ), '<a href="' . get_edit_post_link( $post_id ) ) . '">' . __( 'Bearbeiten', 'bonips' ) . '</a></p>';
 
-				return '<p>' . __( 'This content is currently unattainable. Apologies for the inconvenience.', 'bonips' ) . '</p>';
+				return '<p>' . __( 'Dieser Inhalt ist derzeit nicht verfügbar. Bitte entschuldige die Unannehmlichkeiten.', 'bonips' ) . '</p>';
 
 			}
 
@@ -195,14 +195,14 @@ if ( ! function_exists( 'bonips_render_sell_history' ) ) :
 
 		$user_id     = bonips_get_user_id( $user_id );
 		$date_format = get_option( 'date_format' );
-		$expiration  = apply_filters( 'bonips_sell_exp_title', __( 'Hour(s)', 'bonips' ) );
+		$expiration  = apply_filters( 'bonips_sell_exp_title', __( 'Stunde(n)', 'bonips' ) );
 		$purchases   = bonips_get_users_purchased_content( $user_id, $number, $order, $ctype );
 
 		$columns     = apply_filters( 'bonips_sales_history_columns', array(
-			'col-date'    => __( 'Date', 'bonips' ),
-			'col-title'   => __( 'Title', 'bonips' ),
-			'col-amount'  => __( 'Cost', 'bonips' ),
-			'col-expires' => __( 'Expires', 'bonips' )
+			'col-date'    => __( 'Datum', 'bonips' ),
+			'col-title'   => __( 'Titel', 'bonips' ),
+			'col-amount'  => __( 'Kosten', 'bonips' ),
+			'col-expires' => __( 'Läuft ab', 'bonips' )
 		), $atts );
 
 		if ( empty( $purchases ) && $nothing == '' ) return;
@@ -245,7 +245,7 @@ if ( ! function_exists( 'bonips_render_sell_history' ) ) :
 
 					elseif ( $column_id == 'col-expires' ) {
 
-						$expires = __( 'Never', 'bonips' );
+						$expires = __( 'Nie', 'bonips' );
 						if ( $expirares_in > 0 )
 							$expires = sprintf( _x( 'Purchase expires in %s', 'e.g. 10 hours', 'bonips' ), $expirares_in . ' ' . $expiration );
 

@@ -357,7 +357,7 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 			// Add / Adjust
 			$columns['title']                  = __( 'E-Mail Betreff', 'bonips' );
 			$columns['bonips-email-status']    = __( 'Status', 'bonips' );
-			$columns['bonips-email-reference'] = __( 'Setup', 'bonips' );
+			$columns['bonips-email-reference'] = __( 'Einrichtung', 'bonips' );
 
 			if ( count( $this->point_types ) > 1 )
 				$columns['bonips-email-ctype'] = __( 'Punkttyp', 'bonips' );
@@ -477,7 +477,7 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 			add_meta_box(
 				'bonips-email-setup',
-				__( 'Email Trigger', 'bonips' ),
+				__( 'E-Mail-Auslöser', 'bonips' ),
 				array( $this, 'metabox_email_setup' ),
 				BONIPS_EMAIL_KEY,
 				'side',
@@ -495,7 +495,7 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 			add_meta_box(
 				'bonips-email-details',
-				__( 'Email Details', 'bonips' ),
+				__( 'E-Mail-Details', 'bonips' ),
 				array( $this, 'metabox_email_details' ),
 				BONIPS_EMAIL_KEY,
 				'normal',

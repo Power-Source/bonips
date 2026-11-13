@@ -157,7 +157,7 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 			$base     = array(
 				'ajaxurl'   => admin_url( 'admin-ajax.php' ),
 				'user_id'   => get_current_user_id(),
-				'working'   => esc_attr__( 'Processing...', 'bonips' ),
+				'working'   => esc_attr__( 'Wird bearbeitet...', 'bonips' ),
 				'token'     => wp_create_nonce( 'bonips-autocomplete' ),
 				'reload'    => $this->transfers['reload'],
 				'autofill'  => $this->transfers['autofill']
@@ -165,17 +165,17 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 			// Messages
 			$messages = apply_filters( 'bonips_transfer_messages', array(
-				'completed' => esc_attr__( 'Transaction completed.', 'bonips' ),
-				'error_1'   => esc_attr__( 'Security token could not be verified. Please contact your site administrator!', 'bonips' ),
-				'error_2'   => esc_attr__( 'Communications error. Please try again later.', 'bonips' ),
-				'error_3'   => esc_attr__( 'Recipient not found. Please try again.', 'bonips' ),
-				'error_4'   => esc_attr__( 'Transaction declined by recipient.', 'bonips' ),
-				'error_5'   => esc_attr__( 'Incorrect amount. Please try again.', 'bonips' ),
-				'error_6'   => esc_attr__( 'This boniPS Add-on has not yet been setup! No transfers are allowed until this has been done!', 'bonips' ),
-				'error_7'   => esc_attr__( 'Insufficient Funds. Please try a lower amount.', 'bonips' ),
-				'error_8'   => esc_attr__( 'Transfer Limit exceeded.', 'bonips' ),
-				'error_9'   => esc_attr__( 'Communications error. Please try again later.', 'bonips' ),
-				'error_10'  => esc_attr__( 'The selected point type can not be transferred.', 'bonips' )
+				'completed' => esc_attr__( 'Transaktion abgeschlossen.', 'bonips' ),
+				'error_1'   => esc_attr__( 'Das Sicherheitstoken konnte nicht überprüft werden. Bitte wende Dich an die Administration Deiner Website!', 'bonips' ),
+				'error_2'   => esc_attr__( 'Kommunikationsfehler. Bitte versuche es später erneut.', 'bonips' ),
+				'error_3'   => esc_attr__( 'Empfänger nicht gefunden. Bitte versuche es erneut.', 'bonips' ),
+				'error_4'   => esc_attr__( 'Die Transaktion wurde vom Empfänger abgelehnt.', 'bonips' ),
+				'error_5'   => esc_attr__( 'Ungültiger Betrag. Bitte versuche es erneut.', 'bonips' ),
+				'error_6'   => esc_attr__( 'Dieses BoniPress-Add-on wurde noch nicht eingerichtet! Bis dahin sind keine Überweisungen möglich!', 'bonips' ),
+				'error_7'   => esc_attr__( 'Unzureichendes Guthaben. Bitte versuche es mit einem niedrigeren Betrag.', 'bonips' ),
+				'error_8'   => esc_attr__( 'Überweisungslimit überschritten.', 'bonips' ),
+				'error_9'   => esc_attr__( 'Kommunikationsfehler. Bitte versuche es später erneut.', 'bonips' ),
+				'error_10'  => esc_attr__( 'Die ausgewählte Punkteart kann nicht überwiesen werden.', 'bonips' )
 			) );
 
 			wp_localize_script(
@@ -274,22 +274,22 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 			$autofills = bonips_get_transfer_autofill_by( $settings );
 
 			$yes_no    = array(
-				1 => __( 'Yes', 'bonips' ),
-				0 => __( 'No', 'bonips' )
+				1 => __( 'Ja', 'bonips' ),
+				0 => __( 'Nein', 'bonips' )
 			);
 
 			if ( ! isset( $settings['types'] ) )
 				$settings['types'] = $this->default_prefs['types'];
 
 ?>
-<h4><span class="dashicons dashicons-admin-plugins static"></span><?php _e( 'Transfers', 'bonips' ); ?></h4>
+<h4><span class="dashicons dashicons-admin-plugins static"></span><?php _e( 'Überweisungen', 'bonips' ); ?></h4>
 <div class="body" style="display:none;">
 
-	<h3><?php _e( 'Features', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Funktionen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="bonips-transfer-type"><?php _e( 'Point Types', 'bonips' ); ?></label>
+				<label for="bonips-transfer-type"><?php _e( 'Punktetypen', 'bonips' ); ?></label>
 
 				<?php if ( count( $this->point_types ) > 1 ) : ?>
 
@@ -306,7 +306,7 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( 'reload' ); ?>"><?php _e( 'Reload', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( 'reload' ); ?>"><?php _e( 'Neu laden', 'bonips' ); ?></label>
 				<select name="<?php echo $this->field_name( 'reload' ); ?>" id="<?php echo $this->field_id( 'reload' ); ?>" class="form-control">
 <?php
 
@@ -318,19 +318,19 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 ?>
 				</select>
-				<p><span class="description"><?php _e( 'Should the page reload once a transfer has been completed?', 'bonips' ); ?></span></p>
+				<p><span class="description"><?php _e( 'Soll die Seite nach Abschluss einer Überweisung neu geladen werden?', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( 'message' ); ?>"><?php _e( 'Message Length', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( 'message' ); ?>"><?php _e( 'Nachrichtenlänge', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( 'message' ); ?>" id="<?php echo $this->field_id( 'message' ); ?>" class="form-control" value="<?php echo absint( $settings['message'] ); ?>" />
-				<p><span class="description"><?php _e( 'The maximum length of messages users can attach to a transfer. Use zero to disable.', 'bonips' ); ?></span></p>
+				<p><span class="description"><?php _e( 'Maximale Länge der Nachrichten, die Benutzer einer Überweisung hinzufügen können. Verwende null zum Deaktivieren.', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( 'autofill' ); ?>"><?php _e( 'Autofill Recipient', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( 'autofill' ); ?>"><?php _e( 'Empfänger automatisch ausfüllen', 'bonips' ); ?></label>
 				<select name="<?php echo $this->field_name( 'autofill' ); ?>" id="<?php echo $this->field_id( 'autofill' ); ?>" class="form-control">
 <?php
 
@@ -342,7 +342,7 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 ?>
 				</select>
-				<p><span class="description"><?php _e( 'Select what user details recipients should be autofilled by.', 'bonips' ); ?></span></p>
+				<p><span class="description"><?php _e( 'Wähle, anhand welcher Benutzerdaten Empfänger automatisch ausgefüllt werden sollen.', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 	</div>
@@ -368,58 +368,58 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'limit' => 'amount' ) ); ?>"><?php _e( 'Limit Amount', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'limit' => 'amount' ) ); ?>"><?php _e( 'Betrag begrenzen', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'limit' => 'amount' ) ); ?>" id="<?php echo $this->field_id( array( 'limit' => 'amount' ) ); ?>" class="form-control" value="<?php echo $this->core->number( $settings['limit']['amount'] ); ?>" />
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'templates' => 'button' ) ); ?>"><?php _e( 'Default Button Label', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'templates' => 'button' ) ); ?>"><?php _e( 'Standardbeschriftung der Schaltfläche', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'templates' => 'button' ) ); ?>" id="<?php echo $this->field_id( array( 'templates' => 'button' ) ); ?>" class="form-control" value="<?php echo esc_attr( $settings['templates']['button'] ); ?>" />
-				<p><span class="description"><?php _e( 'The default transfer button label. You can override this in the shortcode or widget if needed.', 'bonips' ); ?></span></p>
+				<p><span class="description"><?php _e( 'Standardbeschriftung der Überweisungsschaltfläche. Du kannst sie bei Bedarf im Shortcode oder Widget überschreiben.', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 	</div>
 
-	<h3><?php _e( 'Protokollvorlages', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Protokollvorlagen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'logs' => 'sending' ) ); ?>"><?php _e( 'Log template for sending', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'logs' => 'sending' ) ); ?>"><?php _e( 'Protokollvorlage für das Senden', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'logs' => 'sending' ) ); ?>" id="<?php echo $this->field_id( array( 'logs' => 'sending' ) ); ?>" class="form-control" value="<?php echo esc_attr( $settings['logs']['sending'] ); ?>" />
 				<p><span class="description"><?php echo $this->core->available_template_tags( array( 'general', 'user' ), '%transfer_message%' ); ?></span></p>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'logs' => 'receiving' ) ); ?>"><?php _e( 'Log template for receiving', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'logs' => 'receiving' ) ); ?>"><?php _e( 'Protokollvorlage für den Empfang', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'logs' => 'receiving' ) ); ?>" id="<?php echo $this->field_id( array( 'logs' => 'receiving' ) ); ?>" class="form-control" value="<?php echo esc_attr( $settings['logs']['receiving'] ); ?>" />
 				<p><span class="description"><?php echo $this->core->available_template_tags( array( 'general', 'user' ), '%transfer_message%' ); ?></span></p>
 			</div>
 		</div>
 	</div>
 
-	<h3><?php _e( 'Warning Messages', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Warnmeldungen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'errors' => 'low' ) ); ?>"><?php _e( 'Insufficient Funds Warning', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'errors' => 'low' ) ); ?>"><?php _e( 'Warnung bei unzureichendem Guthaben', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'errors' => 'low' ) ); ?>" id="<?php echo $this->field_id( array( 'errors' => 'low' ) ); ?>" value="<?php echo esc_attr( $settings['errors']['low'] ); ?>" class="form-control" />
-				<p><span class="description"><?php _e( 'Message to show the user if they try to send more then they can afford.', 'bonips' ); ?></span></p>
+				<p><span class="description"><?php _e( 'Nachricht, wenn ein Benutzer mehr senden möchte, als sein Guthaben erlaubt.', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="bonips-transfer-log-receiving"><?php _e( 'Limit Reached Warning', 'bonips' ); ?></label>
+				<label for="bonips-transfer-log-receiving"><?php _e( 'Warnung bei erreichtem Limit', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'errors' => 'over' ) ); ?>" id="<?php echo $this->field_id( array( 'errors' => 'over' ) ); ?>" value="<?php echo esc_attr( $settings['errors']['over'] ); ?>" class="form-control" />
-				<p><span class="description"><?php _e( 'Message to show the user once they reach their transfer limit. Ignored if no limits are enforced.', 'bonips' ); ?></span></p>
+				<p><span class="description"><?php _e( 'Nachricht, wenn ein Benutzer sein Überweisungslimit erreicht. Wird ignoriert, wenn keine Limits gelten.', 'bonips' ); ?></span></p>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3><?php _e( 'Visitors Template', 'bonips' ); ?></h3>
-			<p><span class="description"><?php _e( 'The template to use when the transfer shortcode or widget is viewed by someone who is not logged in.', 'bonips' ); ?></span></p>
+			<h3><?php _e( 'Vorlage für Besucher', 'bonips' ); ?></h3>
+			<p><span class="description"><?php _e( 'Vorlage für den Überweisungs-Shortcode oder das Widget, wenn jemand nicht angemeldet ist.', 'bonips' ); ?></span></p>
 <?php
 
 			wp_editor( $settings['templates']['login'], $this->field_id( array( 'templates' => 'login' ) ), array(
@@ -432,8 +432,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 	</div>
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3><?php _e( 'Limit Template', 'bonips' ); ?></h3>
-			<p><span class="description"><?php _e( 'The template to use if you select to show the transfer limit in the transfer shortcode or widget. Ignored if there is no limit enforced.', 'bonips' ); ?></span></p>
+			<h3><?php _e( 'Limitvorlage', 'bonips' ); ?></h3>
+			<p><span class="description"><?php _e( 'Vorlage für das Überweisungslimit im Shortcode oder Widget. Wird ignoriert, wenn kein Limit gilt.', 'bonips' ); ?></span></p>
 <?php
 
 			wp_editor( $settings['templates']['limit'], $this->field_id( array( 'templates' => 'limit' ) ), array(
@@ -448,8 +448,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 	</div>
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3><?php _e( 'Balance Template', 'bonips' ); ?></h3>
-			<p><span class="description"><?php _e( 'The template to use if you select to show the users balance in the transfer shortcode or widget. Ignored if balances are not shown.', 'bonips' ); ?></span></p>
+			<h3><?php _e( 'Guthabenvorlage', 'bonips' ); ?></h3>
+			<p><span class="description"><?php _e( 'Vorlage für das Benutzerguthaben im Überweisungs-Shortcode oder Widget. Wird ignoriert, wenn Guthaben nicht angezeigt werden.', 'bonips' ); ?></span></p>
 <?php
 
 			wp_editor( $settings['templates']['balance'], $this->field_id( array( 'templates' => 'balance' ) ), array(

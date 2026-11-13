@@ -128,7 +128,7 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 							if ( $this->complete_payment( $pending_payment, $json['id'] ) )
 								$this->trash_pending_payment( $pending_post_id );
 							else
-								$new_call[] = __( 'Failed to credit users account.', 'bonips' );
+								$new_call[] = __( 'Das Benutzerkonto konnte nicht gutgeschrieben werden.', 'bonips' );
 
 							// Log Call
 							if ( ! empty( $new_call ) )
@@ -367,7 +367,7 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 		<?php if ( ! $this->is_ready ) : ?>
 
 		<div class="form-group">
-			<label><?php _e( 'API Token', 'bonips' ); ?></label>
+			<label><?php _e( 'API-Token', 'bonips' ); ?></label>
 			<div class="form-inline" id="bitpay-pairing-wrapper">
 				<input type="text" id="bitpay-pair-code" class="form-control" placeholder="Pairing Code" value="" /> 
 				<select id="bitpay-pair-network" class="form-control">
@@ -445,7 +445,7 @@ jQuery(function($){
 		<?php else : ?>
 
 		<div class="form-group">
-			<label><?php _e( 'API Token', 'bonips' ); ?></label>
+			<label><?php _e( 'API-Token', 'bonips' ); ?></label>
 			<p class="form-control-static"><?php echo esc_attr( $prefs['api_label'] ); ?></p>
 			<button type="button" id="bitpay-cancel-pair" class="button button-secondary">Revoke Token</button>
 			<input type="hidden" class="reset-api" name="<?php echo $this->field_name( 'api_secret' ); ?>" value="<?php echo esc_attr( $prefs['api_secret'] ); ?>" />
@@ -461,10 +461,10 @@ jQuery(function($){
 
 		e.preventDefault();
 
-		if ( confirm( '<?php echo esc_js( esc_attr( __( 'Are you sure you want to do this?', 'bonips' ) ) ); ?>' ) ) {
+		if ( confirm( '<?php echo esc_js( esc_attr( __( 'Möchtest Du das wirklich tun?', 'bonips' ) ) ); ?>' ) ) {
 
 			$( 'input.reset-api' ).val( '' );
-			$(this).before().html( '<?php echo esc_js( __( 'Removed - Remember to save your changes.', 'bonips' ) ); ?>' );
+			$(this).before().html( '<?php echo esc_js( __( 'Entfernt – denke daran, Deine Änderungen zu speichern.', 'bonips' ) ); ?>' );
 
 		}
 
@@ -476,24 +476,24 @@ jQuery(function($){
 		<?php endif; ?>
 
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'item_name' ); ?>"><?php _e( 'Item Name', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'item_name' ); ?>"><?php _e( 'Artikelname', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'item_name' ); ?>" id="<?php echo $this->field_id( 'item_name' ); ?>" value="<?php echo esc_attr( $prefs['item_name'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo URL', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo-URL', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'logo_url' ); ?>" id="<?php echo $this->field_id( 'logo_url' ); ?>" value="<?php echo esc_attr( $prefs['logo_url'] ); ?>" class="form-control" />
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( 'speed' ); ?>"><?php _e( 'Transaction Speed', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( 'speed' ); ?>"><?php _e( 'Transaktionsgeschwindigkeit', 'bonips' ); ?></label>
 					<select name="<?php echo $this->field_name( 'speed' ); ?>" id="<?php echo $this->field_id( 'speed' ); ?>" class="form-control">
 <?php
 
 			$options = array(
-				'high'   => __( 'High', 'bonips' ),
-				'medium' => __( 'Medium', 'bonips' ),
-				'low'    => __( 'Low', 'bonips' )
+				'high'   => __( 'Hoch', 'bonips' ),
+				'medium' => __( 'Mittel', 'bonips' ),
+				'low'    => __( 'Niedrig', 'bonips' )
 			);
 			foreach ( $options as $value => $label ) {
 				echo '<option value="' . $value . '"';
@@ -508,13 +508,13 @@ jQuery(function($){
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( 'notifications' ); ?>"><?php _e( 'Full Notifications', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( 'notifications' ); ?>"><?php _e( 'Vollständige Benachrichtigungen', 'bonips' ); ?></label>
 					<select name="<?php echo $this->field_name( 'notifications' ); ?>" id="<?php echo $this->field_id( 'notifications' ); ?>" class="form-control">
 <?php
 
 			$options = array(
-				0 => __( 'No', 'bonips' ),
-				1 => __( 'Yes', 'bonips' )
+				0 => __( 'Nein', 'bonips' ),
+				1 => __( 'Ja', 'bonips' )
 			);
 			foreach ( $options as $value => $label ) {
 				echo '<option value="' . $value . '"';
@@ -530,14 +530,14 @@ jQuery(function($){
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-		<h3><?php _e( 'Setup', 'bonips' ); ?></h3>
+		<h3><?php _e( 'Einrichtung', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'currency' ); ?>"><?php _e( 'Currency', 'bonips' ); ?></label>
-			<input type="text" name="<?php echo $this->field_name( 'currency' ); ?>" id="<?php echo $this->field_id( 'currency' ); ?>" value="<?php echo $prefs['currency']; ?>" class="form-control" maxlength="3" placeholder="<?php _e( 'Currency Code', 'bonips' ); ?>" />
+			<label for="<?php echo $this->field_id( 'currency' ); ?>"><?php _e( 'Währung', 'bonips' ); ?></label>
+			<input type="text" name="<?php echo $this->field_name( 'currency' ); ?>" id="<?php echo $this->field_id( 'currency' ); ?>" value="<?php echo $prefs['currency']; ?>" class="form-control" maxlength="3" placeholder="<?php _e( 'Währungscode', 'bonips' ); ?>" />
 
 		</div>
 		<div class="form-group">
-			<label><?php _e( 'Exchange Rates', 'bonips' ); ?></label>
+			<label><?php _e( 'Wechselkurse', 'bonips' ); ?></label>
 
 			<?php $this->exchange_rate_setup(); ?>
 

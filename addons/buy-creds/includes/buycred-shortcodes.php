@@ -254,7 +254,7 @@ if ( ! function_exists( 'bonips_render_buy_form_points' ) ) :
 
 ?>
 				<div class="form-group">
-					<label for="gift_to"><?php _e( 'Recipient', 'bonips' ); ?></label>
+					<label for="gift_to"><?php _e( 'Empfänger', 'bonips' ); ?></label>
 					<p class="form-control-static"><?php echo esc_html( $user->display_name ); ?></p>
 					<input type="hidden" name="<?php if ( $gift_to == 'author' ) echo 'post_id'; else echo 'gift_to'; ?>" value="<?php echo absint( $recipient_id ); ?>" />
 				</div>
@@ -267,7 +267,7 @@ if ( ! function_exists( 'bonips_render_buy_form_points' ) ) :
 
 ?>
 				<div class="form-group">
-					<label for="gateway"><?php _e( 'Pay Using', 'bonips' ); ?></label>
+					<label for="gateway"><?php _e( 'Bezahlen mit', 'bonips' ); ?></label>
 					<select name="bonips_buy" class="form-control">
 <?php
 
@@ -330,8 +330,8 @@ if ( ! function_exists( 'bonips_render_pending_purchases' ) ) :
 
 		extract( shortcode_atts( array(
 			'ctype'   => BONIPS_DEFAULT_TYPE_KEY,
-			'pay_now' => __( 'Pay Now', 'bonips' ),
-			'cancel'  => __( 'Cancel', 'bonips' )
+			'pay_now' => __( 'Jetzt bezahlen', 'bonips' ),
+			'cancel'  => __( 'Abbrechen', 'bonips' )
 		), $atts, BONIPS_SLUG . '_buy_pending' ) );
 
 		$user_id = get_current_user_id();
@@ -348,12 +348,12 @@ if ( ! function_exists( 'bonips_render_pending_purchases' ) ) :
 	<table class="table">
 		<thead>
 			<tr>
-				<th class="column-transaction-id"><?php _e( 'Transaction ID', 'bonips' ); ?></th>
+				<th class="column-transaction-id"><?php _e( 'Transaktions-ID', 'bonips' ); ?></th>
 				<th class="column-gateway"><?php _e( 'Gateway', 'bonips' ); ?></th>
-				<th class="column-amount"><?php _e( 'Amount', 'bonips' ); ?></th>
-				<th class="column-cost"><?php _e( 'Cost', 'bonips' ); ?></th>
-				<?php if ( $ctype == '' ) : ?><th class="column-ctype"><?php _e( 'Point Type', 'bonips' ); ?></th><?php endif; ?>
-				<th class="column-actions"><?php _e( 'Actions', 'bonips' ); ?></th>
+				<th class="column-amount"><?php _e( 'Betrag', 'bonips' ); ?></th>
+				<th class="column-cost"><?php _e( 'Kosten', 'bonips' ); ?></th>
+				<?php if ( $ctype == '' ) : ?><th class="column-ctype"><?php _e( 'Punktetyp', 'bonips' ); ?></th><?php endif; ?>
+				<th class="column-actions"><?php _e( 'Aktionen', 'bonips' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -415,7 +415,7 @@ if ( ! function_exists( 'bonips_render_pending_purchases' ) ) :
 
 ?>
 			<tr>
-				<td colspan="<?php if ( $ctype == '' ) echo '6'; else echo '5'; ?>"><?php _e( 'No pending payments found', 'bonips' ); ?></td>
+				<td colspan="<?php if ( $ctype == '' ) echo '6'; else echo '5'; ?>"><?php _e( 'Keine ausstehenden Zahlungen gefunden', 'bonips' ); ?></td>
 			</tr>
 <?php
 

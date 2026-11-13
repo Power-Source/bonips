@@ -267,9 +267,9 @@ if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 			<div class="body" style="display: none;">
 				<p><?php echo nl2br( $this->core->template_tags_general( $data['description'] ) ); ?></p>
 				<?php if ( $data['cron'] && defined( 'DISABLE_WP_CRON' ) && DISABLE_WP_CRON ) : ?>
-				<div class="alert alert-warning"><strong><?php _e( 'Warning', 'bonips' ); ?></strong> - <?php _e( 'Dieser Bankdienst verwendet WordPress CRON, um Ereignisse zu planen. Wenn WordPress CRON deaktiviert ist, funktioniert dieser Dienst nicht richtig.', 'bonips' ); ?></div>
+				<div class="alert alert-warning"><strong><?php _e( 'Warnung', 'bonips' ); ?></strong> - <?php _e( 'Dieser Bankdienst verwendet WordPress CRON, um Ereignisse zu planen. Wenn WordPress CRON deaktiviert ist, funktioniert dieser Dienst nicht richtig.', 'bonips' ); ?></div>
 				<?php endif; ?>
-				<label class="subheader"><?php _e( 'Enable', 'bonips' ); ?></label>
+				<label class="subheader"><?php _e( 'Aktivieren', 'bonips' ); ?></label>
 				<ol>
 					<li>
 						<input type="checkbox" name="<?php echo $this->option_id; ?>[active][]" id="bonips-bank-service-<?php echo $key; ?>" value="<?php echo $key; ?>"<?php if ( $this->is_active( $key ) ) echo ' checked="checked"'; ?> />

@@ -15,13 +15,13 @@ function bonips_about_header() {
 #bonips-badge { background: url('<?php echo plugins_url( 'assets/images/badge.png', boniPS_THIS ); ?>') no-repeat center center; background-size: 140px 160px; }.dashboard_page_bonips-about #wpwrap {background-color: white;}#wpwrap #bonips-about a {color: #666;background-color: #EBEBEB;padding: 10px;text-decoration: none;border-radius: 5px;}
 </style>
 <h1><?php printf( __( 'Willkommen zu %s %s', 'bonips' ), $name, boniPS_VERSION ); ?></h1>
-<div class="about-text"><?php printf( 'Ein adaptives Punkteverwaltungssystem für WordPress-basierte Webseiten.', $name ); ?></div>
-<p><?php printf( __( 'Vielen Dank das Du %s verwendest.', 'bonips' ), $name ); ?></p>
+<div class="about-text"><?php esc_html_e( 'Ein adaptives Punkteverwaltungssystem für WordPress-basierte Webseiten.', 'bonips' ); ?></div>
+<p><?php printf( esc_html__( 'Vielen Dank, dass Du %s verwendest.', 'bonips' ), esc_html( $name ) ); ?></p>
 <div class="wp-badge" id="bonips-badge">Version <?php echo boniPS_VERSION; ?></div>
 <h2 class="nav-tab-wrapper wp-clearfix">
-	<a class="nav-tab nav-tab-active" href="#">What&#8217;s New</a>
-	<a class="nav-tab" href="https://n3rds.work/gruppen/psource-communityhub/docs/?folder=33146" target="_blank">Dokumentation</a>
-	<a class="nav-tab" href="https://n3rds.work/shop/artikel/category/bonips-erweiterungen/" target="_blank">Shop</a>
+	<a class="nav-tab nav-tab-active" href="#"><?php esc_html_e( 'Neuigkeiten', 'bonips' ); ?></a>
+	<a class="nav-tab" href="https://n3rds.work/gruppen/psource-communityhub/docs/?folder=33146" target="_blank"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a>
+	<a class="nav-tab" href="https://n3rds.work/shop/artikel/category/bonips-erweiterungen/" target="_blank"><?php esc_html_e( 'Shop', 'bonips' ); ?></a>
 </h2>
 <?php
 
@@ -41,55 +41,55 @@ function bonips_about_page() {
 	<?php bonips_about_header(); ?>
 
 	<div id="bonips-about">
-		<h2>Improved Management Tools</h2>
+		<h2><?php esc_html_e( 'Verbesserte Verwaltungswerkzeuge', 'bonips' ); ?></h2>
 		<div class="feature-section two-col">
 			<div class="col">
 				<img src="<?php echo plugins_url( 'assets/images/bonips16-stats-addon.png', boniPS_THIS ); ?>" alt="" />			
 			</div>
 			<div class="col">
-				<h3>Statistics</h3>
-				<p>The Statistics add-on has received a complete re-write in order to add support for showing charts and statistical data on the front end of your website. The add-on comes with pre-set types of data that you can select to show either as a table or using charts (or both).</p>								
-				<a href="https://bonips.me/guides/1-8-guide-statistics-add-on/">Documentation</a>
+				<h3><?php esc_html_e( 'Statistiken', 'bonips' ); ?></h3>
+				<p><?php esc_html_e( 'Das Statistik-Add-on wurde vollständig überarbeitet und unterstützt die Anzeige von Diagrammen und statistischen Daten auf Deiner Website. Vordefinierte Daten lassen sich als Tabelle, als Diagramm oder in beiden Formen anzeigen.', 'bonips' ); ?></p>
+				<a href="https://bonips.me/guides/1-8-guide-statistics-add-on/"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a>
 			</div>
 			<div class="col">
-				<h3>New BuyCred Checkout</h3>
-				<p>One of the most requested features for buyCRED has been to making the checkout process easier to customize, so the checkout process has been completely re-written. You can now override the built-in template via your theme and style or customize the checkout page anyway you like.</p>
-				<p><a href="https://bonips.me/guides/1-8-guide-buycred-add-on-updates/">Documentation</a></p>
+				<h3><?php esc_html_e( 'Neuer Kaufabschluss für buyCRED', 'bonips' ); ?></h3>
+				<p><?php esc_html_e( 'Der Kaufabschluss für buyCRED wurde überarbeitet und lässt sich leichter anpassen. Du kannst die integrierte Vorlage über Dein Theme ersetzen und die Seite nach Deinen Wünschen gestalten.', 'bonips' ); ?></p>
+				<p><a href="https://bonips.me/guides/1-8-guide-buycred-add-on-updates/"><?php esc_html_e( 'Dokumentation', 'bonips' ); ?></a></p>
 			</div>
 			<div class="col">	
 				<img src="<?php echo plugins_url( 'assets/images/buycred-checkout-page.png', boniPS_THIS ); ?>" alt="" />							
 			</div>
 		</div>
 		<hr />
-		<h2>Add-on Improvements</h2>
+		<h2><?php esc_html_e( 'Verbesserungen der Add-ons', 'bonips' ); ?></h2>
 		<div class="feature-section two-col">
 			<div class="col">
-				<h3>Ranks</h3>
-				<p>Ranks can be set to be assigned to users manually, just like badges. This means that you will need to manually change your users rank as boniPS will take no action. To do this, simply edit the user in question in the admin area and select the rank you want to assign them.</p>
+				<h3><?php esc_html_e( 'Ränge', 'bonips' ); ?></h3>
+				<p><?php esc_html_e( 'Ränge können wie Abzeichen manuell zugewiesen werden. BoniPress ändert diese Ränge nicht automatisch. Bearbeite den gewünschten Benutzer im Administrationsbereich und wähle den Rang aus.', 'bonips' ); ?></p>
 			</div>
 			<div class="col">
-				<h3>Email Notifications</h3>
-				<p>The email notifications add-on now supports setting up emails for specific instances based on reference.</p>
+				<h3><?php esc_html_e( 'E-Mail-Benachrichtigungen', 'bonips' ); ?></h3>
+				<p><?php esc_html_e( 'Das Add-on für E-Mail-Benachrichtigungen unterstützt E-Mails für bestimmte Ereignisse anhand ihrer Referenz.', 'bonips' ); ?></p>
 			</div>
 		</div>
 		<hr />
-		<h2>New Shortcodes</h2>
+		<h2><?php esc_html_e( 'Neue Shortcodes', 'bonips' ); ?></h2>
 		<div class="feature-section three-col">
 			<div class="col">
 				<h3><code>[bonips_chart_circulation]</code></h3>
-				<p>This shortcode will render charts based on the amount of points that currently exists amongst your users for each point type.</p>
+				<p><?php esc_html_e( 'Dieser Shortcode zeigt für jede Punkteart Diagramme zur Anzahl der aktuell bei Deinen Benutzern vorhandenen Punkte an.', 'bonips' ); ?></p>
 			</div>
 			<div class="col">
 				<h3><code>[bonips_chart_gain_loss]</code></h3>
-				<p>This shortcode will render charts based on the amount of points that has been given to users vs. the total amount taken.</p>
+				<p><?php esc_html_e( 'Dieser Shortcode zeigt Diagramme zum Vergleich der vergebenen und abgezogenen Punkte an.', 'bonips' ); ?></p>
 			</div>
 			<div class="col">
 				<h3><code>[bonips_chart_top_balances]</code></h3>
-				<p>This shortcode will render a list of balances ordered by size.</p>
+				<p><?php esc_html_e( 'Dieser Shortcode zeigt eine nach Höhe sortierte Liste der Guthaben an.', 'bonips' ); ?></p>
 			</div>
 		</div>
 		<div class="feature-section one-col">
-			<p style="text-align: center;"><a href="https://bonips.me/support/changelog/" target="_blank">View All Changes</a></p>
+			<p style="text-align: center;"><a href="https://bonips.me/support/changelog/" target="_blank"><?php esc_html_e( 'Alle Änderungen ansehen', 'bonips' ); ?></a></p>
 		</div>
 		<hr />
 	</div>

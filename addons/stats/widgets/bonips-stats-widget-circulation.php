@@ -41,7 +41,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 				$total = $wpdb->get_var( $wpdb->prepare( "SELECT SUM( meta_value ) FROM {$wpdb->usermeta} WHERE meta_key = %s;", $type_id ) );
 				if ( $total === NULL ) $total = 0;
 
-				$totals[] = '<strong>' . sprintf( __( 'Total %s:', 'bonips' ), $this->ctypes[ $type_id ] ) . '</strong> <span style="color:' . $this->colors[ $type_id ]['positive'] . '">' . $bonips->format_creds( $total ) . '</span>';
+				$totals[] = '<strong>' . sprintf( __( 'Gesamt %s:', 'bonips' ), $this->ctypes[ $type_id ] ) . '</strong> <span style="color:' . $this->colors[ $type_id ]['positive'] . '">' . $bonips->format_creds( $total ) . '</span>';
 				$all = $all + $total;
 				$series[] = "{ value: " . $total . ", color: '" . $this->colors[ $type_id ]['positive'] . "', highlight: '" . $this->colors[ $type_id ]['negative'] . "', label: '" . esc_attr( $label ) . "' }";
 
@@ -133,9 +133,9 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 		function front_widget() {
 
 			if ( $this->args['ctypes'] == 'all' )
-				$label = __( 'Total amount in circulation', 'bonips' );
+				$label = __( 'Gesamtbetrag im Umlauf', 'bonips' );
 			else
-				$label = sprintf( __( 'Total amount of %s in circulation', 'bonips' ), $this->ctypes[ $this->args['ctypes'] ] );
+				$label = sprintf( __( 'Gesamtbetrag von %s im Umlauf', 'bonips' ), $this->ctypes[ $this->args['ctypes'] ] );
 
 			$circulation = $this->get_data();
 			$gains_loses = $this->gains_and_loses();
@@ -168,14 +168,14 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 				$gains_l = number_format( ( 100 - $gains_p ), 0 );
 
 				$color = $gain_color = $this->colors[ $this->args['ctypes'] ]['positive'];
-				$circulation['series'][] = "{ value: {$gains_p}, color: '" . $color . "', highlight: '" . $color . "', label: '" . esc_attr__( 'Total gains (%)', 'bonips' ) . "' }";
+				$circulation['series'][] = "{ value: {$gains_p}, color: '" . $color . "', highlight: '" . $color . "', label: '" . esc_attr__( 'Gesamtgewinne (%)', 'bonips' ) . "' }";
 
 				$color = $lose_color = $this->colors[ $this->args['ctypes'] ]['positive'];
-				$circulation['series'][] = "{ value: {$gains_l}, color: '" . $color . "', highlight: '" . $color . "', label: '" . esc_attr__( 'Total loses (%)', 'bonips' ) . "' }";
+				$circulation['series'][] = "{ value: {$gains_l}, color: '" . $color . "', highlight: '" . $color . "', label: '" . esc_attr__( 'Gesamtverluste (%)', 'bonips' ) . "' }";
 
 // 
 ?>
-		<ul id="total-per-point-type"><li><?php printf( __( 'Total Gained: %s', 'bonips' ), '<span style="color:' . $gain_color . '">' . $bonips->format_creds( $gains ) . '</span>' ); ?></li><li><?php printf( __( 'Total Spent: %s', 'bonips' ), '<span style="color:' . $lose_color . '">' . $bonips->format_creds( $loses ) . '</span>' ); ?></li></ul>
+		<ul id="total-per-point-type"><li><?php printf( __( 'Insgesamt erhalten: %s', 'bonips' ), '<span style="color:' . $gain_color . '">' . $bonips->format_creds( $gains ) . '</span>' ); ?></li><li><?php printf( __( 'Insgesamt ausgegeben: %s', 'bonips' ), '<span style="color:' . $lose_color . '">' . $bonips->format_creds( $loses ) . '</span>' ); ?></li></ul>
 <?php
 
 			endif;
@@ -186,21 +186,21 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 				<thead>
 					<tr>
 						<th class="rowtitle"></th>
-						<th class="doublecell" colspan="2"><?php _e( 'Today', 'bonips' ); ?></th>
-						<th class="doublecell" colspan="2"><?php _e( 'This Week', 'bonips' ); ?></th>
-						<th class="doublecell" colspan="2"><?php _e( 'This Month', 'bonips' ); ?></th>
-						<th class="doublecell" colspan="2"><?php _e( 'This Year', 'bonips' ); ?></th>
+						<th class="doublecell" colspan="2"><?php _e( 'Heute', 'bonips' ); ?></th>
+						<th class="doublecell" colspan="2"><?php _e( 'Diese Woche', 'bonips' ); ?></th>
+						<th class="doublecell" colspan="2"><?php _e( 'Diesen Monat', 'bonips' ); ?></th>
+						<th class="doublecell" colspan="2"><?php _e( 'Dieses Jahr', 'bonips' ); ?></th>
 					</tr>
 					<tr class="subheader">
 						<th class="rowtitle"></th>
-						<th class="cell"><?php _e( 'Gained', 'bonips' ); ?></th>
-						<th class="cell"><?php _e( 'Lost', 'bonips' ); ?></th>
-						<th class="cell"><?php _e( 'Gained', 'bonips' ); ?></th>
-						<th class="cell"><?php _e( 'Lost', 'bonips' ); ?></th>
-						<th class="cell"><?php _e( 'Gained', 'bonips' ); ?></th>
-						<th class="cell"><?php _e( 'Lost', 'bonips' ); ?></th>
-						<th class="cell"><?php _e( 'Gained', 'bonips' ); ?></th>
-						<th class="cell last"><?php _e( 'Lost', 'bonips' ); ?></th>
+						<th class="cell"><?php _e( 'Erhalten', 'bonips' ); ?></th>
+						<th class="cell"><?php _e( 'Verloren', 'bonips' ); ?></th>
+						<th class="cell"><?php _e( 'Erhalten', 'bonips' ); ?></th>
+						<th class="cell"><?php _e( 'Verloren', 'bonips' ); ?></th>
+						<th class="cell"><?php _e( 'Erhalten', 'bonips' ); ?></th>
+						<th class="cell"><?php _e( 'Verloren', 'bonips' ); ?></th>
+						<th class="cell"><?php _e( 'Erhalten', 'bonips' ); ?></th>
+						<th class="cell last"><?php _e( 'Verloren', 'bonips' ); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -261,9 +261,9 @@ jQuery(function($) {
 		function widget() {
 
 			if ( $this->args['ctypes'] == 'all' )
-				$label = __( 'Total amount in circulation', 'bonips' );
+				$label = __( 'Gesamtbetrag im Umlauf', 'bonips' );
 			else
-				$label = sprintf( __( 'Total amount of %s in circulation', 'bonips' ), $this->ctypes[ $this->args['ctypes'] ] );
+				$label = sprintf( __( 'Gesamtbetrag von %s im Umlauf', 'bonips' ), $this->ctypes[ $this->args['ctypes'] ] );
 
 			$circulation = $this->get_data();
 			$gains_loses = $this->gains_and_loses();
@@ -298,14 +298,14 @@ jQuery(function($) {
 				}
 
 				$color = $gain_color = $this->colors[ $this->args['ctypes'] ]['positive'];
-				$circulation['series'][] = "{ value: {$gains_p}, color: '" . $color . "', highlight: '" . $color . "', label: '" . esc_attr__( 'Total gains (%)', 'bonips' ) . "' }";
+				$circulation['series'][] = "{ value: {$gains_p}, color: '" . $color . "', highlight: '" . $color . "', label: '" . esc_attr__( 'Gesamtgewinne (%)', 'bonips' ) . "' }";
 
 				
 				$color = $lose_color = $this->colors[ $this->args['ctypes'] ]['negative'];
-				$circulation['series'][] = "{ value: {$gains_l}, color: '" . $color . "', highlight: '" . $color . "', label: '" . esc_attr__( 'Total loses (%)', 'bonips' ) . "' }";
+				$circulation['series'][] = "{ value: {$gains_l}, color: '" . $color . "', highlight: '" . $color . "', label: '" . esc_attr__( 'Gesamtverluste (%)', 'bonips' ) . "' }";
 
 ?>
-	<ul id="total-per-point-type"><li><?php printf( __( 'Total Gained: %s', 'bonips' ), '<span style="color:' . $gain_color . '">' . $bonips->format_creds( $gains ) . '</span>' ); ?></li><li><?php printf( __( 'Total Spent: %s', 'bonips' ), '<span style="color:' . $lose_color . '">' . $bonips->format_creds( $loses ) . '</span>' ); ?></li></ul>
+	<ul id="total-per-point-type"><li><?php printf( __( 'Insgesamt erhalten: %s', 'bonips' ), '<span style="color:' . $gain_color . '">' . $bonips->format_creds( $gains ) . '</span>' ); ?></li><li><?php printf( __( 'Insgesamt ausgegeben: %s', 'bonips' ), '<span style="color:' . $lose_color . '">' . $bonips->format_creds( $loses ) . '</span>' ); ?></li></ul>
 <?php
 
 			endif;
@@ -316,21 +316,21 @@ jQuery(function($) {
 			<thead>
 				<tr>
 					<th class="rowtitle"></th>
-					<th class="doublecell" colspan="2"><?php _e( 'Today', 'bonips' ); ?></th>
-					<th class="doublecell" colspan="2"><?php _e( 'This Week', 'bonips' ); ?></th>
-					<th class="doublecell" colspan="2"><?php _e( 'This Month', 'bonips' ); ?></th>
-					<th class="doublecell" colspan="2"><?php _e( 'This Year', 'bonips' ); ?></th>
+					<th class="doublecell" colspan="2"><?php _e( 'Heute', 'bonips' ); ?></th>
+					<th class="doublecell" colspan="2"><?php _e( 'Diese Woche', 'bonips' ); ?></th>
+					<th class="doublecell" colspan="2"><?php _e( 'Diesen Monat', 'bonips' ); ?></th>
+					<th class="doublecell" colspan="2"><?php _e( 'Dieses Jahr', 'bonips' ); ?></th>
 				</tr>
 				<tr class="subheader">
 					<th class="rowtitle"></th>
-					<th class="cell"><?php _e( 'Gained', 'bonips' ); ?></th>
-					<th class="cell"><?php _e( 'Lost', 'bonips' ); ?></th>
-					<th class="cell"><?php _e( 'Gained', 'bonips' ); ?></th>
-					<th class="cell"><?php _e( 'Lost', 'bonips' ); ?></th>
-					<th class="cell"><?php _e( 'Gained', 'bonips' ); ?></th>
-					<th class="cell"><?php _e( 'Lost', 'bonips' ); ?></th>
-					<th class="cell"><?php _e( 'Gained', 'bonips' ); ?></th>
-					<th class="cell last"><?php _e( 'Lost', 'bonips' ); ?></th>
+					<th class="cell"><?php _e( 'Erhalten', 'bonips' ); ?></th>
+					<th class="cell"><?php _e( 'Verloren', 'bonips' ); ?></th>
+					<th class="cell"><?php _e( 'Erhalten', 'bonips' ); ?></th>
+					<th class="cell"><?php _e( 'Verloren', 'bonips' ); ?></th>
+					<th class="cell"><?php _e( 'Erhalten', 'bonips' ); ?></th>
+					<th class="cell"><?php _e( 'Verloren', 'bonips' ); ?></th>
+					<th class="cell"><?php _e( 'Erhalten', 'bonips' ); ?></th>
+					<th class="cell last"><?php _e( 'Verloren', 'bonips' ); ?></th>
 				</tr>
 			</thead>
 			<tbody>

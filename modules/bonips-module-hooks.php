@@ -292,11 +292,11 @@ if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 			<div id="available-widgets" class="widgets-holder-wrap">
 				<div class="sidebar-name">
 					<div class="sidebar-name-arrow"><br /></div>
-					<h2><?php _e( 'Verfügbare Hooks' ); ?> <span id="removing-widget"><?php _ex( 'Deaktivieren', 'removing-widget' ); ?> <span></span></span></h2>
+					<h2><?php _e( 'Verfügbare Hooks', 'bonips' ); ?> <span id="removing-widget"><?php _ex( 'Deaktivieren', 'removing-widget', 'bonips' ); ?> <span></span></span></h2>
 				</div>
 				<div class="widget-holder">
 					<div class="sidebar-description">
-						<p class="description"><?php _e( 'Um einen Hook zu aktivieren, ziehe ihn in eine Seitenleiste oder klicke darauf. Um einen Hook zu deaktivieren und seine Einstellungen zu löschen, ziehe ihn zurück.' ); ?></p>
+						<p class="description"><?php _e( 'Um einen Hook zu aktivieren, ziehe ihn in eine Seitenleiste oder klicke darauf. Um einen Hook zu deaktivieren und seine Einstellungen zu löschen, ziehe ihn zurück.', 'bonips' ); ?></p>
 					</div>
 					<div id="widget-list">
 <?php

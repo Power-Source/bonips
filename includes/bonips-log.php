@@ -408,14 +408,14 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 			$page_links[] = sprintf( '<a class="%s" title="%s" href="%s">%s</a>',
 				'btn btn-default btn-sm first-page' . $disable_first,
-				esc_attr__( 'Gehe zur ersten Seite' ),
+				esc_attr__( 'Gehe zur ersten Seite', 'bonips' ),
 				esc_url( remove_query_arg( 'paged', $current_url ) ),
 				'&laquo;'
 			);
 
 			$page_links[] = sprintf( '<a class="%s" title="%s" href="%s">%s</a>',
 				'btn btn-default btn-sm prev-page' . $disable_first,
-				esc_attr__( 'Gehe zur vorherigen Seite' ),
+				esc_attr__( 'Gehe zur vorherigen Seite', 'bonips' ),
 				esc_url( add_query_arg( 'paged', max( 1, $current-1 ), $current_url ) ),
 				'&lsaquo;'
 			);
@@ -424,24 +424,24 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 				$html_current_page = $current;
 			else
 				$html_current_page = sprintf( '<input class="current-page btn btn-sm" title="%s" type="text" name="paged" value="%s" size="%d" />',
-					esc_attr__( 'Aktuelle Seite' ),
+					esc_attr__( 'Aktuelle Seite', 'bonips' ),
 					$current,
 					strlen( $total_pages )
 				);
 
 			$html_total_pages = sprintf( "<span class='total-pages'>%s</span>", number_format_i18n( $total_pages ) );
-			$page_links[] = '<span class="paging-input">' . sprintf( _x( '%1$s von %2$s', 'paging' ), $html_current_page, $html_total_pages ) . '</span>';
+			$page_links[] = '<span class="paging-input">' . sprintf( _x( '%1$s von %2$s', 'paging', 'bonips' ), $html_current_page, $html_total_pages ) . '</span>';
 
 			$page_links[] = sprintf( '<a class="%s"  title="%s" href="%s">%s</a>',
 				'btn btn-default btn-sm next-page' . $disable_last,
-				esc_attr__( 'Gehe zur nächsten Seite' ),
+				esc_attr__( 'Gehe zur nächsten Seite', 'bonips' ),
 				esc_url( add_query_arg( 'paged', min( $total_pages, $current+1 ), $current_url ) ),
 				'&rsaquo;'
 			);
 
 			$page_links[] = sprintf( '<a class="%s" title="%s" href="%s">%s</a>',
 				'btn btn-default btn-sm last-page' . $disable_last,
-				esc_attr__( 'Gehe zur letzten Seite' ),
+				esc_attr__( 'Gehe zur letzten Seite', 'bonips' ),
 				esc_url( add_query_arg( 'paged', $total_pages, $current_url ) ),
 				'&raquo;'
 			);

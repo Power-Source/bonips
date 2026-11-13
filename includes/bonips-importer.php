@@ -8,8 +8,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  */
 register_importer(
 	'bonips_import_log',
-	sprintf( __( '%s Log Import', 'bonips' ), bonips_label() ),
-	__( 'Import log entries via a CSV file.', 'bonips' ),
+	sprintf( __( '%s-Protokollimport', 'bonips' ), bonips_label() ),
+	__( 'Importiere Protokolleinträge über eine CSV-Datei.', 'bonips' ),
 	'bonips_importer_log_entries'
 );
 
@@ -40,8 +40,8 @@ function bonips_importer_log_entries() {
  */
 register_importer(
 	'bonips_import_balance',
-	sprintf( __( '%s Balance Import', 'bonips' ), bonips_label() ),
-	__( 'Import balances.', 'bonips' ),
+	sprintf( __( '%s-Saldoimport', 'bonips' ), bonips_label() ),
+	__( 'Importiere Salden.', 'bonips' ),
 	'bonips_importer_point_balances'
 );
 
@@ -72,8 +72,8 @@ function bonips_importer_point_balances() {
  */
 register_importer(
 	'bonips_import_cp',
-	sprintf( __( '%s CubePoints Import', 'bonips' ), bonips_label() ),
-	__( 'Import CubePoints log entries and / or balances.', 'bonips' ),
+	sprintf( __( '%s-CubePoints-Import', 'bonips' ), bonips_label() ),
+	__( 'Importiere CubePoints-Protokolleinträge und/oder Salden.', 'bonips' ),
 	'bonips_importer_cubepoints'
 );
 
@@ -89,7 +89,7 @@ function bonips_importer_cubepoints() {
 
 	// No use continuing if there is no log to import
 	if ( $wpdb->query( $wpdb->prepare( "SHOW TABLES LIKE %s;", $wpdb->prefix . 'cp' ) ) == 0 ) {
-		echo '<p>' . __( 'No CubePoints log exists.', 'bonips' ) . '</p>';
+		echo '<p>' . __( 'Es ist kein CubePoints-Protokoll vorhanden.', 'bonips' ) . '</p>';
 		return;
 	}
 

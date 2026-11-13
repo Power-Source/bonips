@@ -307,7 +307,7 @@ function bonips_load_buddypress_profile_hook() {
 
 			// Prevent BP from running this ajax call
 			if ( $balance < $cost ) {
-				echo apply_filters( 'bonips_bp_declined_addfriend', __( 'Insufficient Funds', 'bonips' ), $this );
+				echo apply_filters( 'bonips_bp_declined_addfriend', __( 'Unzureichendes Guthaben', 'bonips' ), $this );
 				exit;
 			}
 

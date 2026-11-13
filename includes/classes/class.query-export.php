@@ -260,7 +260,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		protected function set_column_headers( $headers = array() ) {
 
 			if ( empty( $headers ) || ! is_array( $headers ) )
-				$headers = array( 'ref' => __( 'Reference', 'bonips' ), 'ref_id' => __( 'Reference ID', 'bonips' ), 'user_id' => __( 'User', 'bonips' ), 'creds' => __( 'Amount', 'bonips' ), 'ctype' => __( 'Point Type', 'bonips' ), 'time' => __( 'Date', 'bonips' ), 'entry' => __( 'Entry', 'bonips' ), 'data' => __( 'Data', 'bonips' ) );
+				$headers = array( 'ref' => __( 'Referenz', 'bonips' ), 'ref_id' => __( 'Referenz-ID', 'bonips' ), 'user_id' => __( 'Benutzer', 'bonips' ), 'creds' => __( 'Betrag', 'bonips' ), 'ctype' => __( 'Punktetyp', 'bonips' ), 'time' => __( 'Datum', 'bonips' ), 'entry' => __( 'Eintrag', 'bonips' ), 'data' => __( 'Daten', 'bonips' ) );
 
 			if ( ! $this->raw ) {
 				unset( $headers['ref_id'] );
@@ -357,7 +357,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 					switch ( $header_id ) {
 
 						case 'ref' :
-						case __( 'Reference', 'bonips' ) :
+						case __( 'Referenz', 'bonips' ) :
 
 							$content = '';
 							if ( array_key_exists( $entry->ref, $this->references ) )
@@ -368,10 +368,10 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 						break;
 
 						case 'user_id' :
-						case __( 'User', 'bonips' ) :
+						case __( 'Benutzer', 'bonips' ) :
 
 							$user         = get_userdata( $entry->user_id );
-							$display_name = '<span>' . __( 'User Missing', 'bonips' ) . ' (ID: ' . $entry->user_id . ')</span>';
+							$display_name = '<span>' . __( 'Benutzer fehlt', 'bonips' ) . ' (ID: ' . $entry->user_id . ')</span>';
 							if ( isset( $user->display_name ) )
 								$display_name = $user->display_name;
 
@@ -380,7 +380,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 						break;
 
 						case 'creds' :
-						case __( 'Amount', 'bonips' ) :
+						case __( 'Betrag', 'bonips' ) :
 
 							$content = $this->types[ $type ]->format_creds( $entry->creds );
 							$content = apply_filters( 'bonips_log_creds', $content, $entry->creds, $entry );
@@ -388,7 +388,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 						break;
 
 						case 'ctype' :
-						case __( 'Point Type', 'bonips' ) :
+						case __( 'Punktetyp', 'bonips' ) :
 
 							$content = $this->types[ $type ]->plural();
 							$content = apply_filters( 'bonips_log_ctype', $content, $entry->ctype, $entry );
@@ -396,14 +396,14 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 						break;
 
 						case 'time' :
-						case __( 'Date', 'bonips' ) :
+						case __( 'Datum', 'bonips' ) :
 
 							$content = apply_filters( 'bonips_log_date', date( $this->args['date_format'], $entry->time ), $entry->time, $entry );
 
 						break;
 
 						case 'entry' :
-						case __( 'Entry', 'bonips' ) :
+						case __( 'Eintrag', 'bonips' ) :
 
 							$content = $this->types[ $type ]->parse_template_tags( $entry->entry, $entry );
 							$content = apply_filters( 'bonips_log_entry', $content, $entry->entry, $entry );
@@ -461,8 +461,8 @@ if ( ! function_exists( 'bonips_get_export_formats' ) ) :
 	function bonips_get_export_formats() {
 
 		return apply_filters( 'bonips_export_formats', array(
-			'raw'       => __( 'Export log entries raw', 'bonips' ),
-			'formatted' => __( 'Export log entries formatted', 'bonips' )
+			'raw'       => __( 'Protokolleinträge roh exportieren', 'bonips' ),
+			'formatted' => __( 'Protokolleinträge formatiert exportieren', 'bonips' )
 		) );
 
 	}

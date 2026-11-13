@@ -89,21 +89,21 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 				// Fields
 				$fields['enabled']             = array(
-					'title'   => __( 'Enable/Disable', 'bonips' ),
+					'title'   => __( 'Aktivieren/Deaktivieren', 'bonips' ),
 					'type'    => 'checkbox',
-					'label'   => sprintf( __( 'Enable %s Payment', 'bonips' ), $this->method_title ),
+					'label'   => sprintf( __( '%s-Zahlung aktivieren', 'bonips' ), $this->method_title ),
 					'default' => 'no',
-					'description' => __( 'Users who are not logged in or excluded from using boniPS will not have access to this gateway!', 'bonips' )
+					'description' => __( 'Benutzer, die nicht angemeldet oder von BoniPress ausgeschlossen sind, haben keinen Zugriff auf dieses Gateway!', 'bonips' )
 				);
 				$fields['title']               = array(
-					'title'       => __( 'Title', 'bonips' ),
+					'title'       => __( 'Titel', 'bonips' ),
 					'type'        => 'text',
-					'description' => __( 'Title to show for this payment option.', 'bonips' ),
-					'default'     => __( 'Pay with boniPS', 'bonips' ),
+					'description' => __( 'Titel, der für diese Zahlungsoption angezeigt wird.', 'bonips' ),
+					'default'     => __( 'Mit BoniPress bezahlen', 'bonips' ),
 					'desc_tip'    => true
 				);
 				$fields['description']         = array(
-					'title'       => __( 'Customer Message', 'bonips' ),
+					'title'       => __( 'Kundennachricht', 'bonips' ),
 					'type'        => 'textarea',
 					'default'     => $this->bonips->template_tags_general( 'Deduct the amount from your %_plural% balance.' )
 				);
@@ -114,7 +114,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 					'default'     => 'Payment for Order: #%order_id%'
 				);
 				$fields['log_template_refund'] = array(
-					'title'       => __( 'Refund Protokollvorlage', 'bonips' ),
+					'title'       => __( 'Protokollvorlage für Erstattungen', 'bonips' ),
 					'type'        => 'text',
 					'description' => $this->bonips->available_template_tags( array( 'general' ), '%order_id%, %reason%' ),
 					'default'     => 'Payment refund for order #%order_id% Reason: %reason%'
@@ -125,39 +125,39 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 					$bonips_types = bonips_get_types();
 					$fields['point_type']      = array(
-						'title'       => __( 'Point Type', 'bonips' ),
+						'title'       => __( 'Punktetyp', 'bonips' ),
 						'type'        => 'select',
-						'label'       => __( 'Select the point type users can use to pay.', 'bonips' ),
+						'label'       => __( 'Wähle den Punktetyp, mit dem Benutzer bezahlen können.', 'bonips' ),
 						'options'     => $bonips_types,
 						'default'     => BONIPS_DEFAULT_TYPE_KEY
 					);
 
-					$exchange_desc = $this->bonips->template_tags_general( __( 'How much is 1 %_singular% worth in %currency%?', 'bonips' ) );
+					$exchange_desc = $this->bonips->template_tags_general( __( 'Wie viel ist 1 %_singular% in %currency% wert?', 'bonips' ) );
 					$exchange_desc = str_replace( '%currency%', get_woocommerce_currency(), $exchange_desc );
 
 					$fields['exchange_rate']   = array(
-						'title'       => __( 'Exchange Rate', 'bonips' ),
+						'title'       => __( 'Wechselkurs', 'bonips' ),
 						'type'        => 'text',
 						'description' => $exchange_desc,
 						'default'     => 1,
 						'desc_tip'    => true
 					);
 					$fields['show_total']      = array(
-						'title'       => __( 'Show Total', 'bonips' ),
+						'title'       => __( 'Gesamtbetrag anzeigen', 'bonips' ),
 						'type'        => 'select',
-						'label'       => $this->bonips->template_tags_general( __( 'Show the final price in %_plural% .', 'bonips' ) ),
+						'label'       => $this->bonips->template_tags_general( __( 'Zeige den Endpreis in %_plural% an.', 'bonips' ) ),
 						'options'     => array(
-							''           => __( 'Do not show', 'bonips' ),
-							'cart'       => __( 'Show in Cart', 'bonips' ),
-							'checkout'   => __( 'Show on Checkout Page', 'bonips' ),
-							'all'        => __( 'Show in Cart and on Checkout Page', 'bonips' )
+							''           => __( 'Nicht anzeigen', 'bonips' ),
+							'cart'       => __( 'Im Warenkorb anzeigen', 'bonips' ),
+							'checkout'   => __( 'Auf der Kassenseite anzeigen', 'bonips' ),
+							'all'        => __( 'Im Warenkorb und auf der Kassenseite anzeigen', 'bonips' )
 						),
 						'default'     => ''
 					);
 					$fields['total_label']     = array(
-						'title'       => __( 'Label', 'bonips' ),
+						'title'       => __( 'Beschriftung', 'bonips' ),
 						'type'        => 'text',
-						'default'     => $this->bonips->template_tags_general( __( 'Order Total in %_plural%', 'bonips' ) ),
+						'default'     => $this->bonips->template_tags_general( __( 'Bestellbetrag in %_plural%', 'bonips' ) ),
 						'desc_tip'    => true
 					);
 
@@ -166,7 +166,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 				else {
 
 					$fields['point_type']      = array(
-						'title'       => __( 'Point Type', 'bonips' ),
+						'title'       => __( 'Punktetyp', 'bonips' ),
 						'type'        => 'currency',
 						'description' => $this->bonips->plural(),
 						'default'     => $this->bonips_type
@@ -175,29 +175,29 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 				}
 
 				$fields['balance_format']            = array(
-					'title'       => __( 'Balance Label', 'bonips' ),
+					'title'       => __( 'Guthabenbeschriftung', 'bonips' ),
 					'type'        => 'text',
-					'description' => __( 'The label to use when presenting a user their balance on the checkout / cart pages. Leave empty to hide.', 'bonips' ),
+					'description' => __( 'Beschriftung für das Guthaben auf der Kassen- und Warenkorbseite. Leer lassen, um es auszublenden.', 'bonips' ),
 					'default'     => 'Your Balance',
 					'desc_tip'    => false
 				);
 				$fields['profit_sharing_percent']    = array(
-					'title'       => __( 'Profit Sharing', 'bonips' ),
+					'title'       => __( 'Gewinnbeteiligung', 'bonips' ),
 					'type'        => 'text',
-					'description' => __( 'Option to share sales with the product owner. Use zero to disable.', 'bonips' ),
+					'description' => __( 'Option, Verkäufe mit dem Produktbesitzer zu teilen. Verwende null zum Deaktivieren.', 'bonips' ),
 					'default'     => 0,
 					'desc_tip'    => true
 				);
 				$fields['profit_sharing_log']        = array(
 					'title'       => __( 'Protokollvorlage', 'bonips' ),
 					'type'        => 'text',
-					'description' => __( 'Log entry template for profit sharing.', 'bonips' ) . ' ' . $this->bonips->available_template_tags( array( 'general', 'post' ) ),
+					'description' => __( 'Protokolleintragsvorlage für Gewinnbeteiligungen.', 'bonips' ) . ' ' . $this->bonips->available_template_tags( array( 'general', 'post' ) ),
 					'default'     => 'Sale of %post_title%'
 				);
 				$fields['profit_sharing_refund_log'] = array(
-					'title'       => __( 'Refund Protokollvorlage', 'bonips' ),
+					'title'       => __( 'Protokollvorlage für Erstattungen', 'bonips' ),
 					'type'        => 'text',
-					'description' => __( 'Log entry template for refunds of profit shares.', 'bonips' ) . ' ' . $this->bonips->available_template_tags( array( 'general', 'post' ) ),
+					'description' => __( 'Protokolleintragsvorlage für Erstattungen von Gewinnbeteiligungen.', 'bonips' ) . ' ' . $this->bonips->available_template_tags( array( 'general', 'post' ) ),
 					'default'     => 'Refund for order #%order_id%'
 				);
 				
@@ -276,7 +276,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 			public function admin_options() {
 
 ?>
-		<h3><?php printf( __( '%s Payment', 'bonips' ), bonips_label() ); ?></h3>
+		<h3><?php printf( __( '%s-Zahlung', 'bonips' ), bonips_label() ); ?></h3>
 		<table class="form-table">
 <?php
 
@@ -300,7 +300,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 				// Make sure we are still logged in
 				if ( ! is_user_logged_in() ) {
-					wc_add_notice( $this->bonips->template_tags_general( __( 'You must be logged in to pay with %_plural%', 'bonips' ) ), 'error' );
+					wc_add_notice( $this->bonips->template_tags_general( __( 'Du musst angemeldet sein, um mit %_plural% zu bezahlen', 'bonips' ) ), 'error' );
 					return;
 				}
 
@@ -308,7 +308,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 				// Make sure we have not been excluded
 				if ( $this->bonips->exclude_user( $user_id ) ) {
-					wc_add_notice( $this->bonips->template_tags_general( __( 'You can not use this gateway. Please try a different payment option.', 'bonips' ) ), 'error' );
+					wc_add_notice( $this->bonips->template_tags_general( __( 'Du kannst dieses Gateway nicht verwenden. Bitte wähle eine andere Zahlungsoption.', 'bonips' ) ), 'error' );
 					return;
 				}
 
@@ -326,7 +326,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 				// Check funds
 				if ( $this->bonips->get_users_balance( $user_id, $this->bonips_type ) < $cost ) {
-					$message = apply_filters( 'bonips_woo_error_insufficient_funds', __( 'Insufficient funds.', 'bonips' ) );
+					$message = apply_filters( 'bonips_woo_error_insufficient_funds', __( 'Unzureichendes Guthaben.', 'bonips' ) );
 					wc_add_notice( $message, 'error' );
 					return;
 				}
@@ -479,7 +479,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 			 */
 			function thankyou_page() {
 
-				echo apply_filters( 'bonips_woo_thank_you_message', '<p>' . __( 'Your account has successfully been charged.', 'bonips' ) . '</p>' );
+				echo apply_filters( 'bonips_woo_thank_you_message', '<p>' . __( 'Dein Konto wurde erfolgreich belastet.', 'bonips' ) . '</p>' );
 
 			}
 

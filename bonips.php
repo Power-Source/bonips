@@ -2,7 +2,7 @@
 /**
  * Plugin Name: BoniPress
  * Plugin URI: 
- * Description: Ein adaptives Punkteverwaltungssystem für WordPress-basierte Webseiten, Basiscode von myCred.
+ * Description: Ein adaptives Punkteverwaltungssystem für WordPress-basierte Webseiten.
  * Version: 1.0.0
  * Tags: point, credit, loyalty program, engagement, reward, woocommerce rewards
  * Author: DerN3rd

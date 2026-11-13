@@ -152,7 +152,7 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 			$labels = array(
 				'name'               => __( 'Abzeichen', 'bonips' ),
-				'singular_name'      => __( 'Abzeichen', 'bonips' ),
+				'singular_name'      => _x( 'Abzeichen', 'Einzahl', 'bonips' ),
 				'add_new'            => __( 'Neues hinzufügen', 'bonips' ),
 				'add_new_item'       => __( 'Neues hinzufügen', 'bonips' ),
 				'edit_item'          => __( 'Abzeichen bearbeiten', 'bonips' ),
@@ -731,8 +731,8 @@ th#badge-users { width: 10%; }
 	<?php do_action( 'bonips_edit_badge_before_actions', $post ); ?>
 
 	<input type="hidden" name="bonips-badge-edit" value="<?php echo wp_create_nonce( 'edit-bonips-badge' ); ?>" />
-	<input type="button" id="bonips-assign-badge-connections"<?php if ( $manual_badge || $post->post_status != 'publish' ) echo ' disabled="disabled"'; ?> value="<?php _e( 'Assign Badge', 'bonips' ); ?>" class="button button-secondary bonips-badge-action-button" data-action="bonips-assign-badge" data-token="<?php echo wp_create_nonce( 'bonips-assign-badge' ); ?>" /> 
-	<input type="button" id="bonips-remove-badge-connections"<?php if ( $post->post_status != 'publish' ) echo ' disabled="disabled"'; ?> value="<?php _e( 'Remove Connections', 'bonips' ); ?>" class="button button-secondary bonips-badge-action-button" data-action="bonips-remove-connections" data-token="<?php echo wp_create_nonce( 'bonips-remove-badge-connection' ); ?>" />
+	<input type="button" id="bonips-assign-badge-connections"<?php if ( $manual_badge || $post->post_status != 'publish' ) echo ' disabled="disabled"'; ?> value="<?php esc_attr_e( 'Abzeichen zuweisen', 'bonips' ); ?>" class="button button-secondary bonips-badge-action-button" data-action="bonips-assign-badge" data-token="<?php echo wp_create_nonce( 'bonips-assign-badge' ); ?>" />
+	<input type="button" id="bonips-remove-badge-connections"<?php if ( $post->post_status != 'publish' ) echo ' disabled="disabled"'; ?> value="<?php esc_attr_e( 'Verbindungen entfernen', 'bonips' ); ?>" class="button button-secondary bonips-badge-action-button" data-action="bonips-remove-connections" data-token="<?php echo wp_create_nonce( 'bonips-remove-badge-connection' ); ?>" />
 
 	<?php do_action( 'bonips_edit_badge_after_actions', $post ); ?>
 
@@ -1311,7 +1311,7 @@ var BadgeRequirement   = '<?php echo $js_requirement_clone; ?>';
 .badge-wrapper select { width: 100%; }
 .badge-image-wrap { text-align: center; }
 .badge-image-wrap .badge-image { display: block; width: 100%; height: 100px; line-height: 100px; }
-.badge-image-wrap .badge-image.empty { content: "<?php _e( 'No image set', 'bonips' ); ?>"; }
+.badge-image-wrap .badge-image.empty { content: "<?php _e( 'Kein Bild festgelegt', 'bonips' ); ?>"; }
 .badge-image-wrap .badge-image img { width: auto; height: auto; max-height: 100px; }
 </style>
 <table class="form-table">

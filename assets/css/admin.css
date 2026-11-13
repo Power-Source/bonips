@@ -113,7 +113,6 @@ body.version-3-8 #boniPS-wrap #accordion .ui-accordion-content { border-top: 1px
 #boniPS-wrap ol li.option .h2, #boniPS-wrap ol li.option select, #boniPS-wrap ol li.option textarea { margin-left: 24px; }
 
 /* Setup */
-#boniPS-wrap>h2 {  }
 #boniPS-wrap form.setup { width: 70%; }
 #boniPS-wrap form.setup ol { padding: 12px; }
 #boniPS-wrap form.setup .action-row { text-align: right; }

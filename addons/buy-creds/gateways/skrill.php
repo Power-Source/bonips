@@ -85,19 +85,19 @@ if ( ! class_exists( 'boniPS_Skrill' ) ) :
 
 						// Check amount paid
 						if ( $_POST['amount'] != $pending_payment->cost ) {
-							$new_call[] = sprintf( __( 'Price mismatch. Expected: %s Received: %s', 'bonips' ), $pending_payment->cost, $_POST['amount'] );
+							$new_call[] = sprintf( __( 'Der Preis stimmt nicht überein. Erwartet: %s Erhalten: %s', 'bonips' ), $pending_payment->cost, $_POST['amount'] );
 							$errors     = true;
 						}
 
 						// Check currency
 						if ( $_POST['currency'] != $pending_payment->currency ) {
-							$new_call[] = sprintf( __( 'Currency mismatch. Expected: %s Received: %s', 'bonips' ), $pending_payment->currency, $_POST['currency'] );
+							$new_call[] = sprintf( __( 'Die Währung stimmt nicht überein. Erwartet: %s Erhalten: %s', 'bonips' ), $pending_payment->currency, $_POST['currency'] );
 							$errors     = true;
 						}
 
 						// Check status
 						if ( $_POST['status'] != '2' ) {
-							$new_call[] = sprintf( __( 'Payment not completed. Received: %s', 'bonips' ), $_POST['status'] );
+							$new_call[] = sprintf( __( 'Die Zahlung wurde nicht abgeschlossen. Erhalten: %s', 'bonips' ), $_POST['status'] );
 							$errors     = true;
 						}
 
@@ -108,7 +108,7 @@ if ( ! class_exists( 'boniPS_Skrill' ) ) :
 							if ( $this->complete_payment( $pending_payment, $_POST['transaction_id'] ) )
 								$this->trash_pending_payment( $pending_post_id );
 							else
-								$new_call[] = __( 'Failed to credit users account.', 'bonips' );
+								$new_call[] = __( 'Das Benutzerkonto konnte nicht gutgeschrieben werden.', 'bonips' );
 
 						}
 
@@ -132,8 +132,8 @@ if ( ! class_exists( 'boniPS_Skrill' ) ) :
 		public function returning() {
 
 			if ( isset( $_GET['transaction_id'] ) && ! empty( $_GET['transaction_id'] ) && isset( $_GET['msid'] ) && ! empty( $_GET['msid'] ) ) {
-				$this->get_page_header( __( 'Success', 'bonips' ), $this->get_thankyou() );
-				echo '<h1>' . __( 'Thank you for your purchase', 'bonips' ) . '</h1>';
+				$this->get_page_header( __( 'Erfolg', 'bonips' ), $this->get_thankyou() );
+				echo '<h1>' . __( 'Vielen Dank für Deinen Kauf', 'bonips' ) . '</h1>';
 				$this->get_page_footer();
 				exit;
 			}
@@ -168,7 +168,7 @@ if ( ! class_exists( 'boniPS_Skrill' ) ) :
 				'sales_data'          => $this->post_id,
 				'amount'              => $this->cost,
 				'currency'            => $this->prefs['currency'],
-				'detail1_description' => __( 'Item Name', 'bonips' ),
+				'detail1_description' => __( 'Artikelname', 'bonips' ),
 				'detail1_text'        => $item_name
 			);
 
@@ -190,7 +190,7 @@ if ( ! class_exists( 'boniPS_Skrill' ) ) :
 			if ( $this->gifting ) {
 
 				$user                                   = get_userdata( $this->recipient_id );
-				$redirect_fields['detail2_description'] = __( 'Recipient', 'bonips' );
+				$redirect_fields['detail2_description'] = __( 'Empfänger', 'bonips' );
 				$redirect_fields['detail2_text']        = $user->display_name;
 
 			}
@@ -251,52 +251,52 @@ if ( ! class_exists( 'boniPS_Skrill' ) ) :
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<h3><?php _e( 'Details', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'account' ); ?>"><?php _e( 'Account Email', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'account' ); ?>"><?php _e( 'Konto-E-Mail', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'account' ); ?>" id="<?php echo $this->field_id( 'account' ); ?>" value="<?php echo esc_attr( $prefs['account'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'word' ); ?>"><?php _e( 'Secret Word', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'word' ); ?>"><?php _e( 'Geheimwort', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'word' ); ?>" id="<?php echo $this->field_id( 'word' ); ?>" value="<?php echo esc_attr( $prefs['word'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'item_name' ); ?>"><?php _e( 'Item Name', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'item_name' ); ?>"><?php _e( 'Artikelname', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'item_name' ); ?>" id="<?php echo $this->field_id( 'item_name' ); ?>" value="<?php echo esc_attr( $prefs['item_name'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo URL', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'logo_url' ); ?>"><?php _e( 'Logo-URL', 'bonips' ); ?></label>
 			<input type="text" name="<?php echo $this->field_name( 'logo_url' ); ?>" id="<?php echo $this->field_id( 'logo_url' ); ?>" value="<?php echo esc_attr( $prefs['logo_url'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'email_receipt' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'email_receipt' ); ?>" id="<?php echo $this->field_id( 'email_receipt' ); ?>" value="1"<?php checked( $prefs['email_receipt'], 1 ); ?> /> <?php _e( 'Ask Skrill to send me a confirmation email for each successful purchase.', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'email_receipt' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'email_receipt' ); ?>" id="<?php echo $this->field_id( 'email_receipt' ); ?>" value="1"<?php checked( $prefs['email_receipt'], 1 ); ?> /> <?php _e( 'Skrill bitten, mir für jeden erfolgreichen Kauf eine Bestätigungs-E-Mail zu senden.', 'bonips' ); ?></label>
 		</div>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-		<h3><?php _e( 'Setup', 'bonips' ); ?></h3>
+		<h3><?php _e( 'Einrichtung', 'bonips' ); ?></h3>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'currency' ); ?>"><?php _e( 'Currency', 'bonips' ); ?></label>
+			<label for="<?php echo $this->field_id( 'currency' ); ?>"><?php _e( 'Währung', 'bonips' ); ?></label>
 
 			<?php $this->currencies_dropdown( 'currency', 'bonips-gateway-skrill-currency' ); ?>
 
 		</div>
 		<div class="form-group">
-			<label><?php _e( 'Exchange Rates', 'bonips' ); ?></label>
+			<label><?php _e( 'Wechselkurse', 'bonips' ); ?></label>
 
 			<?php $this->exchange_rate_setup(); ?>
 
 		</div>
 	</div>
 </div>
-<h3><?php _e( 'Checkout Page', 'bonips' ); ?></h3>
+<h3><?php _e( 'Kassenseite', 'bonips' ); ?></h3>
 <div class="row">
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'account_title' ); ?>"><?php _e( 'Title', 'bonips' ); ?></label>
-			<p><span class="description"><?php _e( 'If left empty, your account email is used as title on the Skill Payment Page.', 'bonips' ); ?></span></p>
+			<label for="<?php echo $this->field_id( 'account_title' ); ?>"><?php _e( 'Titel', 'bonips' ); ?></label>
+			<p><span class="description"><?php _e( 'Wenn dieses Feld leer bleibt, wird Deine Konto-E-Mail als Titel auf der Skrill-Zahlungsseite verwendet.', 'bonips' ); ?></span></p>
 			<input type="text" name="<?php echo $this->field_name( 'account_title' ); ?>" id="<?php echo $this->field_id( 'account_title' ); ?>" value="<?php echo esc_attr( $prefs['account_title'] ); ?>" class="form-control" />
 		</div>
 		<div class="form-group">
-			<label for="<?php echo $this->field_id( 'confirmation_note' ); ?>"><?php _e( 'Confirmation Note', 'bonips' ); ?></label>
-			<p><span class="description"><?php _e( 'Optional text to show user once a transaction has been successfully completed. This text is shown by Skrill.', 'bonips' ); ?></span></p>
+			<label for="<?php echo $this->field_id( 'confirmation_note' ); ?>"><?php _e( 'Bestätigungshinweis', 'bonips' ); ?></label>
+			<p><span class="description"><?php _e( 'Optionaler Text, der Benutzern nach erfolgreichem Abschluss einer Transaktion angezeigt wird. Dieser Text wird von Skrill angezeigt.', 'bonips' ); ?></span></p>
 			<textarea rows="10" cols="50" name="<?php echo $this->field_name( 'confirmation_note' ); ?>" id="<?php echo $this->field_id( 'confirmation_note' ); ?>" class="form-control"><?php echo esc_html( $prefs['confirmation_note'] ); ?></textarea>
 		</div>
 	</div>

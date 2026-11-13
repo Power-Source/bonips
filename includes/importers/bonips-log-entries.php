@@ -211,7 +211,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 			if ( $ran ) {
 				echo '<div class="updated notice notice-success is-dismissible"><p>' . sprintf( __( 'Import complete - A total of <strong>%d</strong> log entries were successfully imported. <strong>%d</strong> was skipped.', 'bonips' ), $this->imported, $this->skipped ) . '</p></div>';
-				echo '<p><a href="' . admin_url( 'admin.php?page=' . BONIPS_SLUG ) . '" class="button button-large button-primary">' . __( 'View Log', 'bonips' ) . '</a></p>';
+				echo '<p><a href="' . admin_url( 'admin.php?page=' . BONIPS_SLUG ) . '" class="button button-large button-primary">' . __( 'Protokoll ansehen', 'bonips' ) . '</a></p>';
 			}
 
 			do_action( 'import_end' );

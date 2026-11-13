@@ -252,10 +252,10 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 		public function get_transfer_statuses() {
 
 			return apply_filters( 'bonips_transfer_statuses', array(
-				''           => __( 'Neu', '' ),
-				'incomplete' => __( 'Unvollständig', '' ),
-				'completed'  => __( 'Vollendet', '' ),
-				'refunded'   => __( 'Erstattet', '' )
+				''           => __( 'Neu', 'bonips' ),
+				'incomplete' => __( 'Unvollständig', 'bonips' ),
+				'completed'  => __( 'Vollendet', 'bonips' ),
+				'refunded'   => __( 'Erstattet', 'bonips' )
 			) );
 
 		}
@@ -914,7 +914,7 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 					$placeholder = __( 'Nutzername', 'bonips' );
 
 				elseif ( $this->settings['autofill'] == 'user_email' )
-					$placeholder = __( 'Email', 'bonips' );
+					$placeholder = __( 'E-Mail', 'bonips' );
 
 				$placeholder = sprintf( apply_filters( 'bonips_transfer_to_placeholder', __( 'Empfänger %s', 'bonips' ), $this->settings, $this->args ), $placeholder );
 

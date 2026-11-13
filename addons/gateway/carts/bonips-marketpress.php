@@ -144,15 +144,15 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 <div id="mp-bonips-cost">
 <table style="width:100%;">
 	<tr>
-		<td class="info">' . __( 'Current Balance', 'bonips' ) . '</td>
+		<td class="info">' . __( 'Aktuelles Guthaben', 'bonips' ) . '</td>
 		<td class="amount">' . $this->bonips->format_creds( $balance ) . '</td>
 	</tr>
 	<tr>
-		<td class="info">' . __( 'Total Cost', 'bonips' ) . '</td>
+		<td class="info">' . __( 'Gesamtkosten', 'bonips' ) . '</td>
 		<td class="amount">' . $this->bonips->format_creds( $total ) . '</td>
 	</tr>
 	<tr>
-		<td class="info">' . __( 'Balance After Purchase', 'bonips' ) . '</td>
+		<td class="info">' . __( 'Guthaben nach dem Kauf', 'bonips' ) . '</td>
 		<td class="amount"' . $red . '>' . $this->bonips->format_creds( $balance-$total ) . '</td>
 	</tr>
 </table>
@@ -176,13 +176,13 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 				$balance = $this->bonips->get_users_cred( get_current_user_id(), $this->bonips_type );
 				$total = $this->get_cart_total( $cart );
 			
-				$table = '<table class="bonips-cart-cost"><thead><tr><th>' . __( 'Payment', 'bonips' ) . '</th></tr></thead>';
+				$table = '<table class="bonips-cart-cost"><thead><tr><th>' . __( 'Zahlung', 'bonips' ) . '</th></tr></thead>';
 				if ( $balance-$total < 0 ) {
 					$message = $this->bonips->template_tags_user( $settings['gateways']['bonips']['lowfunds'], false, wp_get_current_user() );
-					$table .= '<tr><td id="mp-bonips-cost" style="color: red; font-weight: bold;"><p>' . $message . ' <a href="' . mp_checkout_step_url( 'checkout' ) . '">' . __( 'Go Back', 'bonips' ) . '</a></td></tr>';
+					$table .= '<tr><td id="mp-bonips-cost" style="color: red; font-weight: bold;"><p>' . $message . ' <a href="' . mp_checkout_step_url( 'checkout' ) . '">' . __( 'Gehe zurück', 'bonips' ) . '</a></td></tr>';
 				}
 				else
-					$table .= '<tr><td id="mp-bonips-cost" class="bonips-ok">' . $this->bonips->format_creds( $total ) . ' ' . __( 'will be deducted from your account.', 'bonips' ) . '</td></tr>';
+					$table .= '<tr><td id="mp-bonips-cost" class="bonips-ok">' . $this->bonips->format_creds( $total ) . ' ' . __( 'wird von Deinem Konto abgezogen.', 'bonips' ) . '</td></tr>';
 			
 				return $table . '</table>';
 			}
@@ -218,7 +218,7 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 				// Make sure current user is not excluded from using boniPS
 				if ( $this->bonips->exclude_user( $user_id ) )
 					$mp->cart_checkout_error(
-						sprintf( __( 'Sorry, but you can not use this gateway as your account is excluded. Please <a href="%s">select a different payment method</a>.', 'bonips' ), mp_checkout_step_url( 'checkout' ) )
+						sprintf( __( 'Du kannst dieses Gateway nicht verwenden, da Dein Konto ausgeschlossen ist. Bitte <a href="%s">wähle eine andere Zahlungsmethode</a>.', 'bonips' ), mp_checkout_step_url( 'checkout' ) )
 					);
 
 				// Get users balance
@@ -228,7 +228,7 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 				// Low balance or Insolvent
 				if ( $balance <= $this->bonips->zero() || $balance-$total < $this->bonips->zero() ) {
 					$mp->cart_checkout_error(
-						$insolvent . ' <a href="' . mp_checkout_step_url( 'checkout' ) . '">' . __( 'Go Back', 'bonips' ) . '</a>'
+						$insolvent . ' <a href="' . mp_checkout_step_url( 'checkout' ) . '">' . __( 'Gehe zurück', 'bonips' ) . '</a>'
 					);
 					return;
 				}
@@ -244,7 +244,7 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 				$order_id = $mp->generate_order_id();
 				$payment_info['gateway_public_name'] = $this->public_name;
 				$payment_info['gateway_private_name'] = $this->admin_name;
-				$payment_info['status'][ $timestamp ] = __( 'Paid', 'bonips' );
+				$payment_info['status'][ $timestamp ] = __( 'Bezahlt', 'bonips' );
 				$payment_info['total'] = $total;
 				$payment_info['currency'] = $settings['currency'];
 				$payment_info['method'] = __( 'boniPS', 'bonips' );
@@ -349,40 +349,40 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 			
 				$name = bonips_label( true );
 				$settings['gateways']['bonips'] = shortcode_atts( array(
-					'name'                 => $name . ' ' . $bonips->template_tags_general( __( '%_singular% Balance', 'bonips' ) ),
+					'name'                 => $name . ' ' . $bonips->template_tags_general( __( '%_singular%-Guthaben', 'bonips' ) ),
 					'logo'                 => $this->method_button_img_url,
 					'type'                 => 'bonips_default',
-					'log_template'         => __( 'Payment for Order: #%order_id%', 'bonips' ),
+					'log_template'         => __( 'Zahlung für Bestellung: #%order_id%', 'bonips' ),
 					'exchange'             => 1,
 					'profit_share_percent' => 0,
-					'profit_share_log'     => __( 'Product Sale: %post_title%', 'bonips' ),
-					'instructions'         => __( 'Pay using your account balance.', 'bonips' ),
-					'confirmation'         => __( 'TOTAL amount has been deducted from your account. Your current balance is: %balance_f%', 'bonips' ),
-					'lowfunds'             => __( 'Insufficient funds.', 'bonips' ),
-					'visitors'             => __( 'You must be logged in to pay with %_plural%. Please <a href="%login_url_here%">login</a>.', 'bonips' ),
+					'profit_share_log'     => __( 'Produktverkauf: %post_title%', 'bonips' ),
+					'instructions'         => __( 'Bezahle mit Deinem Kontoguthaben.', 'bonips' ),
+					'confirmation'         => __( 'Der Betrag TOTAL wurde von Deinem Konto abgezogen. Dein aktuelles Guthaben beträgt: %balance_f%', 'bonips' ),
+					'lowfunds'             => __( 'Unzureichendes Guthaben.', 'bonips' ),
+					'visitors'             => __( 'Du musst angemeldet sein, um mit %_plural% zu bezahlen. Bitte <a href="%login_url_here%">melde Dich an</a>.', 'bonips' ),
 					'email'                => $settings['email']['new_order_txt']
 				), ( isset( $settings['gateways']['bonips'] ) ) ? $settings['gateways']['bonips'] : array() ); ?>
 
 <div id="mp_bonips_payments" class="postbox mp-pages-msgs">
-	<h3 class="handle"><span><?php echo $name . ' ' . __( 'Settings', 'bonips' ); ?></span></h3>
+	<h3 class="handle"><span><?php echo $name . ' ' . __( 'Einstellungen', 'bonips' ); ?></span></h3>
 	<div class="inside">
-		<span class="description"><?php echo sprintf( __( 'Let your users pay for items in their shopping cart using their %s Account. Note! This gateway requires your users to be logged in when making a purchase!', 'bonips' ), $name ); ?></span>
+		<span class="description"><?php echo sprintf( __( 'Lass Deine Benutzer Artikel im Warenkorb mit ihrem %s-Konto bezahlen. Hinweis: Für dieses Gateway müssen Deine Benutzer beim Kauf angemeldet sein!', 'bonips' ), $name ); ?></span>
 		<table class="form-table">
 			<tr>
-				<th scope="row"><label for="bonips-method-name"><?php _e( 'Method Name', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-method-name"><?php _e( 'Methodenname', 'bonips' ); ?></label></th>
 				<td>
-					<span class="description"><?php _e( 'Enter a public name for this payment method that is displayed to users - No HTML', 'bonips' ); ?></span>
+					<span class="description"><?php _e( 'Gib einen öffentlichen Namen für diese Zahlungsmethode ein, der Benutzern angezeigt wird. Kein HTML erlaubt.', 'bonips' ); ?></span>
 					<p><input value="<?php echo esc_attr( $settings['gateways']['bonips']['name'] ); ?>" style="width: 100%;" name="mp[gateways][bonips][name]" id="bonips-method-name" type="text" /></p>
 				</td>
 			</tr>
 			<tr>
-				<th scope="row"><label for="bonips-method-logo"><?php _e( 'Gateway Logo URL', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-method-logo"><?php _e( 'Gateway-Logo-URL', 'bonips' ); ?></label></th>
 				<td>
 					<p><input value="<?php echo esc_attr( $settings['gateways']['bonips']['logo'] ); ?>" style="width: 100%;" name="mp[gateways][bonips][logo]" id="bonips-method-logo" type="text" /></p>
 				</td>
 			</tr>
 			<tr>
-				<th scope="row"><label for="bonips-method-type"><?php _e( 'Point Type', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-method-type"><?php _e( 'Punktetyp', 'bonips' ); ?></label></th>
 				<td>
 					<?php bonips_types_select_from_dropdown( 'mp[gateways][bonips][type]', 'bonips-method-type', $settings['gateways']['bonips']['type'] ); ?>
 				</td>
@@ -397,12 +397,12 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 <?php
 				// Exchange rate
 				if ( $this->use_exchange() ) :
-					$exchange_desc = __( 'How much is 1 %_singular% worth in %currency%?', 'bonips' );
+					$exchange_desc = __( 'Wie viel ist 1 %_singular% in %currency% wert?', 'bonips' );
 					$exchange_desc = $bonips->template_tags_general( $exchange_desc );
 					$exchange_desc = str_replace( '%currency%', $settings['currency'], $exchange_desc ); ?>
 
 			<tr>
-				<th scope="row"><label for="bonips-exchange-rate"><?php _e( 'Exchange Rate', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-exchange-rate"><?php _e( 'Wechselkurs', 'bonips' ); ?></label></th>
 				<td>
 					<span class="description"><?php echo $exchange_desc; ?></span>
 					<p><input value="<?php echo esc_attr( $settings['gateways']['bonips']['exchange'] ); ?>" size="8" name="mp[gateways][bonips][exchange]" id="bonips-exchange-rate" type="text" /></p>
@@ -411,12 +411,12 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 <?php			endif; ?>
 
 			<tr>
-				<td colspan="2"><h4><?php _e( 'Profit Sharing', 'bonips' ); ?></h4></td>
+				<td colspan="2"><h4><?php _e( 'Gewinnbeteiligung', 'bonips' ); ?></h4></td>
 			</tr>
 			<tr>
-				<th scope="row"><label for="bonips-profit-sharing"><?php _e( 'Percentage', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-profit-sharing"><?php _e( 'Prozentsatz', 'bonips' ); ?></label></th>
 				<td>
-					<span class="description"><?php _e( 'Option to share sales with the product owner. Use zero to disable.', 'bonips' ); ?></span>
+					<span class="description"><?php _e( 'Option, Verkäufe mit dem Produktbesitzer zu teilen. Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 					<p><input value="<?php echo esc_attr( $settings['gateways']['bonips']['profit_share_percent'] ); ?>" size="8" name="mp[gateways][bonips][profit_share_percent]" id="bonips-profit-sharing" type="text" /> %</p>
 				</td>
 			</tr>
@@ -428,44 +428,44 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2"><h4><?php _e( 'Messages', 'bonips' ); ?></h4></td>
+				<td colspan="2"><h4><?php _e( 'Nachrichten', 'bonips' ); ?></h4></td>
 			</tr>
 			<tr>
-				<th scope="row"><label for="bonips-lowfunds"><?php _e( 'Insufficient Funds', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-lowfunds"><?php _e( 'Unzureichendes Guthaben', 'bonips' ); ?></label></th>
 				<td>
-					<span class="description"><?php _e( 'Message to show when the user can not use this gateway.', 'bonips' ); ?></span>
+					<span class="description"><?php _e( 'Nachricht, die angezeigt wird, wenn der Benutzer dieses Gateway nicht verwenden kann.', 'bonips' ); ?></span>
 					<p><input type="text" name="mp[gateways][bonips][lowfunds]" id="bonips-lowfunds" style="width: 100%;" value="<?php echo esc_attr( $settings['gateways']['bonips']['lowfunds'] ); ?>"><br />
 					<span class="description"><?php echo $bonips->available_template_tags( array( 'general' ) ); ?></span></p>
 				</td>
 			</tr>
 			<tr>
-				<th scope="row"><label for="bonips-visitors"><?php _e( 'Visitors', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-visitors"><?php _e( 'Besucher', 'bonips' ); ?></label></th>
 				<td>
-					<span class="description"><?php _e( 'Message to show to buyers that are not logged in.', 'bonips' ); ?></span>
+					<span class="description"><?php _e( 'Nachricht für Käufer, die nicht angemeldet sind.', 'bonips' ); ?></span>
 					<p><input type="text" name="mp[gateways][bonips][visitors]" id="bonips-visitors" style="width: 100%;" value="<?php echo esc_attr( $settings['gateways']['bonips']['visitors'] ); ?>"><br />
 					<span class="description"><?php echo $bonips->available_template_tags( array( 'general' ) ); ?></span></p>
 				</td>
 			</tr>
 			<tr>
-				<th scope="row"><label for="bonips-instructions"><?php _e( 'User Instructions', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-instructions"><?php _e( 'Benutzeranleitung', 'bonips' ); ?></label></th>
 				<td>
-					<span class="description"><?php _e( 'Information to show users before payment.', 'bonips' ); ?></span>
+					<span class="description"><?php _e( 'Informationen, die Benutzern vor der Zahlung angezeigt werden.', 'bonips' ); ?></span>
 					<p><?php wp_editor( $settings['gateways']['bonips']['instructions'] , 'bonips-instructions', array( 'textarea_name' => 'mp[gateways][bonips][instructions]' ) ); ?><br />
 					<span class="description"><?php echo $bonips->available_template_tags( array( 'general' ), '%balance% or %balance_f%' ); ?></span></p>
 				</td>
 			</tr>
 			<tr>
-				<th scope="row"><label for="bonips-confirmation"><?php _e( 'Confirmation Information', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-confirmation"><?php _e( 'Bestätigungsinformationen', 'bonips' ); ?></label></th>
 				<td>
-					<span class="description"><?php _e( 'Information to display on the order confirmation page. - HTML allowed', 'bonips' ); ?></span>
+					<span class="description"><?php _e( 'Informationen für die Bestellbestätigungsseite. HTML ist erlaubt.', 'bonips' ); ?></span>
 					<p><?php wp_editor( $settings['gateways']['bonips']['confirmation'], 'bonips-confirmation', array( 'textarea_name' => 'mp[gateways][bonips][confirmation]' ) ); ?><br />
 					<span class="description"><?php echo $bonips->available_template_tags( array( 'general' ), '%balance% or %balance_f%' ); ?></span></p>
 				</td>
 			</tr>
 			<tr>
-				<th scope="row"><label for="bonips-email"><?php _e( 'Order Confirmation Email', 'bonips' ); ?></label></th>
+				<th scope="row"><label for="bonips-email"><?php _e( 'Bestellbestätigungs-E-Mail', 'bonips' ); ?></label></th>
 				<td>
-					<span class="description"><?php echo sprintf( __( 'This is the email text to send to those who have made %s checkouts. It overrides the default order checkout email. These codes will be replaced with order details: CUSTOMERNAME, ORDERID, ORDERINFO, SHIPPINGINFO, PAYMENTINFO, TOTAL, TRACKINGURL. No HTML allowed.', 'bonips' ), $name ); ?></span>
+					<span class="description"><?php echo sprintf( __( 'Dieser E-Mail-Text wird an Kunden gesendet, die mit %s bezahlt haben. Er ersetzt die standardmäßige Bestellbestätigungs-E-Mail. Diese Codes werden durch Bestelldetails ersetzt: CUSTOMERNAME, ORDERID, ORDERINFO, SHIPPINGINFO, PAYMENTINFO, TOTAL, TRACKINGURL. Kein HTML erlaubt.', 'bonips' ), $name ); ?></span>
 					<p><textarea id="bonips-email" name="mp[gateways][bonips][email]" class="mp_emails_txt"><?php echo esc_textarea( $settings['gateways']['bonips']['email'] ); ?></textarea></p>
 					<span class="description"><?php echo $bonips->available_template_tags( array( 'general' ), '%balance% or %balance_f%' ); ?></span>
 				</td>

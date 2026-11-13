@@ -173,7 +173,7 @@ pre { margin: 0 0 12px 0; padding: 10px; background-color: #dedede; }
 				<p><a href="<?php echo esc_url( add_query_arg( array( 'page' => BONIPS_SLUG . '-addons' ), admin_url( 'admin.php' ) ) ); ?>" class="button button-secondary"><?php _e( 'Add-Ons einrichten', 'bonips' ); ?></a></p>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<h3><?php _e( 'Adjust Settings', 'bonips' ); ?></h3>
+				<h3><?php _e( 'Einstellungen anpassen', 'bonips' ); ?></h3>
 				<p><span class="description"><?php _e( 'Wenn Du weitere Änderungen an Deinen Einstellungen vornehmen oder neue Punkttypen hinzufügen musst, kannst Du die Einstellungen Deines Standardpunkttyps aufrufen.', 'bonips' ); ?></span></p>
 				<p><a href="<?php echo esc_url( add_query_arg( array( 'page' => BONIPS_SLUG . '-settings' ), admin_url( 'admin.php' ) ) ); ?>" class="button button-secondary"><?php _e( 'Einstellungen anzeigen', 'bonips' ); ?></a></p>
 			</div>

@@ -288,7 +288,7 @@ function bonips_load_affiliatewp_hook() {
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'signup', 'creds' ) ); ?>"><?php _e( 'Amount', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'signup', 'creds' ) ); ?>"><?php _e( 'Betrag', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'signup', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'signup', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['signup']['creds'] ); ?>" class="form-control" />
 				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
 			</div>
@@ -307,7 +307,7 @@ function bonips_load_affiliatewp_hook() {
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'visits', 'creds' ) ); ?>"><?php _e( 'Amount', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'visits', 'creds' ) ); ?>"><?php _e( 'Betrag', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'visits', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'visits', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['visits']['creds'] ); ?>" class="form-control" />
 				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
 			</div>
@@ -337,7 +337,7 @@ function bonips_load_affiliatewp_hook() {
 				<div class="radio">
 					<label for="<?php echo $this->field_id( array( 'referrals', 'pay-amount' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( array( 'referrals', 'pay' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'pay-amount' ) ); ?>"<?php checked( $this->prefs['referrals']['pay'], 'creds' ); ?> value="creds" /> <?php _e( 'Pay a set amount', 'bonips' ); ?></label>
 				</div>
-				<label for="<?php echo $this->field_id( array( 'referrals', 'creds' ) ); ?>"><?php _e( 'Amount', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'referrals', 'creds' ) ); ?>"><?php _e( 'Betrag', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'referrals', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'creds' ) ); ?>" class="form-control" value="<?php echo $this->core->number( $prefs['referrals']['creds'] ); ?>" />
 				<span class="description"><?php _e( 'All referrals will pay the same amount.', 'bonips' ); ?></span>
 			</div>
@@ -357,9 +357,9 @@ function bonips_load_affiliatewp_hook() {
 				<div class="radio">
 					<label for="<?php echo $this->field_id( array( 'referrals', 'pay-ex' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( array( 'referrals', 'pay' ) ); ?>"<?php if ( array_key_exists( $this->currency, $this->point_types ) ) echo ' readonly="readonly"'; ?> id="<?php echo $this->field_id( array( 'referrals', 'pay-ex' ) ); ?>"<?php checked( $this->prefs['referrals']['pay'], 'exchange' ); ?> value="exchange" /> <?php _e( 'Apply an exchange rate', 'bonips' ); ?></label>
 				</div>
-				<label for="<?php echo $this->field_id( array( 'referrals', 'exchange' ) ); ?>"><?php _e( 'Exchange Rate', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'referrals', 'exchange' ) ); ?>"><?php _e( 'Wechselkurs', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'referrals', 'exchange' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'exchange' ) ); ?>" class="form-control"<?php if ( array_key_exists( $this->currency, $this->point_types ) ) echo ' readonly="readonly"'; ?> value="<?php echo esc_attr( $prefs['referrals']['exchange'] ); ?>" />
-				<span class="description"><?php if ( ! array_key_exists( $this->currency, $this->point_types ) ) printf( __( 'How much is 1 %s worth in %s', 'bonips' ), $this->core->plural(), $this->currency ); else _e( 'Disabled', 'bonips' ); ?></span>
+				<span class="description"><?php if ( ! array_key_exists( $this->currency, $this->point_types ) ) printf( __( 'Wie viel ist 1 %s in %s wert', 'bonips' ), $this->core->plural(), $this->currency ); else _e( 'Deaktiviert', 'bonips' ); ?></span>
 			</div>
 		</div>
 	</div>

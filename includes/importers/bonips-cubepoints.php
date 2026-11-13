@@ -302,7 +302,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 		 */
 		public function header() {
 
-			$label = __( 'Import CubePoints', 'bonips' );
+			$label = __( 'CubePoints importieren', 'bonips' );
 			if ( BONIPS_DEFAULT_LABEL === 'boniPS' )
 				$label .= ' <a href="' . $this->documentation . '" target="_blank" class="page-title-action">' . __( 'Documentation', 'bonips' ) . '</a>';
 
@@ -354,7 +354,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 			</tr>
 			<tr>
 				<th>
-					<label for="bonips-type"><?php _e( 'Point Type', 'bonips' ); ?></label>
+					<label for="bonips-type"><?php _e( 'Punktetyp', 'bonips' ); ?></label>
 				</th>
 				<td>
 

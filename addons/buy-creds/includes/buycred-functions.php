@@ -96,7 +96,7 @@ if ( ! function_exists( 'bonips_get_buycred_gateways' ) ) :
 
 		// Bank Transfers
 		$installed['bank'] = array(
-			'title'         => __( 'Bank Transfer', 'bonips' ),
+			'title'         => __( 'Banküberweisung', 'bonips' ),
 			'documentation' => 'http://codex.bonips.me/chapter-iii/buycred/payment-gateways/bank-transfers/',
 			'callback'      => array( 'boniPS_Bank_Transfer' ),
 			'icon'          => 'dashicons-admin-generic',

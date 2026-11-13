@@ -297,7 +297,7 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 						'ajaxurl'     => home_url( '/' ),
 						'token'       => wp_create_nonce( 'bonips-buy-creds' ),
 						'checkout'    => $settings['checkout'],
-						'redirecting' => esc_js( esc_attr__( 'Redirecting', 'bonips' ) ),
+						'redirecting' => esc_js( esc_attr__( 'Weiterleitung', 'bonips' ) ),
 						'error'       => 'communications error'
 					), $this )
 				);
