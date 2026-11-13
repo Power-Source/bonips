@@ -18,10 +18,10 @@ if ( ! function_exists( 'bonips_render_shortcode_hook_table' ) ) :
 			'post'    => '-post-',
 			'comment' => '-comment-',
 			'amount'  => '',
-			'nothing' => __( 'No instances found for this point type', 'bonips' )
+			'nothing' => __( 'Keine Vorgänge für diesen Punktetyp gefunden', 'bonips' )
 		), $atts, BONIPS_SLUG . '_hook_table' ) );
 
-		if ( ! bonips_point_type_exists( $type ) ) return __( 'Point type not found.', 'bonips' );
+		if ( ! bonips_point_type_exists( $type ) ) return __( 'Punktetyp nicht gefunden.', 'bonips' );
 
 		$bonips     = bonips( $type );
 		$id         = str_replace( '_', '-', $type );
@@ -80,7 +80,7 @@ if ( ! function_exists( 'bonips_render_shortcode_hook_table' ) ) :
 	<table class="table bonips-hook-table hook-table-<?php echo $id; ?>">
 		<thead>
 			<tr>
-				<th class="column-instance" style="width: 60%;"><?php _e( 'Instance', 'bonips' ); ?></th>
+				<th class="column-instance" style="width: 60%;"><?php _e( 'Vorgang', 'bonips' ); ?></th>
 				<th class="column-amount" style="width: 20%;"><?php _e( 'Betrag', 'bonips' ); ?></th>
 				<th class="column-limit" style="width: 20%;"><?php _e( 'Limit', 'bonips' ); ?></th>
 			</tr>

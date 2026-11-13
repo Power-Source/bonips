@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-13T12:57:38+00:00\n"
+"POT-Creation-Date: 2026-11-13T13:10:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: bonips\n"
@@ -63,7 +63,7 @@ msgid "/ Monat"
 msgstr ""
 
 #: abstracts/bonips-abstract-hook.php:328
-#: addons/badges/boniPS-addon-badges.php:831
+#: addons/badges/boniPS-addon-badges.php:833
 msgid "Insgesamt"
 msgstr ""
 
@@ -113,9 +113,9 @@ msgstr ""
 #: addons/badges/boniPS-addon-badges.php:166
 #: addons/badges/boniPS-addon-badges.php:346
 #: addons/badges/boniPS-addon-badges.php:347
-#: addons/badges/boniPS-addon-badges.php:1190
-#: addons/badges/boniPS-addon-badges.php:1319
-#: addons/badges/boniPS-addon-badges.php:1322
+#: addons/badges/boniPS-addon-badges.php:1192
+#: addons/badges/boniPS-addon-badges.php:1321
+#: addons/badges/boniPS-addon-badges.php:1324
 msgid "Abzeichen"
 msgstr ""
 
@@ -205,25 +205,25 @@ msgid "Benutzer"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:572
-#: addons/badges/boniPS-addon-badges.php:852
+#: addons/badges/boniPS-addon-badges.php:854
 msgid "Level hinzufügen"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:573
-#: addons/badges/boniPS-addon-badges.php:853
+#: addons/badges/boniPS-addon-badges.php:855
 msgid "Level entfernen"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:574
-#: addons/badges/boniPS-addon-badges.php:807
-#: addons/badges/boniPS-addon-badges.php:869
-#: addons/badges/boniPS-addon-badges.php:874
+#: addons/badges/boniPS-addon-badges.php:809
+#: addons/badges/boniPS-addon-badges.php:871
+#: addons/badges/boniPS-addon-badges.php:876
 msgid "Bild einstellen"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:575
-#: addons/badges/boniPS-addon-badges.php:807
-#: addons/badges/boniPS-addon-badges.php:874
+#: addons/badges/boniPS-addon-badges.php:809
+#: addons/badges/boniPS-addon-badges.php:876
 msgid "Bild ändern"
 msgstr ""
 
@@ -232,8 +232,8 @@ msgid "Möchtest Du diese Ebene wirklich entfernen?"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:577
-#: addons/badges/boniPS-addon-badges.php:870
-#: addons/badges/boniPS-addon-badges.php:1351
+#: addons/badges/boniPS-addon-badges.php:872
+#: addons/badges/boniPS-addon-badges.php:1353
 msgid "Level"
 msgstr ""
 
@@ -246,32 +246,42 @@ msgid "Als Abzeichen verwenden"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:580
-msgctxt "Vergleich der Badge-Anforderungen. A AND B"
-msgid "AND"
+#: addons/badges/boniPS-addon-badges.php:676
+#: addons/badges/boniPS-addon-badges.php:682
+msgid "Abzeichen-Levelbild"
 msgstr ""
 
 #: addons/badges/boniPS-addon-badges.php:581
-msgctxt "Vergleich der Badge-Anforderungen. A OR B"
-msgid "OR"
+msgid "Abzeichen-Standardbild"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:629
+#: addons/badges/boniPS-addon-badges.php:582
+msgctxt "Vergleich der Badge-Anforderungen. A AND B"
+msgid "UND"
+msgstr ""
+
+#: addons/badges/boniPS-addon-badges.php:583
+msgctxt "Vergleich der Badge-Anforderungen. A OR B"
+msgid "ODER"
+msgstr ""
+
+#: addons/badges/boniPS-addon-badges.php:631
 msgid "Abzeichen Setup"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:638
+#: addons/badges/boniPS-addon-badges.php:640
 msgid "Standardabzeichenbild"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:734
+#: addons/badges/boniPS-addon-badges.php:736
 msgid "Abzeichen zuweisen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:735
+#: addons/badges/boniPS-addon-badges.php:737
 msgid "Verbindungen entfernen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:756
+#: addons/badges/boniPS-addon-badges.php:758
 #: addons/gateway/event-booking/bonips-eventsmanager.php:537
 #: addons/ranks/boniPS-addon-ranks.php:1170
 #: addons/ranks/boniPS-addon-ranks.php:1767
@@ -281,65 +291,65 @@ msgstr ""
 msgid "Wird bearbeitet..."
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:774
+#: addons/badges/boniPS-addon-badges.php:776
 #: addons/badges/includes/bonips-badge-functions.php:303
 msgid "Dieses Abzeichen wird manuell vergeben."
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:808
+#: addons/badges/boniPS-addon-badges.php:810
 msgid "Bild entfernen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:811
+#: addons/badges/boniPS-addon-badges.php:813
 msgid "Optionales Bild, das angezeigt wird, wenn ein Benutzer dieses Abzeichen nicht verdient hat."
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:830
+#: addons/badges/boniPS-addon-badges.php:832
 msgid "Mal"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:876
+#: addons/badges/boniPS-addon-badges.php:878
 #, php-format
 msgid "Level %d"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:879
-#: addons/badges/boniPS-addon-badges.php:880
+#: addons/badges/boniPS-addon-badges.php:881
+#: addons/badges/boniPS-addon-badges.php:882
 msgid "Voraussetzung"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:902
+#: addons/badges/boniPS-addon-badges.php:904
 msgid "Punkttyp auswählen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:916
+#: addons/badges/boniPS-addon-badges.php:918
 msgid "Wähle Referenz"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:937
+#: addons/badges/boniPS-addon-badges.php:939
 #: addons/banking/abstracts/bonips-abstract-service.php:351
 #: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1680
 #: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1705
 msgid "Wählen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:980
+#: addons/badges/boniPS-addon-badges.php:982
 #: addons/badges/includes/bonips-badge-functions.php:287
 msgctxt "Comparison of badge requirements. A AND B"
-msgid "AND"
+msgid "UND"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:980
+#: addons/badges/boniPS-addon-badges.php:982
 #: addons/badges/includes/bonips-badge-functions.php:285
 msgctxt "Comparison of badge requirements. A OR B"
-msgid "OR"
+msgid "ODER"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:998
+#: addons/badges/boniPS-addon-badges.php:1000
 msgid "Belohnung"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1008
+#: addons/badges/boniPS-addon-badges.php:1010
 #: addons/banking/services/bonips-bank-service-interest.php:298
 #: addons/banking/services/bonips-bank-service-payouts.php:252
 #: addons/banking/services/bonips-service-interest.php:510
@@ -503,91 +513,92 @@ msgstr ""
 msgid "Protokollvorlage"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1193
+#: addons/badges/boniPS-addon-badges.php:1195
 #: addons/ranks/boniPS-addon-ranks.php:1659
 msgid "Integrationen von Drittanbietern"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1203
-#: addons/badges/boniPS-addon-badges.php:1237
+#: addons/badges/boniPS-addon-badges.php:1205
+#: addons/badges/boniPS-addon-badges.php:1239
 #: addons/gateway/carts/bonips-woocommerce.php:150
 #: modules/bonips-module-buddypress.php:404
 #: modules/bonips-module-buddypress.php:411
 msgid "Nicht anzeigen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1204
+#: addons/badges/boniPS-addon-badges.php:1206
 msgid "In Profilkopfzeile anzeigen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1205
+#: addons/badges/boniPS-addon-badges.php:1207
 msgid "Unter der Registerkarte \"Profil\" anzeigen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1206
+#: addons/badges/boniPS-addon-badges.php:1208
 msgid "Auf der Registerkarte „Profil“ und im Profil-Header anzeigen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1221
-#: addons/badges/boniPS-addon-badges.php:1255
+#: addons/badges/boniPS-addon-badges.php:1223
+#: addons/badges/boniPS-addon-badges.php:1257
 msgid "Alle Abzeichen anzeigen, einschließlich Abzeichen, die Benutzer noch nicht verdient haben."
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1225
+#: addons/badges/boniPS-addon-badges.php:1227
 #: addons/ranks/boniPS-addon-ranks.php:1698
 #: addons/ranks/boniPS-addon-ranks.php:1739
 msgid "Nicht installiert"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1238
+#: addons/badges/boniPS-addon-badges.php:1240
 msgid "In Profil anzeigen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1239
+#: addons/badges/boniPS-addon-badges.php:1241
 msgid "In Forumsantworten anzeigen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1240
+#: addons/badges/boniPS-addon-badges.php:1242
 msgid "In Profil- und Forumantworten anzeigen"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1259
-msgid "<a href=\"https://n3rds.work/piestingtal_source/ps-forum-plugin/\" target=“_blank”>PS Forum</a>ist nicht installiert"
+#: addons/badges/boniPS-addon-badges.php:1261
+msgid "<a href=\"https://n3rds.work/piestingtal_source/ps-forum-plugin/\" target=\"_blank\">PS Forum</a> ist nicht installiert"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1265
+#: addons/badges/boniPS-addon-badges.php:1267
 #: addons/buy-creds/modules/buycred-module-core.php:570
 #: addons/email-notices/boniPS-addon-email-notices.php:1206
 #: addons/ranks/boniPS-addon-ranks.php:1745
+#: includes/hooks/bonips-hook-referrals.php:645
 msgid "Verfügbare Shortcodes"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1314
+#: addons/badges/boniPS-addon-badges.php:1316
 msgid "Kein Bild festgelegt"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1346
+#: addons/badges/boniPS-addon-badges.php:1348
 msgid "Wähle einen Level aus"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1360
+#: addons/badges/boniPS-addon-badges.php:1362
 msgid "Verdient"
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1491
+#: addons/badges/boniPS-addon-badges.php:1493
 #, php-format
 msgid "Insgesamt %d Benutzer haben dieses Abzeichen erhalten."
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1493
+#: addons/badges/boniPS-addon-badges.php:1495
 msgid "Dieses Abzeichen hat sich noch kein Benutzer verdient."
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1518
+#: addons/badges/boniPS-addon-badges.php:1520
 msgid "Es wurden keine Verbindungen entfernt."
 msgstr ""
 
-#: addons/badges/boniPS-addon-badges.php:1520
+#: addons/badges/boniPS-addon-badges.php:1522
 #, php-format
 msgid "%s Verbindungen wurden entfernt."
 msgstr ""
@@ -677,6 +688,7 @@ msgstr ""
 #: modules/bonips-module-hooks.php:451
 #: modules/bonips-module-log.php:550
 #: modules/bonips-module-management.php:315
+#: modules/bonips-module-settings.php:436
 msgid "Schließen"
 msgstr ""
 
@@ -686,6 +698,15 @@ msgstr ""
 
 #: addons/banking/boniPS-addon-banking.php:205
 msgid "Möchtest Du diesen Zeitplan wirklich entfernen? Das kann nicht rückgängig gemacht werden!"
+msgstr ""
+
+#: addons/banking/boniPS-addon-banking.php:242
+#: addons/buy-creds/modules/buycred-module-core.php:722
+#: addons/buy-creds/modules/buycred-module-core.php:898
+#: addons/import/boniPS-addon-import.php:458
+#: modules/bonips-module-addons.php:342
+#: modules/bonips-module-network.php:234
+msgid "Zugriff verweigert"
 msgstr ""
 
 #: addons/banking/boniPS-addon-banking.php:252
@@ -1327,6 +1348,10 @@ msgstr ""
 msgid "Du hast das Limit überschritten."
 msgstr ""
 
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:377
+msgid "Dieses Zahlungsgateway hat keine Einstellungen."
+msgstr ""
+
 #: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:402
 msgid "Test Modus"
 msgstr ""
@@ -1398,389 +1423,7 @@ msgstr ""
 msgid "Abbrechen"
 msgstr ""
 
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1309
-msgid "Vorname"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1315
-msgid "Nachname"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1323
-msgid "Adresszeile 1"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1331
-msgid "Adresszeile 2"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1339
-msgid "Stadt"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1345
-msgid "Postleitzahl"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1353
-msgid "Bundesland"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1361
-msgid "Land"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1366
-msgid "Land auswählen"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1489
-#, php-format
-msgid "Weiter zu %s"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1490
-msgid "Klicke hier, wenn Du nicht automatisch weitergeleitet wirst"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2055
-msgid "Jänner"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2056
-msgid "Februar"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2057
-msgid "März"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2058
-msgid "April"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2059
-msgid "Mai"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2060
-msgid "Juni"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2061
-msgid "Juli"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2062
-msgid "August"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2063
-msgid "September"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2064
-msgid "Oktober"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2065
-msgid "November"
-msgstr ""
-
-#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2066
-msgid "Dezember"
-msgstr ""
-
-#: addons/buy-creds/gateways/bank-transfer.php:164
-#: addons/buy-creds/gateways/bitpay.php:365
-#: addons/buy-creds/gateways/netbilling.php:220
-#: addons/buy-creds/gateways/paypal-standard.php:286
-#: addons/buy-creds/gateways/skrill.php:252
-#: addons/buy-creds/gateways/zombaio.php:338
-msgid "Details"
-msgstr ""
-
-#: addons/buy-creds/gateways/bank-transfer.php:166
-#: addons/buy-creds/gateways/skrill.php:293
-#: addons/gateway/carts/bonips-woocommerce.php:99
-#: addons/ranks/boniPS-addon-ranks.php:1560
-#: addons/sell-content/includes/bonips-sell-shortcodes.php:203
-#: addons/transfer/includes/bonips-transfer-widgets.php:91
-#: includes/bonips-widgets.php:176
-#: includes/bonips-widgets.php:359
-#: includes/bonips-widgets.php:567
-#: includes/hooks/bonips-hook-referrals.php:666
-#: includes/widgets/bonips-widget-balance.php:176
-#: includes/widgets/bonips-widget-leaderboard.php:105
-#: includes/widgets/bonips-widget-wallet.php:117
-msgid "Titel"
-msgstr ""
-
-#: addons/buy-creds/gateways/bank-transfer.php:170
-#: addons/buy-creds/gateways/bitpay.php:483
-#: addons/buy-creds/gateways/netbilling.php:239
-#: addons/buy-creds/gateways/paypal-standard.php:296
-#: addons/buy-creds/gateways/skrill.php:266
-#: addons/buy-creds/gateways/zombaio.php:348
-msgid "Logo-URL"
-msgstr ""
-
-#: addons/buy-creds/gateways/bank-transfer.php:177
-#: addons/buy-creds/gateways/bitpay.php:535
-#: addons/buy-creds/gateways/netbilling.php:246
-#: addons/buy-creds/gateways/paypal-standard.php:303
-#: addons/buy-creds/gateways/skrill.php:276
-#: addons/buy-creds/gateways/zombaio.php:395
-#: addons/buy-creds/modules/buycred-module-pending.php:691
-msgid "Währung"
-msgstr ""
-
-#: addons/buy-creds/gateways/bank-transfer.php:181
-#: addons/buy-creds/gateways/bitpay.php:540
-#: addons/buy-creds/gateways/netbilling.php:250
-#: addons/buy-creds/gateways/paypal-standard.php:309
-#: addons/buy-creds/gateways/skrill.php:282
-#: addons/buy-creds/gateways/zombaio.php:401
-msgid "Wechselkurse"
-msgstr ""
-
-#: addons/buy-creds/gateways/bank-transfer.php:191
-msgid "Bankkontodaten"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:131
-#: addons/buy-creds/gateways/netbilling.php:110
-#: addons/buy-creds/gateways/paypal-standard.php:168
-#: addons/buy-creds/gateways/skrill.php:111
-#: addons/buy-creds/gateways/zombaio.php:236
-msgid "Das Benutzerkonto konnte nicht gutgeschrieben werden."
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:370
-#: addons/buy-creds/gateways/bitpay.php:448
-msgid "API-Token"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:464
-msgid "Möchtest Du das wirklich tun?"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:467
-msgid "Entfernt – denke daran, Deine Änderungen zu speichern."
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:479
-#: addons/buy-creds/gateways/netbilling.php:235
-#: addons/buy-creds/gateways/paypal-standard.php:292
-#: addons/buy-creds/gateways/skrill.php:171
-#: addons/buy-creds/gateways/skrill.php:262
-msgid "Artikelname"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:489
-msgid "Transaktionsgeschwindigkeit"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:494
-msgid "Hoch"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:495
-msgid "Mittel"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:496
-msgid "Niedrig"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:511
-msgid "Vollständige Benachrichtigungen"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:516
-#: addons/buy-creds/gateways/zombaio.php:359
-#: addons/transfer/boniPS-addon-transfer.php:278
-#: includes/bonips-network.php:185
-#: includes/bonips-network.php:199
-msgid "Nein"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:517
-#: addons/buy-creds/gateways/zombaio.php:360
-#: addons/transfer/boniPS-addon-transfer.php:277
-#: includes/bonips-network.php:181
-#: includes/bonips-network.php:195
-msgid "Ja"
-msgstr ""
-
-#: addons/buy-creds/gateways/bitpay.php:536
-msgid "Währungscode"
-msgstr ""
-
-#: addons/buy-creds/gateways/netbilling.php:93
-#: addons/buy-creds/gateways/paypal-standard.php:145
-#: addons/buy-creds/gateways/skrill.php:88
-#, php-format
-msgid "Der Preis stimmt nicht überein. Erwartet: %s Erhalten: %s"
-msgstr ""
-
-#: addons/buy-creds/gateways/netbilling.php:99
-#: addons/buy-creds/gateways/paypal-standard.php:157
-#: addons/buy-creds/gateways/skrill.php:100
-#, php-format
-msgid "Die Zahlung wurde nicht abgeschlossen. Erhalten: %s"
-msgstr ""
-
-#: addons/buy-creds/gateways/netbilling.php:222
-msgid "Konto-ID"
-msgstr ""
-
-#: addons/buy-creds/gateways/netbilling.php:226
-msgid "Website-Tag"
-msgstr ""
-
-#: addons/buy-creds/gateways/netbilling.php:230
-msgid "Integritätsschlüssel der Bestellung"
-msgstr ""
-
-#: addons/buy-creds/gateways/netbilling.php:232
-msgid "Unter Schritt 12 auf der Fraud-Defense-Seite zu finden."
-msgstr ""
-
-#: addons/buy-creds/gateways/netbilling.php:256
-msgid "Postback-CGI-URL"
-msgstr ""
-
-#: addons/buy-creds/gateways/netbilling.php:258
-msgid "Damit dieses Gateway funktioniert, melde Dich bei Deinem NETbilling-Konto an und bearbeite Deine Website. Stelle unter „Default payment form settings“ sicher, dass die Postback-CGI-URL auf die obige Adresse und „Return method“ auf POST gesetzt ist."
-msgstr ""
-
-#: addons/buy-creds/gateways/paypal-standard.php:151
-#: addons/buy-creds/gateways/skrill.php:94
-#, php-format
-msgid "Die Währung stimmt nicht überein. Erwartet: %s Erhalten: %s"
-msgstr ""
-
-#: addons/buy-creds/gateways/paypal-standard.php:192
-#: addons/buy-creds/gateways/skrill.php:135
-msgid "Erfolg"
-msgstr ""
-
-#: addons/buy-creds/gateways/paypal-standard.php:193
-#: addons/buy-creds/gateways/skrill.php:136
-msgid "Vielen Dank für Deinen Kauf"
-msgstr ""
-
-#: addons/buy-creds/gateways/paypal-standard.php:231
-#, php-format
-msgctxt "Return label. %s = Website name"
-msgid "Return to %s"
-msgstr ""
-
-#: addons/buy-creds/gateways/paypal-standard.php:288
-#: addons/buy-creds/gateways/skrill.php:254
-msgid "Konto-E-Mail"
-msgstr ""
-
-#: addons/buy-creds/gateways/skrill.php:258
-msgid "Geheimwort"
-msgstr ""
-
-#: addons/buy-creds/gateways/skrill.php:270
-msgid "Skrill bitten, mir für jeden erfolgreichen Kauf eine Bestätigungs-E-Mail zu senden."
-msgstr ""
-
-#: addons/buy-creds/gateways/skrill.php:289
-msgid "Kassenseite"
-msgstr ""
-
-#: addons/buy-creds/gateways/skrill.php:294
-msgid "Wenn dieses Feld leer bleibt, wird Deine Konto-E-Mail als Titel auf der Skrill-Zahlungsseite verwendet."
-msgstr ""
-
-#: addons/buy-creds/gateways/skrill.php:298
-msgid "Bestätigungshinweis"
-msgstr ""
-
-#: addons/buy-creds/gateways/skrill.php:299
-msgid "Optionaler Text, der Benutzern nach erfolgreichem Abschluss einer Transaktion angezeigt wird. Dieser Text wird von Skrill angezeigt."
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:198
-#, php-format
-msgid "Doppelte Transaktion. Erhalten: %s"
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:204
-#, php-format
-msgid "Live-Transaktion bei aktiviertem Debug-Modus! Erhalten: %s"
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:340
-msgid "Website-ID"
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:344
-msgid "Gateway-Passwort"
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:354
-msgid "IP-Prüfung"
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:374
-msgid "Sprache"
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:385
-msgid "Preis-ID"
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:390
-msgid "Diese Preis-ID entspricht einem „Dynamic Credits Purchase“ in Zombaio."
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:411
-msgid "Postback-URL (ZScript)"
-msgstr ""
-
-#: addons/buy-creds/gateways/zombaio.php:413
-msgid "Damit dieses Gateway funktioniert, melde Dich bei ZOA an, setze die Postback-URL auf die obige Adresse und klicke auf „Validate“."
-msgstr ""
-
-#: addons/buy-creds/includes/buycred-functions.php:16
-msgid "Bitte melde Dich an, um %_plural% zu kaufen"
-msgstr ""
-
-#: addons/buy-creds/includes/buycred-functions.php:31
-#, php-format
-msgid "Geschenkkauf von %display_name%."
-msgstr ""
-
-#: addons/buy-creds/includes/buycred-functions.php:99
-msgid "Banküberweisung"
-msgstr ""
-
-#: addons/buy-creds/includes/buycred-functions.php:186
-#: addons/buy-creds/modules/buycred-module-core.php:412
-#: addons/transfer/includes/bonips-transfer-object.php:493
-#: includes/bonips-functions.php:3503
-#: includes/shortcodes/bonips_hook_table.php:122
-msgid "Kein Limit"
-msgstr ""
-
-#: addons/buy-creds/includes/buycred-functions.php:466
-msgid "Unbekanntes Gateway"
-msgstr ""
-
-#: addons/buy-creds/includes/buycred-functions.php:470
-#: addons/buy-creds/includes/buycred-shortcodes.php:352
-#: addons/buy-creds/modules/buycred-module-core.php:921
-#: addons/buy-creds/modules/buycred-module-pending.php:314
-#: addons/buy-creds/modules/buycred-module-pending.php:660
-msgid "Gateway"
-msgstr ""
-
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1302
 #: addons/buy-creds/includes/buycred-reward-hook.php:175
 #: addons/email-notices/boniPS-addon-email-notices.php:649
 #: addons/transfer/includes/bonips-transfer-widgets.php:102
@@ -1940,24 +1583,474 @@ msgstr ""
 msgid "erforderlich"
 msgstr ""
 
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1303
+#: addons/transfer/includes/bonips-transfer-widgets.php:92
+#: addons/transfer/includes/bonips-transfer-widgets.php:114
+#: addons/transfer/includes/bonips-transfer-widgets.php:118
+#: addons/transfer/includes/bonips-transfer-widgets.php:126
+#: includes/bonips-admin.php:722
+#: includes/bonips-admin.php:759
+#: modules/bonips-module-management.php:797
+msgid "optional"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1309
+msgid "Vorname"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1315
+msgid "Nachname"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1323
+msgid "Adresszeile 1"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1331
+msgid "Adresszeile 2"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1339
+msgid "Stadt"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1345
+msgid "Postleitzahl"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1353
+msgid "Bundesland"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1361
+msgid "Land"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1366
+msgid "Land auswählen"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1420
+msgid "Hier siehst Du die Informationen, die erfasst und an dieses Gateway gesendet werden. Debug-Informationen sind nur für Administratoren sichtbar und dienen der Fehlersuche und dem Testen des Gateways. Bitte deaktiviere den Sandbox-Modus, wenn Du das Gateway live schalten möchtest."
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1488
+msgid "Wird geladen"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1489
+#, php-format
+msgid "Weiter zu %s"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:1490
+msgid "Klicke hier, wenn Du nicht automatisch weitergeleitet wirst"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2055
+msgid "Jänner"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2056
+msgid "Februar"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2057
+msgid "März"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2058
+msgid "April"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2059
+msgid "Mai"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2060
+msgid "Juni"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2061
+msgid "Juli"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2062
+msgid "August"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2063
+msgid "September"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2064
+msgid "Oktober"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2065
+msgid "November"
+msgstr ""
+
+#: addons/buy-creds/abstracts/bonips-abstract-payment-gateway.php:2066
+msgid "Dezember"
+msgstr ""
+
+#: addons/buy-creds/gateways/bank-transfer.php:164
+#: addons/buy-creds/gateways/bitpay.php:365
+#: addons/buy-creds/gateways/netbilling.php:220
+#: addons/buy-creds/gateways/paypal-standard.php:286
+#: addons/buy-creds/gateways/skrill.php:252
+#: addons/buy-creds/gateways/zombaio.php:338
+msgid "Details"
+msgstr ""
+
+#: addons/buy-creds/gateways/bank-transfer.php:166
+#: addons/buy-creds/gateways/skrill.php:293
+#: addons/gateway/carts/bonips-woocommerce.php:99
+#: addons/ranks/boniPS-addon-ranks.php:1560
+#: addons/sell-content/includes/bonips-sell-shortcodes.php:203
+#: addons/transfer/includes/bonips-transfer-widgets.php:91
+#: includes/bonips-widgets.php:176
+#: includes/bonips-widgets.php:359
+#: includes/bonips-widgets.php:567
+#: includes/hooks/bonips-hook-referrals.php:666
+#: includes/widgets/bonips-widget-balance.php:176
+#: includes/widgets/bonips-widget-leaderboard.php:105
+#: includes/widgets/bonips-widget-wallet.php:117
+msgid "Titel"
+msgstr ""
+
+#: addons/buy-creds/gateways/bank-transfer.php:170
+#: addons/buy-creds/gateways/bitpay.php:483
+#: addons/buy-creds/gateways/netbilling.php:239
+#: addons/buy-creds/gateways/paypal-standard.php:296
+#: addons/buy-creds/gateways/skrill.php:266
+#: addons/buy-creds/gateways/zombaio.php:348
+msgid "Logo-URL"
+msgstr ""
+
+#: addons/buy-creds/gateways/bank-transfer.php:177
+#: addons/buy-creds/gateways/bitpay.php:535
+#: addons/buy-creds/gateways/netbilling.php:246
+#: addons/buy-creds/gateways/paypal-standard.php:303
+#: addons/buy-creds/gateways/skrill.php:276
+#: addons/buy-creds/gateways/zombaio.php:395
+#: addons/buy-creds/modules/buycred-module-pending.php:691
+msgid "Währung"
+msgstr ""
+
+#: addons/buy-creds/gateways/bank-transfer.php:181
+#: addons/buy-creds/gateways/bitpay.php:540
+#: addons/buy-creds/gateways/netbilling.php:250
+#: addons/buy-creds/gateways/paypal-standard.php:309
+#: addons/buy-creds/gateways/skrill.php:282
+#: addons/buy-creds/gateways/zombaio.php:401
+msgid "Wechselkurse"
+msgstr ""
+
+#: addons/buy-creds/gateways/bank-transfer.php:191
+msgid "Bankkontodaten"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:131
+#: addons/buy-creds/gateways/netbilling.php:110
+#: addons/buy-creds/gateways/paypal-standard.php:168
+#: addons/buy-creds/gateways/skrill.php:111
+#: addons/buy-creds/gateways/zombaio.php:236
+msgid "Das Benutzerkonto konnte nicht gutgeschrieben werden."
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:370
+#: addons/buy-creds/gateways/bitpay.php:448
+msgid "API-Token"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:372
+msgid "Kopplungscode"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:450
+msgid "Token widerrufen"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:464
+msgid "Möchtest Du das wirklich tun?"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:467
+msgid "Entfernt – denke daran, Deine Änderungen zu speichern."
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:479
+#: addons/buy-creds/gateways/netbilling.php:235
+#: addons/buy-creds/gateways/paypal-standard.php:292
+#: addons/buy-creds/gateways/skrill.php:171
+#: addons/buy-creds/gateways/skrill.php:262
+msgid "Artikelname"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:489
+msgid "Transaktionsgeschwindigkeit"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:494
+msgid "Hoch"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:495
+msgid "Mittel"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:496
+msgid "Niedrig"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:511
+msgid "Vollständige Benachrichtigungen"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:516
+#: addons/buy-creds/gateways/zombaio.php:359
+#: addons/transfer/boniPS-addon-transfer.php:278
+#: includes/bonips-network.php:185
+#: includes/bonips-network.php:199
+msgid "Nein"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:517
+#: addons/buy-creds/gateways/zombaio.php:360
+#: addons/transfer/boniPS-addon-transfer.php:277
+#: includes/bonips-network.php:181
+#: includes/bonips-network.php:195
+msgid "Ja"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:536
+msgid "Währungscode"
+msgstr ""
+
+#: addons/buy-creds/gateways/bitpay.php:631
+#: addons/buy-creds/gateways/bitpay.php:677
+msgid "Ein ungültiger Server-Fingerabdruck wurde erzeugt."
+msgstr ""
+
+#: addons/buy-creds/gateways/netbilling.php:93
+#: addons/buy-creds/gateways/paypal-standard.php:145
+#: addons/buy-creds/gateways/skrill.php:88
+#, php-format
+msgid "Der Preis stimmt nicht überein. Erwartet: %s Erhalten: %s"
+msgstr ""
+
+#: addons/buy-creds/gateways/netbilling.php:99
+#: addons/buy-creds/gateways/paypal-standard.php:157
+#: addons/buy-creds/gateways/skrill.php:100
+#, php-format
+msgid "Die Zahlung wurde nicht abgeschlossen. Erhalten: %s"
+msgstr ""
+
+#: addons/buy-creds/gateways/netbilling.php:222
+msgid "Konto-ID"
+msgstr ""
+
+#: addons/buy-creds/gateways/netbilling.php:226
+msgid "Website-Tag"
+msgstr ""
+
+#: addons/buy-creds/gateways/netbilling.php:230
+msgid "Integritätsschlüssel der Bestellung"
+msgstr ""
+
+#: addons/buy-creds/gateways/netbilling.php:232
+msgid "Unter Schritt 12 auf der Fraud-Defense-Seite zu finden."
+msgstr ""
+
+#: addons/buy-creds/gateways/netbilling.php:256
+msgid "Postback-CGI-URL"
+msgstr ""
+
+#: addons/buy-creds/gateways/netbilling.php:258
+msgid "Damit dieses Gateway funktioniert, melde Dich bei Deinem NETbilling-Konto an und bearbeite Deine Website. Stelle unter „Default payment form settings“ sicher, dass die Postback-CGI-URL auf die obige Adresse und „Return method“ auf POST gesetzt ist."
+msgstr ""
+
+#: addons/buy-creds/gateways/paypal-standard.php:151
+#: addons/buy-creds/gateways/skrill.php:94
+#, php-format
+msgid "Die Währung stimmt nicht überein. Erwartet: %s Erhalten: %s"
+msgstr ""
+
+#: addons/buy-creds/gateways/paypal-standard.php:192
+#: addons/buy-creds/gateways/skrill.php:135
+msgid "Erfolg"
+msgstr ""
+
+#: addons/buy-creds/gateways/paypal-standard.php:193
+#: addons/buy-creds/gateways/skrill.php:136
+msgid "Vielen Dank für Deinen Kauf"
+msgstr ""
+
+#: addons/buy-creds/gateways/paypal-standard.php:231
+#, php-format
+msgctxt "Return label. %s = Website name"
+msgid "Zurück zu %s"
+msgstr ""
+
+#: addons/buy-creds/gateways/paypal-standard.php:288
+#: addons/buy-creds/gateways/skrill.php:254
+msgid "Konto-E-Mail"
+msgstr ""
+
+#: addons/buy-creds/gateways/skrill.php:258
+msgid "Geheimwort"
+msgstr ""
+
+#: addons/buy-creds/gateways/skrill.php:270
+msgid "Skrill bitten, mir für jeden erfolgreichen Kauf eine Bestätigungs-E-Mail zu senden."
+msgstr ""
+
+#: addons/buy-creds/gateways/skrill.php:289
+msgid "Kassenseite"
+msgstr ""
+
+#: addons/buy-creds/gateways/skrill.php:294
+msgid "Wenn dieses Feld leer bleibt, wird Deine Konto-E-Mail als Titel auf der Skrill-Zahlungsseite verwendet."
+msgstr ""
+
+#: addons/buy-creds/gateways/skrill.php:298
+msgid "Bestätigungshinweis"
+msgstr ""
+
+#: addons/buy-creds/gateways/skrill.php:299
+msgid "Optionaler Text, der Benutzern nach erfolgreichem Abschluss einer Transaktion angezeigt wird. Dieser Text wird von Skrill angezeigt."
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:198
+#, php-format
+msgid "Doppelte Transaktion. Erhalten: %s"
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:204
+#, php-format
+msgid "Live-Transaktion bei aktiviertem Debug-Modus! Erhalten: %s"
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:340
+msgid "Website-ID"
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:344
+msgid "Gateway-Passwort"
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:354
+msgid "IP-Prüfung"
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:374
+msgid "Sprache"
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:385
+msgid "Preis-ID"
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:390
+msgid "Diese Preis-ID entspricht einem „Dynamic Credits Purchase“ in Zombaio."
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:411
+msgid "Postback-URL (ZScript)"
+msgstr ""
+
+#: addons/buy-creds/gateways/zombaio.php:413
+msgid "Damit dieses Gateway funktioniert, melde Dich bei ZOA an, setze die Postback-URL auf die obige Adresse und klicke auf „Validate“."
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-functions.php:16
+msgid "Bitte melde Dich an, um %_plural% zu kaufen"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-functions.php:31
+#, php-format
+msgid "Geschenkkauf von %display_name%."
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-functions.php:99
+msgid "Banküberweisung"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-functions.php:186
+#: addons/buy-creds/modules/buycred-module-core.php:412
+#: addons/transfer/includes/bonips-transfer-object.php:493
+#: includes/bonips-functions.php:3503
+#: includes/hooks/bonips-hook-link-clicks.php:54
+#: includes/shortcodes/bonips_hook_table.php:122
+msgid "Kein Limit"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-functions.php:466
+msgid "Unbekanntes Gateway"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-functions.php:470
+#: addons/buy-creds/includes/buycred-shortcodes.php:352
+#: addons/buy-creds/modules/buycred-module-core.php:921
+#: addons/buy-creds/modules/buycred-module-pending.php:314
+#: addons/buy-creds/modules/buycred-module-pending.php:660
+msgid "Gateway"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-reward-hook.php:114
+#: addons/buy-creds/includes/buycred-reward-hook.php:137
+#: addons/buy-creds/includes/buycred-reward.php:50
+msgid "Belohnung für den Kauf von %plural%."
+msgstr ""
+
 #: addons/buy-creds/includes/buycred-reward-hook.php:183
 msgid "Minimum"
 msgstr ""
 
 #: addons/buy-creds/includes/buycred-reward-hook.php:189
-msgid "Maximium"
+msgid "Maximum"
 msgstr ""
 
-#: addons/buy-creds/includes/buycred-reward.php:58
+#: addons/buy-creds/includes/buycred-reward-hook.php:197
+msgid "Weitere hinzufügen"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-reward-hook.php:198
+msgid "Entfernen"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-reward.php:49
+msgid "Möchtest Du diesen Hook wirklich entfernen?"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-reward.php:62
 msgid "Belohnung für den Kauf von %plural%"
 msgstr ""
 
-#: addons/buy-creds/includes/buycred-reward.php:59
+#: addons/buy-creds/includes/buycred-reward.php:63
 msgid "Fügt einen BoniPress-Hook für die buyCred-Belohnung hinzu."
 msgstr ""
 
-#: addons/buy-creds/includes/buycred-reward.php:69
+#: addons/buy-creds/includes/buycred-reward.php:73
 msgid "Belohnung für den Kauf von buyCRED"
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-shortcodes.php:35
+msgid "Keine Gateways installiert."
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-shortcodes.php:36
+msgid "Das Gateway existiert nicht."
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-shortcodes.php:37
+msgid "Keine aktiven Gateways gefunden."
+msgstr ""
+
+#: addons/buy-creds/includes/buycred-shortcodes.php:38
+msgid "Das ausgewählte Gateway ist nicht aktiv."
 msgstr ""
 
 #: addons/buy-creds/includes/buycred-shortcodes.php:102
@@ -2109,6 +2202,9 @@ msgstr ""
 #: includes/bonips-about.php:23
 #: includes/bonips-about.php:52
 #: includes/bonips-about.php:57
+#: includes/importers/bonips-balances.php:247
+#: includes/importers/bonips-cubepoints.php:307
+#: includes/importers/bonips-log-entries.php:241
 #: modules/bonips-module-addons.php:354
 #: modules/bonips-module-addons.php:396
 #: modules/bonips-module-caching.php:301
@@ -2124,6 +2220,10 @@ msgstr ""
 
 #: addons/buy-creds/modules/buycred-module-core.php:805
 msgid "Update Einstellungen"
+msgstr ""
+
+#: addons/buy-creds/modules/buycred-module-core.php:805
+msgid "Mehr Erweiterungen"
 msgstr ""
 
 #: addons/buy-creds/modules/buycred-module-core.php:873
@@ -2146,6 +2246,7 @@ msgid "Bezahlt"
 msgstr ""
 
 #: addons/buy-creds/modules/buycred-module-core.php:1136
+#: addons/sell-content/includes/bonips-sell-shortcodes.php:187
 msgid "Keine Käufe gefunden"
 msgstr ""
 
@@ -2314,6 +2415,7 @@ msgid "Gutscheine"
 msgstr ""
 
 #: addons/coupons/boniPS-addon-coupons.php:106
+#: addons/coupons/includes/bonips-coupon-shortcodes.php:17
 msgid "Gutschein"
 msgstr ""
 
@@ -2387,6 +2489,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: addons/coupons/boniPS-addon-coupons.php:310
+#: includes/hooks/bonips-hook-referrals.php:50
 #: includes/widgets/bonips-widget-leaderboard.php:125
 #: modules/bonips-module-management.php:463
 msgid "Gesamt"
@@ -2534,6 +2637,14 @@ msgstr ""
 
 #: addons/coupons/includes/bonips-coupon-functions.php:256
 msgid "Ein unbekannter Fehler ist aufgetreten. Gutschein nicht verwendet."
+msgstr ""
+
+#: addons/coupons/includes/bonips-coupon-shortcodes.php:18
+msgid "Gutschein anwenden"
+msgstr ""
+
+#: addons/coupons/includes/bonips-coupon-shortcodes.php:24
+msgid "Die Gutschein-Erweiterung ist nicht eingerichtet! Bitte besuche BoniPress > Einstellungen und speichere Deine Einstellungen, bevor Du diesen Shortcode verwendest."
 msgstr ""
 
 #: addons/email-notices/boniPS-addon-email-notices.php:144
@@ -3167,6 +3278,10 @@ msgstr ""
 msgid "Beschriftung für das Guthaben auf der Kassen- und Warenkorbseite. Leer lassen, um es auszublenden."
 msgstr ""
 
+#: addons/gateway/carts/bonips-woocommerce.php:181
+msgid "Dein Guthaben"
+msgstr ""
+
 #: addons/gateway/carts/bonips-woocommerce.php:194
 msgid "Protokolleintragsvorlage für Gewinnbeteiligungen."
 msgstr ""
@@ -3191,7 +3306,7 @@ msgstr ""
 #: addons/gateway/carts/bonips-woocommerce.php:430
 #, php-format
 msgctxt "%s = Point amount formatted"
-msgid "Refunded %s"
+msgid "%s erstattet"
 msgstr ""
 
 #: addons/gateway/carts/bonips-woocommerce.php:482
@@ -3262,6 +3377,11 @@ msgstr ""
 #: addons/gateway/event-booking/bonips-eventespresso3.php:389
 #, php-format
 msgid "%s deaktivieren"
+msgstr ""
+
+#: addons/gateway/event-booking/bonips-eventespresso3.php:400
+#: addons/gateway/event-booking/bonips-eventsmanager.php:585
+msgid "Zum Umschalten klicken"
 msgstr ""
 
 #: addons/gateway/event-booking/bonips-eventespresso3.php:402
@@ -3502,10 +3622,6 @@ msgstr ""
 msgid "Guthaben nach der Zahlung"
 msgstr ""
 
-#: addons/gateway/event-booking/bonips-eventsmanager.php:585
-msgid "Zum Umschalten klicken"
-msgstr ""
-
 #: addons/gateway/event-booking/bonips-eventsmanager.php:586
 #, php-format
 msgid "%s-Zahlungen"
@@ -3608,10 +3724,6 @@ msgstr ""
 
 #: addons/import/boniPS-addon-import.php:432
 msgid "Keine gültigen Datensätze gefunden."
-msgstr ""
-
-#: addons/import/boniPS-addon-import.php:458
-msgid "Zugriff verweigert"
 msgstr ""
 
 #: addons/import/boniPS-addon-import.php:466
@@ -4238,6 +4350,23 @@ msgstr ""
 msgid "Weise Benutzern Ränge zu"
 msgstr ""
 
+#: addons/sell-content/boniPS-addon-sell-content.php:43
+msgid "Wird verarbeitet ..."
+msgstr ""
+
+#: addons/sell-content/boniPS-addon-sell-content.php:45
+#, php-format
+msgid "<div class=\"text-center\"><h3>Premium-Inhalt</h3><p>Kaufe Zugang zu diesem Inhalt.</p><p>%buy_button%</p></div>"
+msgstr ""
+
+#: addons/sell-content/boniPS-addon-sell-content.php:46
+msgid "<div class=\"text-center\"><h3>Premium-Inhalt</h3><p>Melde Dich an, um Zugang zu diesem Inhalt zu kaufen.</p></div>"
+msgstr ""
+
+#: addons/sell-content/boniPS-addon-sell-content.php:47
+msgid "<div class=\"text-center\"><h3>Premium-Inhalt</h3><p>Kaufe Zugang zu diesem Inhalt.</p><p><strong>Unzureichendes Guthaben</strong></p></div>"
+msgstr ""
+
 #: addons/sell-content/boniPS-addon-sell-content.php:155
 #: includes/bonips-shortcodes.php:424
 #: includes/bonips-shortcodes.php:427
@@ -4256,7 +4385,7 @@ msgstr ""
 #: addons/sell-content/boniPS-addon-sell-content.php:521
 #, php-format
 msgctxt "Points Name"
-msgid "%s Profit Share"
+msgid "%s Gewinnbeteiligung"
 msgstr ""
 
 #: addons/sell-content/boniPS-addon-sell-content.php:509
@@ -4266,13 +4395,13 @@ msgstr ""
 #: addons/sell-content/boniPS-addon-sell-content.php:524
 #, php-format
 msgctxt "Points Name"
-msgid "User can not pay using %s"
+msgid "Benutzer kann nicht mit %s bezahlen"
 msgstr ""
 
 #: addons/sell-content/boniPS-addon-sell-content.php:536
 #, php-format
 msgctxt "Buying Points"
-msgid "%s Profit Share"
+msgid "%s Gewinnbeteiligung"
 msgstr ""
 
 #: addons/sell-content/boniPS-addon-sell-content.php:539
@@ -4398,49 +4527,49 @@ msgstr ""
 #: addons/sell-content/includes/bonips-sell-functions.php:561
 #, php-format
 msgctxt "Point type name"
-msgid "You can not pay using %s"
+msgid "Du kannst nicht mit %s bezahlen"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:822
 #, php-format
 msgctxt "all post type name"
-msgid "All %s"
+msgid "Alle %s"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:826
 #, php-format
 msgctxt "all post type name"
-msgid "%s I manually select"
+msgid "%s, die ich manuell auswähle"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:830
 #, php-format
 msgctxt "%s = post type name"
-msgid "All %s except"
+msgid "Alle %s außer"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:831
 #, php-format
 msgctxt "%s = post type name"
-msgid "Comma separated list of %s IDs to exclude"
+msgid "Kommagetrennte Liste der auszuschließenden %s-IDs"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:834
 #, php-format
 msgctxt "%s = post type name"
-msgid "Only %s"
+msgid "Nur %s"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:835
 #, php-format
 msgctxt "%s = post type name"
-msgid "Comma separated list of %s IDs"
+msgid "Kommagetrennte Liste von %s-IDs"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:847
 #, php-format
 msgctxt "e.g. Only \"Posts\" in \"Categories\""
-msgid "Only %s in %s"
+msgid "Nur %s in %s"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:848
@@ -4449,25 +4578,25 @@ msgstr ""
 #: addons/sell-content/includes/bonips-sell-functions.php:862
 #, php-format
 msgctxt "%s = taxonomy name"
-msgid "Comma separated list of %s slugs"
+msgid "Kommagetrennte Liste von %s-Slugs"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:851
 #, php-format
 msgctxt "e.g. Only \"Posts\" not in \"Categories\""
-msgid "Only %s not in %s"
+msgid "Nur %s nicht in %s"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:857
 #, php-format
 msgctxt "e.g. Only \"Posts\" with \"Tags\""
-msgid "Only %s with %s"
+msgid "Nur %s mit %s"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-functions.php:861
 #, php-format
 msgctxt "e.g. Only \"Posts\" without \"Tags\""
-msgid "Only %s without %s"
+msgid "Nur %s ohne %s"
 msgstr ""
 
 #: addons/sell-content/includes/bonips-sell-shortcodes.php:68
@@ -4495,7 +4624,7 @@ msgstr ""
 #: addons/sell-content/includes/bonips-sell-shortcodes.php:250
 #, php-format
 msgctxt "e.g. 10 hours"
-msgid "Purchase expires in %s"
+msgid "Kauf läuft in %s ab"
 msgstr ""
 
 #: addons/stats/abstracts/bonips-abstract-stat-widget.php:100
@@ -4672,6 +4801,37 @@ msgstr ""
 msgid "Verluste der letzten 10 Tage"
 msgstr ""
 
+#: addons/transfer/boniPS-addon-transfer.php:37
+#, php-format
+msgid "Überweisung von %plural% an %display_name%"
+msgstr ""
+
+#: addons/transfer/boniPS-addon-transfer.php:38
+#, php-format
+msgid "Überweisung von %plural% von %display_name%"
+msgstr ""
+
+#: addons/transfer/boniPS-addon-transfer.php:41
+msgid "Du hast nicht genügend %plural% zum Senden."
+msgstr ""
+
+#: addons/transfer/boniPS-addon-transfer.php:42
+msgid "Du hast Dein Überweisungslimit von %limit% überschritten."
+msgstr ""
+
+#: addons/transfer/boniPS-addon-transfer.php:46
+#, php-format
+msgid "Dein aktuelles Guthaben beträgt %balance%"
+msgstr ""
+
+#: addons/transfer/boniPS-addon-transfer.php:47
+msgid "Von Deinem Überweisungslimit %limit% verbleiben %left%"
+msgstr ""
+
+#: addons/transfer/boniPS-addon-transfer.php:48
+msgid "Überweisen"
+msgstr ""
+
 #: addons/transfer/boniPS-addon-transfer.php:168
 msgid "Transaktion abgeschlossen."
 msgstr ""
@@ -4805,6 +4965,15 @@ msgstr ""
 msgid "Vorlage für das Benutzerguthaben im Überweisungs-Shortcode oder Widget. Wird ignoriert, wenn Guthaben nicht angezeigt werden."
 msgstr ""
 
+#: addons/transfer/boniPS-addon-transfer.php:469
+msgid "Tipp:"
+msgstr ""
+
+#: addons/transfer/boniPS-addon-transfer.php:469
+#, php-format
+msgid "Mit der Erweiterung %s kannst Du Gebühren für Überweisungen erheben oder Überweisungen zurückhalten."
+msgstr ""
+
 #: addons/transfer/includes/bonips-transfer-functions.php:124
 msgid "Keine Limits."
 msgstr ""
@@ -4860,6 +5029,7 @@ msgstr ""
 
 #: addons/transfer/includes/bonips-transfer-object.php:823
 #: addons/transfer/includes/bonips-transfer-shortcodes.php:30
+#: modules/bonips-module-management.php:555
 msgid "Guthaben"
 msgstr ""
 
@@ -4889,16 +5059,6 @@ msgstr ""
 
 #: addons/transfer/includes/bonips-transfer-widgets.php:22
 msgid "Übertragungen zwischen Benutzern zulassen."
-msgstr ""
-
-#: addons/transfer/includes/bonips-transfer-widgets.php:92
-#: addons/transfer/includes/bonips-transfer-widgets.php:114
-#: addons/transfer/includes/bonips-transfer-widgets.php:118
-#: addons/transfer/includes/bonips-transfer-widgets.php:126
-#: includes/bonips-admin.php:722
-#: includes/bonips-admin.php:759
-#: modules/bonips-module-management.php:797
-msgid "optional"
 msgstr ""
 
 #: addons/transfer/includes/bonips-transfer-widgets.php:95
@@ -5245,25 +5405,25 @@ msgstr[1] ""
 #: includes/bonips-functions.php:3547
 #, php-format
 msgctxt "e.g. 5 th"
-msgid "%d th"
+msgid "%d."
 msgstr ""
 
 #: includes/bonips-functions.php:3551
 #, php-format
 msgctxt "e.g. 1 st"
-msgid "%d st"
+msgid "%d."
 msgstr ""
 
 #: includes/bonips-functions.php:3552
 #, php-format
 msgctxt "e.g. 2 nd"
-msgid "%d nd"
+msgid "%d."
 msgstr ""
 
 #: includes/bonips-functions.php:3553
 #, php-format
 msgctxt "e.g. 3 rd"
-msgid "%d rd"
+msgid "%d."
 msgstr ""
 
 #: includes/bonips-importer.php:11
@@ -5736,6 +5896,8 @@ msgid "Präfix"
 msgstr ""
 
 #: includes/bonips-setup.php:303
+#: includes/importers/bonips-balances.php:307
+#: includes/importers/bonips-log-entries.php:303
 #: modules/bonips-module-settings.php:568
 msgid "Trennzeichen"
 msgstr ""
@@ -5980,6 +6142,7 @@ msgid "Verwende \"Balance\", um die Bestenliste auf die aktuellen Salden Deiner 
 msgstr ""
 
 #: includes/bonips-widgets.php:375
+#: includes/widgets/bonips-widget-leaderboard.php:121
 msgid "Referenzhandbuch"
 msgstr ""
 
@@ -6023,6 +6186,16 @@ msgstr ""
 #: includes/bonips-widgets.php:472
 #: includes/widgets/bonips-widget-wallet.php:22
 msgid "Zeigt mehrere Salden an."
+msgstr ""
+
+#: includes/bonips-widgets.php:558
+#: includes/widgets/bonips-widget-wallet.php:108
+msgid "Meine Brieftasche"
+msgstr ""
+
+#: includes/bonips-widgets.php:562
+#: includes/widgets/bonips-widget-wallet.php:112
+msgid "<a href=\"%login_url_here%\">Melde Dich an</a>, um Dein Guthaben anzuzeigen."
 msgstr ""
 
 #: includes/classes/class.query-export.php:263
@@ -6282,14 +6455,20 @@ msgid "Neuer Gruppenkommentar"
 msgstr ""
 
 #: includes/classes/class.query-log.php:2350
+#: includes/hooks/external/bonips-hook-buddypress-media.php:290
+#: plugins/bonips-hook-buddypress-media.php:290
 msgid "Foto-Upload"
 msgstr ""
 
 #: includes/classes/class.query-log.php:2351
+#: includes/hooks/external/bonips-hook-buddypress-media.php:314
+#: plugins/bonips-hook-buddypress-media.php:314
 msgid "Video-Upload"
 msgstr ""
 
 #: includes/classes/class.query-log.php:2352
+#: includes/hooks/external/bonips-hook-buddypress-media.php:338
+#: plugins/bonips-hook-buddypress-media.php:338
 msgid "Musik-Upload"
 msgstr ""
 
@@ -6462,11 +6641,11 @@ msgid "Manuelle Anpassung durch Admin"
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:363
-msgid "%plural% are only awarded when your website has been synced with the Disqus server!"
+msgid "%plural% werden erst vergeben, wenn Deine Website mit dem Disqus-Server synchronisiert wurde!"
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:367
-msgid "Approved Comments"
+msgid "Genehmigte Kommentare"
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:371
@@ -6481,7 +6660,8 @@ msgstr ""
 #: includes/hooks/external/bonips-hook-wp-postratings.php:165
 #: plugins/bonips-hook-wp-favorite-posts.php:222
 #: plugins/bonips-hook-wp-favorite-posts.php:267
-msgid "Member"
+#: plugins/bonips-hook-wp-postratings.php:165
+msgid "Mitglied"
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:373
@@ -6492,7 +6672,7 @@ msgstr ""
 #: includes/hooks/bonips-hook-comments.php:457
 #: includes/hooks/external/bonips-hook-affiliatewp.php:293
 #: includes/hooks/external/bonips-hook-affiliatewp.php:312
-msgid "Use zero to disable."
+msgid "Verwende null zum Deaktivieren."
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:378
@@ -6507,39 +6687,40 @@ msgstr ""
 #: includes/hooks/external/bonips-hook-wp-postratings.php:177
 #: plugins/bonips-hook-wp-favorite-posts.php:234
 #: plugins/bonips-hook-wp-favorite-posts.php:282
-msgid "Content Author"
+#: plugins/bonips-hook-wp-postratings.php:177
+msgid "Inhaltsautor"
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:395
-msgid "%plural% is to be awarded even when comment authors reply to their own comment."
+msgid "%plural% auch vergeben, wenn Kommentarautoren auf ihren eigenen Kommentar antworten."
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:403
-msgid "Limit per post"
+msgid "Limit pro Beitrag"
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:405
-msgid "The number of comments per post that grants %_plural% to the comment author. Use zero for unlimited."
+msgid "Anzahl der Kommentare pro Beitrag, für die der Kommentarautor %_plural% erhält. Verwende null für unbegrenzt."
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:410
-msgid "Limit per day"
+msgid "Limit pro Tag"
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:412
-msgid "Number of comments per day that grants %_plural%. Use zero for unlimited."
+msgid "Anzahl der Kommentare pro Tag, für die %_plural% vergeben werden. Verwende null für unbegrenzt."
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:418
-msgid "SPAM Comments"
+msgid "Spam-Kommentare"
 msgstr ""
 
 #: includes/hooks/bonips-hook-comments.php:444
-msgid "Trashed Comments"
+msgid "Kommentare im Papierkorb"
 msgstr ""
 
 #: includes/hooks/bonips-hook-delete-content.php:107
-msgid "Trashing Posts"
+msgid "Beiträge in den Papierkorb verschieben"
 msgstr ""
 
 #: includes/hooks/bonips-hook-delete-content.php:117
@@ -6639,55 +6820,47 @@ msgid "Limit"
 msgstr ""
 
 #: includes/hooks/bonips-hook-delete-content.php:131
-msgid "Trashing Pages"
+msgid "Seiten in den Papierkorb verschieben"
 msgstr ""
 
 #: includes/hooks/bonips-hook-delete-content.php:187
 #, php-format
-msgid "Trashing %s"
-msgstr ""
-
-#: includes/hooks/bonips-hook-link-clicks.php:54
-msgid "No limit"
+msgid "%s in den Papierkorb verschieben"
 msgstr ""
 
 #: includes/hooks/bonips-hook-link-clicks.php:55
-msgid "Once for each unique URL"
+msgid "Einmal pro eindeutiger URL"
 msgstr ""
 
 #: includes/hooks/bonips-hook-link-clicks.php:56
-msgid "Once for each unique link id"
+msgid "Einmal pro eindeutiger Link-ID"
 msgstr ""
 
 #: includes/hooks/bonips-hook-link-clicks.php:302
 #: includes/hooks/bonips-hook-watching-video.php:355
-msgid "Available Shortcode"
+msgid "Verfügbarer Shortcode"
 msgstr ""
 
 #: includes/hooks/bonips-hook-publishing-content.php:109
 #: plugins/bonips-hook-sharethis.php:257
-msgid "Publishing Posts"
+msgid "Beiträge veröffentlichen"
 msgstr ""
 
 #: includes/hooks/bonips-hook-publishing-content.php:133
-msgid "Publishing Pages"
+msgid "Seiten veröffentlichen"
 msgstr ""
 
 #: includes/hooks/bonips-hook-publishing-content.php:189
 #, php-format
-msgid "Publishing %s"
+msgid "%s veröffentlichen"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:42
-msgid "Affiliate Program"
-msgstr ""
-
-#: includes/hooks/bonips-hook-referrals.php:50
-msgid "Total"
+msgid "Partnerprogramm"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:51
-msgid "Per Day"
+msgid "Pro Tag"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:211
@@ -6695,82 +6868,82 @@ msgid "Link"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:215
-msgid "Visitors Referred"
+msgid "Geworbene Besucher"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:219
-msgid "Signups Referred"
+msgid "Geworbene Registrierungen"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:555
 #: includes/hooks/external/bonips-hook-affiliatewp.php:306
 #: plugins/bonips-hook-affiliatewp.php:306
-msgid "Referring Visitors"
+msgid "Besucher werben"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:579
-msgid "Referring Signups"
+msgid "Registrierungen werben"
+msgstr ""
+
+#: includes/hooks/bonips-hook-referrals.php:609
+msgid "Registrierungen sind deaktiviert."
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:620
-msgid "Referral Links"
+msgid "Empfehlungslinks"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:624
-msgid "Assign numeric referral IDs to each user."
+msgid "Jedem Benutzer eine numerische Empfehlungs-ID zuweisen."
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:625
 #: includes/hooks/bonips-hook-referrals.php:631
-msgid "Example"
+msgid "Beispiel"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:630
-msgid "Assign usernames as IDs for each user."
+msgid "Benutzernamen als Empfehlungs-IDs zuweisen."
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:638
-msgid "IP Limit"
+msgid "IP-Limit"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:640
-msgid "The number of times each IP address grants %_plural%. Use zero for unlimited."
-msgstr ""
-
-#: includes/hooks/bonips-hook-referrals.php:645
-msgid "Available Shortcodes"
+msgid "Anzahl der Male, die jede IP-Adresse %_plural% vergibt. Verwende null für unbegrenzt."
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:653
-msgid "BuddyPress Profile"
+msgid "BuddyPress-Profil"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:658
-msgid "Insert referral link in users profiles"
+msgid "Empfehlungslink in Benutzerprofile einfügen"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:668
-msgid "Leave empty to hide."
+msgid "Leer lassen, um es auszublenden."
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:673
-msgid "Profile Positioning"
+msgid "Position im Profil"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:675
-msgid "You can move around the referral link on your users profile by changing the position. Increase to move up, decrease to move down."
+msgid "Du kannst die Position des Empfehlungslinks im Benutzerprofil ändern. Ein höherer Wert verschiebt ihn nach oben, ein niedrigerer nach unten."
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:682
-msgid "Description"
+msgid "Beschreibung"
 msgstr ""
 
 #: includes/hooks/bonips-hook-referrals.php:683
-msgid "Optional description to insert under the link."
+msgid "Optionale Beschreibung unter dem Link."
 msgstr ""
 
 #: includes/hooks/bonips-hook-view-content.php:144
-msgid "Viewing Posts"
+msgid "Beiträge ansehen"
 msgstr ""
 
 #: includes/hooks/bonips-hook-view-content.php:174
@@ -6778,7 +6951,7 @@ msgstr ""
 #: includes/hooks/external/bonips-hook-wp-favorite-posts.php:248
 #: includes/hooks/external/bonips-hook-wp-postratings.php:207
 #: plugins/bonips-hook-wp-favorite-posts.php:248
-msgid "Member Protokollvorlage"
+msgid "Protokollvorlage für Mitglieder"
 msgstr ""
 
 #: includes/hooks/bonips-hook-view-content.php:181
@@ -6786,49 +6959,50 @@ msgstr ""
 #: includes/hooks/external/bonips-hook-wp-favorite-posts.php:255
 #: includes/hooks/external/bonips-hook-wp-postratings.php:214
 #: plugins/bonips-hook-wp-favorite-posts.php:255
-msgid "Content Author Protokollvorlage"
+#: plugins/bonips-hook-wp-postratings.php:214
+msgid "Protokollvorlage für Inhaltsautoren"
 msgstr ""
 
 #: includes/hooks/bonips-hook-view-content.php:189
-msgid "Viewing Pages"
+msgid "Seiten ansehen"
 msgstr ""
 
 #: includes/hooks/bonips-hook-view-content.php:280
 #, php-format
-msgid "Viewing %s"
+msgid "%s ansehen"
 msgstr ""
 
 #: includes/hooks/bonips-hook-watching-video.php:323
-msgid "Award Logic"
+msgid "Vergabelogik"
 msgstr ""
 
 #: includes/hooks/bonips-hook-watching-video.php:325
-msgid "Play - As soon as video starts playing."
+msgid "Abspielen – sobald das Video startet."
 msgstr ""
 
 #: includes/hooks/bonips-hook-watching-video.php:328
-msgid "Full - First when the entire video has played."
+msgid "Vollständig – erst wenn das gesamte Video abgespielt wurde."
 msgstr ""
 
 #: includes/hooks/bonips-hook-watching-video.php:331
-msgid "Interval - For each x number of seconds watched."
+msgid "Intervall – für jede festgelegte Anzahl angesehener Sekunden."
 msgstr ""
 
 #: includes/hooks/bonips-hook-watching-video.php:338
-msgid "Intervals"
+msgid "Intervalle"
 msgstr ""
 
 #: includes/hooks/bonips-hook-watching-video.php:340
 #, php-format
-msgid "The number of seconds a user must watch in order to get %s."
+msgid "Anzahl der Sekunden, die ein Benutzer ansehen muss, um %s zu erhalten."
 msgstr ""
 
 #: includes/hooks/bonips-hook-watching-video.php:345
-msgid "Leniency"
+msgid "Toleranz"
 msgstr ""
 
 #: includes/hooks/bonips-hook-watching-video.php:347
-msgid "Do not set this value to zero! A lot of thing can happen while a user watches a movie and sometimes a few seconds can drop of the counter due to buffering or play back errors."
+msgid "Setze diesen Wert nicht auf null! Beim Ansehen eines Videos können durch Pufferung oder Wiedergabefehler einige Sekunden im Zähler fehlen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:15
@@ -6837,48 +7011,49 @@ msgid "AffiliateWP"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:16
-msgid "Awards %_plural% for affiliate signups, referring visitors and store sale referrals."
+msgid "Vergibt %_plural% für Partnerregistrierungen, geworbene Besucher und vermittelte Shop-Verkäufe."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:287
-msgid "Affiliate Signup"
+msgid "Partnerregistrierung"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:333
 #: plugins/bonips-hook-affiliatewp.php:333
-msgid "Referring Sales"
+msgid "Verkäufe vermitteln"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:338
-msgid "Pay a set amount"
+msgid "Einen festen Betrag auszahlen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:342
-msgid "All referrals will pay the same amount."
+msgid "Alle Empfehlungen zahlen denselben Betrag aus."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:348
-msgid "Pay the referral amount"
+msgid "Empfehlungsbetrag auszahlen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:350
-msgid "Points Currency Code"
+msgid "Währungscode der Punkte"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:352
-msgid "Requires AffiliateWP and your store to use points as currency."
+msgid "Erfordert, dass AffiliateWP und Dein Shop Punkte als Währung verwenden."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:358
-msgid "Apply an exchange rate"
+msgid "Wechselkurs anwenden"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:369
-msgid "Log template - Payout"
+#: plugins/bonips-hook-affiliatewp.php:369
+msgid "Protokollvorlage – Auszahlung"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-affiliatewp.php:376
-msgid "Log template - Refund"
+msgid "Protokollvorlage – Erstattung"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-badgeOS.php:15
@@ -6888,98 +7063,86 @@ msgstr ""
 
 #: includes/hooks/external/bonips-hook-badgeOS.php:16
 #: plugins/bonips-hook-badgeOS.php:16
-msgid "Default settings for each BadgeOS Achievement type. These settings may be overridden for individual achievement type."
+msgid "Standardeinstellungen für jeden BadgeOS-Erfolgstyp. Sie können für einzelne Erfolgstypen überschrieben werden."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-badgeOS.php:124
 #: plugins/bonips-hook-badgeOS.php:124
 #, php-format
-msgid "Please setup your <a href=\"%s\">default settings</a> before using this feature."
+msgid "Bitte richte Deine <a href=\"%s\">Standardeinstellungen</a> ein, bevor Du diese Funktion verwendest."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-badgeOS.php:138
 #: includes/hooks/external/bonips-hook-badgeOS.php:140
 #: plugins/bonips-hook-badgeOS.php:138
 #: plugins/bonips-hook-badgeOS.php:140
-msgid "%plural% to Award"
+msgid "Zu vergebende %plural%"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-badgeOS.php:142
 #: plugins/bonips-hook-badgeOS.php:142
-msgid "Use zero to disable"
+msgid "Verwende null zum Deaktivieren"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-badgeOS.php:155
 #: plugins/bonips-hook-badgeOS.php:155
-msgid "Deduction Protokollvorlage"
+msgid "Protokollvorlage für Abzüge"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-badgeOS.php:317
 #: plugins/bonips-hook-badgeOS.php:317
 #, php-format
-msgid "Earning: %s"
+msgid "Erhalten: %s"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-badgeOS.php:335
 #: plugins/bonips-hook-badgeOS.php:335
 #, php-format
-msgid "Revoked: %s"
+msgid "Widerrufen: %s"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress-media.php:15
 #: plugins/bonips-hook-buddypress-media.php:15
-msgid "rtMedia Galleries"
+msgid "rtMedia-Galerien"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress-media.php:16
 #: plugins/bonips-hook-buddypress-media.php:16
-msgid "Award / Deduct %_plural% for users creating albums or uploading new photos."
-msgstr ""
-
-#: includes/hooks/external/bonips-hook-buddypress-media.php:290
-#: plugins/bonips-hook-buddypress-media.php:290
-msgid "Photo Upload"
-msgstr ""
-
-#: includes/hooks/external/bonips-hook-buddypress-media.php:314
-#: plugins/bonips-hook-buddypress-media.php:314
-msgid "Video Upload"
-msgstr ""
-
-#: includes/hooks/external/bonips-hook-buddypress-media.php:338
-#: plugins/bonips-hook-buddypress-media.php:338
-msgid "Music Upload"
+msgid "Vergibt oder zieht %_plural% ab, wenn Benutzer Alben erstellen oder Fotos hochladen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress-media.php:362
 #: plugins/bonips-hook-buddypress-media.php:362
-msgid "Photo Deletion"
+msgid "Foto löschen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress-media.php:380
 #: plugins/bonips-hook-buddypress-media.php:380
-msgid "Video Deletion"
+msgid "Video löschen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress-media.php:398
 #: plugins/bonips-hook-buddypress-media.php:398
-msgid "Music Deletion"
+msgid "Musik löschen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:16
-msgid "BuddyPress: Members"
+#: plugins/bonips-hook-buddypress.php:16
+msgid "BuddyPress: Mitglieder"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:17
-msgid "Awards %_plural% for profile related actions."
+#: plugins/bonips-hook-buddypress.php:17
+msgid "Vergibt %_plural% für profilbezogene Aktionen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:25
-msgid "BuddyPress: Groups"
+#: plugins/bonips-hook-buddypress.php:25
+msgid "BuddyPress: Gruppen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:26
-msgid "Awards %_plural% for group related actions. Use minus to deduct %_plural% or zero to disable a specific hook."
+msgid "Vergibt %_plural% für gruppenbezogene Aktionen. Verwende negative Werte, um %_plural% abzuziehen, oder null, um einen Hook zu deaktivieren."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:614
@@ -7008,7 +7171,7 @@ msgid "Neue Freundschaften"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:736
-msgid "Users with zero balance can not add friends. Requires that you deduct %_plural% for adding a new friend."
+msgid "Benutzer ohne Guthaben können keine Freunde hinzufügen. Voraussetzung ist, dass Du beim Hinzufügen eines Freundes %_plural% abziehst."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:743
@@ -7035,77 +7198,83 @@ msgid "Neue private Nachricht"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1503
-msgid "Group Creation"
+msgid "Gruppe erstellen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1509
-msgid "If you use a negative value and the user does not have enough %_plural%, the \"Create Group\" button will be disabled."
+msgid "Wenn Du einen negativen Wert verwendest und der Benutzer nicht genügend %_plural% hat, wird die Schaltfläche „Gruppe erstellen“ deaktiviert."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1514
 #: plugins/bonips-hook-buddypress.php:1513
-msgid "No. of Members"
+msgid "Anzahl der Mitglieder"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1516
-msgid "The number of members a group must gain before awarding %_plural%. Use zero to award as soon as the group is created."
+msgid "Anzahl der Mitglieder, die eine Gruppe vor der Vergabe von %_plural% erreichen muss. Verwende null für die Vergabe direkt nach der Erstellung."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1529
-msgid "Group Deletions"
+msgid "Gruppen löschen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1547
-msgid "New Group Avatar Upload"
+msgid "Neuen Gruppenavatar hochladen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1571
-msgid "New Group Cover Upload"
+#: plugins/bonips-hook-buddypress.php:1570
+msgid "Neues Gruppencover hochladen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1595
-msgid "New Forum Topics"
+#: plugins/bonips-hook-buddypress.php:1594
+msgid "Neue Forenthemen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1619
-msgid "Editing Forum Topics"
+#: plugins/bonips-hook-buddypress.php:1618
+msgid "Forenthemen bearbeiten"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1643
-msgid "New Forum Posts"
+msgid "Neue Forenbeiträge"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1667
-msgid "Editing Forum Posts"
+msgid "Forenbeiträge bearbeiten"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1691
-msgid "Joining Groups"
+#: plugins/bonips-hook-buddypress.php:1690
+msgid "Gruppen beitreten"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1715
-msgid "Leaving Groups"
+#: plugins/bonips-hook-buddypress.php:1714
+msgid "Gruppen verlassen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-buddypress.php:1733
-msgid "New Group Comments"
+#: plugins/bonips-hook-buddypress.php:1732
+msgid "Neue Gruppenkommentare"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-contact-form7.php:15
 #: plugins/bonips-hook-contact-form7.php:15
-msgid "Contact Form 7 Form Submissions"
+msgid "Contact-Form-7-Formulareinreichungen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-contact-form7.php:16
 #: plugins/bonips-hook-contact-form7.php:16
-msgid "Awards %_plural% for successful form submissions (by logged in users)."
+msgid "Vergibt %_plural% für erfolgreiche Formulareinreichungen angemeldeter Benutzer."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-contact-form7.php:135
 #: includes/hooks/external/bonips-hook-gravityforms.php:130
 #: plugins/bonips-hook-contact-form7.php:134
 #: plugins/bonips-hook-gravityforms.php:130
-msgid "No forms found."
+msgid "Keine Formulare gefunden."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-contact-form7.php:163
@@ -7113,7 +7282,7 @@ msgstr ""
 #: plugins/bonips-hook-contact-form7.php:162
 #: plugins/bonips-hook-gravityforms.php:156
 #, php-format
-msgid "Form: %s"
+msgid "Formular: %s"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-events-manager-light.php:15
@@ -7123,67 +7292,67 @@ msgstr ""
 
 #: includes/hooks/external/bonips-hook-events-manager-light.php:16
 #: plugins/bonips-hook-events-manager-light.php:16
-msgid "Awards %_plural% for users attending events."
+msgid "Vergibt %_plural% für Benutzer, die an Veranstaltungen teilnehmen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-events-manager-light.php:201
 #: plugins/bonips-hook-events-manager-light.php:201
-msgid "Attending Event"
+msgid "An Veranstaltung teilnehmen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-events-manager-light.php:225
 #: plugins/bonips-hook-events-manager-light.php:225
-msgid "Cancelling Attendance"
+msgid "Teilnahme stornieren"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-gravityforms.php:15
 #: plugins/bonips-hook-gravityforms.php:15
-msgid "Gravityform Submissions"
+msgid "Gravity-Forms-Einreichungen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-gravityforms.php:16
 #: plugins/bonips-hook-gravityforms.php:16
-msgid "Awards %_plural% for successful form submissions."
+msgid "Vergibt %_plural% für erfolgreiche Formulareinreichungen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-invite-anyone.php:15
 #: plugins/bonips-hook-invite-anyone.php:15
-msgid "Invite Anyone Plugin"
+msgid "Invite-Anyone-Plugin"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-invite-anyone.php:16
 #: plugins/bonips-hook-invite-anyone.php:16
-msgid "Awards %_plural% for sending invitations and/or %_plural% if the invite is accepted."
+msgid "Vergibt %_plural% für das Senden von Einladungen und/oder %_plural%, wenn die Einladung angenommen wird."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-invite-anyone.php:205
 #: plugins/bonips-hook-invite-anyone.php:205
-msgid "Sending Invites"
+msgid "Einladungen senden"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-invite-anyone.php:229
 #: plugins/bonips-hook-invite-anyone.php:229
-msgid "Accepted Invites"
+msgid "Angenommene Einladungen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-jetpack.php:15
 #: plugins/bonips-hook-jetpack.php:15
-msgid "Jetpack Subscriptions"
+msgid "Jetpack-Abonnements"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-jetpack.php:16
 #: plugins/bonips-hook-jetpack.php:16
-msgid "Awards %_plural% for users signing up for site or comment updates using Jetpack."
+msgid "Vergibt %_plural% für Benutzer, die Website- oder Kommentarbenachrichtigungen über Jetpack abonnieren."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-jetpack.php:539
 #: plugins/bonips-hook-jetpack.php:154
-msgid "Site Subscriptions"
+msgid "Website-Abonnements"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-jetpack.php:557
 #: plugins/bonips-hook-jetpack.php:172
-msgid "Comment Subscriptions"
+msgid "Kommentar-Abonnements"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-ps-community.php:10
@@ -7272,17 +7441,17 @@ msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:16
 #: plugins/bonips-hook-PSForum.php:16
-msgid "Awards %_plural% for PSForum actions."
+msgid "Vergibt %_plural% für PSForum-Aktionen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:433
 #: plugins/bonips-hook-PSForum.php:433
-msgid "New Forums"
+msgid "Neue Foren"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:457
 #: plugins/bonips-hook-PSForum.php:457
-msgid "Deleting Forums"
+msgid "Foren löschen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:475
@@ -7290,90 +7459,92 @@ msgstr ""
 #: plugins/bonips-hook-PSForum.php:475
 #: plugins/bonips-hook-PSForum.php:550
 #: plugins/bonips-hook-simplepress.php:291
-msgid "New Topic"
+msgid "Neues Thema"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:501
 #: plugins/bonips-hook-PSForum.php:501
-msgid "Forum authors can receive %_plural% for creating new topics."
+msgid "Forenautoren können %_plural% für das Erstellen neuer Themen erhalten."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:508
 #: includes/hooks/external/bonips-hook-simplepress.php:315
 #: plugins/bonips-hook-PSForum.php:508
 #: plugins/bonips-hook-simplepress.php:315
-msgid "Deleted Topic"
+msgid "Gelöschtes Thema"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:526
 #: plugins/bonips-hook-PSForum.php:526
-msgid "Adding Topic to Favorites"
+msgid "Thema zu Favoriten hinzufügen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:550
-msgid "Forum Reply"
+msgid "Forenantwort"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:576
 #: plugins/bonips-hook-PSForum.php:576
-msgid "Topic authors can receive %_plural% for replying to their own Topic."
+msgid "Themenautoren können %_plural% für Antworten auf ihr eigenes Thema erhalten."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:583
 #: plugins/bonips-hook-PSForum.php:583
-msgid "Deleted Reply"
+msgid "Gelöschte Antwort"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:605
 #: plugins/bonips-hook-PSForum.php:605
-msgid "Show users %_plural% balance in replies"
+#, php-format
+msgid "%_plural%-Guthaben der Benutzer in Antworten anzeigen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-PSForum.php:608
 #: plugins/bonips-hook-PSForum.php:608
-msgid "Show users %_plural% balance in their PSForum profiles"
+#, php-format
+msgid "%_plural%-Guthaben der Benutzer in ihren PSForum-Profilen anzeigen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-simplepress.php:16
 #: plugins/bonips-hook-simplepress.php:16
-msgid "Awards %_plural% for Simple:Press actions."
+msgid "Vergibt %_plural% für Simple:Press-Aktionen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-simplepress.php:333
 #: plugins/bonips-hook-simplepress.php:333
-msgid "New Topic Post"
+msgid "Neuer Themenbeitrag"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-simplepress.php:359
 #: plugins/bonips-hook-simplepress.php:359
-msgid "Topic authors can receive %_plural% for posting on their own Topic."
+msgid "Themenautoren können %_plural% für Beiträge in ihrem eigenen Thema erhalten."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-simplepress.php:366
 #: plugins/bonips-hook-simplepress.php:366
-msgid "Deleted Topic Post"
+msgid "Gelöschter Themenbeitrag"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-woocommerce.php:93
 #: includes/hooks/external/bonips-hook-woocommerce.php:159
 #: plugins/bonips-hook-woocommerce.php:93
 #: plugins/bonips-hook-woocommerce.php:159
-msgid "Reward with %plural%"
+msgid "Mit %plural% belohnen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-woocommerce.php:160
 #: plugins/bonips-hook-woocommerce.php:160
-msgid "Leave empty for no rewards"
+msgid "Leer lassen, um keine Belohnungen zu vergeben"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-woocommerce.php:405
 #: plugins/bonips-hook-woocommerce.php:406
-msgid "WooCommerce Product Reviews"
+msgid "WooCommerce-Produktbewertungen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-woocommerce.php:406
 #: plugins/bonips-hook-woocommerce.php:407
-msgid "Awards %_plural% for users leaving reviews on your WooCommerce products."
+msgid "Vergibt %_plural% für Bewertungen Deiner WooCommerce-Produkte."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-favorite-posts.php:15
@@ -7383,17 +7554,17 @@ msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-favorite-posts.php:16
 #: plugins/bonips-hook-wp-favorite-posts.php:16
-msgid "Awards %_plural% for users adding posts to their favorites."
+msgid "Vergibt %_plural% für Benutzer, die Beiträge zu ihren Favoriten hinzufügen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-favorite-posts.php:218
 #: plugins/bonips-hook-wp-favorite-posts.php:218
-msgid "Adding Content to Favorites"
+msgid "Inhalte zu Favoriten hinzufügen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-favorite-posts.php:263
 #: plugins/bonips-hook-wp-favorite-posts.php:263
-msgid "Removing Content from Favorites"
+msgid "Inhalte aus Favoriten entfernen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-polls.php:15
@@ -7403,131 +7574,121 @@ msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-polls.php:16
 #: plugins/bonips-hook-wp-polls.php:16
-msgid "Awards %_plural% for users voting in polls."
+msgid "Vergibt %_plural% für Benutzer, die an Umfragen teilnehmen."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-postratings.php:15
-msgid "Post Ratings"
+msgid "Beitragsbewertungen"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-postratings.php:16
-msgid "Awards %_plural% for post ratings. Supports awarding %_plural% both to post author and the user rating."
+msgid "Vergibt %_plural% für Beitragsbewertungen. Sowohl der Beitragsautor als auch der bewertende Benutzer können %_plural% erhalten."
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-postratings.php:85
-msgid "Based on rating"
+msgid "Basierend auf der Bewertung"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-postratings.php:161
-msgid "Content Rating"
+#: plugins/bonips-hook-wp-postratings.php:161
+msgid "Inhaltsbewertung"
 msgstr ""
 
 #: includes/hooks/external/bonips-hook-wp-postratings.php:192
 #: includes/hooks/external/bonips-hook-wp-postratings.php:199
-msgid "Use the Rating Value instead of the amount set here."
+msgid "Verwende den Bewertungswert statt des hier festgelegten Betrags."
 msgstr ""
 
 #: includes/importers/bonips-balances.php:117
 #: includes/importers/bonips-balances.php:144
 #: includes/importers/bonips-log-entries.php:117
 #: includes/importers/bonips-log-entries.php:142
-msgid "The file does not exist or could not be read."
+msgid "Die Datei existiert nicht oder konnte nicht gelesen werden."
 msgstr ""
 
 #: includes/importers/bonips-balances.php:220
 #: includes/importers/bonips-log-entries.php:204
-msgid "Invalid CSV file. Please consult the documentation for further assistance."
+msgid "Ungültige CSV-Datei. Weitere Hilfe findest Du in der Dokumentation."
 msgstr ""
 
 #: includes/importers/bonips-balances.php:229
 #: includes/importers/bonips-cubepoints.php:288
 #, php-format
-msgid "Import complete - A total of <strong>%d</strong> balances were successfully imported. <strong>%d</strong> was skipped."
+msgid "Import abgeschlossen – insgesamt wurden <strong>%d</strong> Guthaben erfolgreich importiert. <strong>%d</strong> wurden übersprungen."
 msgstr ""
 
 #: includes/importers/bonips-balances.php:230
 #: includes/importers/bonips-cubepoints.php:289
-msgid "View Users"
+msgid "Benutzer ansehen"
 msgstr ""
 
 #: includes/importers/bonips-balances.php:245
-msgid "Import Balances"
-msgstr ""
-
-#: includes/importers/bonips-balances.php:247
-#: includes/importers/bonips-cubepoints.php:307
-#: includes/importers/bonips-log-entries.php:241
-msgid "Documentation"
+msgid "Guthaben importieren"
 msgstr ""
 
 #: includes/importers/bonips-balances.php:288
 #: includes/importers/bonips-log-entries.php:284
-msgid "Choose a file from your computer:"
+msgid "Wähle eine Datei von Deinem Computer:"
 msgstr ""
 
 #: includes/importers/bonips-balances.php:294
 #: includes/importers/bonips-log-entries.php:290
 #, php-format
-msgid "Maximum size: %s"
+msgid "Maximale Größe: %s"
 msgstr ""
 
 #: includes/importers/bonips-balances.php:299
 #: includes/importers/bonips-log-entries.php:295
-msgid "OR enter path to file:"
-msgstr ""
-
-#: includes/importers/bonips-balances.php:307
-#: includes/importers/bonips-log-entries.php:303
-msgid "Delimiter"
+msgid "ODER gib den Pfad zur Datei ein:"
 msgstr ""
 
 #: includes/importers/bonips-balances.php:315
-msgid "Method"
+msgid "Methode"
 msgstr ""
 
 #: includes/importers/bonips-balances.php:319
-msgid "Replace current balances with the amount in this CSV file"
+msgid "Aktuelle Guthaben durch die Beträge in dieser CSV-Datei ersetzen"
 msgstr ""
 
 #: includes/importers/bonips-balances.php:320
-msgid "Adjust current balances according to the amount in this CSV file"
+msgid "Aktuelle Guthaben anhand der Beträge in dieser CSV-Datei anpassen"
 msgstr ""
 
 #: includes/importers/bonips-cubepoints.php:85
-msgid "Could not find a CubePoints installation."
+msgid "Es wurde keine CubePoints-Installation gefunden."
 msgstr ""
 
 #: includes/importers/bonips-cubepoints.php:282
-msgid "No balances were imported."
+msgid "Es wurden keine Guthaben importiert."
 msgstr ""
 
 #: includes/importers/bonips-cubepoints.php:282
-msgid "No log entries were imported!"
+msgid "Es wurden keine Protokolleinträge importiert!"
 msgstr ""
 
 #: includes/importers/bonips-cubepoints.php:348
-msgid "Select what to import"
+msgid "Wähle aus, was importiert werden soll"
 msgstr ""
 
 #: includes/importers/bonips-cubepoints.php:349
-msgid "Log Entries Only"
+msgid "Nur Protokolleinträge"
 msgstr ""
 
 #: includes/importers/bonips-cubepoints.php:350
-msgid "CubePoints Balances Only"
+msgid "Nur CubePoints-Guthaben"
 msgstr ""
 
 #: includes/importers/bonips-cubepoints.php:351
-msgid "Log Entries and Balances"
+msgid "Protokolleinträge und Guthaben"
 msgstr ""
 
 #: includes/importers/bonips-log-entries.php:213
 #, php-format
-msgid "Import complete - A total of <strong>%d</strong> log entries were successfully imported. <strong>%d</strong> was skipped."
+msgid "Import abgeschlossen – insgesamt wurden <strong>%d</strong> Protokolleinträge erfolgreich importiert. <strong>%d</strong> wurden übersprungen."
 msgstr ""
 
 #: includes/importers/bonips-log-entries.php:239
-msgid "Import Log Entries"
+msgid "Protokolleinträge importieren"
 msgstr ""
 
 #: includes/shortcodes/bonips_exchange.php:27
@@ -7563,15 +7724,15 @@ msgid "Austausch zu %s"
 msgstr ""
 
 #: includes/shortcodes/bonips_hook_table.php:21
-msgid "No instances found for this point type"
+msgid "Keine Vorgänge für diesen Punktetyp gefunden"
 msgstr ""
 
 #: includes/shortcodes/bonips_hook_table.php:24
-msgid "Point type not found."
+msgid "Punktetyp nicht gefunden."
 msgstr ""
 
 #: includes/shortcodes/bonips_hook_table.php:83
-msgid "Instance"
+msgid "Vorgang"
 msgstr ""
 
 #: includes/shortcodes/bonips_hook_table.php:111
@@ -7626,10 +7787,6 @@ msgstr ""
 
 #: includes/widgets/bonips-widget-leaderboard.php:121
 msgid "Verwende \"Guthaben\", um die Rangliste auf dem aktuellen Guthaben Deiner Benutzer zu basieren, oder verwende eine bestimmte Referenz."
-msgstr ""
-
-#: includes/widgets/bonips-widget-leaderboard.php:121
-msgid "Reference Guide"
 msgstr ""
 
 #: includes/widgets/bonips-widget-leaderboard.php:127
@@ -7758,16 +7915,16 @@ msgid "Deaktivieren"
 msgstr ""
 
 #: modules/bonips-module-buddypress.php:31
-msgid "Wallet"
+msgid "Geldbörse"
 msgstr ""
 
 #: modules/bonips-module-buddypress.php:32
 #, php-format
-msgid "%s's Wallet"
+msgid "Geldbörse von %s"
 msgstr ""
 
 #: modules/bonips-module-buddypress.php:352
-msgid "Show:"
+msgid "Anzeigen:"
 msgstr ""
 
 #: modules/bonips-module-buddypress.php:352
@@ -7874,16 +8031,16 @@ msgstr ""
 msgid "Protokoll deaktiviert"
 msgstr ""
 
+#: modules/bonips-module-caching.php:300
+#: modules/bonips-module-caching.php:314
+msgid "Tage"
+msgstr ""
+
 #: modules/bonips-module-caching.php:301
+#: modules/bonips-module-caching.php:315
 #, php-format
 msgctxt "Dokumentation"
 msgid "Option zum automatischen Löschen von Protokolleinträgen nach einer bestimmten Anzahl von Tagen. Bitte lese die %s, bevor Du diese Funktion verwendest, da ihre Verwendung Konsequenzen hat! Verwende zum Deaktivieren Null."
-msgstr ""
-
-#: modules/bonips-module-caching.php:315
-#, php-format
-msgctxt "documentation"
-msgid "ption zum automatischen Löschen von Protokolleinträgen nach einer bestimmten Anzahl von Tagen. Bitte lese die %s, bevor Du diese Funktion verwendest, da ihre Verwendung Konsequenzen hat! Verwende zum Deaktivieren Null."
 msgstr ""
 
 #: modules/bonips-module-export.php:260
@@ -8039,6 +8196,11 @@ msgstr ""
 msgid "Um einen Hook zu aktivieren, ziehe ihn in eine Seitenleiste oder klicke darauf. Um einen Hook zu deaktivieren und seine Einstellungen zu löschen, ziehe ihn zurück."
 msgstr ""
 
+#: modules/bonips-module-hooks.php:335
+#: modules/bonips-module-hooks.php:451
+msgid "Hook-Dokumentation"
+msgstr ""
+
 #: modules/bonips-module-hooks.php:376
 msgid "Hook hinzufügen"
 msgstr ""
@@ -8049,6 +8211,10 @@ msgstr ""
 
 #: modules/bonips-module-hooks.php:418
 msgid "Die folgenden Hooks werden für alle Benutzer verwendet."
+msgstr ""
+
+#: modules/bonips-module-hooks.php:593
+msgid "Dieser Hook ist nicht mehr verfügbar."
 msgstr ""
 
 #: modules/bonips-module-log.php:256
@@ -8064,7 +8230,7 @@ msgid "Protokolleintrag nicht gefunden"
 msgstr ""
 
 #: modules/bonips-module-log.php:327
-msgid "Could not save the new log entry"
+msgid "Der neue Protokolleintrag konnte nicht gespeichert werden"
 msgstr ""
 
 #: modules/bonips-module-log.php:350
@@ -8154,10 +8320,6 @@ msgstr ""
 msgid "Benutzerguthaben bearbeiten"
 msgstr ""
 
-#: modules/bonips-module-management.php:555
-msgid "Balances"
-msgstr ""
-
 #: modules/bonips-module-management.php:753
 msgid "Aktueller Saldo"
 msgstr ""
@@ -8242,10 +8404,6 @@ msgstr ""
 msgid "Erledigt!"
 msgstr ""
 
-#: modules/bonips-module-settings.php:436
-msgid "Close"
-msgstr ""
-
 #: modules/bonips-module-settings.php:437
 #, php-format
 msgid "%singular% Salden exportieren"
@@ -8303,6 +8461,10 @@ msgstr ""
 
 #: modules/bonips-module-settings.php:662
 msgid "Management"
+msgstr ""
+
+#: modules/bonips-module-settings.php:668
+msgid "Protokolltabelle"
 msgstr ""
 
 #: modules/bonips-module-settings.php:683
@@ -8390,24 +8552,20 @@ msgstr ""
 msgid "Wende einen Wechselkurs an"
 msgstr ""
 
-#: plugins/bonips-hook-affiliatewp.php:369
-msgid "Protokollvorlage – Auszahlung"
-msgstr ""
-
 #: plugins/bonips-hook-affiliatewp.php:376
 msgid "Protokollvorlage – Rückerstattung"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-gallery.php:19
-msgid "BuddyPress: Gallery Actions"
+msgid "BuddyPress: Galerieaktionen"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-gallery.php:20
-msgid "Awards %_plural% for creating a new gallery either using BP Album+ or BP Gallery."
+msgid "Vergibt %_plural% für das Erstellen einer neuen Galerie mit BP Album+ oder BP Gallery."
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-gallery.php:97
-msgid "%plural% for New Gallery"
+msgid "%plural% für eine neue Galerie"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:19
@@ -8415,47 +8573,35 @@ msgid "BuddyPress: Links"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:20
-msgid "Awards %_plural% for link related actions."
+msgid "Vergibt %_plural% für linkbezogene Aktionen."
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:247
-msgid "%plural% for New Links"
+msgid "%plural% für neue Links"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:260
-msgid "%plural% for Vote on Link"
+msgid "%plural% für die Bewertung eines Links"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:272
-msgid "%plural% per received Vote"
+msgid "%plural% pro erhaltener Stimme"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:275
-msgid "Vote Up"
+msgid "Positive Stimme"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:286
-msgid "Vote Down"
+msgid "Negative Stimme"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:297
-msgid "%plural% for Updating Links"
+msgid "%plural% für das Aktualisieren von Links"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress-links.php:310
-msgid "%plural% for Deleting Links"
-msgstr ""
-
-#: plugins/bonips-hook-buddypress.php:16
-msgid "BuddyPress: Mitglieder"
-msgstr ""
-
-#: plugins/bonips-hook-buddypress.php:17
-msgid "Vergibt %_plural% für profilbezogene Aktionen."
-msgstr ""
-
-#: plugins/bonips-hook-buddypress.php:25
-msgid "BuddyPress: Gruppen"
+msgid "%plural% für das Löschen von Links"
 msgstr ""
 
 #: plugins/bonips-hook-buddypress.php:26
@@ -8494,18 +8640,6 @@ msgstr ""
 msgid "Neuer Gruppen-Avatar-Upload"
 msgstr ""
 
-#: plugins/bonips-hook-buddypress.php:1570
-msgid "Neues Gruppencover hochladen"
-msgstr ""
-
-#: plugins/bonips-hook-buddypress.php:1594
-msgid "Neue Forenthemen"
-msgstr ""
-
-#: plugins/bonips-hook-buddypress.php:1618
-msgid "Forenthemen bearbeiten"
-msgstr ""
-
 #: plugins/bonips-hook-buddypress.php:1642
 msgid "Neue Forumsbeiträge"
 msgstr ""
@@ -8514,48 +8648,36 @@ msgstr ""
 msgid "Bearbeiten von Forenbeiträgen"
 msgstr ""
 
-#: plugins/bonips-hook-buddypress.php:1690
-msgid "Gruppen beitreten"
-msgstr ""
-
-#: plugins/bonips-hook-buddypress.php:1714
-msgid "Gruppen verlassen"
-msgstr ""
-
-#: plugins/bonips-hook-buddypress.php:1732
-msgid "Neue Gruppenkommentare"
-msgstr ""
-
 #: plugins/bonips-hook-gd-star-rating.php:18
 msgid "GD Star Rating"
 msgstr ""
 
 #: plugins/bonips-hook-gd-star-rating.php:19
-msgid "Awards %_plural% for users rate items using the GD Star Rating plugin."
+msgid "Vergibt %_plural% für Benutzer, die Inhalte mit dem Plugin GD Star Rating bewerten."
 msgstr ""
 
 #: plugins/bonips-hook-gd-star-rating.php:103
-msgid "Rating"
+msgid "Bewertung"
 msgstr ""
 
 #: plugins/bonips-hook-gd-star-rating.php:116
-msgid "Up / Down Vote"
+msgid "Positive / negative Stimme"
 msgstr ""
 
 #: plugins/bonips-hook-sharethis.php:15
-msgid "%plural% for Sharing"
+msgid "%plural% fürs Teilen"
 msgstr ""
 
 #: plugins/bonips-hook-sharethis.php:16
-msgid "Awards %_plural% for users sharing / liking your website content to popular social media sites."
+msgid "Vergibt %_plural% für Benutzer, die Inhalte Deiner Website in sozialen Medien teilen oder mit „Gefällt mir“ markieren."
 msgstr ""
 
 #: plugins/bonips-hook-sharethis.php:216
-msgid "Your ShareThis public key is not set."
+msgid "Dein öffentlicher ShareThis-Schlüssel ist nicht festgelegt."
 msgstr ""
 
 #: plugins/bonips-hook-sharethis.php:221
-msgid "No ShareThis services detected. Please check your installation."
+msgid "Keine ShareThis-Dienste gefunden. Bitte überprüfe Deine Installation."
 msgstr ""
 
 #: plugins/bonips-hook-wp-postratings.php:15
@@ -8570,18 +8692,6 @@ msgstr ""
 msgid "Basierend auf Bewertung"
 msgstr ""
 
-#: plugins/bonips-hook-wp-postratings.php:161
-msgid "Inhaltsbewertung"
-msgstr ""
-
-#: plugins/bonips-hook-wp-postratings.php:165
-msgid "Mitglied"
-msgstr ""
-
-#: plugins/bonips-hook-wp-postratings.php:177
-msgid "Inhaltsautor"
-msgstr ""
-
 #: plugins/bonips-hook-wp-postratings.php:192
 #: plugins/bonips-hook-wp-postratings.php:199
 msgid "Verwende den Bewertungswert anstelle des hier festgelegten Betrags."
@@ -8589,8 +8699,4 @@ msgstr ""
 
 #: plugins/bonips-hook-wp-postratings.php:207
 msgid "Mitgliedsprotokollvorlage"
-msgstr ""
-
-#: plugins/bonips-hook-wp-postratings.php:214
-msgid "Protokollvorlage für Inhaltsautoren"
 msgstr ""

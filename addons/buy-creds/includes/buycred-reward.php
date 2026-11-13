@@ -45,6 +45,10 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward' ) ) :
 
 			wp_enqueue_style( 'buycred-admin-style', plugins_url( 'assets/css/admin-style.css', BONIPS_PURCHASE ), array(), BONIPS_PURCHASE_VERSION, 'all' );
 			wp_enqueue_script( 'buycred-admin-script', plugins_url( 'assets/js/admin-script.js', BONIPS_PURCHASE ), array( 'jquery' ), BONIPS_PURCHASE_VERSION, 'all' );
+			wp_localize_script( 'buycred-admin-script', 'buycredRewardStrings', array(
+				'confirmRemove' => __( 'Möchtest Du diesen Hook wirklich entfernen?', 'bonips' ),
+				'defaultLog'    => __( 'Belohnung für den Kauf von %plural%.', 'bonips' ),
+			) );
 
 		}
 

@@ -141,11 +141,11 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Viewing Posts', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Beiträge ansehen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'post' => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'post' => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'post' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'post' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['post']['creds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -157,7 +157,7 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 		</div>
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'post' => 'acreds' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'post' => 'acreds' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'post' => 'acreds' ) ); ?>" id="<?php echo $this->field_id( array( 'post' => 'acreds' ) ); ?>" value="<?php echo $this->core->number( $prefs['post']['acreds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -171,14 +171,14 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'post' => 'log' ) ); ?>"><?php _e( 'Member Protokollvorlage', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'post' => 'log' ) ); ?>"><?php _e( 'Protokollvorlage für Mitglieder', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'post' => 'log' ) ); ?>" id="<?php echo $this->field_id( array( 'post' => 'log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['post']['log'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'post' => 'alog' ) ); ?>"><?php _e( 'Content Author Protokollvorlage', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'post' => 'alog' ) ); ?>"><?php _e( 'Protokollvorlage für Inhaltsautoren', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'post' => 'alog' ) ); ?>" id="<?php echo $this->field_id( array( 'post' => 'alog' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['post']['alog'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
@@ -186,11 +186,11 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Viewing Pages', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Seiten ansehen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'page' => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'page' => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'page' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'page' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['page']['creds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -202,7 +202,7 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 		</div>
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'page' => 'acreds' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'page' => 'acreds' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'page' => 'acreds' ) ); ?>" id="<?php echo $this->field_id( array( 'page' => 'acreds' ) ); ?>" value="<?php echo $this->core->number( $prefs['page']['acreds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -216,14 +216,14 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'page' => 'log' ) ); ?>"><?php _e( 'Member Protokollvorlage', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'page' => 'log' ) ); ?>"><?php _e( 'Protokollvorlage für Mitglieder', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'page' => 'log' ) ); ?>" id="<?php echo $this->field_id( array( 'page' => 'log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['page']['log'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'page' => 'alog' ) ); ?>"><?php _e( 'Content Author Protokollvorlage', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'page' => 'alog' ) ); ?>"><?php _e( 'Protokollvorlage für Inhaltsautoren', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'page' => 'alog' ) ); ?>" id="<?php echo $this->field_id( array( 'page' => 'alog' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['page']['alog'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
@@ -277,11 +277,11 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 
 ?>
 <div class="hook-instance">
-	<h3><?php printf( __( 'Viewing %s', 'bonips' ), $post_type->labels->name ); ?></h3>
+	<h3><?php printf( __( '%s ansehen', 'bonips' ), $post_type->labels->name ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( $post_type->name => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( $post_type->name => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( $post_type->name => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( $post_type->name => 'creds' ) ); ?>" value="<?php echo $this->core->number( $_creds ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -293,7 +293,7 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 		</div>
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( $post_type->name => 'acreds' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( $post_type->name => 'acreds' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( $post_type->name => 'acreds' ) ); ?>" id="<?php echo $this->field_id( array( $post_type->name => 'acreds' ) ); ?>" value="<?php echo $this->core->number( $_acreds ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -307,14 +307,14 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( $post_type->name => 'log' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( $post_type->name => 'log' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( $post_type->name => 'log' ) ); ?>" id="<?php echo $this->field_id( array( $post_type->name => 'log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $_log ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( $post_type->name => 'alog' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( $post_type->name => 'alog' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( $post_type->name => 'alog' ) ); ?>" id="<?php echo $this->field_id( array( $post_type->name => 'alog' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $_alog ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>

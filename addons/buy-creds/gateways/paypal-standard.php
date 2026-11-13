@@ -228,7 +228,7 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 				'return'        => $this->get_thankyou(),
 				'notify_url'    => $this->callback_url(),
 				'rm'            => 2,
-				'cbt'           => sprintf( _x( 'Return to %s', 'Return label. %s = Website name', 'bonips' ), get_bloginfo( 'name' ) ),
+				'cbt'           => sprintf( _x( 'Zurück zu %s', 'Return label. %s = Website name', 'bonips' ), get_bloginfo( 'name' ) ),
 				'cancel_return' => $this->get_cancelled( $this->transaction_id )
 			);
 

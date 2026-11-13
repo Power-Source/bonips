@@ -324,7 +324,7 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 			// Do the actual update
 			if ( ! $this->core->update_log_entry( $entry_id, array( 'ref' => $request['ref'], 'creds' => $amount, 'entry' => $request['entry'] ), array( '%s', $format, '%s' ) ) )
-				wp_send_json_error( array( 'message' => esc_attr__( 'Could not save the new log entry', 'bonips' ) ) );
+				wp_send_json_error( array( 'message' => esc_attr__( 'Der neue Protokolleintrag konnte nicht gespeichert werden', 'bonips' ) ) );
 
 			bonips_update_users_history( $log_entry->user_id, $this->bonips_type, $log_entry->ref, $log_entry->ref_id, ( $amount - $log_entry->creds ) );
 
@@ -969,7 +969,7 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 ?>
 <div id="edit-bonips-log-entry" style="display: none;">
 	<div class="bonips-container">
-		<?php if ( $name == 'boniPS' ) : ?><img id="bonips-token-sitting" class="hidden-sm hidden-xs" src="<?php echo plugins_url( 'assets/images/token-sitting.png', boniPS_THIS ); ?>" alt="Token looking on" /><?php endif; ?>
+		<?php if ( $name == 'boniPS' ) : ?><img id="bonips-token-sitting" class="hidden-sm hidden-xs" src="<?php echo plugins_url( 'assets/images/token-sitting.png', boniPS_THIS ); ?>" alt="" /><?php endif; ?>
 		<form class="form" method="post" action="" id="bonips-editor-form">
 			<input type="hidden" name="bonips_manage_log[id]" value="" id="bonips-edit-log-id" />
 

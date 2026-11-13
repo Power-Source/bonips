@@ -12,8 +12,8 @@ function bonips_register_contact_form_seven_hook( $installed ) {
 	if ( ! function_exists( 'wpcf7' ) ) return $installed;
 
 	$installed['contact_form7'] = array(
-		'title'         => __( 'Contact Form 7 Form Submissions', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for successful form submissions (by logged in users).', 'bonips' ),
+		'title'         => __( 'Contact-Form-7-Formulareinreichungen', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für erfolgreiche Formulareinreichungen angemeldeter Benutzer.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/submitting-contact-form-7-forms/',
 		'callback'      => array( 'boniPS_Contact_Form7' )
 	);
@@ -132,7 +132,7 @@ function bonips_load_contact_form_seven_hook() {
 
 			// No forms found
 			if ( empty( $forms ) ) {
-				echo '<p>' . __( 'No forms found.', 'bonips' ) . '</p>';
+				echo '<p>' . __( 'Keine Formulare gefunden.', 'bonips' ) . '</p>';
 				return;
 			}
 
@@ -160,7 +160,7 @@ function bonips_load_contact_form_seven_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php printf( __( 'Form: %s', 'bonips' ), $form_title ); ?></h3>
+	<h3><?php printf( __( 'Formular: %s', 'bonips' ), $form_title ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">

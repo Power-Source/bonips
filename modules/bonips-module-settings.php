@@ -433,7 +433,7 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 					'confirm_clean' => esc_attr__( 'Alle Protokolleinträge gelöschter Benutzer werden dauerhaft gelöscht! Das kann nicht rückgängig gemacht werden!', 'bonips' ),
 					'confirm_reset' => esc_attr__( 'Warnung! Alle Benutzerguthaben werden auf Null gesetzt! Das kann nicht rückgängig gemacht werden!', 'bonips' ),
 					'done'          => esc_attr__( 'Erledigt!', 'bonips' ),
-					'export_close'  => esc_attr__( 'Close', 'bonips' ),
+					'export_close'  => esc_attr__( 'Schließen', 'bonips' ),
 					'export_title'  => $bonips->template_tags_general( esc_attr__( '%singular% Salden exportieren', 'bonips' ) ),
 					'decimals'      => esc_attr__( 'Um die Anzahl der Dezimalstellen anzupassen, die Du verwenden möchtest, müssen wir Dein Protokoll aktualisieren. Es wird dringend empfohlen, dass Du Dein aktuelles Protokoll sicherst, bevor Du fortfährst!', 'bonips' )
 				)
@@ -665,7 +665,7 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 				<div class="row">
 					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 						<div class="form-group">
-							<label>Log Table</label>
+							<label><?php esc_html_e( 'Protokolltabelle', 'bonips' ); ?></label>
 							<h1><?php echo esc_attr( $bonips_log_table ); ?></h1>
 						</div>
 					</div>

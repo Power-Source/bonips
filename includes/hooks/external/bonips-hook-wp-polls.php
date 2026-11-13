@@ -13,7 +13,7 @@ function bonips_register_wp_polls_hook( $installed ) {
 
 	$installed['wppolls'] = array(
 		'title'         => __( 'WP-Polls', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for users voting in polls.', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Benutzer, die an Umfragen teilnehmen.', 'bonips' ),
 		'documentation' => '',
 		'callback'      => array( 'boniPS_Hook_WPPolls' )
 	);

@@ -90,7 +90,7 @@ if ( ! function_exists( 'bonips_woo_product_metabox' ) ) :
 			$setup = $prefs[ $point_type ];
 
 ?>
-<p class="<?php if ( $count == 1 ) echo 'first'; ?>"><label for="bonips-reward-purchase-with-<?php echo $point_type; ?>"><input class="toggle-bonips-reward" data-id="<?php echo $point_type; ?>" <?php if ( $setup != '' ) echo 'checked="checked"'; ?> type="checkbox" name="bonips_reward[<?php echo $point_type; ?>][use]" id="bonips-reward-purchase-with-<?php echo $point_type; ?>" value="1" /> <?php echo $bonips->template_tags_general( __( 'Reward with %plural%', 'bonips' ) ); ?></label></p>
+<p class="<?php if ( $count == 1 ) echo 'first'; ?>"><label for="bonips-reward-purchase-with-<?php echo $point_type; ?>"><input class="toggle-bonips-reward" data-id="<?php echo $point_type; ?>" <?php if ( $setup != '' ) echo 'checked="checked"'; ?> type="checkbox" name="bonips_reward[<?php echo $point_type; ?>][use]" id="bonips-reward-purchase-with-<?php echo $point_type; ?>" value="1" /> <?php echo $bonips->template_tags_general( __( 'Mit %plural% belohnen', 'bonips' ) ); ?></label></p>
 <div class="bonips-woo-wrap" id="reward-<?php echo $point_type; ?>" style="display:<?php if ( $setup == '' ) echo 'none'; else echo 'block'; ?>">
 	<label><?php echo $bonips->plural(); ?></label> <input type="text" size="8" name="bonips_reward[<?php echo $point_type; ?>][amount]" value="<?php echo esc_attr( $setup ); ?>" placeholder="<?php echo $bonips->zero(); ?>" />
 </div>
@@ -156,8 +156,8 @@ if ( ! function_exists( 'bonips_woo_add_product_variation_detail' ) ) :
 
 ?>
 		<div class="box">
-			<label for="<?php echo $id; ?>"><?php echo $bonips->template_tags_general( __( 'Reward with %plural%', 'bonips' ) ); ?></label>
-			<input type="text" name="_bonips_reward[<?php echo $variation->ID; ?>][<?php echo $point_type; ?>]" id="<?php echo $id; ?>" class="input-text" placeholder="<?php _e( 'Leave empty for no rewards', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs[ $point_type ] ); ?>" />
+			<label for="<?php echo $id; ?>"><?php echo $bonips->template_tags_general( __( 'Mit %plural% belohnen', 'bonips' ) ); ?></label>
+			<input type="text" name="_bonips_reward[<?php echo $variation->ID; ?>][<?php echo $point_type; ?>]" id="<?php echo $id; ?>" class="input-text" placeholder="<?php _e( 'Leer lassen, um keine Belohnungen zu vergeben', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs[ $point_type ] ); ?>" />
 		</div>
 <?php
 
@@ -402,8 +402,8 @@ function bonips_register_woocommerce_hook( $installed ) {
 	if ( ! class_exists( 'WooCommerce' ) ) return $installed;
 
 	$installed['wooreview'] = array(
-		'title'         => __( 'WooCommerce Product Reviews', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for users leaving reviews on your WooCommerce products.', 'bonips' ),
+		'title'         => __( 'WooCommerce-Produktbewertungen', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Bewertungen Deiner WooCommerce-Produkte.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/product-reviews/',
 		'callback'      => array( 'boniPS_Hook_WooCommerce_Reviews' )
 	);

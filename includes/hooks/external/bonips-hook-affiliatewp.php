@@ -13,7 +13,7 @@ function bonips_register_affiliatewp_hook( $installed ) {
 
 	$installed['affiliatewp'] = array(
 		'title'         => __( 'AffiliateWP', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for affiliate signups, referring visitors and store sale referrals.', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Partnerregistrierungen, geworbene Besucher und vermittelte Shop-Verkäufe.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/affiliatewp-actions/',
 		'callback'      => array( 'boniPS_AffiliateWP' )
 	);
@@ -284,13 +284,13 @@ function bonips_load_affiliatewp_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Affiliate Signup', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Partnerregistrierung', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<label for="<?php echo $this->field_id( array( 'signup', 'creds' ) ); ?>"><?php _e( 'Betrag', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'signup', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'signup', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['signup']['creds'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -303,13 +303,13 @@ function bonips_load_affiliatewp_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Referring Visitors', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Besucher werben', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<label for="<?php echo $this->field_id( array( 'visits', 'creds' ) ); ?>"><?php _e( 'Betrag', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'visits', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'visits', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['visits']['creds'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -330,32 +330,32 @@ function bonips_load_affiliatewp_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Referring Sales', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Verkäufe vermitteln', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="radio">
-					<label for="<?php echo $this->field_id( array( 'referrals', 'pay-amount' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( array( 'referrals', 'pay' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'pay-amount' ) ); ?>"<?php checked( $this->prefs['referrals']['pay'], 'creds' ); ?> value="creds" /> <?php _e( 'Pay a set amount', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'referrals', 'pay-amount' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( array( 'referrals', 'pay' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'pay-amount' ) ); ?>"<?php checked( $this->prefs['referrals']['pay'], 'creds' ); ?> value="creds" /> <?php _e( 'Einen festen Betrag auszahlen', 'bonips' ); ?></label>
 				</div>
 				<label for="<?php echo $this->field_id( array( 'referrals', 'creds' ) ); ?>"><?php _e( 'Betrag', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'referrals', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'creds' ) ); ?>" class="form-control" value="<?php echo $this->core->number( $prefs['referrals']['creds'] ); ?>" />
-				<span class="description"><?php _e( 'All referrals will pay the same amount.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Alle Empfehlungen zahlen denselben Betrag aus.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="radio">
-					<label for="<?php echo $this->field_id( array( 'referrals', 'pay-store' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( array( 'referrals', 'pay' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'pay-store' ) ); ?>"<?php checked( $this->prefs['referrals']['pay'], 'currency' ); ?> value="currency" /> <?php _e( 'Pay the referral amount', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'referrals', 'pay-store' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( array( 'referrals', 'pay' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'pay-store' ) ); ?>"<?php checked( $this->prefs['referrals']['pay'], 'currency' ); ?> value="currency" /> <?php _e( 'Empfehlungsbetrag auszahlen', 'bonips' ); ?></label>
 				</div>
-				<label for="<?php echo $this->field_id( array( 'referrals', 'currency' ) ); ?>"><?php _e( 'Points Currency Code', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'referrals', 'currency' ) ); ?>"><?php _e( 'Währungscode der Punkte', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'referrals', 'currency' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'currency' ) ); ?>" class="form-control" value="<?php echo esc_attr( $prefs['referrals']['currency'] ); ?>" />
-				<span class="description"><?php _e( 'Requires AffiliateWP and your store to use points as currency.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Erfordert, dass AffiliateWP und Dein Shop Punkte als Währung verwenden.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="radio">
-					<label for="<?php echo $this->field_id( array( 'referrals', 'pay-ex' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( array( 'referrals', 'pay' ) ); ?>"<?php if ( array_key_exists( $this->currency, $this->point_types ) ) echo ' readonly="readonly"'; ?> id="<?php echo $this->field_id( array( 'referrals', 'pay-ex' ) ); ?>"<?php checked( $this->prefs['referrals']['pay'], 'exchange' ); ?> value="exchange" /> <?php _e( 'Apply an exchange rate', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'referrals', 'pay-ex' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( array( 'referrals', 'pay' ) ); ?>"<?php if ( array_key_exists( $this->currency, $this->point_types ) ) echo ' readonly="readonly"'; ?> id="<?php echo $this->field_id( array( 'referrals', 'pay-ex' ) ); ?>"<?php checked( $this->prefs['referrals']['pay'], 'exchange' ); ?> value="exchange" /> <?php _e( 'Wechselkurs anwenden', 'bonips' ); ?></label>
 				</div>
 				<label for="<?php echo $this->field_id( array( 'referrals', 'exchange' ) ); ?>"><?php _e( 'Wechselkurs', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'referrals', 'exchange' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'exchange' ) ); ?>" class="form-control"<?php if ( array_key_exists( $this->currency, $this->point_types ) ) echo ' readonly="readonly"'; ?> value="<?php echo esc_attr( $prefs['referrals']['exchange'] ); ?>" />
@@ -366,14 +366,14 @@ function bonips_load_affiliatewp_hook() {
 	<div class="row">
 		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'referrals', 'log' ) ); ?>"><?php _e( 'Log template - Payout', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'referrals', 'log' ) ); ?>"><?php _e( 'Protokollvorlage – Auszahlung', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'referrals', 'log' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['referrals']['log'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'referrals', 'remove_log' ) ); ?>"><?php _e( 'Log template - Refund', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'referrals', 'remove_log' ) ); ?>"><?php _e( 'Protokollvorlage – Erstattung', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'referrals', 'remove_log' ) ); ?>" id="<?php echo $this->field_id( array( 'referrals', 'remove_log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['referrals']['remove_log'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>

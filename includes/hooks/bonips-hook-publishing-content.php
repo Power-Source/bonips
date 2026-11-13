@@ -106,7 +106,7 @@ if ( ! class_exists( 'boniPS_Hook_Publishing_Content' ) ) :
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Publishing Posts', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Beiträge veröffentlichen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
@@ -130,7 +130,7 @@ if ( ! class_exists( 'boniPS_Hook_Publishing_Content' ) ) :
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Publishing Pages', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Seiten veröffentlichen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
@@ -186,7 +186,7 @@ if ( ! class_exists( 'boniPS_Hook_Publishing_Content' ) ) :
 
 ?>
 <div class="hook-instance">
-	<h3><?php printf( __( 'Publishing %s', 'bonips' ), $post_type->labels->name ); ?></h3>
+	<h3><?php printf( __( '%s veröffentlichen', 'bonips' ), $post_type->labels->name ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">

@@ -13,8 +13,8 @@ function bonips_register_buddypress_hook( $installed ) {
 
 	if ( bp_is_active( 'xprofile' ) ) {
 		$installed['hook_bp_profile'] = array(
-			'title'         => __( 'BuddyPress: Members', 'bonips' ),
-			'description'   => __( 'Awards %_plural% for profile related actions.', 'bonips' ),
+			'title'         => __( 'BuddyPress: Mitglieder', 'bonips' ),
+			'description'   => __( 'Vergibt %_plural% für profilbezogene Aktionen.', 'bonips' ),
 			'documentation' => 'http://codex.bonips.me/hooks/buddypress-profiles/',
 			'callback'      => array( 'boniPS_BuddyPress_Profile' )
 		);
@@ -22,8 +22,8 @@ function bonips_register_buddypress_hook( $installed ) {
 
 	if ( bp_is_active( 'groups' ) ) {
 		$installed['hook_bp_groups'] = array(
-			'title'         => __( 'BuddyPress: Groups', 'bonips' ),
-			'description'   => __( 'Awards %_plural% for group related actions. Use minus to deduct %_plural% or zero to disable a specific hook.', 'bonips' ),
+			'title'         => __( 'BuddyPress: Gruppen', 'bonips' ),
+			'description'   => __( 'Vergibt %_plural% für gruppenbezogene Aktionen. Verwende negative Werte, um %_plural% abzuziehen, oder null, um einen Hook zu deaktivieren.', 'bonips' ),
 			'documentation' => 'http://codex.bonips.me/hooks/buddypress-groups/',
 			'callback'      => array( 'boniPS_BuddyPress_Groups' )
 		);
@@ -733,7 +733,7 @@ function bonips_load_buddypress_profile_hook() {
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="radio">
-					<label for="<?php echo $this->field_id( array( 'new_friend', 'block' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'new_friend', 'block' ) ); ?>"<?php checked( $friend_block, 1 ); ?> id="<?php echo $this->field_id( array( 'new_friend', 'block' ) ); ?>" value="1" /> <?php echo $this->core->template_tags_general( __( 'Users with zero balance can not add friends. Requires that you deduct %_plural% for adding a new friend.', 'bonips' ) ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'new_friend', 'block' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'new_friend', 'block' ) ); ?>"<?php checked( $friend_block, 1 ); ?> id="<?php echo $this->field_id( array( 'new_friend', 'block' ) ); ?>" value="1" /> <?php echo $this->core->template_tags_general( __( 'Benutzer ohne Guthaben können keine Freunde hinzufügen. Voraussetzung ist, dass Du beim Hinzufügen eines Freundes %_plural% abziehst.', 'bonips' ) ); ?></label>
 				</div>
 			</div>
 		</div>
@@ -1500,20 +1500,20 @@ function bonips_load_buddypress_groups_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Group Creation', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Gruppe erstellen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<label for="<?php echo $this->field_id( array( 'create', 'creds' ) ); ?>"><?php echo $this->core->plural(); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'create', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'create', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['create']['creds'] ); ?>" class="form-control" />
-				<span class="description"><?php echo $this->core->template_tags_general( __( 'If you use a negative value and the user does not have enough %_plural%, the "Create Group" button will be disabled.', 'bonips' ) ); ?></span>
+				<span class="description"><?php echo $this->core->template_tags_general( __( 'Wenn Du einen negativen Wert verwendest und der Benutzer nicht genügend %_plural% hat, wird die Schaltfläche „Gruppe erstellen“ deaktiviert.', 'bonips' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'create', 'min' ) ); ?>"><?php _e( 'No. of Members', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'create', 'min' ) ); ?>"><?php _e( 'Anzahl der Mitglieder', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'create', 'min' ) ); ?>" id="<?php echo $this->field_id( array( 'create', 'min' ) ); ?>" value="<?php echo esc_attr( $prefs['create']['min'] ); ?>" class="form-control" />
-				<span class="description"><?php echo $this->core->template_tags_general( __( 'The number of members a group must gain before awarding %_plural%. Use zero to award as soon as the group is created.', 'bonips' ) ); ?></span>
+				<span class="description"><?php echo $this->core->template_tags_general( __( 'Anzahl der Mitglieder, die eine Gruppe vor der Vergabe von %_plural% erreichen muss. Verwende null für die Vergabe direkt nach der Erstellung.', 'bonips' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -1526,7 +1526,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Group Deletions', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Gruppen löschen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1544,7 +1544,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'New Group Avatar Upload', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neuen Gruppenavatar hochladen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1568,7 +1568,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'New Group Cover Upload', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neues Gruppencover hochladen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1592,7 +1592,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'New Forum Topics', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neue Forenthemen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1616,7 +1616,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Editing Forum Topics', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Forenthemen bearbeiten', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1640,7 +1640,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'New Forum Posts', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neue Forenbeiträge', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1664,7 +1664,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Editing Forum Posts', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Forenbeiträge bearbeiten', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1688,7 +1688,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Joining Groups', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Gruppen beitreten', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1712,7 +1712,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Leaving Groups', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Gruppen verlassen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -1730,7 +1730,7 @@ function bonips_load_buddypress_groups_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'New Group Comments', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neue Gruppenkommentare', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">

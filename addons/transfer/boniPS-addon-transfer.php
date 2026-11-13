@@ -34,18 +34,18 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 				'defaults'    => array(
 					'types'      => array( BONIPS_DEFAULT_TYPE_KEY ),
 					'logs'       => array(
-						'sending'   => 'Transfer of %plural% to %display_name%',
-						'receiving' => 'Transfer of %plural% from %display_name%'
+						'sending'   => __( 'Überweisung von %plural% an %display_name%', 'bonips' ),
+						'receiving' => __( 'Überweisung von %plural% von %display_name%', 'bonips' )
 					),
 					'errors'     => array(
-						'low'       => 'You do not have enough %plural% to send.',
-						'over'      => 'You have exceeded your %limit% transfer limit.'
+						'low'       => __( 'Du hast nicht genügend %plural% zum Senden.', 'bonips' ),
+						'over'      => __( 'Du hast Dein Überweisungslimit von %limit% überschritten.', 'bonips' )
 					),
 					'templates'  => array(
 						'login'     => '',
-						'balance'   => 'Your current balance is %balance%',
-						'limit'     => 'Your current %limit% transfer limit is %left%',
-						'button'    => 'Transfer'
+						'balance'   => __( 'Dein aktuelles Guthaben beträgt %balance%', 'bonips' ),
+						'limit'     => __( 'Von Deinem Überweisungslimit %limit% verbleiben %left%', 'bonips' ),
+						'button'    => __( 'Überweisen', 'bonips' )
 					),
 					'autofill'   => 'user_login',
 					'reload'     => 1,
@@ -466,7 +466,7 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 	<hr />
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<p><strong>Tip:</strong> <?php printf( 'The %s add-on allows you charge a fee for creating transfers or put transfers on hold.', sprintf( '<a href="http://bonips.me/store/transfer-plus/" target="_blank">%s</a>', 'Transfer Plus' ) ); ?></p>
+			<p><strong><?php esc_html_e( 'Tipp:', 'bonips' ); ?></strong> <?php printf( __( 'Mit der Erweiterung %s kannst Du Gebühren für Überweisungen erheben oder Überweisungen zurückhalten.', 'bonips' ), sprintf( '<a href="http://bonips.me/store/transfer-plus/" target="_blank">%s</a>', 'Transfer Plus' ) ); ?></p>
 		</div>
 	</div>
 	<?php endif; ?>

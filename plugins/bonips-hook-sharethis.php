@@ -12,8 +12,8 @@ function bonips_register_sharethis_hook( $installed ) {
 	if ( ! function_exists( 'install_ShareThis' ) ) return $installed;
 
 	$installed['sharethis'] = array(
-		'title'         => __( '%plural% for Sharing', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for users sharing / liking your website content to popular social media sites.', 'bonips' ),
+		'title'         => __( '%plural% fürs Teilen', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Benutzer, die Inhalte Deiner Website in sozialen Medien teilen oder mit „Gefällt mir“ markieren.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/sharethis-actions/',
 		'callback'      => array( 'boniPS_ShareThis' )
 	);
@@ -213,12 +213,12 @@ jQuery(function($) {
 			// Public key is not yet setup
 			if ( $st_public_key === false ) :
 
-				echo '<p>' . __( 'Your ShareThis public key is not set.', 'bonips' ) . '</p>';
+				echo '<p>' . __( 'Dein öffentlicher ShareThis-Schlüssel ist nicht festgelegt.', 'bonips' ) . '</p>';
 
 			// Services is not yet setup
 			elseif ( $st_services === false ) :
 
-				echo '<p>' . __( 'No ShareThis services detected. Please check your installation.', 'bonips' ) . '</p>';
+				echo '<p>' . __( 'Keine ShareThis-Dienste gefunden. Bitte überprüfe Deine Installation.', 'bonips' ) . '</p>';
 
 			// All is well!
 			else :
@@ -254,7 +254,7 @@ jQuery(function($) {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Publishing Posts', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Beiträge veröffentlichen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">

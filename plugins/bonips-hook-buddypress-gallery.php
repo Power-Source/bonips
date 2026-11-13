@@ -16,8 +16,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 	function BuddyPress_Gallery_boniPS_Hook( $installed ) {
 
 		$installed['hook_bp_gallery'] = array(
-			'title'       => __( 'BuddyPress: Gallery Actions', 'bonips' ),
-			'description' => __( 'Awards %_plural% for creating a new gallery either using BP Album+ or BP Gallery.', 'bonips' ),
+			'title'       => __( 'BuddyPress: Galerieaktionen', 'bonips' ),
+			'description' => __( 'Vergibt %_plural% für das Erstellen einer neuen Galerie mit BP Album+ oder BP Gallery.', 'bonips' ),
 			'callback'    => array( 'boniPS_BuddyPress_Gallery' )
 		);
 
@@ -94,7 +94,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 				$prefs = $this->prefs; ?>
 
 <!-- Creds for New Gallery -->
-<label for="<?php echo $this->field_id( array( 'new_gallery', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% for New Gallery', 'bonips' ) ); ?></label>
+<label for="<?php echo $this->field_id( array( 'new_gallery', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% für eine neue Galerie', 'bonips' ) ); ?></label>
 <ol>
 	<li>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'new_gallery', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'new_gallery', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['new_gallery']['creds'] ); ?>" size="8" /></div>

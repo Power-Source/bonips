@@ -114,7 +114,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 				} else {
 
-					echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'The file does not exist or could not be read.', 'bonips' ) . '</p></div>';
+					echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'Die Datei existiert nicht oder konnte nicht gelesen werden.', 'bonips' ) . '</p></div>';
 					return false;
 
 				}
@@ -139,7 +139,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 			// Make sure the file exists
 			if ( ! is_file( $file ) ) {
 
-				echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'The file does not exist or could not be read.', 'bonips' ) . '</p></div>';
+				echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'Die Datei existiert nicht oder konnte nicht gelesen werden.', 'bonips' ) . '</p></div>';
 				return true;
 
 			}
@@ -201,7 +201,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 				} else {
 
-					echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'Invalid CSV file. Please consult the documentation for further assistance.', 'bonips' ) . '</p></div>';
+					echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'Ungültige CSV-Datei. Weitere Hilfe findest Du in der Dokumentation.', 'bonips' ) . '</p></div>';
 
 				}
 
@@ -210,7 +210,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 			}
 
 			if ( $ran ) {
-				echo '<div class="updated notice notice-success is-dismissible"><p>' . sprintf( __( 'Import complete - A total of <strong>%d</strong> log entries were successfully imported. <strong>%d</strong> was skipped.', 'bonips' ), $this->imported, $this->skipped ) . '</p></div>';
+				echo '<div class="updated notice notice-success is-dismissible"><p>' . sprintf( __( 'Import abgeschlossen – insgesamt wurden <strong>%d</strong> Protokolleinträge erfolgreich importiert. <strong>%d</strong> wurden übersprungen.', 'bonips' ), $this->imported, $this->skipped ) . '</p></div>';
 				echo '<p><a href="' . admin_url( 'admin.php?page=' . BONIPS_SLUG ) . '" class="button button-large button-primary">' . __( 'Protokoll ansehen', 'bonips' ) . '</a></p>';
 			}
 
@@ -236,9 +236,9 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 		 */
 		public function header() {
 
-			$label = __( 'Import Log Entries', 'bonips' );
+			$label = __( 'Protokolleinträge importieren', 'bonips' );
 			if ( BONIPS_DEFAULT_LABEL === 'boniPS' )
-				$label .= ' <a href="' . $this->documentation . '" target="_blank" class="page-title-action">' . __( 'Documentation', 'bonips' ) . '</a>';
+				$label .= ' <a href="' . $this->documentation . '" target="_blank" class="page-title-action">' . __( 'Dokumentation', 'bonips' ) . '</a>';
 
 			echo '<div class="wrap"><h1>' . $label . '</h1>';
 
@@ -281,18 +281,18 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 		<tbody>
 			<tr>
 				<th>
-					<label for="upload"><?php _e( 'Choose a file from your computer:', 'bonips' ); ?></label>
+					<label for="upload"><?php _e( 'Wähle eine Datei von Deinem Computer:', 'bonips' ); ?></label>
 				</th>
 				<td>
 					<input type="file" id="upload" name="import" size="25" />
 					<input type="hidden" name="action" value="save" />
 					<input type="hidden" name="max_file_size" value="<?php echo $bytes; ?>" />
-					<small><?php printf( __( 'Maximum size: %s', 'bonips' ), $size ); ?></small>
+					<small><?php printf( __( 'Maximale Größe: %s', 'bonips' ), $size ); ?></small>
 				</td>
 			</tr>
 			<tr>
 				<th>
-					<label for="file_url"><?php _e( 'OR enter path to file:', 'bonips' ); ?></label>
+					<label for="file_url"><?php _e( 'ODER gib den Pfad zur Datei ein:', 'bonips' ); ?></label>
 				</th>
 				<td>
 					<?php echo ABSPATH . ' '; ?><input type="text" id="file_url" name="file_url" size="25" />
@@ -300,7 +300,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 			</tr>
 			<tr>
 				<th>
-					<label for="delimiter"><?php _e( 'Delimiter', 'bonips' ); ?></label>
+					<label for="delimiter"><?php _e( 'Trennzeichen', 'bonips' ); ?></label>
 				</th>
 				<td>
 					<input type="text" name="delimiter" id="delimiter" placeholder="," size="2" />

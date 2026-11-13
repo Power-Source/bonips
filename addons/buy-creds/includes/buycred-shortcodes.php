@@ -32,10 +32,10 @@ if ( ! function_exists( 'bonips_render_buy_points' ) ) :
 		$installed          = bonips_get_buycred_gateways();
 
 		// Catch errors
-		if ( empty( $installed ) )                                                   return 'No gateways installed.';
-		elseif ( ! empty( $gateway ) && ! array_key_exists( $gateway, $installed ) ) return 'Gateway does not exist.';
-		elseif ( empty( $buycred->active ) )                                         return 'No active gateways found.';
-		elseif ( ! empty( $gateway ) && ! $buycred->is_active( $gateway ) )          return 'The selected gateway is not active.';
+		if ( empty( $installed ) )                                                   return __( 'Keine Gateways installiert.', 'bonips' );
+		elseif ( ! empty( $gateway ) && ! array_key_exists( $gateway, $installed ) ) return __( 'Das Gateway existiert nicht.', 'bonips' );
+		elseif ( empty( $buycred->active ) )                                         return __( 'Keine aktiven Gateways gefunden.', 'bonips' );
+		elseif ( ! empty( $gateway ) && ! $buycred->is_active( $gateway ) )          return __( 'Das ausgewählte Gateway ist nicht aktiv.', 'bonips' );
 
 		$buycred_sale       = true;
 

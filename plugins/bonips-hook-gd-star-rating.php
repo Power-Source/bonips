@@ -16,7 +16,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 	function GD_Star_boniPS_Hook( $installed ) {
 		$installed['gdstars'] = array(
 			'title'       => __( 'GD Star Rating', 'bonips' ),
-			'description' => __( 'Awards %_plural% for users rate items using the GD Star Rating plugin.', 'bonips' ),
+			'description' => __( 'Vergibt %_plural% für Benutzer, die Inhalte mit dem Plugin GD Star Rating bewerten.', 'bonips' ),
 			'callback'    => array( 'boniPS_Hook_GD_Star_Rating' )
 		);
 		return $installed;
@@ -100,7 +100,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 			public function preferences() {
 				$prefs = $this->prefs; ?>
 
-<label class="subheader" for="<?php echo $this->field_id( array( 'star_rating' => 'creds' ) ); ?>"><?php _e( 'Rating', 'bonips' ); ?></label>
+<label class="subheader" for="<?php echo $this->field_id( array( 'star_rating' => 'creds' ) ); ?>"><?php _e( 'Bewertung', 'bonips' ); ?></label>
 <ol>
 	<li>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'star_rating' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'star_rating' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['star_rating']['creds'] ); ?>" size="8" /></div>
@@ -113,7 +113,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 		<span class="description"><?php echo $this->available_template_tags( array( 'general' ) ); ?></span>
 	</li>
 </ol>
-<label class="subheader" for="<?php echo $this->field_id( array( 'up_down' => 'creds' ) ); ?>"><?php _e( 'Up / Down Vote', 'bonips' ); ?></label>
+<label class="subheader" for="<?php echo $this->field_id( array( 'up_down' => 'creds' ) ); ?>"><?php _e( 'Positive / negative Stimme', 'bonips' ); ?></label>
 <ol>
 	<li>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'up_down' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'up_down' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['up_down']['creds'] ); ?>" size="8" /></div>

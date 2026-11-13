@@ -13,7 +13,7 @@ function bonips_register_simplepress_hook( $installed ) {
 
 	$installed['hook_simplepress'] = array(
 		'title'         => 'Simple:Press',
-		'description'   => __( 'Awards %_plural% for Simple:Press actions.', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Simple:Press-Aktionen.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/simplepress-actions/',
 		'callback'      => array( 'boniPS_SimplePress' )
 	);
@@ -288,7 +288,7 @@ function bonips_load_simplepress_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'New Topic', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neues Thema', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -312,7 +312,7 @@ function bonips_load_simplepress_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Deleted Topic', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Gelöschtes Thema', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -330,7 +330,7 @@ function bonips_load_simplepress_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'New Topic Post', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neuer Themenbeitrag', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -356,14 +356,14 @@ function bonips_load_simplepress_hook() {
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="radio">
-					<label for="<?php echo $this->field_id( array( 'new_post' => 'author' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'new_post' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'new_post' => 'author' ) ); ?>" <?php checked( $prefs['new_post']['author'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( 'Topic authors can receive %_plural% for posting on their own Topic.', 'bonips' ) ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'new_post' => 'author' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'new_post' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'new_post' => 'author' ) ); ?>" <?php checked( $prefs['new_post']['author'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( 'Themenautoren können %_plural% für Beiträge in ihrem eigenen Thema erhalten.', 'bonips' ) ); ?></label>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Deleted Topic Post', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Gelöschter Themenbeitrag', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">

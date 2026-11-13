@@ -369,7 +369,7 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 		<div class="form-group">
 			<label><?php _e( 'API-Token', 'bonips' ); ?></label>
 			<div class="form-inline" id="bitpay-pairing-wrapper">
-				<input type="text" id="bitpay-pair-code" class="form-control" placeholder="Pairing Code" value="" /> 
+				<input type="text" id="bitpay-pair-code" class="form-control" placeholder="<?php esc_attr_e( 'Kopplungscode', 'bonips' ); ?>" value="" />
 				<select id="bitpay-pair-network" class="form-control">
 					<option value="live">Livenet</option>
 					<option value="test">Testnet</option>
@@ -447,7 +447,7 @@ jQuery(function($){
 		<div class="form-group">
 			<label><?php _e( 'API-Token', 'bonips' ); ?></label>
 			<p class="form-control-static"><?php echo esc_attr( $prefs['api_label'] ); ?></p>
-			<button type="button" id="bitpay-cancel-pair" class="button button-secondary">Revoke Token</button>
+			<button type="button" id="bitpay-cancel-pair" class="button button-secondary"><?php esc_html_e( 'Token widerrufen', 'bonips' ); ?></button>
 			<input type="hidden" class="reset-api" name="<?php echo $this->field_name( 'api_secret' ); ?>" value="<?php echo esc_attr( $prefs['api_secret'] ); ?>" />
 			<input type="hidden" class="reset-api" name="<?php echo $this->field_name( 'api_public' ); ?>" value="<?php echo esc_attr( $prefs['api_public'] ); ?>" />
 			<input type="hidden" class="reset-api" name="<?php echo $this->field_name( 'api_sign' ); ?>" value="<?php echo esc_attr( $prefs['api_sign'] ); ?>" />
@@ -628,7 +628,7 @@ if ( ! function_exists( 'buycred_bitpay_encrypt' ) ) :
 
             return $encrypted;
         } else {
-            wp_die('Invalid server fingerprint generated');
+            wp_die( esc_html__( 'Ein ungültiger Server-Fingerabdruck wurde erzeugt.', 'bonips' ) );
         }
 
 	}
@@ -674,7 +674,7 @@ if ( ! function_exists( 'buycred_bitpay_decrypt' ) ) :
 
             return unserialize($decrypted);
         } else {
-            wp_die('Invalid server fingerprint generated');
+            wp_die( esc_html__( 'Ein ungültiger Server-Fingerabdruck wurde erzeugt.', 'bonips' ) );
         }
 
 	}

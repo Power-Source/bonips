@@ -30,4 +30,4 @@ Store reward systems, community leaderboards, online banking or monetizing your 
 
 Die Ausgangssprache ist Deutsch. Mit installiertem WP-CLI aktualisiert
 `sh scripts/update-translations.sh` die POT-Datei sowie die englischen PO- und
-MO-Dateien. Die englische Übersetzung ist derzeit noch unvollständig.
+MO-Dateien. Alle Einträge im aktuellen Katalog sind ins Englische übersetzt.

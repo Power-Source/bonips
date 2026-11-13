@@ -397,7 +397,7 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 <p id="bonips-gate">&nbsp;</p>
 <div class="metabox-holder">
 	<div class="postbox <?php echo $postbox_style; ?>">
-		<div title="Click to toggle" class="handlediv"><br /></div>
+		<div title="<?php esc_attr_e( 'Zum Umschalten klicken', 'bonips' ); ?>" class="handlediv"><br /></div>
 		<h3 class="hndle">
 			<?php echo $this->label . ' ' . __( 'Gateway-Einstellungen', 'bonips' ); ?>
 		</h3>

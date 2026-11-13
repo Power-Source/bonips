@@ -40,11 +40,11 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 						'filters'     => array(),
 					'type'        => array( BONIPS_DEFAULT_TYPE_KEY ),
 					'reload'      => 0,
-					'working'     => 'Processing ...',
+					'working'     => __( 'Wird verarbeitet ...', 'bonips' ),
 					'templates'   => array(
-						'members'     => '<div class="text-center"><h3>Premium Content</h3><p>Buy access to this content.</p><p>%buy_button%</p></div>',
-						'visitors'    => '<div class="text-center"><h3>Premium Content</h3><p>Login to buy access to this content.</p></div>',
-						'cantafford'  => '<div class="text-center"><h3>Premium Content</h3><p>Buy access to this content.</p><p><strong>Insufficient Funds</strong></p></div>'
+						'members'     => __( '<div class="text-center"><h3>Premium-Inhalt</h3><p>Kaufe Zugang zu diesem Inhalt.</p><p>%buy_button%</p></div>', 'bonips' ),
+						'visitors'    => __( '<div class="text-center"><h3>Premium-Inhalt</h3><p>Melde Dich an, um Zugang zu diesem Inhalt zu kaufen.</p></div>', 'bonips' ),
+						'cantafford'  => __( '<div class="text-center"><h3>Premium-Inhalt</h3><p>Kaufe Zugang zu diesem Inhalt.</p><p><strong>Unzureichendes Guthaben</strong></p></div>', 'bonips' )
 					)
 				),
 				'add_to_core' => true
@@ -503,7 +503,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 ?>
 				<div class="bonips-wrapper buycred-wrapper disabled-option color-option">
-					<div><?php printf( _x( '%s Profit Share', 'Points Name', 'bonips' ), $data['name'] ); ?></div>
+					<div><?php printf( _x( '%s Gewinnbeteiligung', 'Points Name', 'bonips' ), $data['name'] ); ?></div>
 					<div class="balance-row">
 						<div class="balance-view"><?php _e( 'Deaktiviert', 'bonips' ); ?></div>
 						<div class="balance-desc"><em><?php _e( 'Wird nicht als Zahlungsmittel akzeptiert.', 'bonips' ); ?></em></div>
@@ -518,10 +518,10 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 ?>
 				<div class="bonips-wrapper buycred-wrapper disabled-option color-option">
-					<div><?php printf( _x( '%s Profit Share', 'Points Name', 'bonips' ), $data['name'] ); ?></div>
+					<div><?php printf( _x( '%s Gewinnbeteiligung', 'Points Name', 'bonips' ), $data['name'] ); ?></div>
 					<div class="balance-row">
 						<div class="balance-view"><?php _e( 'Ausgeschlossen', 'bonips' ); ?></div>
-						<div class="balance-desc"><em><?php printf( _x( 'User can not pay using %s', 'Points Name', 'bonips' ), $data['name'] ); ?></em></div>
+						<div class="balance-desc"><em><?php printf( _x( 'Benutzer kann nicht mit %s bezahlen', 'Points Name', 'bonips' ), $data['name'] ); ?></em></div>
 					</div>
 				</div>
 <?php
@@ -533,7 +533,7 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 ?>
 				<div class="bonips-wrapper buycred-wrapper color-option selected">
-					<div><?php printf( _x( '%s Profit Share', 'Buying Points', 'bonips' ), $data['name'] ); ?></div>
+					<div><?php printf( _x( '%s Gewinnbeteiligung', 'Buying Points', 'bonips' ), $data['name'] ); ?></div>
 					<div class="balance-row">
 						<div class="balance-view"><input type="text" size="8" name="bonips_sell_this[<?php echo $point_type; ?>]" class="half" placeholder="<?php echo esc_attr( $data['default'] ); ?>" value="<?php if ( $data['override'] ) echo esc_attr( $data['custom'] ); ?>" /> %</div>
 						<div class="balance-desc"><em><?php _e( 'Leer lassen, um den Standardwert zu verwenden.', 'bonips' ); ?></em></div>

@@ -332,7 +332,7 @@ if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 									<input type="hidden" name="add_new" class="add_new" value="single" />
 									<div class="widget-control-actions">
 										<div class="alignleft">
-											<a class="widget-control-remove" href="#remove"><?php _e( 'Löschen', 'bonips' ); ?></a> | <a class="widget-control-close" href="#close"><?php _e( 'Schließen', 'bonips' ); ?></a><?php if ( BONIPS_DEFAULT_LABEL === 'boniPS' && array_key_exists( 'documentation', $data ) && ! empty( $data['documentation'] ) ) : ?> | <a class="hook-documentation" href="<?php echo esc_url( $data['documentation'] ); ?>" target="_blank">Hook Dokumentation</a><?php endif; ?>
+											<a class="widget-control-remove" href="#remove"><?php _e( 'Löschen', 'bonips' ); ?></a> | <a class="widget-control-close" href="#close"><?php _e( 'Schließen', 'bonips' ); ?></a><?php if ( BONIPS_DEFAULT_LABEL === 'boniPS' && array_key_exists( 'documentation', $data ) && ! empty( $data['documentation'] ) ) : ?> | <a class="hook-documentation" href="<?php echo esc_url( $data['documentation'] ); ?>" target="_blank"><?php esc_html_e( 'Hook-Dokumentation', 'bonips' ); ?></a><?php endif; ?>
 										</div>
 										<div class="alignright">
 											<input type="submit" name="savewidget" id="widget-bonips-hook-<?php echo $key; ?>-__i__-savewidget" class="button button-primary widget-control-save right" value="<?php _e( 'Speichern', 'bonips' ); ?>" />
@@ -448,7 +448,7 @@ jQuery(function($) {
 							<input type="hidden" name="add_new" class="add_new" value="single" />
 							<div class="widget-control-actions">
 								<div class="alignleft">
-									<a class="widget-control-remove" href="#remove"><?php _e( 'Löschen', 'bonips' ); ?></a> | <a class="widget-control-close" href="#close"><?php _e( 'Schließen', 'bonips' ); ?></a><?php if ( BONIPS_DEFAULT_LABEL === 'boniPS' && array_key_exists( 'documentation', $data ) && ! empty( $data['documentation'] ) ) : ?>  | <a class="hook-documentation" href="<?php echo esc_url( $data['documentation'] ); ?>" target="_blank">Hook Dokumentation</a><?php endif; ?>
+									<a class="widget-control-remove" href="#remove"><?php _e( 'Löschen', 'bonips' ); ?></a> | <a class="widget-control-close" href="#close"><?php _e( 'Schließen', 'bonips' ); ?></a><?php if ( BONIPS_DEFAULT_LABEL === 'boniPS' && array_key_exists( 'documentation', $data ) && ! empty( $data['documentation'] ) ) : ?>  | <a class="hook-documentation" href="<?php echo esc_url( $data['documentation'] ); ?>" target="_blank"><?php esc_html_e( 'Hook-Dokumentation', 'bonips' ); ?></a><?php endif; ?>
 								</div>
 								<div class="alignright">
 									<input type="submit" name="savewidget" id="widget-bonips-hook-<?php echo $key; ?>-__i__-savewidget" class="button button-primary widget-control-save right" value="<?php _e( 'Speichern', 'bonips' ); ?>" />
@@ -590,7 +590,7 @@ jQuery(function($) {
 				if ( $hook_prefs === false ) die;
 
 				if ( ! array_key_exists( $hook_id, $installed ) )
-					die( '<p>No longer available hook</p>' );
+					die( '<p>' . esc_html__( 'Dieser Hook ist nicht mehr verfügbar.', 'bonips' ) . '</p>' );
 
 				// New settings
 				$new_settings = $this->call( 'sanitise_preferences', $installed[ $hook_id ]['callback'], $hook_prefs );

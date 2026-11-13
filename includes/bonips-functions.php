@@ -3544,13 +3544,13 @@ if ( ! function_exists( 'bonips_ordinal_suffix' ) ) :
 		$value  = $num;
 		$num    = $num % 100; // protect against large numbers
 
-		$result = sprintf( _x( '%d th', 'e.g. 5 th', 'bonips' ), $value );
+		$result = sprintf( _x( '%d.', 'e.g. 5 th', 'bonips' ), $value );
 		if ( $num < 11 || $num > 13 ) {
 			switch ( $num % 10 ) {
 
-				case 1 : $result = sprintf( _x( '%d st', 'e.g. 1 st', 'bonips' ), $value );
-				case 2 : $result = sprintf( _x( '%d nd', 'e.g. 2 nd', 'bonips' ), $value );
-				case 3 : $result = sprintf( _x( '%d rd', 'e.g. 3 rd', 'bonips' ), $value );
+				case 1 : $result = sprintf( _x( '%d.', 'e.g. 1 st', 'bonips' ), $value ); break;
+				case 2 : $result = sprintf( _x( '%d.', 'e.g. 2 nd', 'bonips' ), $value ); break;
+				case 3 : $result = sprintf( _x( '%d.', 'e.g. 3 rd', 'bonips' ), $value ); break;
 
 			}
 		}

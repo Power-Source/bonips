@@ -39,7 +39,7 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 					'buddypress' => array(
 						'profile'  => 0,
 						'priority' => 10,
-						'title'    => __( 'Affiliate Program', 'bonips' ),
+						'title'    => __( 'Partnerprogramm', 'bonips' ),
 						'desc'     => ''
 					)
 				)
@@ -47,8 +47,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 			// Let others play with the limit by
 			$this->limit_by = apply_filters( 'bonips_affiliate_limit_by', array(
-				'total' => __( 'Total', 'bonips' ),
-				'daily' => __( 'Per Day', 'bonips' )
+				'total' => __( 'Gesamt', 'bonips' ),
+				'daily' => __( 'Pro Tag', 'bonips' )
 			), $this );
 
 			// Let others play with the ref key
@@ -212,11 +212,11 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 				// Show Visitor referral count
 				if ( $this->prefs['visit']['creds'] != 0 )
-					$output .= sprintf( '<tr class="field_2 field_ref_count_visit"><td class="label">%s</td><td>%s</td></tr>', __( 'Visitors Referred', 'bonips' ), bonips_count_ref_instances( 'visitor_referral', $user_id, $this->bonips_type ) );
+					$output .= sprintf( '<tr class="field_2 field_ref_count_visit"><td class="label">%s</td><td>%s</td></tr>', __( 'Geworbene Besucher', 'bonips' ), bonips_count_ref_instances( 'visitor_referral', $user_id, $this->bonips_type ) );
 
 				// Show Signup referral count
 				if ( $this->prefs['signup']['creds'] != 0 )
-					$output .= sprintf( '<tr class="field_3 field_ref_count_signup"><td class="label">%s</td><td>%s</td></tr>', __( 'Signups Referred', 'bonips' ), bonips_count_ref_instances( 'signup_referral', $user_id, $this->bonips_type ) );
+					$output .= sprintf( '<tr class="field_3 field_ref_count_signup"><td class="label">%s</td><td>%s</td></tr>', __( 'Geworbene Registrierungen', 'bonips' ), bonips_count_ref_instances( 'signup_referral', $user_id, $this->bonips_type ) );
 
 				$output .= '</table>';
 
@@ -552,7 +552,7 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Referring Visitors', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Besucher werben', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -576,7 +576,7 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Referring Signups', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Registrierungen werben', 'bonips' ); ?></h3>
 
 	<?php if ( get_option( 'users_can_register' ) ) : ?>
 
@@ -606,7 +606,7 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<p>Registrations are disabled.</p>
+			<p><?php esc_html_e( 'Registrierungen sind deaktiviert.', 'bonips' ); ?></p>
 			<input type="hidden" name="<?php echo $this->field_name( array( 'signup' => 'creds' ) ); ?>" value="<?php echo esc_attr( $this->defaults['signup']['creds'] ); ?>" />
 			<input type="hidden" name="<?php echo $this->field_name( array( 'signup' => 'limit' ) ); ?>" value="<?php echo esc_attr( $this->defaults['signup']['limit'] ); ?>" />
 			<input type="hidden" name="<?php echo $this->field_name( array( 'signup' => 'log' ) ); ?>" value="<?php echo esc_attr( $this->defaults['signup']['log'] ); ?>" />
@@ -617,32 +617,32 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Referral Links', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Empfehlungslinks', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'setup' => 'links' ) ); ?>-numeric"><input type="radio" name="<?php echo $this->field_name( array( 'setup' => 'links' ) ); ?>" id="<?php echo $this->field_id( array( 'setup' => 'links' ) ); ?>-numeric" <?php checked( $prefs['setup']['links'], 'numeric' ); ?> value="numeric" /> <?php _e( 'Assign numeric referral IDs to each user.', 'bonips' ); ?></label>
-				<span class="description"><?php printf( '%s: %s', __( 'Example', 'bonips' ), esc_url( add_query_arg( array( $this->ref_key => 1 ), home_url( '/' ) ) ) ); ?></span>
+				<label for="<?php echo $this->field_id( array( 'setup' => 'links' ) ); ?>-numeric"><input type="radio" name="<?php echo $this->field_name( array( 'setup' => 'links' ) ); ?>" id="<?php echo $this->field_id( array( 'setup' => 'links' ) ); ?>-numeric" <?php checked( $prefs['setup']['links'], 'numeric' ); ?> value="numeric" /> <?php _e( 'Jedem Benutzer eine numerische Empfehlungs-ID zuweisen.', 'bonips' ); ?></label>
+				<span class="description"><?php printf( '%s: %s', __( 'Beispiel', 'bonips' ), esc_url( add_query_arg( array( $this->ref_key => 1 ), home_url( '/' ) ) ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'setup' => 'links' ) ); ?>-username"><input type="radio" name="<?php echo $this->field_name( array( 'setup' => 'links' ) ); ?>" id="<?php echo $this->field_id( array( 'setup' => 'links' ) ); ?>-username" <?php checked( $prefs['setup']['links'], 'username' ); ?> value="username" /> <?php _e( 'Assign usernames as IDs for each user.', 'bonips' ); ?></label>
-				<span class="description"><?php printf( '%s: %s', __( 'Example', 'bonips' ), esc_url( add_query_arg( array( $this->ref_key => 'john+doe' ), home_url( '/' ) ) ) ); ?></span>
+				<label for="<?php echo $this->field_id( array( 'setup' => 'links' ) ); ?>-username"><input type="radio" name="<?php echo $this->field_name( array( 'setup' => 'links' ) ); ?>" id="<?php echo $this->field_id( array( 'setup' => 'links' ) ); ?>-username" <?php checked( $prefs['setup']['links'], 'username' ); ?> value="username" /> <?php _e( 'Benutzernamen als Empfehlungs-IDs zuweisen.', 'bonips' ); ?></label>
+				<span class="description"><?php printf( '%s: %s', __( 'Beispiel', 'bonips' ), esc_url( add_query_arg( array( $this->ref_key => 'john+doe' ), home_url( '/' ) ) ) ); ?></span>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'setup' => 'IP' ) ); ?>"><?php _e( 'IP Limit', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'setup' => 'IP' ) ); ?>"><?php _e( 'IP-Limit', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'setup' => 'IP' ) ); ?>" id="<?php echo $this->field_id( array( 'setup' => 'IP' ) ); ?>" value="<?php echo absint( $prefs['setup']['IP'] ); ?>" class="form-control" />
-				<span class="description"><?php echo $this->core->template_tags_general( __( 'The number of times each IP address grants %_plural%. Use zero for unlimited.', 'bonips' ) ); ?></span>
+				<span class="description"><?php echo $this->core->template_tags_general( __( 'Anzahl der Male, die jede IP-Adresse %_plural% vergibt. Verwende null für unbegrenzt.', 'bonips' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label><?php _e( 'Available Shortcodes', 'bonips' ); ?></label>
+				<label><?php _e( 'Verfügbare Shortcodes', 'bonips' ); ?></label>
 				<p class="form-control-static"><a href="http://codex.bonips.me/shortcodes/bonips_affiliate_link/" target="_blank">[bonips_affiliate_link]</a>, <a href="http://codex.bonips.me/shortcodes/bonips_affiliate_id/" target="_blank">[bonips_affiliate_id]</a></p>
 			</div>
 		</div>
@@ -650,12 +650,12 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 </div>
 <?php if ( function_exists( 'bp_is_active' ) && bp_is_active( 'xprofile' ) ) : ?>
 <div class="hook-instance">
-	<h3><?php _e( 'BuddyPress Profile', 'bonips' ); ?></h3>
+	<h3><?php _e( 'BuddyPress-Profil', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( array( 'buddypress' => 'profile' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'buddypress' => 'profile' ) ); ?>" id="<?php echo $this->field_id( array( 'buddypress' => 'profile' ) ); ?>"<?php checked( $prefs['buddypress']['profile'], 1 ); ?> value="1" /> <?php _e( 'Insert referral link in users profiles', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'buddypress' => 'profile' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'buddypress' => 'profile' ) ); ?>" id="<?php echo $this->field_id( array( 'buddypress' => 'profile' ) ); ?>"<?php checked( $prefs['buddypress']['profile'], 1 ); ?> value="1" /> <?php _e( 'Empfehlungslink in Benutzerprofile einfügen', 'bonips' ); ?></label>
 				</div>
 			</div>
 		</div>
@@ -665,22 +665,22 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 			<div class="form-group">
 				<label><?php _e( 'Titel', 'bonips' ); ?></label><br />
 				<input type="text" name="<?php echo $this->field_name( array( 'buddypress' => 'title' ) ); ?>" id="<?php echo $this->field_id( array( 'buddypress' => 'title' ) ); ?>" value="<?php echo esc_attr( $prefs['buddypress']['title'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Leave empty to hide.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Leer lassen, um es auszublenden.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label><?php _e( 'Profile Positioning', 'bonips' ); ?></label><br />
+				<label><?php _e( 'Position im Profil', 'bonips' ); ?></label><br />
 				<input type="text" name="<?php echo $this->field_name( array( 'buddypress' => 'priority' ) ); ?>" id="<?php echo $this->field_id( array( 'buddypress' => 'priority' ) ); ?>" value="<?php echo absint( $prefs['buddypress']['priority'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'You can move around the referral link on your users profile by changing the position. Increase to move up, decrease to move down.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Du kannst die Position des Empfehlungslinks im Benutzerprofil ändern. Ein höherer Wert verschiebt ihn nach oben, ein niedrigerer nach unten.', 'bonips' ); ?></span>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'buddypress' => 'desc' ) ); ?>"><?php _e( 'Description', 'bonips' ); ?></label>
-				<span class="description"><?php _e( 'Optional description to insert under the link.', 'bonips' ); ?></span>
+				<label for="<?php echo $this->field_id( array( 'buddypress' => 'desc' ) ); ?>"><?php _e( 'Beschreibung', 'bonips' ); ?></label>
+				<span class="description"><?php _e( 'Optionale Beschreibung unter dem Link.', 'bonips' ); ?></span>
 				<textarea name="<?php echo $this->field_name( array( 'buddypress' => 'desc' ) ); ?>" id="<?php echo $this->field_id( array( 'buddypress' => 'desc' ) ); ?>" class="form-control" rows="5" cols="30"><?php echo esc_attr( $prefs['buddypress']['desc'] ); ?></textarea>
 			</div>
 		</div>

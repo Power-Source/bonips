@@ -82,7 +82,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 
 			$cubepoints = $wpdb->prefix . 'cp';
 			if ( $wpdb->get_var( "SHOW TABLES LIKE '{$cubepoints}';" ) != $cubepoints ) {
-				echo '<div class="error notice notice-error"><p>' . __( 'Could not find a CubePoints installation.', 'bonips' ) . '</p></div>';
+				echo '<div class="error notice notice-error"><p>' . __( 'Es wurde keine CubePoints-Installation gefunden.', 'bonips' ) . '</p></div>';
 				return false;
 			}
 
@@ -279,14 +279,14 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 			// Show Result
 			if ( $this->imported == 0 ) {
 
-				echo '<div class="error notice notice-error is-dismissible"><p>' . ( ( $action == 'balance' ) ? __( 'No balances were imported.', 'bonips' ) : __( 'No log entries were imported!', 'bonips' ) ) . '</p></div>';
+				echo '<div class="error notice notice-error is-dismissible"><p>' . ( ( $action == 'balance' ) ? __( 'Es wurden keine Guthaben importiert.', 'bonips' ) : __( 'Es wurden keine Protokolleinträge importiert!', 'bonips' ) ) . '</p></div>';
 
 			}
 			else {
 
 				$show_greet = false;
-				echo '<div class="updated notice notice-success is-dismissible"><p>' . sprintf( __( 'Import complete - A total of <strong>%d</strong> balances were successfully imported. <strong>%d</strong> was skipped.', 'bonips' ), $this->imported, $this->skipped ) . '</p></div>';
-				echo '<p><a href="' . admin_url( 'users.php' ) . '" class="button button-large button-primary">' . __( 'View Users', 'bonips' ) . '</a></p>';
+				echo '<div class="updated notice notice-success is-dismissible"><p>' . sprintf( __( 'Import abgeschlossen – insgesamt wurden <strong>%d</strong> Guthaben erfolgreich importiert. <strong>%d</strong> wurden übersprungen.', 'bonips' ), $this->imported, $this->skipped ) . '</p></div>';
+				echo '<p><a href="' . admin_url( 'users.php' ) . '" class="button button-large button-primary">' . __( 'Benutzer ansehen', 'bonips' ) . '</a></p>';
 
 			}
 
@@ -304,7 +304,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 
 			$label = __( 'CubePoints importieren', 'bonips' );
 			if ( BONIPS_DEFAULT_LABEL === 'boniPS' )
-				$label .= ' <a href="' . $this->documentation . '" target="_blank" class="page-title-action">' . __( 'Documentation', 'bonips' ) . '</a>';
+				$label .= ' <a href="' . $this->documentation . '" target="_blank" class="page-title-action">' . __( 'Dokumentation', 'bonips' ) . '</a>';
 
 			echo '<div class="wrap"><h1>' . $label . '</h1>';
 
@@ -345,10 +345,10 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 				</th>
 				<td>
 					<select name="action" id="import-action">
-						<option value=""><?php _e( 'Select what to import', 'bonips' ); ?></option>
-						<option value="log"><?php _e( 'Log Entries Only', 'bonips' ); ?></option>
-						<option value="balance"><?php _e( 'CubePoints Balances Only', 'bonips' ); ?></option>
-						<option value="both"><?php _e( 'Log Entries and Balances', 'bonips' ); ?></option>
+						<option value=""><?php _e( 'Wähle aus, was importiert werden soll', 'bonips' ); ?></option>
+						<option value="log"><?php _e( 'Nur Protokolleinträge', 'bonips' ); ?></option>
+						<option value="balance"><?php _e( 'Nur CubePoints-Guthaben', 'bonips' ); ?></option>
+						<option value="both"><?php _e( 'Protokolleinträge und Guthaben', 'bonips' ); ?></option>
 					</select>
 				</td>
 			</tr>

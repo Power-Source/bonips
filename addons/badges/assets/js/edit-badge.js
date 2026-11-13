@@ -476,7 +476,7 @@ jQuery(function($){
 
 					$( '#bonips-badge-level' + currentlevel + ' .level-image-wrapper' ).fadeOut(function(){
 
-						$( '#bonips-badge-level' + currentlevel + ' .level-image-wrapper' ).empty().removeClass( 'empty dashicons' ).html( '<img src="' + attachment.url + '" alt="Badge level image" \/><input type="hidden" name="bonips_badge[levels][' + currentlevel + '][attachment_id]" value="' + attachment.id + '" \/><input type="hidden" name="bonips_badge[levels][' + currentlevel + '][image]" value="" \/>' ).fadeIn();
+						$( '#bonips-badge-level' + currentlevel + ' .level-image-wrapper' ).empty().removeClass( 'empty dashicons' ).html( '<img src="' + attachment.url + '" alt="" \/><input type="hidden" name="bonips_badge[levels][' + currentlevel + '][attachment_id]" value="' + attachment.id + '" \/><input type="hidden" name="bonips_badge[levels][' + currentlevel + '][image]" value="" \/>' ).fadeIn().find( 'img' ).attr( 'alt', boniPSBadge.levelImageAlt );
 						button.text( boniPSBadge.changeimage );
 
 					});
@@ -529,7 +529,7 @@ jQuery(function($){
 
 					$( '#bonips-badge-default .default-image-wrapper' ).fadeOut(function(){
 
-						$( '#bonips-badge-default .default-image-wrapper' ).empty().removeClass( 'empty dashicons' ).html( '<img src="' + attachment.url + '" alt="Abzeichen-Standardbild" \/><input type="hidden" name="bonips_badge[main_image]" value="' + attachment.id + '" \/><input type="hidden" name="bonips_badge[main_image_url]" value="" \/>' ).fadeIn();
+						$( '#bonips-badge-default .default-image-wrapper' ).empty().removeClass( 'empty dashicons' ).html( '<img src="' + attachment.url + '" alt="" \/><input type="hidden" name="bonips_badge[main_image]" value="' + attachment.id + '" \/><input type="hidden" name="bonips_badge[main_image_url]" value="" \/>' ).fadeIn().find( 'img' ).attr( 'alt', boniPSBadge.defaultImageAlt );
 						button.text( boniPSBadge.changeimage );
 
 						RemoveDefaultImageButton.removeClass('hidden');

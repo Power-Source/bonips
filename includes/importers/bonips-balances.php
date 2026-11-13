@@ -114,7 +114,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 
 				} else {
 
-					echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'The file does not exist or could not be read.', 'bonips' ) . '</p></div>';
+					echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'Die Datei existiert nicht oder konnte nicht gelesen werden.', 'bonips' ) . '</p></div>';
 					return false;
 
 				}
@@ -141,7 +141,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 			// Make sure the file exists
 			if ( ! is_file( $file ) ) {
 
-				echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'The file does not exist or could not be read.', 'bonips' ) . '</p></div>';
+				echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'Die Datei existiert nicht oder konnte nicht gelesen werden.', 'bonips' ) . '</p></div>';
 				return true;
 
 			}
@@ -217,7 +217,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 
 				} else {
 
-					echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'Invalid CSV file. Please consult the documentation for further assistance.', 'bonips' ) . '</p></div>';
+					echo '<div class="error notice notice-error is-dismissible"><p>' . __( 'Ungültige CSV-Datei. Weitere Hilfe findest Du in der Dokumentation.', 'bonips' ) . '</p></div>';
 
 				}
 
@@ -226,8 +226,8 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 			}
 
 			if ( $ran ) {
-				echo '<div class="updated notice notice-success is-dismissible"><p>' . sprintf( __( 'Import complete - A total of <strong>%d</strong> balances were successfully imported. <strong>%d</strong> was skipped.', 'bonips' ), $this->imported, $this->skipped ) . '</p></div>';
-				echo '<p><a href="' . admin_url( 'users.php' ) . '" class="button button-large button-primary">' . __( 'View Users', 'bonips' ) . '</a></p>';
+				echo '<div class="updated notice notice-success is-dismissible"><p>' . sprintf( __( 'Import abgeschlossen – insgesamt wurden <strong>%d</strong> Guthaben erfolgreich importiert. <strong>%d</strong> wurden übersprungen.', 'bonips' ), $this->imported, $this->skipped ) . '</p></div>';
+				echo '<p><a href="' . admin_url( 'users.php' ) . '" class="button button-large button-primary">' . __( 'Benutzer ansehen', 'bonips' ) . '</a></p>';
 			}
 
 			do_action( 'import_end' );
@@ -242,9 +242,9 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 		 */
 		public function header() {
 
-			$label = __( 'Import Balances', 'bonips' );
+			$label = __( 'Guthaben importieren', 'bonips' );
 			if ( BONIPS_DEFAULT_LABEL === 'boniPS' )
-				$label .= ' <a href="' . $this->documentation . '" target="_blank" class="page-title-action">' . __( 'Documentation', 'bonips' ) . '</a>';
+				$label .= ' <a href="' . $this->documentation . '" target="_blank" class="page-title-action">' . __( 'Dokumentation', 'bonips' ) . '</a>';
 
 			echo '<div class="wrap"><h1>' . $label . '</h1>';
 
@@ -285,18 +285,18 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 		<tbody>
 			<tr>
 				<th>
-					<label for="upload"><?php _e( 'Choose a file from your computer:', 'bonips' ); ?></label>
+					<label for="upload"><?php _e( 'Wähle eine Datei von Deinem Computer:', 'bonips' ); ?></label>
 				</th>
 				<td>
 					<input type="file" id="upload" name="import" size="25" />
 					<input type="hidden" name="action" value="save" />
 					<input type="hidden" name="max_file_size" value="<?php echo $bytes; ?>" />
-					<small><?php printf( __( 'Maximum size: %s', 'bonips' ), $size ); ?></small>
+					<small><?php printf( __( 'Maximale Größe: %s', 'bonips' ), $size ); ?></small>
 				</td>
 			</tr>
 			<tr>
 				<th>
-					<label for="file_url"><?php _e( 'OR enter path to file:', 'bonips' ); ?></label>
+					<label for="file_url"><?php _e( 'ODER gib den Pfad zur Datei ein:', 'bonips' ); ?></label>
 				</th>
 				<td>
 					<?php echo ABSPATH . ' '; ?><input type="text" id="file_url" name="file_url" size="25" />
@@ -304,7 +304,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 			</tr>
 			<tr>
 				<th>
-					<label for="delimiter"><?php _e( 'Delimiter', 'bonips' ); ?></label>
+					<label for="delimiter"><?php _e( 'Trennzeichen', 'bonips' ); ?></label>
 				</th>
 				<td>
 					<input type="text" name="delimiter" id="delimiter" placeholder="," size="2" />
@@ -312,12 +312,12 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 			</tr>
 			<tr>
 				<th>
-					<label><?php _e( 'Method', 'bonips' ); ?></label>
+					<label><?php _e( 'Methode', 'bonips' ); ?></label>
 				</th>
 				<td>
 					<select name="method">
-						<option value=""><?php _e( 'Replace current balances with the amount in this CSV file', 'bonips' ); ?></option>
-						<option value="add"><?php _e( 'Adjust current balances according to the amount in this CSV file', 'bonips' ); ?></option>
+						<option value=""><?php _e( 'Aktuelle Guthaben durch die Beträge in dieser CSV-Datei ersetzen', 'bonips' ); ?></option>
+						<option value="add"><?php _e( 'Aktuelle Guthaben anhand der Beträge in dieser CSV-Datei anpassen', 'bonips' ); ?></option>
 					</select>
 				</td>
 			</tr>

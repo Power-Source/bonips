@@ -105,11 +105,11 @@ if ( ! class_exists( 'boniPS_Widget_Wallet' ) ) :
 			$bonips        = bonips();
 
 			// Defaults
-			$title         = isset( $instance['title'] )         ? $instance['title']         : 'My Wallet';
+			$title         = isset( $instance['title'] )         ? $instance['title']         : __( 'Meine Brieftasche', 'bonips' );
 			$types         = isset( $instance['types'] )         ? $instance['types']         : array();
 			$row_template  = isset( $instance['row'] )           ? $instance['row']           : '%label%: %cred_f%';
 			$show_visitors = isset( $instance['show_visitors'] ) ? $instance['show_visitors'] : 0;
-			$message       = isset( $instance['message'] )       ? $instance['message']       : '<a href="%login_url_here%">Melde Dich an</a>, um Dein Guthaben anzuzeigen.';
+			$message       = isset( $instance['message'] )       ? $instance['message']       : __( '<a href="%login_url_here%">Melde Dich an</a>, um Dein Guthaben anzuzeigen.', 'bonips' );
 
 ?>
 <!-- Widget Options -->

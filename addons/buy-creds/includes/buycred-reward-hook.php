@@ -111,7 +111,7 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward_Hook' ) ) :
 				$default_data = array(
 					array(
 						'creds' => '10',
-						'log'   => 'Reward for Buying %plural%.',
+						'log'   => __( 'Belohnung für den Kauf von %plural%.', 'bonips' ),
 						'min'   => '1',
 						'max'   => '10'
 					)
@@ -134,7 +134,7 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward_Hook' ) ) :
 						$new_data[$data_key][$key] = ( !empty( $value ) ) ? floatval( $value ) : 10;
 					}
 					else if ( $data_key == 'log' ) {
-						$new_data[$data_key][$key] = ( !empty( $value ) ) ? sanitize_text_field( $value ) : 'Reward for Buying %plural%.';
+						$new_data[$data_key][$key] = ( !empty( $value ) ) ? sanitize_text_field( $value ) : __( 'Belohnung für den Kauf von %plural%.', 'bonips' );
 					}
 					else if ( $data_key == 'min' ) {
 						$new_data[$data_key][$key] = ( !empty( $value ) ) ? floatval( $value ) : 1;
@@ -186,7 +186,7 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward_Hook' ) ) :
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group">
-								<label><?php _e( 'Maximium', 'bonips' ); ?></label>
+								<label><?php _e( 'Maximum', 'bonips' ); ?></label>
 								<input type="text" name="<?php echo $this->name( $this->bonips_type, 'max' ); ?>" value="<?php echo $this->core->number( $hook['max'] ); ?>" class="form-control buycred-reward-max" />
 							</div>
 						</div>
@@ -194,8 +194,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward_Hook' ) ) :
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="form-group specific-hook-actions textright">
-								<button class="button button-small bonips-add-specific-hook" type="button">Add More</button>
-								<button class="button button-small bonips-remove-specific-hook" type="button">Remove</button>
+								<button class="button button-small bonips-add-specific-hook" type="button"><?php esc_html_e( 'Weitere hinzufügen', 'bonips' ); ?></button>
+								<button class="button button-small bonips-remove-specific-hook" type="button"><?php esc_html_e( 'Entfernen', 'bonips' ); ?></button>
 							</div>
 						</div>
 					</div>

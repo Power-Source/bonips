@@ -13,7 +13,7 @@ function bonips_register_events_manager_light_hook( $installed ) {
 
 	$installed['eventsmanager'] = array(
 		'title'         => __( 'Events Manager', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for users attending events.', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Benutzer, die an Veranstaltungen teilnehmen.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/event-attendance/',
 		'callback'      => array( 'boniPS_Hook_Events_Manager' )
 	);
@@ -198,7 +198,7 @@ function bonips_load_events_manager_light_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Attending Event', 'bonips' ); ?></h3>
+	<h3><?php _e( 'An Veranstaltung teilnehmen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
@@ -222,7 +222,7 @@ function bonips_load_events_manager_light_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Cancelling Attendance', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Teilnahme stornieren', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">

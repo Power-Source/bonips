@@ -17,7 +17,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 		$installed['hook_bp_links'] = array(
 			'title'       => __( 'BuddyPress: Links', 'bonips' ),
-			'description' => __( 'Awards %_plural% for link related actions.', 'bonips' ),
+			'description' => __( 'Vergibt %_plural% für linkbezogene Aktionen.', 'bonips' ),
 			'callback'    => array( 'boniPS_BuddyPress_Links' )
 		);
 
@@ -244,7 +244,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 				$prefs = $this->prefs; ?>
 
 <!-- Creds for New Link -->
-<label for="<?php echo $this->field_id( array( 'new_link', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% for New Links', 'bonips' ) ); ?></label>
+<label for="<?php echo $this->field_id( array( 'new_link', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% für neue Links', 'bonips' ) ); ?></label>
 <ol>
 	<li>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'new_link', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'new_link', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['new_link']['creds'] ); ?>" size="8" /></div>
@@ -257,7 +257,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 	</li>
 </ol>
 <!-- Creds for Vote Link -->
-<label for="<?php echo $this->field_id( array( 'vote_link', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% for Vote on Link', 'bonips' ) ); ?></label>
+<label for="<?php echo $this->field_id( array( 'vote_link', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% für die Bewertung eines Links', 'bonips' ) ); ?></label>
 <ol>
 	<li>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'vote_link', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'vote_link', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['vote_link']['creds'] ); ?>" size="8" /></div>
@@ -269,10 +269,10 @@ if ( defined( 'boniPS_VERSION' ) ) {
 		<span class="description"><?php echo $this->available_template_tags( array( 'general' ) ); ?></span>
 	</li>
 </ol>
-<label for="<?php echo $this->field_id( array( 'vote_link_up', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% per received Vote', 'bonips' ) ); ?></label>
+<label for="<?php echo $this->field_id( array( 'vote_link_up', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% pro erhaltener Stimme', 'bonips' ) ); ?></label>
 <ol>
 	<li>
-		<label><?php _e( 'Vote Up', 'bonips' ); ?></label>
+		<label><?php _e( 'Positive Stimme', 'bonips' ); ?></label>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'vote_link_up', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'vote_link_up', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['vote_link_up']['creds'] ); ?>" size="8" /></div>
 	</li>
 	<li class="empty">&nbsp;</li>
@@ -283,7 +283,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 	</li>
 	<li class="empty">&nbsp;</li>
 	<li>
-		<label><?php _e( 'Vote Down', 'bonips' ); ?></label>
+		<label><?php _e( 'Negative Stimme', 'bonips' ); ?></label>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'vote_link_down', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'vote_link_down', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['vote_link_down']['creds'] ); ?>" size="8" /></div>
 	</li>
 	<li class="empty">&nbsp;</li>
@@ -294,7 +294,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 	</li>
 </ol>
 <!-- Creds for Update Link -->
-<label for="<?php echo $this->field_id( array( 'update_link', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% for Updating Links', 'bonips' ) ); ?></label>
+<label for="<?php echo $this->field_id( array( 'update_link', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% für das Aktualisieren von Links', 'bonips' ) ); ?></label>
 <ol>
 	<li>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'update_link', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'update_link', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['update_link']['creds'] ); ?>" size="8" /></div>
@@ -307,7 +307,7 @@ if ( defined( 'boniPS_VERSION' ) ) {
 	</li>
 </ol>
 <!-- Creds for Deleting Links -->
-<label for="<?php echo $this->field_id( array( 'delete_link', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% for Deleting Links', 'bonips' ) ); ?></label>
+<label for="<?php echo $this->field_id( array( 'delete_link', 'creds' ) ); ?>" class="subheader"><?php echo $this->core->template_tags_general( __( '%plural% für das Löschen von Links', 'bonips' ) ); ?></label>
 <ol>
 	<li>
 		<div class="h2"><input type="text" name="<?php echo $this->field_name( array( 'delete_link', 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'delete_link', 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['delete_link']['creds'] ); ?>" size="8" /></div>

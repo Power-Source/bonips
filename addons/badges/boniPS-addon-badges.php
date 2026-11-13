@@ -577,8 +577,10 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 						'levellabel'   => esc_js( sprintf( '%s {{level}}', __( 'Level', 'bonips' ) ) ),
 						'uploadtitle'  => esc_js( esc_attr__( 'Abzeichen-Bild', 'bonips' ) ),
 						'uploadbutton' => esc_js( esc_attr__( 'Als Abzeichen verwenden', 'bonips' ) ),
-						'compareAND'   => esc_js( _x( 'AND', 'Vergleich der Badge-Anforderungen. A AND B', 'bonips' ) ),
-						'compareOR'    => esc_js( _x( 'OR', 'Vergleich der Badge-Anforderungen. A OR B', 'bonips' ) )
+						'levelImageAlt' => __( 'Abzeichen-Levelbild', 'bonips' ),
+						'defaultImageAlt' => __( 'Abzeichen-Standardbild', 'bonips' ),
+						'compareAND'   => esc_js( _x( 'UND', 'Vergleich der Badge-Anforderungen. A AND B', 'bonips' ) ),
+						'compareOR'    => esc_js( _x( 'ODER', 'Vergleich der Badge-Anforderungen. A OR B', 'bonips' ) )
 					)
 				);
 
@@ -671,13 +673,13 @@ th#badge-users { width: 10%; }
 
 				$_image = wp_get_attachment_url( $setup['attachment_id'] );
 				if ( strlen( $_image ) > 5 )
-					$image = '<img src="' . $_image . '" alt="Badge level image" /><input type="hidden" name="bonips_badge[levels][' . $level . '][attachment_id]" value="' . $setup['attachment_id'] . '" /><input type="hidden" name="bonips_badge[levels][' . $level . '][image_url]" value="" />';
+					$image = '<img src="' . $_image . '" alt="' . esc_attr__( 'Abzeichen-Levelbild', 'bonips' ) . '" /><input type="hidden" name="bonips_badge[levels][' . $level . '][attachment_id]" value="' . $setup['attachment_id'] . '" /><input type="hidden" name="bonips_badge[levels][' . $level . '][image_url]" value="" />';
 
 			}
 			else {
 
 				if ( strlen( $setup['image_url'] ) > 5 )
-					$image = '<img src="' . $setup['image_url'] . '" alt="Badge level image" /><input type="hidden" name="bonips_badge[levels][' . $level . '][attachment_id]" value="0" /><input type="hidden" name="bonips_badge[levels][' . $level . '][image_url]" value="' . $setup['image_url'] . '" />';
+					$image = '<img src="' . $setup['image_url'] . '" alt="' . esc_attr__( 'Abzeichen-Levelbild', 'bonips' ) . '" /><input type="hidden" name="bonips_badge[levels][' . $level . '][attachment_id]" value="0" /><input type="hidden" name="bonips_badge[levels][' . $level . '][image_url]" value="' . $setup['image_url'] . '" />';
 
 			}
 
@@ -977,7 +979,7 @@ jQuery(function($) {
 
 					$compare_label       = '';
 					if ( $level > 0 && $req_level < $total_requirements )
-						$compare_label = ( ( $setup['compare'] === 'AND' ) ? _x( 'AND', 'Comparison of badge requirements. A AND B', 'bonips' ) : _x( 'OR', 'Comparison of badge requirements. A OR B', 'bonips' ) );
+						$compare_label = ( ( $setup['compare'] === 'AND' ) ? _x( 'UND', 'Comparison of badge requirements. A AND B', 'bonips' ) : _x( 'ODER', 'Comparison of badge requirements. A OR B', 'bonips' ) );
 
 					if ( $req_level+1 == $total_requirements )
 						$compare_label = '';
@@ -1256,7 +1258,7 @@ var BadgeRequirement   = '<?php echo $js_requirement_clone; ?>';
 				</div>
 				<?php else : ?>
 					<input type="hidden" name="<?php echo $this->field_name( 'psforum' ); ?>" id="<?php echo $this->field_id( 'psforum' ); ?>" value="" />
-					<p><span class="description"><?php _e( '<a href="https://n3rds.work/piestingtal_source/ps-forum-plugin/" target=“_blank”>PS Forum</a>ist nicht installiert', 'bonips' ); ?></span></p>
+					<p><span class="description"><?php _e( '<a href="https://n3rds.work/piestingtal_source/ps-forum-plugin/" target="_blank">PS Forum</a> ist nicht installiert', 'bonips' ); ?></span></p>
 				<?php endif; ?>
 			</div>
 		</div>

@@ -12,8 +12,8 @@ function bonips_register_buddypress_media_hook( $installed ) {
 	if ( ! function_exists( 'rtmedia_autoloader' ) ) return $installed;
 
 	$installed['rtmedia'] = array(
-		'title'         => __( 'rtMedia Galleries', 'bonips' ),
-		'description'   => __( 'Award / Deduct %_plural% for users creating albums or uploading new photos.', 'bonips' ),
+		'title'         => __( 'rtMedia-Galerien', 'bonips' ),
+		'description'   => __( 'Vergibt oder zieht %_plural% ab, wenn Benutzer Alben erstellen oder Fotos hochladen.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/rtmedia-uploads/',
 		'callback'      => array( 'boniPS_rtMedia' )
 	);
@@ -287,7 +287,7 @@ function bonips_load_buddypress_media_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Photo Upload', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Foto-Upload', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -311,7 +311,7 @@ function bonips_load_buddypress_media_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Video Upload', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Video-Upload', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -335,7 +335,7 @@ function bonips_load_buddypress_media_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Music Upload', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Musik-Upload', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -359,7 +359,7 @@ function bonips_load_buddypress_media_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Photo Deletion', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Foto löschen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -377,7 +377,7 @@ function bonips_load_buddypress_media_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Video Deletion', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Video löschen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -395,7 +395,7 @@ function bonips_load_buddypress_media_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Music Deletion', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Musik löschen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">

@@ -178,7 +178,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 					'title'       => __( 'Guthabenbeschriftung', 'bonips' ),
 					'type'        => 'text',
 					'description' => __( 'Beschriftung für das Guthaben auf der Kassen- und Warenkorbseite. Leer lassen, um es auszublenden.', 'bonips' ),
-					'default'     => 'Your Balance',
+					'default'     => __( 'Dein Guthaben', 'bonips' ),
 					'desc_tip'    => false
 				);
 				$fields['profit_sharing_percent']    = array(
@@ -427,7 +427,7 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 					$this->bonips_type
 				);
 
-				$order->add_order_note( sprintf( _x( 'Refunded %s', '%s = Point amount formatted', 'bonips' ), $this->bonips->format_creds( $refund ) ) );
+				$order->add_order_note( sprintf( _x( '%s erstattet', '%s = Point amount formatted', 'bonips' ), $this->bonips->format_creds( $refund ) ) );
 
 				// Profit Sharing
 				if ( $this->profit_sharing_percent > 0 ) {

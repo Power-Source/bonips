@@ -1510,7 +1510,7 @@ function bonips_load_buddypress_groups_hook() {
 		</div>
 		<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'create', 'min' ) ); ?>"><?php _e( 'No. of Members', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'create', 'min' ) ); ?>"><?php _e( 'Anzahl der Mitglieder', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'create', 'min' ) ); ?>" id="<?php echo $this->field_id( array( 'create', 'min' ) ); ?>" value="<?php echo esc_attr( $prefs['create']['min'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->core->template_tags_general( __( 'Die Anzahl der Mitglieder, die eine Gruppe gewinnen muss, bevor %_plural% vergeben werden. Verwende Null, um zu vergeben, sobald die Gruppe erstellt wurde.', 'bonips' ) ); ?></span>
 			</div>

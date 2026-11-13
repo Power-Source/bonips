@@ -12,8 +12,8 @@ function bonips_register_gravity_forms_hook( $installed ) {
 	if ( ! class_exists( 'GFForms' ) ) return $installed;
 
 	$installed['gravityform'] = array(
-		'title'         => __( 'Gravityform Submissions', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for successful form submissions.', 'bonips' ),
+		'title'         => __( 'Gravity-Forms-Einreichungen', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für erfolgreiche Formulareinreichungen.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/submitting-gravity-forms/',
 		'callback'      => array( 'boniPS_Gravity_Forms' )
 	);
@@ -127,7 +127,7 @@ function bonips_load_gravity_forms_hook() {
 
 			// No forms found
 			if ( empty( $forms ) ) {
-				echo '<p>' . __( 'No forms found.', 'bonips' ) . '</p>';
+				echo '<p>' . __( 'Keine Formulare gefunden.', 'bonips' ) . '</p>';
 				return;
 			}
 
@@ -153,7 +153,7 @@ function bonips_load_gravity_forms_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php printf( __( 'Form: %s', 'bonips' ), $form->title ); ?></h3>
+	<h3><?php printf( __( 'Formular: %s', 'bonips' ), $form->title ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">

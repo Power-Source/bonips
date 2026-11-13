@@ -374,7 +374,7 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		 */
 		public function preferences() {
 
-			echo '<p>This Payment Gateway has no settings</p>';
+			echo '<p>' . esc_html__( 'Dieses Zahlungsgateway hat keine Einstellungen.', 'bonips' ) . '</p>';
 
 		}
 
@@ -1299,8 +1299,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 			$required_fields = apply_filters( 'bonips_buycred_req_fields', array( 'first_name', 'last_name', 'address1', 'city', 'zip', 'state', 'country' ), $this );
 
 			// Show required and optional fields via placeholders
-			$required = 'placeholder="required"';
-			$optional = 'placeholder="optional"';
+			$required = 'placeholder="' . esc_attr__( 'erforderlich', 'bonips' ) . '"';
+			$optional = 'placeholder="' . esc_attr__( 'optional', 'bonips' ) . '"';
 
 ?>
 <div class="row">
@@ -1417,7 +1417,7 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 ?>
 <h2><?php echo 'Debug'; ?></h2>
-<p><span class="description"><?php echo 'Here you can see information that are collected and sent to this gateway. Debug information is only visible for administrators and are intended for troubleshooting / testing of this gateway. Please disable "Sandbox Mode" when you want to take this gateway online.'; ?></span></p>
+<p><span class="description"><?php esc_html_e( 'Hier siehst Du die Informationen, die erfasst und an dieses Gateway gesendet werden. Debug-Informationen sind nur für Administratoren sichtbar und dienen der Fehlersuche und dem Testen des Gateways. Bitte deaktiviere den Sandbox-Modus, wenn Du das Gateway live schalten möchtest.', 'bonips' ); ?></span></p>
 <table id="gateway-debug">
 	<thead>
 		<tr>
@@ -1485,7 +1485,7 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<form name="bonips_<?php echo $id; ?>_request" class="form text-center" action="<?php echo $location; ?>" method="post" id="redirect-form">
 			<?php foreach ( $hidden_fields as $name => $value ) echo '<input type="hidden" name="' . $name . '" value="' . $value . '" />' . "\n"; ?>
-			<img src="<?php echo plugins_url( 'assets/images/loading.gif', BONIPS_PURCHASE ); ?>" alt="Loading" />
+			<img src="<?php echo plugins_url( 'assets/images/loading.gif', BONIPS_PURCHASE ); ?>" alt="<?php esc_attr_e( 'Wird geladen', 'bonips' ); ?>" />
 			<noscript><input type="submit" name="submit-form" value="<?php printf( __( 'Weiter zu %s', 'bonips' ), $this->label ); ?>" /></noscript>
 			<p id="manual-continue"><a href="javascript:void(0);" onclick="document.bonips_<?php echo $id; ?>_request.submit();return false;"><?php _e( 'Klicke hier, wenn Du nicht automatisch weitergeleitet wirst', 'bonips' ); ?></a></p>
 		</form>

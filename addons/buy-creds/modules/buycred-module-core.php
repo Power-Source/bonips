@@ -719,7 +719,7 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 		public function admin_page() {
 
 			// Security
-			if ( ! $this->core->user_is_point_admin() ) wp_die( 'Access Denied' );
+			if ( ! $this->core->user_is_point_admin() ) wp_die( esc_html__( 'Zugriff verweigert', 'bonips' ) );
 
 			$installed = $this->get();
 
@@ -802,7 +802,7 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		<?php do_action( 'bonips_after_buycreds_page', $this ); ?>
 
-		<p><?php submit_button( __( 'Update Einstellungen', 'bonips' ), 'primary large', 'submit', false ); ?> <?php if ( BONIPS_SHOW_PREMIUM_ADDONS ) : ?><a href="https://n3rds.work/shop/artikel/category/bonips-erweiterungen/" class="button button-secondary button-large" target="_blank">Mehr Erweiterungen</a><?php endif; ?></p>
+		<p><?php submit_button( __( 'Update Einstellungen', 'bonips' ), 'primary large', 'submit', false ); ?> <?php if ( BONIPS_SHOW_PREMIUM_ADDONS ) : ?><a href="https://n3rds.work/shop/artikel/category/bonips-erweiterungen/" class="button button-secondary button-large" target="_blank"><?php esc_html_e( 'Mehr Erweiterungen', 'bonips' ); ?></a><?php endif; ?></p>
 
 	</form>
 
@@ -895,7 +895,7 @@ jQuery(function($) {
 				$bonips = bonips( $point_type );
 
 			// Security (incase the user has setup different capabilities to manage this particular point type)
-			if ( ! $bonips->user_is_point_editor() ) wp_die( 'Access Denied' );
+			if ( ! $bonips->user_is_point_editor() ) wp_die( esc_html__( 'Zugriff verweigert', 'bonips' ) );
 
 			// Get references
 			$references           = bonips_get_buycred_gateway_refs( $point_type );

@@ -339,7 +339,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 		public function admin_page() {
 
 			// Security
-			if ( ! $this->core->user_is_point_admin() ) wp_die( 'Access Denied' );
+			if ( ! $this->core->user_is_point_admin() ) wp_die( esc_html__( 'Zugriff verweigert', 'bonips' ) );
 
 			$installed = $this->get( true );
 

@@ -184,7 +184,7 @@ if ( ! function_exists( 'bonips_render_sell_history' ) ) :
 		extract( shortcode_atts( array(
 			'user_id' => 'current',
 			'number'  => 25,
-			'nothing' => 'No purchases found',
+			'nothing' => __( 'Keine Käufe gefunden', 'bonips' ),
 			'ctype'   => NULL,
 			'order'   => 'DESC'
 		), $atts, BONIPS_SLUG . '_sales_history' ) );
@@ -247,7 +247,7 @@ if ( ! function_exists( 'bonips_render_sell_history' ) ) :
 
 						$expires = __( 'Nie', 'bonips' );
 						if ( $expirares_in > 0 )
-							$expires = sprintf( _x( 'Purchase expires in %s', 'e.g. 10 hours', 'bonips' ), $expirares_in . ' ' . $expiration );
+							$expires = sprintf( _x( 'Kauf läuft in %s ab', 'e.g. 10 hours', 'bonips' ), $expirares_in . ' ' . $expiration );
 
 						echo '<td class="' . $column_id . '">' . $expires . '</td>';
 

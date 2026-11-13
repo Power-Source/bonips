@@ -552,7 +552,7 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 <div id="bonips-edit-user-wrapper">
 	<table class="form-table bonips-inline-table">
 		<tr>
-			<th scope="row"><?php _e( 'Balances', 'bonips' ); ?></th>
+			<th scope="row"><?php _e( 'Guthaben', 'bonips' ); ?></th>
 			<td>
 				<fieldset id="bonips-badge-list" class="badge-list">
 					<legend class="screen-reader-text"><span><?php _e( 'Balance', 'bonips' ); ?></span></legend>
@@ -729,7 +729,7 @@ jQuery(function($){
 
 ?>
 <div id="edit-bonips-balance" style="display: none;">
-	<?php if ( $name == 'boniPS' ) : ?><img id="bonips-token-sitting" class="hidden-sm hidden-xs" src="<?php echo plugins_url( 'assets/images/token-sitting.png', boniPS_THIS ); ?>" alt="Token looking on" /><?php endif; ?>
+	<?php if ( $name == 'boniPS' ) : ?><img id="bonips-token-sitting" class="hidden-sm hidden-xs" src="<?php echo plugins_url( 'assets/images/token-sitting.png', boniPS_THIS ); ?>" alt="" /><?php endif; ?>
 	<div class="bonips-container">
 		<form class="form" method="post" action="" id="bonips-editor-form">
 			<input type="hidden" name="bonips_manage_balance[type]" value="" id="bonips-edit-balance-of-type" />

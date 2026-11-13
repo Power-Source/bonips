@@ -13,7 +13,7 @@ function bonips_register_badgeos_hook( $installed ) {
 
 	$installed['badgeos'] = array(
 		'title'         => __( 'BadgeOS', 'bonips' ),
-		'description'   => __( 'Default settings for each BadgeOS Achievement type. These settings may be overridden for individual achievement type.', 'bonips' ),
+		'description'   => __( 'Standardeinstellungen für jeden BadgeOS-Erfolgstyp. Sie können für einzelne Erfolgstypen überschrieben werden.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/badgeos-achievements/',
 		'callback'      => array( 'boniPS_Hook_BadgeOS' )
 	);
@@ -121,7 +121,7 @@ function bonips_load_badgeos_hook() {
 				if ( ! $this->is_main_type )
 					$page = BONIPS_SLUG . '_' . $this->bonips_type . '-hooks';
 
-				echo '<p>' . sprintf( __( 'Please setup your <a href="%s">default settings</a> before using this feature.', 'bonips' ), admin_url( 'admin.php?page=' . $page ) ) . '</p>';
+				echo '<p>' . sprintf( __( 'Bitte richte Deine <a href="%s">Standardeinstellungen</a> ein, bevor Du diese Funktion verwendest.', 'bonips' ), admin_url( 'admin.php?page=' . $page ) ) . '</p>';
 				return;
 
 			}
@@ -135,11 +135,11 @@ function bonips_load_badgeos_hook() {
 				$achievement_data = $prefs[ $post->post_type ];
 
 ?>
-<p><strong><?php echo $this->core->template_tags_general( __( '%plural% to Award', 'bonips' ) ); ?></strong></p>
+<p><strong><?php echo $this->core->template_tags_general( __( 'Zu vergebende %plural%', 'bonips' ) ); ?></strong></p>
 <p>
-	<label class="screen-reader-text" for="bonips-values-<?php echo $this->bonips_type; ?>-creds"><?php echo $this->core->template_tags_general( __( '%plural% to Award', 'bonips' ) ); ?></label>
+	<label class="screen-reader-text" for="bonips-values-<?php echo $this->bonips_type; ?>-creds"><?php echo $this->core->template_tags_general( __( 'Zu vergebende %plural%', 'bonips' ) ); ?></label>
 	<input type="text" name="<?php echo $post_key; ?>[creds]" id="bonips-values-<?php echo $this->bonips_type; ?>-creds" value="<?php echo $this->core->number( $achievement_data['creds'] ); ?>" size="8" />
-	<span class="description"><?php _e( 'Use zero to disable', 'bonips' ); ?></span>
+	<span class="description"><?php _e( 'Verwende null zum Deaktivieren', 'bonips' ); ?></span>
 </p>
 <p><strong><?php _e( 'Protokollvorlage', 'bonips' ); ?></strong></p>
 <p>
@@ -152,7 +152,7 @@ function bonips_load_badgeos_hook() {
 			if ( $this->prefs[ $post->post_type ]['deduct'] == 1 ) {
 
 ?>
-<p><strong><?php _e( 'Deduction Protokollvorlage', 'bonips' ); ?></strong></p>
+<p><strong><?php _e( 'Protokollvorlage für Abzüge', 'bonips' ); ?></strong></p>
 <p>
 	<label class="screen-reader-text" for="bonips-values-<?php echo $this->bonips_type; ?>-log"><?php _e( 'Protokollvorlage', 'bonips' ); ?></label>
 	<input type="text" name="<?php echo $post_key; ?>[deduct_log]" id="bonips-values-deduct-<?php echo $this->bonips_type; ?>-log" value="<?php echo esc_attr( $achievement_data['deduct_log'] ); ?>" style="width:99%;" />
@@ -314,7 +314,7 @@ function bonips_load_badgeos_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php printf( __( 'Earning: %s', 'bonips' ), $post_type_object->labels->singular_name ); ?></h3>
+	<h3><?php printf( __( 'Erhalten: %s', 'bonips' ), $post_type_object->labels->singular_name ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -332,7 +332,7 @@ function bonips_load_badgeos_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php printf( __( 'Revoked: %s', 'bonips' ), $post_type_object->labels->singular_name ); ?></h3>
+	<h3><?php printf( __( 'Widerrufen: %s', 'bonips' ), $post_type_object->labels->singular_name ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">

@@ -558,7 +558,7 @@ if ( ! function_exists( 'bonips_sell_content_new_purchase' ) ) :
 
 			// Disabled point type or user is excluded.
 			if ( $setup['status'] === 'disabled' || $bonips->exclude_user( $user_id ) )
-				$result = sprintf( _x( 'You can not pay using %s', 'Point type name', 'bonips' ), $bonips->plural() );
+				$result = sprintf( _x( 'Du kannst nicht mit %s bezahlen', 'Point type name', 'bonips' ), $bonips->plural() );
 
 			else {
 
@@ -819,20 +819,20 @@ if ( ! function_exists( 'bonips_get_post_type_options' ) ) :
 
 		$options = array();
 		$options['all'] = array(
-			'label' => sprintf( _x( 'All %s', 'all post type name', 'bonips' ), $type->labels->name ),
+			'label' => sprintf( _x( 'Alle %s', 'all post type name', 'bonips' ), $type->labels->name ),
 			'data'  => ''
 		);
 		$options['manual'] = array(
-			'label' => sprintf( _x( '%s I manually select', 'all post type name', 'bonips' ), $type->labels->name ),
+			'label' => sprintf( _x( '%s, die ich manuell auswähle', 'all post type name', 'bonips' ), $type->labels->name ),
 			'data'  => ''
 		);
 		$options['exclude'] = array(
-			'label' => sprintf( _x( 'All %s except', '%s = post type name', 'bonips' ), $type->labels->name ),
-			'data'  => sprintf( _x( 'Comma separated list of %s IDs to exclude', '%s = post type name', 'bonips' ), $type->labels->singular_name )
+			'label' => sprintf( _x( 'Alle %s außer', '%s = post type name', 'bonips' ), $type->labels->name ),
+			'data'  => sprintf( _x( 'Kommagetrennte Liste der auszuschließenden %s-IDs', '%s = post type name', 'bonips' ), $type->labels->singular_name )
 		);
 		$options['include'] = array(
-			'label' => sprintf( _x( 'Only %s', '%s = post type name', 'bonips' ), $type->labels->name ),
-			'data'  => sprintf( _x( 'Comma separated list of %s IDs', '%s = post type name', 'bonips' ), $type->labels->singular_name )
+			'label' => sprintf( _x( 'Nur %s', '%s = post type name', 'bonips' ), $type->labels->name ),
+			'data'  => sprintf( _x( 'Kommagetrennte Liste von %s-IDs', '%s = post type name', 'bonips' ), $type->labels->singular_name )
 		);
 
 		$taxonomies = get_object_taxonomies( $post_type, 'objects' );
@@ -844,22 +844,22 @@ if ( ! function_exists( 'bonips_get_post_type_options' ) ) :
 
 				if ( $term->hierarchical ) {
 					$options[ $taxonomy_id ] = array(
-						'label' => sprintf( _x( 'Only %s in %s', 'e.g. Only "Posts" in "Categories"', 'bonips' ), $type->labels->name, $term->labels->name ),
-						'data'  => sprintf( _x( 'Comma separated list of %s slugs', '%s = taxonomy name', 'bonips' ), $term->labels->singular_name )
+						'label' => sprintf( _x( 'Nur %s in %s', 'e.g. Only "Posts" in "Categories"', 'bonips' ), $type->labels->name, $term->labels->name ),
+						'data'  => sprintf( _x( 'Kommagetrennte Liste von %s-Slugs', '%s = taxonomy name', 'bonips' ), $term->labels->singular_name )
 					);
 					$options[ '_' . $taxonomy_id ] = array(
-						'label' => sprintf( _x( 'Only %s not in %s', 'e.g. Only "Posts" not in "Categories"', 'bonips' ), $type->labels->name, $term->labels->name ),
-						'data'  => sprintf( _x( 'Comma separated list of %s slugs', '%s = taxonomy name', 'bonips' ), $term->labels->singular_name )
+						'label' => sprintf( _x( 'Nur %s nicht in %s', 'e.g. Only "Posts" not in "Categories"', 'bonips' ), $type->labels->name, $term->labels->name ),
+						'data'  => sprintf( _x( 'Kommagetrennte Liste von %s-Slugs', '%s = taxonomy name', 'bonips' ), $term->labels->singular_name )
 					);
 				}
 				else {
 					$options[ $taxonomy_id ] = array(
-						'label' => sprintf( _x( 'Only %s with %s', 'e.g. Only "Posts" with "Tags"', 'bonips' ), $type->labels->name, $term->labels->name ),
-						'data'  => sprintf( _x( 'Comma separated list of %s slugs', '%s = taxonomy name', 'bonips' ), $term->labels->singular_name )
+						'label' => sprintf( _x( 'Nur %s mit %s', 'e.g. Only "Posts" with "Tags"', 'bonips' ), $type->labels->name, $term->labels->name ),
+						'data'  => sprintf( _x( 'Kommagetrennte Liste von %s-Slugs', '%s = taxonomy name', 'bonips' ), $term->labels->singular_name )
 					);
 					$options[ '_' . $taxonomy_id ] = array(
-						'label' => sprintf( _x( 'Only %s without %s', 'e.g. Only "Posts" without "Tags"', 'bonips' ), $type->labels->name, $term->labels->name ),
-						'data'  => sprintf( _x( 'Comma separated list of %s slugs', '%s = taxonomy name', 'bonips' ), $term->labels->singular_name )
+						'label' => sprintf( _x( 'Nur %s ohne %s', 'e.g. Only "Posts" without "Tags"', 'bonips' ), $type->labels->name, $term->labels->name ),
+						'data'  => sprintf( _x( 'Kommagetrennte Liste von %s-Slugs', '%s = taxonomy name', 'bonips' ), $term->labels->singular_name )
 					);
 				}
 

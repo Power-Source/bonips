@@ -13,7 +13,7 @@ function bonips_register_wp_favorite_posts_hook( $installed ) {
 
 	$installed['wpfavorite'] = array(
 		'title'         => __( 'WP Favorite Posts', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for users adding posts to their favorites.', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Benutzer, die Beiträge zu ihren Favoriten hinzufügen.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/wp-favorite-posts-actions/',
 		'callback'      => array( 'boniPS_Hook_WPFavorite' )
 	);
@@ -215,11 +215,11 @@ function bonips_load_wp_favorite_posts_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Adding Content to Favorites', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Inhalte zu Favoriten hinzufügen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'add' => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'add' => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'add' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'add' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['add']['creds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -231,7 +231,7 @@ function bonips_load_wp_favorite_posts_hook() {
 		</div>
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'added' => 'creds' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'added' => 'creds' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'added' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'added' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['added']['creds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -245,14 +245,14 @@ function bonips_load_wp_favorite_posts_hook() {
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'add' => 'log' ) ); ?>"><?php _e( 'Member Protokollvorlage', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'add' => 'log' ) ); ?>"><?php _e( 'Protokollvorlage für Mitglieder', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'add' => 'log' ) ); ?>" id="<?php echo $this->field_id( array( 'add' => 'log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['add']['log'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'added' => 'log' ) ); ?>"><?php _e( 'Content Author Protokollvorlage', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'added' => 'log' ) ); ?>"><?php _e( 'Protokollvorlage für Inhaltsautoren', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'added' => 'log' ) ); ?>" id="<?php echo $this->field_id( array( 'added' => 'log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['added']['log'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
@@ -260,11 +260,11 @@ function bonips_load_wp_favorite_posts_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Removing Content from Favorites', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Inhalte aus Favoriten entfernen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'remove' => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'remove' => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'remove' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'remove' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['remove']['creds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -279,7 +279,7 @@ function bonips_load_wp_favorite_posts_hook() {
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'removed' => 'creds' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'removed' => 'creds' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'removed' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'removed' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['removed']['creds'] ); ?>" class="form-control" />
 			</div>
 		</div>

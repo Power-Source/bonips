@@ -13,7 +13,7 @@ function bonips_register_psforum_hook( $installed ) {
 
 	$installed['hook_psforum'] = array(
 		'title'         => 'PSForum',
-		'description'   => __( 'Awards %_plural% for PSForum actions.', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für PSForum-Aktionen.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/psforum-actions/',
 		'callback'      => array( 'boniPS_PSForum' )
 	);
@@ -430,7 +430,7 @@ function bonips_load_psforum_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'New Forums', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neue Foren', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -454,7 +454,7 @@ function bonips_load_psforum_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Deleting Forums', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Foren löschen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -472,7 +472,7 @@ function bonips_load_psforum_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'New Topic', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neues Thema', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -498,14 +498,14 @@ function bonips_load_psforum_hook() {
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="radio">
-					<label for="<?php echo $this->field_id( array( 'new_topic' => 'author' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'new_topic' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'new_topic' => 'author' ) ); ?>" <?php checked( $prefs['new_topic']['author'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( 'Forum authors can receive %_plural% for creating new topics.', 'bonips' ) ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'new_topic' => 'author' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'new_topic' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'new_topic' => 'author' ) ); ?>" <?php checked( $prefs['new_topic']['author'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( 'Forenautoren können %_plural% für das Erstellen neuer Themen erhalten.', 'bonips' ) ); ?></label>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Deleted Topic', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Gelöschtes Thema', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -523,7 +523,7 @@ function bonips_load_psforum_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Adding Topic to Favorites', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Thema zu Favoriten hinzufügen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -547,7 +547,7 @@ function bonips_load_psforum_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'New Topic', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Neues Thema', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -573,14 +573,14 @@ function bonips_load_psforum_hook() {
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="radio">
-					<label for="<?php echo $this->field_id( array( 'new_reply' => 'author' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'new_reply' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'new_reply' => 'author' ) ); ?>" <?php checked( $prefs['new_reply']['author'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( 'Topic authors can receive %_plural% for replying to their own Topic.', 'bonips' ) ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'new_reply' => 'author' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'new_reply' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'new_reply' => 'author' ) ); ?>" <?php checked( $prefs['new_reply']['author'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( 'Themenautoren können %_plural% für Antworten auf ihr eigenes Thema erhalten.', 'bonips' ) ); ?></label>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Deleted Reply', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Gelöschte Antwort', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
@@ -602,10 +602,10 @@ function bonips_load_psforum_hook() {
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="radio">
-					<label for="<?php echo $this->field_id( 'show_points_in_reply' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'show_points_in_reply' ); ?>" id="<?php echo $this->field_id( 'show_points_in_reply' ); ?>" <?php checked( $prefs['show_points_in_reply'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( 'Show users %_plural% balance in replies', 'bonips' ) ); ?></label>
+					<label for="<?php echo $this->field_id( 'show_points_in_reply' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'show_points_in_reply' ); ?>" id="<?php echo $this->field_id( 'show_points_in_reply' ); ?>" <?php checked( $prefs['show_points_in_reply'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( '%_plural%-Guthaben der Benutzer in Antworten anzeigen', 'bonips' ) ); ?></label>
 				</div>
 				<div class="radio">
-					<label for="<?php echo $this->field_id( 'show_points_in_profile' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'show_points_in_profile' ); ?>" id="<?php echo $this->field_id( 'show_points_in_profile' ); ?>" <?php checked( $prefs['show_points_in_profile'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( 'Show users %_plural% balance in their PSForum profiles', 'bonips' ) ); ?></label>
+					<label for="<?php echo $this->field_id( 'show_points_in_profile' ); ?>"><input type="checkbox" name="<?php echo $this->field_name( 'show_points_in_profile' ); ?>" id="<?php echo $this->field_id( 'show_points_in_profile' ); ?>" <?php checked( $prefs['show_points_in_profile'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( '%_plural%-Guthaben der Benutzer in ihren PSForum-Profilen anzeigen', 'bonips' ) ); ?></label>
 				</div>
 			</div>
 		</div>

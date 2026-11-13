@@ -12,8 +12,8 @@ function bonips_register_invite_anyone_hook( $installed ) {
 	if ( ! function_exists( 'invite_anyone_init' ) ) return $installed;
 
 	$installed['invite_anyone'] = array(
-		'title'         => __( 'Invite Anyone Plugin', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for sending invitations and/or %_plural% if the invite is accepted.', 'bonips' ),
+		'title'         => __( 'Invite-Anyone-Plugin', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für das Senden von Einladungen und/oder %_plural%, wenn die Einladung angenommen wird.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/inviting-users/',
 		'callback'      => array( 'boniPS_Invite_Anyone' )
 	);
@@ -202,7 +202,7 @@ function bonips_load_invite_anyone_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Sending Invites', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Einladungen senden', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
@@ -226,7 +226,7 @@ function bonips_load_invite_anyone_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Accepted Invites', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Angenommene Einladungen', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">

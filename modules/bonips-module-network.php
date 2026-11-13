@@ -231,7 +231,7 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 		public function admin_page_settings() {
 
 			// Security
-			if ( ! current_user_can( 'manage_network_options' ) ) wp_die( 'Access Denied' );
+			if ( ! current_user_can( 'manage_network_options' ) ) wp_die( esc_html__( 'Zugriff verweigert', 'bonips' ) );
 
 			global $bonips_network;
 

@@ -320,31 +320,31 @@ if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 	<div class="row">
 		<div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'logic' => 'play' ) ); ?>"><?php _e( 'Award Logic', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'logic' => 'play' ) ); ?>"><?php _e( 'Vergabelogik', 'bonips' ); ?></label>
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( array( 'logic' => 'play' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( 'logic' ); ?>" id="<?php echo $this->field_id( array( 'logic' => 'play' ) ); ?>"<?php checked( $prefs['logic'], 'play' ); ?> value="play" class="toggle-hook-option" /> <?php _e( 'Play - As soon as video starts playing.', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'logic' => 'play' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( 'logic' ); ?>" id="<?php echo $this->field_id( array( 'logic' => 'play' ) ); ?>"<?php checked( $prefs['logic'], 'play' ); ?> value="play" class="toggle-hook-option" /> <?php _e( 'Abspielen – sobald das Video startet.', 'bonips' ); ?></label>
 				</div>
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( array( 'logic' => 'full' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( 'logic' ); ?>" id="<?php echo $this->field_id( array( 'logic' => 'full' ) ); ?>"<?php checked( $prefs['logic'], 'full' ); ?> value="full" class="toggle-hook-option" /> <?php _e( 'Full - First when the entire video has played.', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'logic' => 'full' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( 'logic' ); ?>" id="<?php echo $this->field_id( array( 'logic' => 'full' ) ); ?>"<?php checked( $prefs['logic'], 'full' ); ?> value="full" class="toggle-hook-option" /> <?php _e( 'Vollständig – erst wenn das gesamte Video abgespielt wurde.', 'bonips' ); ?></label>
 				</div>
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( array( 'logic' => 'interval' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( 'logic' ); ?>" id="<?php echo $this->field_id( array( 'logic' => 'interval' ) ); ?>"<?php checked( $prefs['logic'], 'interval' ); ?> value="interval" class="toggle-hook-option" /> <?php echo $this->core->template_tags_general( __( 'Interval - For each x number of seconds watched.', 'bonips' ) ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'logic' => 'interval' ) ); ?>"><input type="radio" name="<?php echo $this->field_name( 'logic' ); ?>" id="<?php echo $this->field_id( array( 'logic' => 'interval' ) ); ?>"<?php checked( $prefs['logic'], 'interval' ); ?> value="interval" class="toggle-hook-option" /> <?php echo $this->core->template_tags_general( __( 'Intervall – für jede festgelegte Anzahl angesehener Sekunden.', 'bonips' ) ); ?></label>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
 			<div id="<?php echo $this->field_id( array( 'logic-option-interval' ) ); ?>"<?php if ( $prefs['logic'] != 'interval' ) echo ' style="display: none;"';?>>
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( 'interval' ); ?>"><?php _e( 'Intervals', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( 'interval' ); ?>"><?php _e( 'Intervalle', 'bonips' ); ?></label>
 					<input type="text" name="<?php echo $this->field_name( 'interval' ); ?>" id="<?php echo $this->field_id( 'interval' ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['interval'] ); ?>" class="form-control" />
-					<span class="description"><?php printf( __( 'The number of seconds a user must watch in order to get %s.', 'bonips' ), $this->core->plural() ); ?></span>
+					<span class="description"><?php printf( __( 'Anzahl der Sekunden, die ein Benutzer ansehen muss, um %s zu erhalten.', 'bonips' ), $this->core->plural() ); ?></span>
 				</div>
 			</div>
 			<div id="<?php echo $this->field_id( array( 'logic-option-full' ) ); ?>"<?php if ( $prefs['logic'] != 'full' ) echo ' style="display: none;"';?>>
 				<div class="form-group">
-					<label for="<?php echo $this->field_id( 'leniency' ); ?>"><?php _e( 'Leniency', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( 'leniency' ); ?>"><?php _e( 'Toleranz', 'bonips' ); ?></label>
 					<input type="text" name="<?php echo $this->field_name( 'leniency' ); ?>" id="<?php echo $this->field_id( 'leniency' ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['leniency'] ); ?>" class="form-control" />
-					<span class="description"><?php _e( 'Do not set this value to zero! A lot of thing can happen while a user watches a movie and sometimes a few seconds can drop of the counter due to buffering or play back errors.', 'bonips' ); ?></span>
+					<span class="description"><?php _e( 'Setze diesen Wert nicht auf null! Beim Ansehen eines Videos können durch Pufferung oder Wiedergabefehler einige Sekunden im Zähler fehlen.', 'bonips' ); ?></span>
 				</div>
 			</div>
 		</div>
@@ -352,7 +352,7 @@ if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label><?php _e( 'Available Shortcode', 'bonips' ); ?></label>
+				<label><?php _e( 'Verfügbarer Shortcode', 'bonips' ); ?></label>
 				<p class="form-control-static"><a href="https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcode-bonips_video/" target="_blank">[bonips_video]</a></p>
 			</div>
 		</div>

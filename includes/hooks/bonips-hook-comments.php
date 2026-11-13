@@ -360,24 +360,24 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 				);
 
 			if ( function_exists( 'dsq_is_installed' ) )
-				echo '<p>' . $this->core->template_tags_general( __( '%plural% are only awarded when your website has been synced with the Disqus server!', 'bonips' ) ) . '</p>';
+				echo '<p>' . $this->core->template_tags_general( __( '%plural% werden erst vergeben, wenn Deine Website mit dem Disqus-Server synchronisiert wurde!', 'bonips' ) ) . '</p>';
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Approved Comments', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Genehmigte Kommentare', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'approved' => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'approved' => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'approved' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'approved' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['approved']['creds'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'approved' => 'author' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'approved' => 'author' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'approved' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'approved' => 'author' ) ); ?>" value="<?php echo $this->core->number( $prefs['approved']['author'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -392,7 +392,7 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( array( 'limits' => 'self_reply' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'limits' => 'self_reply' ) ); ?>" id="<?php echo $this->field_id( array( 'limits' => 'self_reply' ) ); ?>" <?php checked( $prefs['limits']['self_reply'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( '%plural% is to be awarded even when comment authors reply to their own comment.', 'bonips' ) ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'limits' => 'self_reply' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'limits' => 'self_reply' ) ); ?>" id="<?php echo $this->field_id( array( 'limits' => 'self_reply' ) ); ?>" <?php checked( $prefs['limits']['self_reply'], 1 ); ?> value="1" /> <?php echo $this->core->template_tags_general( __( '%plural% auch vergeben, wenn Kommentarautoren auf ihren eigenen Kommentar antworten.', 'bonips' ) ); ?></label>
 				</div>
 			</div>
 		</div>
@@ -400,35 +400,35 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'limits' => 'per_post' ) ); ?>"><?php _e( 'Limit per post', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'limits' => 'per_post' ) ); ?>"><?php _e( 'Limit pro Beitrag', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'limits' => 'per_post' ) ); ?>" id="<?php echo $this->field_id( array( 'limits' => 'per_post' ) ); ?>" value="<?php echo esc_attr( $prefs['limits']['per_post'] ); ?>" class="form-control" />
-				<span class="description"><?php echo $this->core->template_tags_general( __( 'The number of comments per post that grants %_plural% to the comment author. Use zero for unlimited.', 'bonips' ) ); ?></span>
+				<span class="description"><?php echo $this->core->template_tags_general( __( 'Anzahl der Kommentare pro Beitrag, für die der Kommentarautor %_plural% erhält. Verwende null für unbegrenzt.', 'bonips' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'limits' => 'per_day' ) ); ?>"><?php _e( 'Limit per day', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'limits' => 'per_day' ) ); ?>"><?php _e( 'Limit pro Tag', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'limits' => 'per_day' ) ); ?>" id="<?php echo $this->field_id( array( 'limits' => 'per_day' ) ); ?>" value="<?php echo $prefs['limits']['per_day']; ?>" class="form-control" />
-				<span class="description"><?php echo $this->core->template_tags_general( __( 'Number of comments per day that grants %_plural%. Use zero for unlimited.', 'bonips' ) ); ?></span>
+				<span class="description"><?php echo $this->core->template_tags_general( __( 'Anzahl der Kommentare pro Tag, für die %_plural% vergeben werden. Verwende null für unbegrenzt.', 'bonips' ) ); ?></span>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'SPAM Comments', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Spam-Kommentare', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'spam' => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'spam' => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'spam' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'spam' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['spam']['creds'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'spam' => 'author' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'spam' => 'author' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'spam' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'spam' => 'author' ) ); ?>" value="<?php echo $this->core->number( $prefs['spam']['author'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -441,20 +441,20 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Trashed Comments', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Kommentare im Papierkorb', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'trash' => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'trash' => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'trash' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'trash' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['trash']['creds'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'trash' => 'author' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'trash' => 'author' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'trash' => 'author' ) ); ?>" id="<?php echo $this->field_id( array( 'trash' => 'author' ) ); ?>" value="<?php echo $this->core->number( $prefs['trash']['author'] ); ?>" class="form-control" />
-				<span class="description"><?php _e( 'Use zero to disable.', 'bonips' ); ?></span>
+				<span class="description"><?php _e( 'Verwende null zum Deaktivieren.', 'bonips' ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">

@@ -14,14 +14,14 @@ if ( ! function_exists( 'bonips_render_shortcode_load_coupon' ) ) :
 			return $content;
 
 		extract( shortcode_atts( array(
-			'label'       => 'Gutschein',
-			'button'      => 'Gutschein anwenden',
+			'label'       => __( 'Gutschein', 'bonips' ),
+			'button'      => __( 'Gutschein anwenden', 'bonips' ),
 			'placeholder' => ''
 		), $atts, BONIPS_SLUG . '_load_coupon' ) );
 
 		$bonips = bonips();
 		if ( ! isset( $bonips->coupons ) )
-			return '<p><strong>Coupon-Add-on-Einstellungen fehlen! Bitte besuche die Seite BoniPress > Einstellungen, um Deine Einstellungen zu speichern, bevor Du diesen Shortcode verwendest.</strong></p>';
+			return '<p><strong>' . esc_html__( 'Die Gutschein-Erweiterung ist nicht eingerichtet! Bitte besuche BoniPress > Einstellungen und speichere Deine Einstellungen, bevor Du diesen Shortcode verwendest.', 'bonips' ) . '</strong></p>';
 
 		// Prep
 		$user_id = get_current_user_id();

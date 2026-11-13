@@ -51,9 +51,9 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 		public function custom_limit() {
 
 			return array(
-				'none' => __( 'No limit', 'bonips' ),
-				'url'  => __( 'Once for each unique URL', 'bonips' ),
-				'id'   => __( 'Once for each unique link id', 'bonips' )
+				'none' => __( 'Kein Limit', 'bonips' ),
+				'url'  => __( 'Einmal pro eindeutiger URL', 'bonips' ),
+				'id'   => __( 'Einmal pro eindeutiger Link-ID', 'bonips' )
 			);
 
 		}
@@ -299,7 +299,7 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label><?php _e( 'Available Shortcode', 'bonips' ); ?></label>
+				<label><?php _e( 'Verfügbarer Shortcode', 'bonips' ); ?></label>
 				<p class="form-control-static"><a href="https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_link/" target="_blank">[bonips_link]</a></p>
 			</div>
 		</div>

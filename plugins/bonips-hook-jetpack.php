@@ -12,8 +12,8 @@ function bonips_register_jetpack_hook( $installed ) {
 	if ( ! defined( 'JETPACK__PLUGIN_DIR' ) ) return $installed;
 
 	$installed['jetpack'] = array(
-		'title'         => __( 'Jetpack Subscriptions', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for users signing up for site or comment updates using Jetpack.', 'bonips' ),
+		'title'         => __( 'Jetpack-Abonnements', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Benutzer, die Website- oder Kommentarbenachrichtigungen über Jetpack abonnieren.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/jetpack-subscriptions/',
 		'callback'      => array( 'boniPS_Hook_Jetpack' )
 	);
@@ -151,7 +151,7 @@ function bonips_load_jetpack_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Site Subscriptions', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Website-Abonnements', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
@@ -169,7 +169,7 @@ function bonips_load_jetpack_hook() {
 	</div>
 </div>
 <div class="hook-instance">
-	<h3><?php _e( 'Comment Subscriptions', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Kommentar-Abonnements', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">

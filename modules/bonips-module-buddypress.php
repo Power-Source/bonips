@@ -28,8 +28,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 					'balance_template'   => '%plural% balance:',
 					'history_location'   => '',
 					'history_menu_title' => array(
-						'me'      => __( "Wallet", 'bonips' ),
-						'others'  => __( "%s's Wallet", 'bonips' )
+						'me'      => __( 'Geldbörse', 'bonips' ),
+						'others'  => __( 'Geldbörse von %s', 'bonips' )
 					),
 					'history_menu_pos'   => 99,
 					'history_url'        => 'bonips-history',
@@ -349,7 +349,7 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 			if ( count( $bonips_types ) > 1 ) :
 
 ?>
-<form action="" id="bonips-sort-cred-history-form" method="get"><label><?php _e( 'Show:', 'bonips' ); ?></label> <?php bonips_types_select_from_dropdown( 'show-ctype', 'bonips-select-type', $type ); ?> <input type="submit" class="btn btn-large btn-primary button button-large button-primary" value="<?php _e( 'Los', 'bonips' ); ?>" /></form>
+<form action="" id="bonips-sort-cred-history-form" method="get"><label><?php _e( 'Anzeigen:', 'bonips' ); ?></label> <?php bonips_types_select_from_dropdown( 'show-ctype', 'bonips-select-type', $type ); ?> <input type="submit" class="btn btn-large btn-primary button button-large button-primary" value="<?php _e( 'Los', 'bonips' ); ?>" /></form>
 <?php
 
 			endif;

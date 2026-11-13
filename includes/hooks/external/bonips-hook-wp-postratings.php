@@ -12,8 +12,8 @@ function bonips_register_wp_postratings_hook( $installed ) {
 	if ( ! defined( 'WP_POSTRATINGS_VERSION' ) ) return $installed;
 
 	$installed['wp_postratings'] = array(
-		'title'         => __( 'Post Ratings', 'bonips' ),
-		'description'   => __( 'Awards %_plural% for post ratings. Supports awarding %_plural% both to post author and the user rating.', 'bonips' ),
+		'title'         => __( 'Beitragsbewertungen', 'bonips' ),
+		'description'   => __( 'Vergibt %_plural% für Beitragsbewertungen. Sowohl der Beitragsautor als auch der bewertende Benutzer können %_plural% erhalten.', 'bonips' ),
 		'documentation' => 'http://codex.bonips.me/hooks/wp-postratings-actions/',
 		'callback'      => array( 'boniPS_WP_Postratings' )
 	);
@@ -82,7 +82,7 @@ function bonips_load_wp_postratings_hook() {
 			if ( ! in_array( $id, array( 'rating', 'rated' ) ) || ! isset( $prefs['value'] ) ) return $amount;
 
 			if ( $prefs['value'] == 1 )
-				return __( 'Based on rating', 'bonips' );
+				return __( 'Basierend auf der Bewertung', 'bonips' );
 
 			return $amount;
 
@@ -158,11 +158,11 @@ function bonips_load_wp_postratings_hook() {
 
 ?>
 <div class="hook-instance">
-	<h3><?php _e( 'Content Rating', 'bonips' ); ?></h3>
+	<h3><?php _e( 'Inhaltsbewertung', 'bonips' ); ?></h3>
 	<div class="row">
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'rating' => 'creds' ) ); ?>"><?php _e( 'Member', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'rating' => 'creds' ) ); ?>"><?php _e( 'Mitglied', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'rating' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'rating' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['rating']['creds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -174,7 +174,7 @@ function bonips_load_wp_postratings_hook() {
 		</div>
 		<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'rated' => 'creds' ) ); ?>"><?php _e( 'Content Author', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'rated' => 'creds' ) ); ?>"><?php _e( 'Inhaltsautor', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'rated' => 'creds' ) ); ?>" id="<?php echo $this->field_id( array( 'rated' => 'creds' ) ); ?>" value="<?php echo $this->core->number( $prefs['rated']['creds'] ); ?>" class="form-control" />
 			</div>
 		</div>
@@ -189,14 +189,14 @@ function bonips_load_wp_postratings_hook() {
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( array( 'rating', 'value' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'rating', 'value' ) ); ?>" id="<?php echo $this->field_id( array( 'rating', 'value' ) ); ?>" <?php checked( $prefs['rating']['value'], 1 ); ?> value="1" /> <?php _e( 'Use the Rating Value instead of the amount set here.', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'rating', 'value' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'rating', 'value' ) ); ?>" id="<?php echo $this->field_id( array( 'rating', 'value' ) ); ?>" <?php checked( $prefs['rating']['value'], 1 ); ?> value="1" /> <?php _e( 'Verwende den Bewertungswert statt des hier festgelegten Betrags.', 'bonips' ); ?></label>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 				<div class="checkbox">
-					<label for="<?php echo $this->field_id( array( 'rated', 'value' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'rated', 'value' ) ); ?>" id="<?php echo $this->field_id( array( 'rated', 'value' ) ); ?>" <?php checked( $prefs['rated']['value'], 1 ); ?> value="1" /> <?php _e( 'Use the Rating Value instead of the amount set here.', 'bonips' ); ?></label>
+					<label for="<?php echo $this->field_id( array( 'rated', 'value' ) ); ?>"><input type="checkbox" name="<?php echo $this->field_name( array( 'rated', 'value' ) ); ?>" id="<?php echo $this->field_id( array( 'rated', 'value' ) ); ?>" <?php checked( $prefs['rated']['value'], 1 ); ?> value="1" /> <?php _e( 'Verwende den Bewertungswert statt des hier festgelegten Betrags.', 'bonips' ); ?></label>
 				</div>
 			</div>
 		</div>
@@ -204,14 +204,14 @@ function bonips_load_wp_postratings_hook() {
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'rating' => 'log' ) ); ?>"><?php _e( 'Member Protokollvorlage', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'rating' => 'log' ) ); ?>"><?php _e( 'Protokollvorlage für Mitglieder', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'rating' => 'log' ) ); ?>" id="<?php echo $this->field_id( array( 'rating' => 'log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['rating']['log'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-				<label for="<?php echo $this->field_id( array( 'rated' => 'log' ) ); ?>"><?php _e( 'Content Author Protokollvorlage', 'bonips' ); ?></label>
+				<label for="<?php echo $this->field_id( array( 'rated' => 'log' ) ); ?>"><?php _e( 'Protokollvorlage für Inhaltsautoren', 'bonips' ); ?></label>
 				<input type="text" name="<?php echo $this->field_name( array( 'rated' => 'log' ) ); ?>" id="<?php echo $this->field_id( array( 'rated' => 'log' ) ); ?>" placeholder="<?php _e( 'erforderlich', 'bonips' ); ?>" value="<?php echo esc_attr( $prefs['rated']['log'] ); ?>" class="form-control" />
 				<span class="description"><?php echo $this->available_template_tags( array( 'general', 'post' ) ); ?></span>
 			</div>
