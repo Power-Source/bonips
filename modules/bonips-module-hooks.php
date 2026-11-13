@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Hooks_Module class
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 	class boniPS_Hooks_Module extends boniPS_Module {
@@ -38,8 +38,8 @@ if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 
 		/**
 		 * Load Hooks
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -64,8 +64,8 @@ if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 
 		/**
 		 * Get Hooks
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get( $save = false ) {
 
@@ -178,8 +178,8 @@ if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 		/**
 		 * Call
 		 * Either calls a given class method or function.
-		 * @since 0.1
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function call( $call, $callback, $return = NULL ) {
 
@@ -218,8 +218,8 @@ if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 
 		/**
 		 * Settings Header
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_header() {
 
@@ -244,8 +244,8 @@ if ( ! class_exists( 'boniPS_Hooks_Module' ) ) :
 
 		/**
 		 * Admin Page
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page() {
 
@@ -397,8 +397,8 @@ jQuery(function($) {
 
 		/**
 		 * Display Sidebars
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function display_sidebars() {
 
@@ -489,8 +489,8 @@ jQuery(function($) {
 		/**
 		 * AJAX: Save Hook Activations
 		 * Either saves the hook order (no use) or saves hooks being activated or deactivated.
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_hook_activation() {
 
@@ -559,8 +559,8 @@ jQuery(function($) {
 
 		/**
 		 * AJAX: Save Hook Settings
-		 * @since 1.7
-		 * @version 1.0.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_save_hook_prefs() {
 		    

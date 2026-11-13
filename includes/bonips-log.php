@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Query Log
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-bonips_query_log/ 
- * @since 0.1
- * @version 1.4.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 	class boniPS_Query_Log {
@@ -319,8 +319,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		/**
 		 * Has Entries
 		 * @returns true or false
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function have_entries() {
 			if ( ! empty( $this->results ) ) return true;
@@ -329,8 +329,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Table Nav
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function table_nav( $location = 'top', $is_profile = false ) {
 			if ( $location == 'top' ) {
@@ -348,8 +348,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Item Count
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function navigation( $location = 'top', $id = '' ) { ?>
 
@@ -362,8 +362,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Get Page Number
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_pagenum() {
 			global $paged;
@@ -381,8 +381,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Pagination
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function pagination( $location = 'top', $id = '' ) {
 			$output = '';
@@ -460,8 +460,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		/**
 		 * Get References
 		 * Returns all available references in the database.
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_refs( $req = array() ) {
 			$refs = bonips_get_used_references( $this->args['ctype'] );
@@ -478,8 +478,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		/**
 		 * Get Users
 		 * Returns an array of user id's and display names.
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function get_users() {
 			$users = wp_cache_get( 'bonips_users' );
@@ -499,8 +499,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Filter Log options
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function filter_options( $is_profile = false, $refs = array() ) {
 			echo '<div class="alignleft actions">';
@@ -555,8 +555,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		/**
 		 * Exporter
 		 * Displays all available export options.
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exporter( $title = '', $is_profile = false ) {
 			// Must be logged in
@@ -623,8 +623,8 @@ jQuery(function($) {
 		 * Returns all table column headers.
 		 *
 		 * @filter bonips_log_column_headers
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function table_headers() {
 			global $bonips_types;
@@ -639,8 +639,8 @@ jQuery(function($) {
 
 		/**
 		 * Display
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function display() {
 			echo $this->get_display();
@@ -650,8 +650,8 @@ jQuery(function($) {
 		 * Get Display
 		 * Generates a table for our results.
 		 *
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_display() {
 			$output = '
@@ -708,8 +708,8 @@ jQuery(function($) {
 
 		/**
 		 * The Entry
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function the_entry( $log_entry, $wrap = 'td' ) {
 			echo $this->get_the_entry( $log_entry, $wrap );
@@ -719,8 +719,8 @@ jQuery(function($) {
 		 * Get The Entry
 		 * Generated a single entry row depending on the columns used / requested.
 		 * @filter bonips_log_date
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_the_entry( $log_entry, $wrap = 'td' ) {
 			$date_format = get_option( 'date_format' ) . ' ' . get_option( 'time_format' );
@@ -776,8 +776,8 @@ jQuery(function($) {
 
 		/**
 		 * Mobile Support
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function mobile_support() {
 			echo '<style type="text/css">' . apply_filters( 'bonips_log_mobile_support', '
@@ -791,8 +791,8 @@ jQuery(function($) {
 
 		/**
 		 * No Entries
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function no_entries() {
 			echo $this->get_no_entries();
@@ -800,8 +800,8 @@ jQuery(function($) {
 
 		/**
 		 * Get No Entries
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_no_entries() {
 			return __( 'Keine Protokolleinträge gefunden', 'bonips' );
@@ -809,8 +809,8 @@ jQuery(function($) {
 
 		/**
 		 * Log Search
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function search() {
 			if ( isset( $_GET['s'] ) && $_GET['s'] != '' )
@@ -828,8 +828,8 @@ jQuery(function($) {
 
 		/**
 		 * Filter by Dates
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function filter_dates( $url = '' ) {
 			$date_sorting = apply_filters( 'bonips_sort_by_time', array(
@@ -882,8 +882,8 @@ jQuery(function($) {
 		
 		/**
 		 * Reset Query
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function reset_query() {
 			$this->args = NULL;

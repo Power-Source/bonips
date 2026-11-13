@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.0.8
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_badgeos_hook', 15 );
 function bonips_register_badgeos_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_badgeos_hook( $installed ) {
 
 /**
  * BadgeOS Hook
- * @since 1.0.8
- * @version 1.1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_badgeos_hook', 15 );
 function bonips_load_badgeos_hook() {
@@ -55,8 +55,8 @@ function bonips_load_badgeos_hook() {
 
 		/**
 		 * Run
-		 * @since 1.0.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -72,8 +72,8 @@ function bonips_load_badgeos_hook() {
 
 		/**
 		 * Exclude PSForum Post Types
-		 * @since 1.0.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exclude_post_type( $excludes ) {
 
@@ -85,8 +85,8 @@ function bonips_load_badgeos_hook() {
 
 		/**
 		 * Add Metaboxes
-		 * @since 1.0.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_metaboxes() {
 
@@ -109,8 +109,8 @@ function bonips_load_badgeos_hook() {
 
 		/**
 		 * Render Meta Box
-		 * @since 1.0.8
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function render_meta_box( $post ) {
 
@@ -165,8 +165,8 @@ function bonips_load_badgeos_hook() {
 
 		/**
 		 * Save Achievement Data
-		 * @since 1.0.8
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_achivement_data( $post_id ) {
 
@@ -221,8 +221,8 @@ function bonips_load_badgeos_hook() {
 		 * Award Achievement
 		 * Run by BadgeOS when ever needed, we make sure settings are not zero otherwise
 		 * award points whenever this hook fires.
-		 * @since 1.0.8
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function award_achievent( $user_id, $achievement_id ) {
 
@@ -256,8 +256,8 @@ function bonips_load_badgeos_hook() {
 		/**
 		 * Revoke Achievement
 		 * Run by BadgeOS when a users achievement is revoed.
-		 * @since 1.0.8
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function revoke_achievement( $user_id, $achievement_id ) {
 
@@ -290,8 +290,8 @@ function bonips_load_badgeos_hook() {
 
 		/**
 		 * Preferences for BadgeOS
-		 * @since 1.0.8
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 

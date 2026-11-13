@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * Shortcode: Sell This
  * This shortcode is intended to be used when selling parts of a content.
  * Can only be used once per content.
- * @since 1.7
- * @version 1.0.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_sell_this' ) ) :
 	function bonips_render_sell_this( $atts, $content = '' ) {
@@ -60,7 +60,7 @@ if ( ! function_exists( 'bonips_render_sell_this' ) ) :
 			 * on content that has been set to be purchasable. In manual mode, this means we must have clicked to enable sale in the metabox.
 			 * In auto modes, the particular post types setup must be enabled and the post must fit any filter criteria we might have set.
 			 * Since the content might have monetary value, we do not want to just show it, but to warn admin/post author and appologize to the user.
-			 * @since 1.7.8
+			 * @since 1.0.0
 			 */
 			elseif ( ! bonips_post_is_for_sale( $post ) ) {
 
@@ -88,14 +88,14 @@ endif;
 
 /**
  * Shortcode: Sell This AJAX
- * Depreciated as of version 1.7 and will be removed in version 1.8
- * @since 1.3
- * @version 1.0
+ * Deprecated.
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_sell_this_ajax' ) ) :
 	function bonips_render_sell_this_ajax( $atts, $content = '' ) {
 
-		_doing_it_wrong( 'bonips_render_sell_this_ajax', 'The bonips_sell_this_ajax shortcode has been depreciated and will be removed in version 1.8.', '1.7' );
+		_doing_it_wrong( 'bonips_render_sell_this_ajax', 'The bonips_sell_this_ajax shortcode is deprecated.', '1.0.0' );
 
 		return bonips_render_sell_this( $atts, $content );
 
@@ -108,8 +108,8 @@ endif;
  * active sales right now, if sales expire.
  * @attribute wrapper (string) - optional html element to wrap around the value.
  * @attribute post_id (int) - option to get the count for the provided post ID.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_sell_count' ) ) :
 	function bonips_render_sell_count( $atts, $content = '' ) {
@@ -142,8 +142,8 @@ endif;
  * Renders the total number of unique users that has purchased this content.
  * @attribute wrapper (string) - optional html element to wrap around the value.
  * @attribute post_id (int) - option to get the count for the provided post ID.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_sell_buyer_count' ) ) :
 	function bonips_render_sell_buyer_count( $atts, $content = '' ) {
@@ -175,8 +175,8 @@ endif;
  * Shortcode: Sales Verlauf
  * Will show a given users payment history with links to the posts
  * they have purchased.
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_sell_history' ) ) :
 	function bonips_render_sell_history( $atts, $content = '' ) {
@@ -288,8 +288,8 @@ endif;
 /**
  * Shortcode: Buyer Avatars
  * Renders a given number of avatars of past buyers for this post.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_sell_buyer_avatars' ) ) :
 	function bonips_render_sell_buyer_avatars( $atts, $content = '' ) {

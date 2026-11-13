@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for comments
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 	class boniPS_Hook_Comments extends boniPS_Hook {
@@ -44,8 +44,8 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -63,8 +63,8 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 		 * New Comment
 		 * If comments are approved without moderation, we apply the corresponding method
 		 * or else we will wait till the appropriate instance.
-		 * @since 0.1
-		 * @version 1.2.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_comment( $comment_id, $comment_status ) {
 
@@ -80,8 +80,8 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 
 		/**
 		 * Discuss Support
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function disqus( $id, $comment ) {
 
@@ -108,8 +108,8 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 
 		/**
 		 * Comment Transitions
-		 * @since 1.1.2
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function comment_transitions( $new_status, $old_status, $comment ) {
 
@@ -261,8 +261,8 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 
 		/**
 		 * Check if user exceeds limit
-		 * @since 1.1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_exceeds_limit( $user_id = NULL, $post_id = NULL ) {
 
@@ -345,8 +345,8 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 
 		/**
 		 * Preferences for Commenting Hook
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -472,8 +472,8 @@ if ( ! class_exists( 'boniPS_Hook_Comments' ) ) :
 
 		/**
 		 * Sanitise Preference
-		 * @since 1.1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $data ) {
 

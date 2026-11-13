@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Load Coupon Shortcode
  * Renders the form that allows users to redeem coupons from.
- * @since 1.4
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_load_coupon' ) ) :
 	function bonips_render_shortcode_load_coupon( $atts, $content = NULL ) {

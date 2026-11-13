@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Bank_Transfer class
  * Manual payment gateway - bank transfers
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 	class boniPS_Bank_Transfer extends boniPS_Payment_Gateway {
@@ -38,15 +38,15 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 
 		/**
 		 * Process Handler
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() { }
 
 		/**
 		 * Results Handler
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function returning() {
 
@@ -56,8 +56,8 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 
 		/**
 		 * Admin Init Handler
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_init() {
 
@@ -67,8 +67,8 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 
 		/**
 		 * Results Handler
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function relable_gateway( $installed ) {
 
@@ -81,8 +81,8 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 
 		/**
 		 * AJAX Buy Handler
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_buy() {
 
@@ -112,8 +112,8 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 
 		/**
 		 * Checkout Page Title
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_title() {
 
@@ -123,8 +123,8 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 
 		/**
 		 * Checkout Page Body
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_body() {
 
@@ -151,8 +151,8 @@ if ( ! class_exists( 'boniPS_Bank_Transfer' ) ) :
 
 		/**
 		 * Preferences
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -208,8 +208,8 @@ jQuery(function($){
 
 		/**
 		 * Sanatize Prefs
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

@@ -2,13 +2,13 @@
 /**
  * Addon: Coupons
  * Addon URI: http://codex.bonips.me/chapter-iii/coupons/
- * Version: 1.4
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 define( 'boniPS_COUPONS',         __FILE__ );
 define( 'boniPS_COUPONS_DIR',     boniPS_ADDONS_DIR . 'coupons/' );
-define( 'boniPS_COUPONS_VERSION', '1.3' );
+define( 'boniPS_COUPONS_VERSION', '1.0.0' );
 
 // Coupon Key
 if ( ! defined( 'BONIPS_COUPON_KEY' ) )
@@ -20,8 +20,8 @@ require_once boniPS_COUPONS_DIR . 'includes/bonips-coupon-shortcodes.php';
 
 /**
  * boniPS_Coupons_Module class
- * @since 1.4
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 	class boniPS_Coupons_Module extends boniPS_Module {
@@ -54,8 +54,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Hook into Init
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -70,8 +70,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Hook into Admin Init
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -96,8 +96,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Register Coupons Post Type
-		 * @since 1.4
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function register_coupons() {
 
@@ -138,8 +138,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Adjust Update Messages
-		 * @since 1.4
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function post_updated_messages( $messages ) {
 
@@ -163,8 +163,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Add Admin Menu Item
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_to_menu() {
 
@@ -184,8 +184,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Parent File
-		 * @since 1.7
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parent_file( $parent = '' ) {
 
@@ -203,8 +203,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Sub Parent File
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function subparent_file( $subparent = '', $parent = '' ) {
 
@@ -228,8 +228,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Adjust Enter Title Here
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enter_title_here( $title ) {
 
@@ -244,8 +244,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Adjust Column Header
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_headers( $defaults ) {
 
@@ -268,8 +268,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Adjust Column Body
-		 * @since 1.4
-		 * @version 1.1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_content( $column_name, $post_id ) {
 
@@ -351,8 +351,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Adjust Bulk Actions
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bulk_actions( $actions ) {
 
@@ -363,8 +363,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Adjust Row Actions
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_row_actions( $actions, $post ) {
 
@@ -379,8 +379,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Edit Coupon Style
-		 * @since 1.7
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function edit_coupons_style() {
 
@@ -402,15 +402,15 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Coupon Style
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function coupon_style() { }
 
 		/**
 		 * Add Meta Boxes
-		 * @since 1.4
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_metaboxes( $post ) {
 
@@ -456,8 +456,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 		/**
 		 * Admin Notice
 		 * If we are have an issue with the expiration date set for this coupon we need to warn the user.
-		 * @since 1.7.5
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function warn_bad_expiration() {
 
@@ -480,8 +480,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Metabox: Coupon Setup
-		 * @since 1.4
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_coupon_setup( $post ) {
 
@@ -533,8 +533,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Metabox: Coupon Limits
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_coupon_limits( $post ) {
 
@@ -570,8 +570,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Metabox: Coupon Requirements
-		 * @since 1.4
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bonips_coupon_requirements( $post ) {
 
@@ -615,8 +615,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Metabox: Coupon Usage
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bonips_coupon_usage( $post ) {
 
@@ -641,8 +641,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Save Coupon
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_coupon( $post_id, $post = NULL ) {
 
@@ -675,8 +675,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Add to General Settings
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -762,8 +762,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Save Settings
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 
@@ -782,8 +782,8 @@ if ( ! class_exists( 'boniPS_Coupons_Module' ) ) :
 
 		/**
 		 * Parse Log Entries
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_log_entry( $content, $log_entry ) {
 
@@ -796,8 +796,8 @@ endif;
 
 /**
  * Load Coupons Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_coupons_addon' ) ) :
 	function bonips_load_coupons_addon( $modules, $point_types ) {

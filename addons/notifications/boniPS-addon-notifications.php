@@ -2,17 +2,17 @@
 /**
  * Addon: Notifications
  * Addon URI: http://codex.bonips.me/chapter-iii/notifications/
- * Version: 1.1.2
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 define( 'boniPS_NOTE',         __FILE__ );
-define( 'boniPS_NOTE_VERSION', '1.1.2' );
+define( 'boniPS_NOTE_VERSION', '1.0.0' );
 
 /**
  * boniPS_Notifications class
- * @since 1.2.3
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 	class boniPS_Notifications_Module extends boniPS_Module {
@@ -40,8 +40,8 @@ if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 
 		/**
 		 * Module Init
-		 * @since 1.2.3
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -55,8 +55,8 @@ if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 
 		/**
 		 * Load Notice in Footer
-		 * @since 1.2.3
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function wp_footer() {
 
@@ -87,8 +87,8 @@ if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 
 		/**
 		 * Register Assets
-		 * @since 1.2.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_assets() {
 
@@ -132,8 +132,8 @@ if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 
 		/**
 		 * boniPS Finished
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bonips_finished( $reply, $request, $bonips ) {
 
@@ -161,8 +161,8 @@ if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 
 		/**
 		 * Get Notices
-		 * @since 1.2.3
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_notices() {
 
@@ -184,8 +184,8 @@ if ( ! class_exists( 'boniPS_Notifications_Module' ) ) :
 
 		/**
 		 * Settings Page
-		 * @since 1.2.3
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -255,8 +255,8 @@ jQuery(function($) {
 
 		/**
 		 * Sanitize & Save Settings
-		 * @since 1.2.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $general ) {
 
@@ -265,7 +265,7 @@ jQuery(function($) {
 			$new_data['notifications']['life']     = absint( $data['notifications']['life'] );
 			$new_data['notifications']['duration'] = absint( $data['notifications']['duration'] );
 
-			// As of 1.6, we are going from miliseconds to seconds.
+			// Convert milliseconds to seconds.
 			if ( strlen( $new_data['notifications']['duration'] ) >= 3 )
 				$new_data['notifications']['duration'] = $new_data['notifications']['duration'] / 1000;
 
@@ -277,8 +277,8 @@ endif;
 
 /**
  * Load Notifications Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_notices_addon' ) ) :
 	function bonips_load_notices_addon( $modules, $point_types ) {
@@ -294,8 +294,8 @@ add_filter( 'bonips_load_modules', 'bonips_load_notices_addon', 70, 2 );
 
 /**
  * Add Notice
- * @since 1.2.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_add_new_notice' ) ) :
 	function bonips_add_new_notice( $notice = array(), $life = 1 ) {

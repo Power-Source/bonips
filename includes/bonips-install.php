@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * boniPS_Install class
  * Used when the plugin is activated/de-activated or deleted. Installs core settings and
  * base templates, checks compatibility and uninstalls.
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Install' ) ) :
 	final class boniPS_Install {
@@ -16,8 +16,8 @@ if ( ! class_exists( 'boniPS_Install' ) ) :
 
 		/**
 		 * Setup Instance
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function instance() {
 			if ( is_null( self::$_instance ) ) {
@@ -28,17 +28,17 @@ if ( ! class_exists( 'boniPS_Install' ) ) :
 
 		/**
 		 * Not allowed
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
-		public function __clone() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.7' ); }
+		public function __clone() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.0.0' ); }
 
 		/**
 		 * Not allowed
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
-		public function __wakeup() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.7' ); }
+		public function __wakeup() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.0.0' ); }
 
 		/**
 		 * Construct
@@ -48,8 +48,8 @@ if ( ! class_exists( 'boniPS_Install' ) ) :
 		/**
 		 * Compat
 		 * Check to make sure we reach minimum requirements for this plugin to work propery.
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function compat() {
 
@@ -83,8 +83,8 @@ if ( ! class_exists( 'boniPS_Install' ) ) :
 
 		/**
 		 * First time activation
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function activate() {
 
@@ -123,8 +123,8 @@ if ( ! class_exists( 'boniPS_Install' ) ) :
 
 		/**
 		 * Re-activation
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function reactivate() {
 		
@@ -140,8 +140,8 @@ if ( ! class_exists( 'boniPS_Install' ) ) :
 
 		/**
 		 * Update to Latest
-		 * @since 1.7.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function update_to_latest( $version ) {
 
@@ -179,8 +179,8 @@ if ( ! class_exists( 'boniPS_Install' ) ) :
 		/**
 		 * Uninstall
 		 * Removes all boniPS related data from the database.
-		 * @since 0.1
-		 * @version 1.5.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function uninstall() {
 
@@ -393,8 +393,8 @@ endif;
 
 /**
  * Get Installer
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_installer' ) ) :
 	function bonips_installer() {

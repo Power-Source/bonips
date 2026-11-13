@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Sell Content Settings
  * Returns the sell content add-ons settings.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_sell_content_settings' ) ) :
 	function bonips_sell_content_settings() {
@@ -31,8 +31,8 @@ endif;
  * Get Post Types
  * Returns an array of sellable post types. In order for a post type to be
  * considered "usable", it must be public.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_sell_content_post_types' ) ) :
 	function bonips_sell_content_post_types() {
@@ -69,8 +69,8 @@ endif;
  * Will attempt to get the current posts ID. Also supports PSForum
  * where it will return either the form ID (if viewing a forum), the topic ID
  * (if viewing a topic) or the reply ID (if viewing a reply).
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_sell_content_post_id' ) ) :
 	function bonips_sell_content_post_id() {
@@ -146,8 +146,8 @@ endif;
 /**
  * Post Type for Sale
  * Returns either true (post type is for sale) or false (post type not for sale).
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_post_type_for_sale' ) ) :
 	function bonips_post_type_for_sale( $post_type = NULL ) {
@@ -175,8 +175,8 @@ endif;
 /**
  * Post is for Sale
  * Returns true (post is for sale) or false (post is not for sale).
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_post_is_for_sale' ) ) :
 	function bonips_post_is_for_sale( $post = NULL ) {
@@ -300,8 +300,8 @@ endif;
  * User Has Paid
  * Checks if a user has paid for the given post. Will also take into account
  * if a purchase has expired (if used).
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_user_paid_for_content' ) ) :
 	function bonips_user_paid_for_content( $user_id = NULL, $post_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -357,8 +357,8 @@ endif;
  * Sale Expired
  * Checks if a given purchase has expired. Left this in place from the old version
  * for backwards comp.
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_content_purchase_has_expired' ) ) :
 	function bonips_content_purchase_has_expired( $payment = NULL ) {
@@ -386,8 +386,8 @@ endif;
 
 /**
  * Get Expiration Length
- * @since 1.7.9.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_sell_content_get_expiration_length' ) ) :
 	function bonips_sell_content_get_expiration_length( $post_id = NULL, $type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -435,8 +435,8 @@ endif;
 /**
  * Get Payment Buttons
  * Returns all payment buttons a user can use to pay for a given post.
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_sell_content_payment_buttons' ) ) :
 	function bonips_sell_content_payment_buttons( $user_id = NULL, $post_id = NULL ) {
@@ -499,8 +499,8 @@ endif;
 /**
  * Sell Content Template
  * Parses a particular template.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_sell_content_template' ) ) :
 	function bonips_sell_content_template( $template = '', $post = NULL, $type = 'bonips-sell-partial-content', $status = 'visitor' ) {
@@ -537,8 +537,8 @@ endif;
  * New Purchase
  * Handles the purchase of a particular post by a given user.
  * @returns true (bool) on success or an error message (string)
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_sell_content_new_purchase' ) ) :
 	function bonips_sell_content_new_purchase( $post = NULL, $user_id = NULL, $point_type = NULL ) {
@@ -644,8 +644,8 @@ endif;
 /**
  * Get Content Price
  * Returns the contents price.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_content_price' ) ) :
 	function bonips_get_content_price( $post_id = NULL, $point_type = NULL, $user_id = NULL ) {
@@ -677,8 +677,8 @@ endif;
 /**
  * Get Users Purchased Content
  * Returns an array of log entries for content purchases.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_purchased_content' ) ) :
 	function bonips_get_users_purchased_content( $user_id = NULL, $number = 25, $order = 'DESC', $point_type = NULL ) {
@@ -712,8 +712,8 @@ endif;
  * Get Posts Buyers
  * Returns an array of User IDs of the user that has purchased
  * a given post.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_posts_buyers' ) ) :
 	function bonips_get_posts_buyers( $post_id = NULL, $number = 25, $point_type = NULL ) {
@@ -741,8 +741,8 @@ endif;
 /**
  * Get Content Sales Count
  * Returns the number of times a content has been purchased.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_content_sales_count' ) ) :
 	function bonips_get_content_sales_count( $post_id = NULL ) {
@@ -763,8 +763,8 @@ endif;
 /**
  * Get Content Buyer Count
  * Returns the number of buyers a particular content has.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_content_buyers_count' ) ) :
 	function bonips_get_content_buyers_count( $post_id = NULL ) {
@@ -790,8 +790,8 @@ endif;
  * Get Authors Profit Share
  * Get a particular users profit share percentage. If not set, the general setup for the given
  * point type is returned instead.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_authors_profit_share' ) ) :
 	function bonips_get_authors_profit_share( $user_id = NULL, $point_type = NULL, $default = false ) {
@@ -808,8 +808,8 @@ endif;
 /**
  * Get Post Type Options
  * Returns an array of filter options for post types.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_post_type_options' ) ) :
 	function bonips_get_post_type_options( $post_type ) {

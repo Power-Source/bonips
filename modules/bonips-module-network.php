@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * boniPS_Network class
  * This module handles all Multisite related features along with adding in the Network settings
  * page in the wp-admin area. Only used if boniPS is enabled network wide!
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 	class boniPS_Network_Module {
@@ -32,8 +32,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 
 		/**
 		 * Load
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -47,8 +47,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 
 		/**
 		 * Init
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -88,8 +88,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 
 		/**
 		 * Admin Init
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -100,8 +100,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 		/**
 		 * Enqueue Admin Before
 		 * Adjust the boniPS column on the sites screen.
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_admin_before() {
 
@@ -116,8 +116,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 
 		/**
 		 * Site Column Headers
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function site_column_headers( $columns ) {
 
@@ -130,8 +130,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 
 		/**
 		 * Site Column Content
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function site_column_content( $column_name, $blog_id ) {
 
@@ -166,8 +166,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 
 		/**
 		 * Add Network Menu Items
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_menu() {
 
@@ -199,8 +199,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) :
 
 		/**
 		 * Add Admin Menu Styling
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page_header() {
 
@@ -225,8 +225,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Network Settings Page
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page_settings() {
 
@@ -342,8 +342,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Save Network Settings
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_network_prefs( $settings ) {
 
@@ -386,8 +386,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Enable Master Template
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function enable_master_template() {
 
@@ -397,8 +397,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Disable Master Template
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function disable_master_template() {
 
@@ -408,8 +408,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Enable Central Logging
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function enable_central_logging() {
 
@@ -419,8 +419,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Disable Central Logging
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function disable_central_logging() {
 

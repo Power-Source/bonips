@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS About Page Header
- * @since 1.3.2
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 function bonips_about_header() {
 
@@ -30,8 +30,8 @@ function bonips_about_header() {
 
 /**
  * About boniPS Page
- * @since 1.3.2
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 function bonips_about_page() {
 
@@ -47,7 +47,7 @@ function bonips_about_page() {
 				<img src="<?php echo plugins_url( 'assets/images/bonips16-stats-addon.png', boniPS_THIS ); ?>" alt="" />			
 			</div>
 			<div class="col">
-				<h3>Statistics 2.0</h3>
+				<h3>Statistics</h3>
 				<p>The Statistics add-on has received a complete re-write in order to add support for showing charts and statistical data on the front end of your website. The add-on comes with pre-set types of data that you can select to show either as a table or using charts (or both).</p>								
 				<a href="https://bonips.me/guides/1-8-guide-statistics-add-on/">Documentation</a>
 			</div>
@@ -65,7 +65,7 @@ function bonips_about_page() {
 		<div class="feature-section two-col">
 			<div class="col">
 				<h3>Ranks</h3>
-				<p>As of version 1.8, ranks can be set to be assigned to users manually, just like badges. This means that you will need to manually change your users rank as boniPS will take no action. To do this, simply edit the user in question in the admin area and select the rank you want to assign them.</p>
+				<p>Ranks can be set to be assigned to users manually, just like badges. This means that you will need to manually change your users rank as boniPS will take no action. To do this, simply edit the user in question in the admin area and select the rank you want to assign them.</p>
 			</div>
 			<div class="col">
 				<h3>Email Notifications</h3>

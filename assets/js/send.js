@@ -1,8 +1,8 @@
 /**
  * boniPS
  * Handle bonips_send shortcode buttons.
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 jQuery(function($) {
 

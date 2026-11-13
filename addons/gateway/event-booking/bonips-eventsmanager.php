@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Events Manager
- * @since 1.2
- * @version 1.3.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' ) ) :
 	class boniPS_Events_Manager_Gateway {
@@ -57,8 +57,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * Load Gateway
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -93,8 +93,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 		/**
 		 * Add Currency
 		 * Adds "Points" as a form of currency
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_currency( $currencies ) {
 
@@ -120,8 +120,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * Format Price
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function format_price( $formatted_price, $price, $currency, $format ) {
 
@@ -135,8 +135,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 		/**
 		 * Use Gateway
 		 * Checks if this gateway has been enabled.
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function use_gateway() {
 
@@ -148,8 +148,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * Check if using Single Currency
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function single_currency() {
 
@@ -162,8 +162,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 		/**
 		 * Can Pay Check
 		 * Checks if the user can pay for their booking.
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function can_pay( $EM_Booking ) {
 
@@ -199,8 +199,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 		/**
 		 * Has Paid
 		 * Checks if the user has paid for booking
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function has_paid( $EM_Booking ) {
 
@@ -212,8 +212,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * AJAX: Process Payment
-		 * @since 1.2
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process_payment() {
 
@@ -307,8 +307,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * Refunds
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function refunds( $result, $EM_Booking ) {
 
@@ -352,8 +352,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * Adjust Ticket Columns
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ticket_columns( $columns, $EM_Event ) {
 
@@ -386,8 +386,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * Adjust Ticket Column Content
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ticket_col( $EM_Ticket, $EM_Event ) {
 
@@ -405,8 +405,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 		/**
 		 * Add Pay Action
 		 * @used by em_my_bookings_booking_actions
-		 * @since 1.2
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_pay_button( $cancel_link = '', $EM_Booking ) {
 
@@ -430,8 +430,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * Payment Box
-		 * @since 1.2
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function payment_box( $EM_Booking ) {
 
@@ -494,8 +494,8 @@ if ( ! class_exists( 'boniPS_Events_Manager_Gateway' ) && defined( 'EM_VERSION' 
 
 		/**
 		 * Payment Box Scripting
-		 * @since 1.2
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_scripting() {
 
@@ -567,8 +567,8 @@ jQuery(function($) {
 
 		/**
 		 * Gateway Settings
-		 * @since 1.2
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_page() {
 
@@ -721,8 +721,8 @@ jQuery(function($){
 
 		/**
 		 * Save Settings
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_settings() {
 

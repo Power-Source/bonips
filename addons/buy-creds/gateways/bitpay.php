@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Load BitPay PHP Library
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'WC_Gateway_Bitpay' ) ) {
 
@@ -36,8 +36,8 @@ if ( ! class_exists( 'WC_Gateway_Bitpay' ) ) {
 /**
  * boniPS_Bitpay class
  * BitPay (Bitcoins) - Payment Gateway
- * @since 1.4
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 	class boniPS_Bitpay extends boniPS_Payment_Gateway {
@@ -80,8 +80,8 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 
 		/**
 		 * Process
-		 * @since 1.4
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() {
 
@@ -146,15 +146,15 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 
 		/**
 		 * Returning
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function returning() { }
 
 		/**
 		 * Admin Init Handler
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_init() {
 
@@ -164,8 +164,8 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 
 		/**
 		 * AJAX: Pair with bitPay
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_pair() {
 
@@ -238,8 +238,8 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 
 		/**
 		 * Prep Sale
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function prep_sale( $new_transaction = false ) {
 
@@ -315,8 +315,8 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 
 		/**
 		 * AJAX Buy Handler
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_buy() {
 
@@ -335,8 +335,8 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 		/**
 		 * Checkout Page Body
 		 * This gateway only uses the checkout body.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_body() {
 
@@ -352,8 +352,8 @@ if ( ! class_exists( 'boniPS_Bitpay' ) ) :
 
 		/**
 		 * Gateway Prefs
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function preferences() {
 
@@ -550,8 +550,8 @@ jQuery(function($){
 
 		/**
 		 * Sanatize Prefs
-		 * @since 1.4
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 
@@ -597,8 +597,8 @@ endif;
 
 /**
  * Bitpay Encrypt
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_bitpay_encrypt' ) ) :
 	function buycred_bitpay_encrypt( $data ) {
@@ -636,8 +636,8 @@ endif;
 
 /**
  * Bitpay Decrypt
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_bitpay_decrypt' ) ) :
     function buycred_bitpay_decrypt( $encrypted ) {

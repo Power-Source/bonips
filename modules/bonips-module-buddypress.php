@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_BuddyPress_Module class
- * @since 0.1
- * @version 1.3.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 	class boniPS_BuddyPress_Module extends boniPS_Module {
@@ -46,8 +46,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * Init
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -75,8 +75,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 		 * If we are logging out from the points history page, we want to make
 		 * sure we are redirected away from this page when we log out. All else
 		 * the default logout link is used.
-		 * @since 1.3.1
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_logout( $logouturl, $redirect ) {
 
@@ -95,8 +95,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * Show Balance in Profile
-		 * @since 0.1
-		 * @version 1.4.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function show_balance_profile() {
 
@@ -140,8 +140,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * Show Balance in Header
-		 * @since 0.1
-		 * @version 1.4.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function show_balance( $dump = NULL, $context = 'header' ) {
 
@@ -191,8 +191,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * Setup Navigation
-		 * @since 0.1
-		 * @version 1.3.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function setup_nav() {
 
@@ -274,8 +274,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * Construct My Verlauf Page
-		 * @since 0.1
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function my_history() {
 
@@ -289,8 +289,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * Pagination Styling
-		 * @since 1.5.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function paginate_class( $classes ) {
 
@@ -300,8 +300,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * My Verlauf Title
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function my_history_title() {
 
@@ -316,8 +316,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * My Verlauf Content
-		 * @since 0.1
-		 * @version 1.2.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function my_history_screen() {
 
@@ -390,8 +390,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * After General Settings
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -525,8 +525,8 @@ if ( ! class_exists( 'boniPS_BuddyPress_Module' ) ) :
 
 		/**
 		 * Sanitize Core Settings
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 

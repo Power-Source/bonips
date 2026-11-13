@@ -2,15 +2,15 @@
 
 /**
  * BuddyPress Gallery Hook
- * @since 0.1
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( defined( 'boniPS_VERSION' ) ) {
 
 	/**
 	 * Register Hook
-	 * @since 0.1
-	 * @version 1.0
+	 * @since 1.0.0
+	 * @version 1.0.0
 	 */
 	add_filter( 'bonips_setup_hooks', 'BuddyPress_Gallery_boniPS_Hook' );
 	function BuddyPress_Gallery_boniPS_Hook( $installed ) {
@@ -28,8 +28,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 	 * boniPS_BuddyPress_Gallery class
 	 *
 	 * Creds for creating a gallery or deleting gallery
-	 * @since 0.1
-	 * @version 1.0
+	 * @since 1.0.0
+	 * @version 1.0.0
 	 */
 	if ( ! class_exists( 'boniPS_BuddyPress_Gallery' ) && class_exists( 'boniPS_Hook' ) ) {
 		class boniPS_BuddyPress_Gallery extends boniPS_Hook {
@@ -51,8 +51,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Run
-			 * @since 0.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function run() {
 				if ( $this->prefs['new_gallery']['creds'] != 0 ) {
@@ -63,8 +63,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * New Gallery
-			 * @since 0.1
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function new_gallery( $gallery ) {
 				// Check if user is excluded
@@ -87,8 +87,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Preferences
-			 * @since 0.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function preferences() {
 				$prefs = $this->prefs; ?>

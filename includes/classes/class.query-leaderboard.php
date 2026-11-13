@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Query Log
  * @see http://codex.bonips.me/classes/bonips_query_leaderboard/ 
- * @since 1.7.9.1
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 	class boniPS_Query_Leaderboard {
@@ -30,8 +30,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		 * Construct
 		 * Preps the class for getting a leaderboard based on the
 		 * given arguments. Validates these arguments.
-		 * @since 1.0
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function __construct( $args = array() ) {
 
@@ -59,8 +59,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 
 		/**
 		 * Apply Defaults
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function apply_defaults( $data = array() ) {
 
@@ -85,8 +85,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		 * Parse Arguments
 		 * We have two jobs: Make sure we provide arguments we can understand and
 		 * that the arguments we provided are valid.
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_args( $args = array() ) {
 
@@ -189,8 +189,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		/**
 		 * Get Leaderboard Results
 		 * Returns the leaderboard data in an array form or false if the query results in no data.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_leaderboard_results( $append_current_user = false ) {
 
@@ -222,8 +222,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		 * Append Current User
 		 * Appends the current logged in user to the end of the leaderboard if the user is not in the results.
 		 * This is done separatelly since we can not cache a leaderboard for each user that might view the board.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function append_current_user( $return = false ) {
 
@@ -247,8 +247,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		/**
 		 * User In Leaderboard
 		 * Checks if a given user or the current user is in the leaderboard.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_in_leaderboard( $user_id = NULL ) {
 
@@ -276,8 +276,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		/**
 		 * Get Database Query
 		 * Returns the SQL query required for generating a leaderboard.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_db_query() {
 
@@ -293,8 +293,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		/**
 		 * Get Balance Database Query
 		 * Returns the SQL query required for generating a leaderboard that is based on balances.
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_balance_db_query() {
 
@@ -374,8 +374,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		/**
 		 * Get Reference Database Query
 		 * Returns the SQL query required for generating a leaderboard that is based on references.
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_reference_db_query() {
 
@@ -445,8 +445,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 
 		/**
 		 * Get Users Leaderboard Position
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_current_position( $user_id = NULL, $no_position = '' ) {
 
@@ -575,8 +575,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 
 		/**
 		 * Get Users Leaderboard Value
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_current_value( $user_id = NULL ) {
 
@@ -703,8 +703,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		 * Get Time Filter
 		 * Generates the required SQL query for filtering results based on time.
 		 * Can only be used when the leaderboard is based either on total balance or based on references.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_timefilter() {
 
@@ -749,8 +749,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		 * Generates the required SQL query for filtering results based on if zero balances should
 		 * be part of the leaderboard or not. By default, boniPS will not give a user a balance until they
 		 * gain or lose points. A user that has no balance and is not excluded, is considered to have zero balance.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_excludefilter() {
 
@@ -779,8 +779,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		 * Get Multisite Filter
 		 * Generates the required SQL query for filtering results based on our multisite setup.
 		 * Will return an empty string if we are not using multisites or if we have centralized the log.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_multisitefilter() {
 
@@ -800,8 +800,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 
 		/**
 		 * Get Cache Key
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_cache_key( $args = array() ) {
 
@@ -814,8 +814,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 
 		/**
 		 * Get Cached Leaderboard
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_cache() {
 
@@ -839,8 +839,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 
 		/**
 		 * Cache Results
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cache_result( $data = array() ) {
 
@@ -865,8 +865,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 
 		/**
 		 * Is Leaderboard
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_leaderboard( $args = array() ) {
 
@@ -878,8 +878,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 
 		/**
 		 * Render Leaderboard
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function render( $args = array(), $content = '' ) {
 
@@ -970,8 +970,8 @@ endif;
 
 /**
  * Get Leaderboard
- * @since 1.7.9.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_leaderboard' ) ) :
 	function bonips_get_leaderboard( $args = array() ) {

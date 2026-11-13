@@ -16,8 +16,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * @uses boniPS_Query_Rankings()
  * @uses boniPS_Rankings()
  * @returns class object
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_leaderboard' ) ) :
 	function bonips_get_leaderboard( $args = array(), $reset = false, $raw = false )
@@ -43,8 +43,8 @@ endif;
  * @param $user_id (int) required user id
  * @param $type (string) optional points type
  * @returns position (int) or empty if no record could be made
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_leaderboard_position' ) ) :
 	function bonips_leaderboard_position( $user_id = '', $type = 'bonips_default' )
@@ -59,8 +59,8 @@ endif;
 /**
  * boniPS Query Leaderboard Class
  * @see http://codex.bonips.me/classes/bonips_query_leaderboard/
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 	class boniPS_Query_Leaderboard {
@@ -86,8 +86,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		/**
 		 * Have Results
 		 * @returns true or false
-		 * @since 1.1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function have_results() {
 			if ( ! empty( $this->result ) ) return true;
@@ -98,8 +98,8 @@ if ( ! class_exists( 'boniPS_Query_Leaderboard' ) ) :
 		/**
 		 * Get Leaderboard
 		 * Queries the DB for all users in order of their point balance.
-		 * @since 1.1.2
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_results() {
 			global $wpdb;
@@ -162,8 +162,8 @@ ORDER BY {$wpdb->usermeta}.meta_value+1 {$order} {$limit};", $this->args, $wpdb 
 		 * With the option to reset and bypass any set frequency.
 		 * If a frequency is set to something other then 'always', then that
 		 * setting is enforced.
-		 * @since 1.1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save( $reset = false ) {
 			// No longer used
@@ -174,8 +174,8 @@ endif;
 /**
  * boniPS_Rankings class
  * @see http://codex.bonips.me/classes/bonips_leaderboard/
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Leaderboard' ) ) :
 	class boniPS_Leaderboard {
@@ -201,8 +201,8 @@ if ( ! class_exists( 'boniPS_Leaderboard' ) ) :
 		/**
 		 * Have Results
 		 * @returns true or false
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function have_results() {
 			if ( ! empty( $this->result ) ) return true;
@@ -213,8 +213,8 @@ if ( ! class_exists( 'boniPS_Leaderboard' ) ) :
 		 * Users Position
 		 * @param $user_id (int) required user id
 		 * @returns position (int)
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function users_position( $user_id = NULL ) {
 			if ( $user_id !== NULL ) {
@@ -235,8 +235,8 @@ if ( ! class_exists( 'boniPS_Leaderboard' ) ) :
 		 * Users Creds
 		 * @param $user_id (int) user id
 		 * @returns position (int) or empty
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function users_creds( $user_id = NULL ) {
 			if ( $user_id !== NULL ) {
@@ -255,8 +255,8 @@ if ( ! class_exists( 'boniPS_Leaderboard' ) ) :
 
 		/**
 		 * Leaderboard
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function leaderboard() {
 			echo $this->get_leaderboard();
@@ -264,8 +264,8 @@ if ( ! class_exists( 'boniPS_Leaderboard' ) ) :
 
 		/**
 		 * Get Leaderboard
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_leaderboard() {
 			return '<ol class="boniPS-leaderboard">' . $this->loop( 'li' ) . '</ol>';
@@ -273,8 +273,8 @@ if ( ! class_exists( 'boniPS_Leaderboard' ) ) :
 
 		/**
 		 * Leaderboard Loop
-		 * @since 1.1.2
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function loop( $wrap = '' ) {
 			// Default template

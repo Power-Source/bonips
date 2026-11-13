@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * Hook Table
  * Renders a table of all the active hooks and how much a user can
  * earn / lose from each hook.
- * @since 1.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_hook_table' ) ) :
 	function bonips_render_shortcode_hook_table( $atts ) {

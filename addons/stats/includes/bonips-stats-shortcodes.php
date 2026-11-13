@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_STATS_VERSION' ) ) exit;
 /**
  * Shortcode: Circulation
  * @see http://codex.bonips.me/shortcodes/bonips_chart_circulation/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_chart_circulation' ) ) :
 	function bonips_render_chart_circulation( $atts, $no_data = '' ) {
@@ -48,8 +48,8 @@ endif;
 /**
  * Shortcode: Gains vs. Losses
  * @see http://codex.bonips.me/shortcodes/bonips_chart_gain_loss/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_chart_gain_vs_loss' ) ) :
 	function bonips_render_chart_gain_vs_loss( $atts, $no_data = '' ) {
@@ -102,8 +102,8 @@ endif;
 /**
  * Shortcode: Point Verlauf
  * @see http://codex.bonips.me/shortcodes/bonips_chart_history/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_chart_history' ) ) :
 	function bonips_render_chart_history( $atts, $no_data = '' ) {
@@ -150,8 +150,8 @@ endif;
 /**
  * Shortcode: Top Balances
  * @see http://codex.bonips.me/shortcodes/bonips_chart_top_balances/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_chart_top_balances' ) ) :
 	function bonips_render_chart_top_balances( $atts, $no_data = '' ) {
@@ -197,8 +197,8 @@ endif;
 /**
  * Shortcode: Top Instances
  * @see http://codex.bonips.me/shortcodes/bonips_chart_top_instances/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_chart_top_instances' ) ) :
 	function bonips_render_chart_top_instances( $atts, $no_data = '' ) {
@@ -244,8 +244,8 @@ endif;
 /**
  * Shortcode: Balance Verlauf
  * @see http://codex.bonips.me/shortcodes/bonips_chart_balance_history/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_chart_balance_history' ) ) :
 	function bonips_render_chart_balance_history( $atts, $no_data = '' ) {
@@ -297,8 +297,8 @@ endif;
 /**
  * Shortcode: Reference Verlauf
  * @see http://codex.bonips.me/shortcodes/bonips_chart_instance_history/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_chart_instance_history' ) ) :
 	function bonips_render_chart_instance_history( $atts, $no_data = '' ) {

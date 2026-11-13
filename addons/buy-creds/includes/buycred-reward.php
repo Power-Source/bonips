@@ -3,8 +3,8 @@ if ( ! defined( 'BONIPS_PURCHASE' ) ) exit;
 
 /**
  * boniPS_buyCRED_Module class
- * @since 0.1
- * @version 1.4.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_buyCRED_Reward' ) ) :
 	class boniPS_buyCRED_Reward {
@@ -26,8 +26,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward' ) ) :
 
 		/**
 		 * Setup Instance
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function instance() {
 			if ( is_null( self::$_instance ) ) {
@@ -38,8 +38,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward' ) ) :
 
 		/**
 		 * Register Assets
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_assets() {
 

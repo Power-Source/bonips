@@ -6,8 +6,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  *
  * Custom Payment Gateway for WP E-Commerce.
  * @see http://getshopped.org/resources/docs/get-involved/writing-a-new-payment-gateway/
- * @since 1.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 	function bonips_init_wpecom_construct_gateway() {
@@ -70,8 +70,8 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 
 			/**
 			 * Process Payment
-			 * @since 1.3
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function process_gateway( $gateway, $purchase_log ) {
 
@@ -95,8 +95,8 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 
 			/**
 			 * Checkout Form
-			 * @since 1.3
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function checkout_form() {
 
@@ -136,8 +136,8 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 
 			/**
 			 * Parse Custom Template Tags
-			 * @since 1.3
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function parse_template_tags( $content, $log_entry ) {
 
@@ -177,8 +177,8 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 			/**
 			 * Validate
 			 * Checks to make sure the current user can use this gateway.
-			 * @since 1.3
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function validate( $purchase_log ) {
 
@@ -239,8 +239,8 @@ if ( ! function_exists( 'bonips_init_wpecom_construct_gateway' ) ) :
 			 * Submit
 			 * Charges the user for the purchase and if profit sharing is enabled
 			 * each product owner.
-			 * @since 1.3
-			 * @version 1.3
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function submit() {
 
@@ -333,8 +333,8 @@ add_action( 'after_setup_theme', 'bonips_init_wpecom_construct_gateway' );
 /**
  * Gateway Settings
  * @filter bonips_wpecom_settings
- * @since 1.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_wpecom_gateway_settings' ) ) :
 	function bonips_wpecom_gateway_settings() {
@@ -424,8 +424,8 @@ endif;
 /**
  * Save Gateway Settings
  * @filter bonips_wpecom_save_settings
- * @since 1.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_wpecom_gateway_settings_save' ) ) :
 	function bonips_wpecom_gateway_settings_save() {
@@ -451,8 +451,8 @@ endif;
 
 /**
  * Parse Email Notice
- * @since 1.2.2
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_wpecom_parse_email' ) ) :
 	function bonips_wpecom_parse_email( $email ) {

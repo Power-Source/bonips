@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Get Badge
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_badge' ) ) :
 	function bonips_get_badge( $badge_id = NULL, $level = NULL ) {
@@ -34,8 +34,8 @@ endif;
 /**
  * Get Badge References
  * Returns an array of references used by badges for quicker checks.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_badge_references' ) ) :
 	function bonips_get_badge_references( $point_type = BONIPS_DEFAULT_TYPE_KEY, $force = false ) {
@@ -67,7 +67,7 @@ if ( ! function_exists( 'bonips_get_badge_references' ) ) :
 			}
 
 
-			// New version (post 1.7)
+			// Current format
 			$table      = bonips_get_db_column( 'postmeta' );
 			$references = $wpdb->get_results( "SELECT post_id, meta_value FROM {$table} WHERE meta_key = 'badge_prefs';" );
 			if ( ! empty( $references ) ) {
@@ -115,8 +115,8 @@ endif;
 /**
  * Get Badge Requirements
  * Returns the badge requirements as an array.
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_badge_requirements' ) ) :
 	function bonips_get_badge_requirements( $badge_id = NULL ) {
@@ -129,8 +129,8 @@ endif;
 /**
  * Get Badge Levels
  * Returns an array of levels associated with a given badge.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_badge_levels' ) ) :
 	function bonips_get_badge_levels( $badge_id ) {
@@ -215,8 +215,8 @@ endif;
 /**
  * Display Badge Requirements
  * Returns the badge requirements as a string in a readable format.
- * @since 1.5
- * @version 1.2.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_display_badge_requirement' ) ) :
 	function bonips_display_badge_requirements( $badge_id = NULL ) {
@@ -315,8 +315,8 @@ endif;
  * Count Users with Badge
  * Counts the number of users that has the given badge. Option to get count
  * of a specific level.
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_count_users_with_badge' ) ) :
 	function bonips_count_users_with_badge( $badge_id = NULL, $level = NULL ) {
@@ -339,8 +339,8 @@ endif;
 /**
  * Count Users without Badge
  * Counts the number of users that does not have a given badge.
- * @since 1.5
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_count_users_without_badge' ) ) :
 	function bonips_count_users_without_badge( $badge_id = NULL ) {
@@ -359,8 +359,8 @@ endif;
 /**
  * Reference Has Badge
  * Checks if a given reference has a badge associated with it.
- * @since 1.5
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_ref_has_badge' ) ) :
 	function bonips_ref_has_badge( $reference = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -385,8 +385,8 @@ endif;
 /**
  * Badge Level Reached
  * Checks what level a user has earned for a badge. Returns false if badge was not earned.
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_badge_level_reached' ) ) :
 	function bonips_badge_level_reached( $user_id = NULL, $badge_id = NULL ) {
@@ -410,8 +410,8 @@ endif;
 /**
  * Check if User Gets Badge
  * Checks if a given user has earned one or multiple badges.
- * @since 1.5
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_check_if_user_gets_badge' ) ) :
 	function bonips_check_if_user_gets_badge( $user_id = NULL, $badge_ids = array(), $depreciated = array(), $save = true ) {
@@ -447,8 +447,8 @@ endif;
 /**
  * Assign Badge
  * Assigns a given badge to all users that fulfill the badges requirements.
- * @since 1.7
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_assign_badge' ) ) :
 	function bonips_assign_badge( $badge_id = NULL ) {
@@ -471,8 +471,8 @@ endif;
 
 /**
  * Assign Badge to User
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_assign_badge_to_user' ) ) :
 	function bonips_assign_badge_to_user( $user_id = NULL, $badge_id = NULL, $level = 0 ) {
@@ -497,8 +497,8 @@ endif;
 /**
  * User Has Badge
  * Checks if a user has a particular badge by badge ID.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_user_has_badge' ) ) :
 	function bonips_user_has_badge( $user_id = 0, $badge_id = NULL, $level_id = 0 ) {
@@ -534,8 +534,8 @@ endif;
 
 /**
  * Get Users Badge Level
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_badge_level' ) ) :
 	function bonips_get_users_badge_level( $user_id = 0, $badge_id = NULL ) {
@@ -564,8 +564,8 @@ endif;
 /**
  * Get Users Badges
  * Returns the badge post IDs that a given user currently holds.
- * @since 1.5
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_badges' ) ) :
 	function bonips_get_users_badges( $user_id = NULL, $force = false ) {
@@ -623,8 +623,8 @@ endif;
 /**
  * Display Users Badges
  * Will echo all badge images a given user has earned.
- * @since 1.5
- * @version 1.3.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_display_users_badges' ) ) :
 	function bonips_display_users_badges( $user_id = NULL, $width = BONIPS_BADGE_WIDTH, $height = BONIPS_BADGE_HEIGHT ) {
@@ -672,8 +672,8 @@ endif;
 /**
  * Get Badge IDs
  * Returns all published badge post IDs.
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_badge_ids' ) ) :
 	function bonips_get_badge_ids() {

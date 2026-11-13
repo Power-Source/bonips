@@ -1,8 +1,8 @@
 <?php
 /**
  * boniPS Bank Service - Recurring Payouts
- * @since 1.2
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( !defined( 'boniPS_VERSION' ) ) exit;
 
@@ -29,8 +29,8 @@ if ( !class_exists( 'boniPS_Banking_Service_Payouts' ) ) {
 
 		/**
 		 * Run
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 			add_action( 'wp_loaded',                       array( $this, 'process' ) );
@@ -40,8 +40,8 @@ if ( !class_exists( 'boniPS_Banking_Service_Payouts' ) ) {
 
 		/**
 		 * Deactivation
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function deactivate() {
 			// Unschedule payouts
@@ -51,8 +51,8 @@ if ( !class_exists( 'boniPS_Banking_Service_Payouts' ) ) {
 		/**
 		 * Process
 		 * Determines if we should run a payout or not.
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() {
 			// Get cycles
@@ -98,8 +98,8 @@ if ( !class_exists( 'boniPS_Banking_Service_Payouts' ) ) {
 		 * If the amount is higher then our threshold, we split up the ID's
 		 * into batches and schedule then seperate. This is due to the maximum
 		 * execution limit which will not be enough to handle a lot of users in one go.
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function do_payouts( $cycle = NULL ) {
 			// Make sure to clear any stray schedules to prevent duplicates
@@ -134,8 +134,8 @@ if ( !class_exists( 'boniPS_Banking_Service_Payouts' ) ) {
 		/**
 		 * Do Batch
 		 * Applies points to a batch of user ID's. This is also where we check for exclusions.
-		 * @since 1.2
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function do_payout_batch( $batch, $set = NULL, $cycle = NULL ) {
 			if ( !empty( $batch ) && is_array( $batch ) ) {
@@ -173,8 +173,8 @@ if ( !class_exists( 'boniPS_Banking_Service_Payouts' ) ) {
 		/**
 		 * Save
 		 * Saves the last run and the number of cycles run.
-		 * @since 1.2
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save( $now = 0, $cycles = 0, $deactivate = false ) {
 			// Update last run
@@ -202,8 +202,8 @@ if ( !class_exists( 'boniPS_Banking_Service_Payouts' ) ) {
 
 		/**
 		 * Preference for Savings
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 			$prefs = $this->prefs;
@@ -269,8 +269,8 @@ if ( !class_exists( 'boniPS_Banking_Service_Payouts' ) ) {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $post ) {
 			// Amount

@@ -1,11 +1,11 @@
 <?php
 /**
  * Addon: Transfer
- * Version: 1.6
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
-define( 'boniPS_TRANSFER_VERSION', '1.6' );
+define( 'boniPS_TRANSFER_VERSION', '1.0.0' );
 define( 'boniPS_TRANSFER',         __FILE__ );
 define( 'boniPS_TRANSFER_DIR',     boniPS_ADDONS_DIR . 'transfer/' );
 
@@ -18,8 +18,8 @@ require_once boniPS_TRANSFER_DIR . 'includes/bonips-transfer-widgets.php';
  * boniPS_Transfer_Module class
  * Manages this add-on by hooking into boniPS where needed. Regsiters our custom shortcode and widget
  * along with scripts and styles needed. Also adds settings to the boniPS settings page.
- * @since 0.1
- * @version 1.3.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 	class boniPS_Transfer_Module extends boniPS_Module {
@@ -63,8 +63,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Init
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -92,8 +92,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Register Widgets
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function render_message( $content = '', $log = NULL ) {
 
@@ -107,8 +107,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Register Widgets
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_widgets_init() {
 
@@ -118,8 +118,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Enqueue Front
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_script() {
 
@@ -132,7 +132,7 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 				'bonips-transfer',
 				plugins_url( 'assets/js/bonips-transfer.js', boniPS_TRANSFER ),
 				array( 'jquery', 'bonips-ui-compat' ),
-				'1.7',
+				boniPS_TRANSFER_VERSION,
 				true
 			);
 
@@ -141,8 +141,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 		/**
 		 * Front Footer
 		 * @filter 'bonips_transfer_messages'
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function maybe_load_script() {
 
@@ -190,8 +190,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * AJAX Autocomplete
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_call_autocomplete() {
 
@@ -230,8 +230,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * AJAX Transfer Creds
-		 * @since 0.1
-		 * @version 1.8
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_call_transfer() {
 
@@ -254,8 +254,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Settings Page
-		 * @since 0.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -478,8 +478,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Sanitize & Save Settings
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $general ) {
 
@@ -508,8 +508,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Get Recipient
-		 * @since 1.3.2
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_recipient( $to = '' ) {
 
@@ -551,8 +551,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Add Email Notice Instance
-		 * @since 1.5.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function email_notice_instance( $events, $request ) {
 
@@ -572,8 +572,8 @@ if ( ! class_exists( 'boniPS_Transfer_Module' ) ) :
 
 		/**
 		 * Support for Email Notices
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function email_notices( $data ) {
 
@@ -594,8 +594,8 @@ endif;
 
 /**
  * Load Transfer Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_transfer_addon' ) ) :
 	function bonips_load_transfer_addon( $modules, $point_types ) {

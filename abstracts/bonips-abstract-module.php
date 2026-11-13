@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Module class
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips_module/
- * @since 0.1
- * @version 1.3.5
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Module' ) ) :
 	#[\AllowDynamicProperties]
@@ -138,8 +138,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		/**
 		 * Set Settings
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function set_settings() {
 
@@ -234,8 +234,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		/**
 		 * Load
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -262,44 +262,44 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		/**
 		 * boniPS Ready
-		 * No longer available as of version 1.4
-		 * @since 1.1.1
-		 * @version 1.0
+		 * No longer available.
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_ready() { }
 
 		/**
 		 * Plugins Loaded (pre init)
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_pre_init() { }
 
 		/**
 		 * Init
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() { }
 
 		/**
 		 * Admin Init
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() { }
 
 		/**
 		 * Widgets Init
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_widgets_init() { }
 
 		/**
 		 * Get
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get() { }
 
@@ -307,8 +307,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 		 * Call
 		 * Either runs a given class method or function.
 		 * Defaults to an empty array if class/function does not exist
-		 * @since 0.1
-		 * @version 1.0.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function call( $call, $callback, $return = NULL ) {
 
@@ -348,8 +348,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 		 * Checks if hooks have been installed
 		 *
 		 * @returns (bool) true or false
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_installed() {
 
@@ -363,8 +363,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 		 * Is Active
 		 * @param $key (string) required key to check for
 		 * @returns (bool) true or false
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_active( $key = '' ) {
 
@@ -394,8 +394,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		/**
 		 * Add Admin Menu Item
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_menu() {
 
@@ -446,15 +446,15 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		/**
 		 * Register Scripts & Styles
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function scripts_and_styles() { }
 
 		/**
 		 * Save Log Entries per page
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function set_entries_per_page() {
 
@@ -471,8 +471,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		/**
 		 * Register Settings
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_settings() {
 
@@ -484,8 +484,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		/**
 		 * Screen Options
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function screen_options() {
 
@@ -495,8 +495,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 
 		/**
 		 * Add Metabox Class
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_classes( $classes ) {
 
@@ -509,8 +509,8 @@ if ( ! class_exists( 'boniPS_Module' ) ) :
 		/**
 		 * Enqueue Scripts & Styles
 		 * Scripts and styles to enqueu on module admin pages.
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_page_enqueue() {
 
@@ -554,22 +554,22 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 		/**
 		 * Settings Header
 		 * Scripts and styles to insert after scripts are printed.
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_header() { }
 
 		/**
 		 * Admin Page
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page() { }
 
 		/**
 		 * Update Notice
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_notice( $get = 'settings-updated', $class = 'updated', $message = '' ) {
 
@@ -583,8 +583,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Sanitize Settings
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_settings( $post ) {
 
@@ -594,15 +594,15 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * After General Settings
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) { }
 
 		/**
 		 * Sanitize Core Settings
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 
@@ -612,8 +612,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Input Field Name Value
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function field_name( $name = '' ) {
 
@@ -650,8 +650,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Input Field Id Value
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function field_id( $id = '' ) {
 
@@ -690,8 +690,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Available Template Tags
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function available_template_tags( $available = array() ) {
 
@@ -701,8 +701,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Get Settings URL
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_settings_url( $module = '' ) {
 
@@ -718,8 +718,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Request to Entry
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function request_to_entry( $request = array() ) {
 

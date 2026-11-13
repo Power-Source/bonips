@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Service class
  * @see http://codex.bonips.me/classes/bonips_service/
- * @since 1.2
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Service' ) ) :
 	abstract class boniPS_Service {
@@ -57,8 +57,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 		/**
 		 * Run
 		 * Must be over-ridden by sub-class!
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 			wp_die( 'function boniPS_Service::run() must be over-ridden in a sub-class.' );
@@ -66,15 +66,15 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() { }
 
 		/**
 		 * Sanitise Preference
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $post ) {
 
@@ -84,37 +84,37 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Activate
-		 * @since 1.5.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function activate() { }
 
 		/**
 		 * Deactivate
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function deactivate() { }
 
 		/**
 		 * Ajax Handler
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_handler() { }
 
 		/**
 		 * User Screen
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_screen( $user ) { }
 
 		/**
 		 * Get Field Name
 		 * Returns the field name for the current service
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function field_name( $field = '' ) {
 
@@ -144,8 +144,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 		/**
 		 * Get Field ID
 		 * Returns the field id for the current service
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function field_id( $field = '' ) {
 
@@ -175,8 +175,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Get Days in Year
-		 * @since 1.2
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_days_in_year() {
 
@@ -191,8 +191,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Is Large Site?
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_large_site() {
 
@@ -224,8 +224,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Get Excluded User IDs
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_excluded_user_ids() {
 
@@ -292,8 +292,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Convert Date to GMT Timestamp
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function date_to_timestamp( $string = '' ) {
 
@@ -303,8 +303,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Convert GMT Timestamp to Date
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function timestamp_to_date( $string = '' ) {
 
@@ -314,8 +314,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Time Select
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function time_select( $name = '', $id = '', $date = NULL ) {
 
@@ -336,8 +336,8 @@ if ( ! class_exists( 'boniPS_Service' ) ) :
 
 		/**
 		 * Timeframe Dropdown
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function timeframe_dropdown( $pref_id = '', $use_select = true, $hourly = true ) {
 

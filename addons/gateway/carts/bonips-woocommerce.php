@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * WooCommerce Payment Gateway
  * Custom Payment Gateway for WooCommerce.
  * @see http://docs.woothemes.com/document/payment-gateway-api/
- * @since 0.1
- * @version 1.5
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 	function bonips_init_woo_gateway() {
@@ -82,8 +82,8 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 			/**
 			 * Initialise Gateway Settings Form Fields
-			 * @since 0.1
-			 * @version 1.4.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function init_form_fields() {
 
@@ -207,8 +207,8 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 			/**
 			 * Generate Text Input HTML.
-			 * @since 1.7.6
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function generate_text_html( $key, $data ) {
 
@@ -257,8 +257,8 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 			/**
 			 * Use Exchange
 			 * Checks to see if exchange is needed.
-			 * @since 0.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function use_exchange() {
 
@@ -270,8 +270,8 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 			/**
 			 * Admin Panel Options
-			 * @since 0.1
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function admin_options() {
 
@@ -291,8 +291,8 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 			/**
 			 * Process Payment
-			 * @since 0.1
-			 * @version 1.4.3
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function process_payment( $order_id ) {
 
@@ -400,8 +400,8 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 			/**
 			 * Process Refunds
-			 * @since 1.5.4
-			 * @version 1.0.3
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function process_refund( $order_id, $amount = null, $reason = '' ) {
 
@@ -474,8 +474,8 @@ if ( ! function_exists( 'bonips_init_woo_gateway' ) ) :
 
 			/**
 			 * Thank You Page
-			 * @since 0.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function thankyou_page() {
 
@@ -491,8 +491,8 @@ add_action( 'after_setup_theme', 'bonips_init_woo_gateway' );
 
 /**
  * Register Gateway
- * @since 0.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_register_woo_gateway' ) ) :
 	function bonips_register_woo_gateway( $methods ) {
@@ -511,8 +511,8 @@ add_filter( 'woocommerce_payment_gateways', 'bonips_register_woo_gateway' );
  * - User is excluded
  * - Users balance is too low
  *
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_available_gateways' ) ) :
 	function bonips_woo_available_gateways( $gateways ) {
@@ -573,8 +573,8 @@ add_filter( 'woocommerce_available_payment_gateways', 'bonips_woo_available_gate
 /**
  * Add Currency
  * Inserts all registered point types as a currency in WooCommerce.
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_add_currency' ) ) :
 	function bonips_woo_add_currency( $currencies ) {
@@ -601,8 +601,8 @@ add_filter( 'woocommerce_currencies', 'bonips_woo_add_currency' );
 /**
  * Currency Symbol
  * Appends the boniPS prefix or suffix to the amount.
- * @since 0.1
- * @version 1.2.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_currency_symbol' ) ) :
 	function bonips_woo_currency_symbol( $currency_symbols ) {
@@ -634,8 +634,8 @@ add_filter( 'woocommerce_currency_symbols', 'bonips_woo_currency_symbol' );
 
 /**
  * Log Entry: Payment
- * @since 0.1
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_log_entry_payment' ) ) :
 	function bonips_woo_log_entry_payment( $content, $log_entry ) {
@@ -663,8 +663,8 @@ add_filter( 'bonips_parse_log_entry_woocommerce_payment', 'bonips_woo_log_entry_
 
 /**
  * Log Entry: Refund
- * @since 1.5.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_log_entry_refunds' ) ) :
 	function bonips_woo_log_entry_refunds( $content, $log_entry ) {
@@ -686,8 +686,8 @@ add_filter( 'bonips_parse_log_entry_woocommerce_refund', 'bonips_woo_log_entry_r
 
 /**
  * Log Entry: Profit Share Refund
- * @since 1.5.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_log_entry_profit_refund' ) ) :
 	function bonips_woo_log_entry_profit_refund( $content, $log_entry ) {
@@ -713,8 +713,8 @@ add_filter( 'bonips_parse_log_entry_store_sale_refund', 'bonips_woo_log_entry_pr
 
 /**
  * Parse Email Notice
- * @since 1.2.2
- * @version 1.0.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_parse_email' ) ) :
 	function bonips_woo_parse_email( $email ) {
@@ -746,8 +746,8 @@ add_filter( 'bonips_email_before_send', 'bonips_woo_parse_email', 10 );
 /**
  * After Order Total
  * Potentially insert the cart cost in points and the users current balance.
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_after_order_total' ) ) :
 	function bonips_woo_after_order_total() {

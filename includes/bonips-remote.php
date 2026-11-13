@@ -6,8 +6,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * Allows execution of remote actions such as adding points, removing points,
  * transfering points between two users and balance checks.
  * @see http://codex.bonips.me/classes/bonips_remote/
- * @since 1.3
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Remote' ) ) :
 	class boniPS_Remote {
@@ -48,8 +48,8 @@ if ( ! class_exists( 'boniPS_Remote' ) ) :
 
 		/**
 		 * Handle Magic Quotes
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function handle_magic() {
 
@@ -82,8 +82,8 @@ if ( ! class_exists( 'boniPS_Remote' ) ) :
 
 		/**
 		 * Set Headers
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function set_headers() {
 
@@ -103,8 +103,8 @@ if ( ! class_exists( 'boniPS_Remote' ) ) :
 
 		/**
 		 * Parse Call
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_call() {
 
@@ -168,8 +168,8 @@ if ( ! class_exists( 'boniPS_Remote' ) ) :
 
 		/**
 		 * Get Host IP
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_host_IP() {
 
@@ -200,8 +200,8 @@ if ( ! class_exists( 'boniPS_Remote' ) ) :
 
 		/**
 		 * Validate Call
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function validate_call() {
 
@@ -341,8 +341,8 @@ if ( ! class_exists( 'boniPS_Remote' ) ) :
 
 		/**
 		 * Process
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() {
 
@@ -528,8 +528,8 @@ endif;
 
 /**
  * Remote Init
- * @since 1.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_remote_init' ) ) :
 	function bonips_remote_init() {
@@ -570,8 +570,8 @@ add_action( 'init', 'bonips_remote_init' );
 
 /**
  * Remote Enable / Disable Settings
- * @since 1.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_remote_activate_row' ) ) :
 	function bonips_remote_activate_row( $bonips_general ) {
@@ -602,8 +602,8 @@ add_action( 'bonips_management_prefs', 'bonips_remote_activate_row' );
 
 /**
  * Remote API Settings Page
- * @since 1.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_remote_settings_page' ) ) :
 	function bonips_remote_settings_page( $bonips_general ) {
@@ -657,8 +657,8 @@ add_action( 'bonips_after_management_prefs', 'bonips_remote_settings_page' );
 
 /**
  * Remote API Settings Save
- * @since 1.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_remote_save_settings' ) ) :
 	function bonips_remote_save_settings( $new_data, $post, $bonips_general ) {

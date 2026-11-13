@@ -3,8 +3,8 @@ if ( ! defined( 'BONIPS_PURCHASE' ) ) exit;
 
 /**
  * boniPS_Addons_Module class
- * @since 0.1
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_buyCRED_Reward_Hook' ) ) :
 	class boniPS_buyCRED_Reward_Hook extends boniPS_Hook {
@@ -28,8 +28,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward_Hook' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -39,8 +39,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward_Hook' ) ) :
 
 		/**
 		 * Page Load
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function assign_buycred_reward( $result, $request, $bonips ) {
 
@@ -96,8 +96,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Reward_Hook' ) ) :
 
 		/**
 		 * Preference for Anniversary Hook
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 

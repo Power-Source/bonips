@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS Bank Service - Recurring Payouts
- * @since 1.2
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 	class boniPS_Banking_Service_Payouts extends boniPS_Service {
@@ -41,8 +41,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Activate Service
-		 * @since 1.5.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function activate() {
 
@@ -80,8 +80,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Deactivation
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function deactivate() {
 
@@ -100,8 +100,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -120,8 +120,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Run Schedule
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run_schedule( $schedule_id = NULL ) {
 
@@ -292,8 +292,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Get Eligible Users
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_eligible_users( $setup, $number = 0, $offset = 0 ) {
 
@@ -414,8 +414,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Display Schedule Table
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function display_schedule_table( $schedule = NULL ) {
 
@@ -500,8 +500,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * View Schedule Form
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function view_schedule_form( $schedule_id, $setup ) {
 
@@ -649,8 +649,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Manage Schedule Form
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function manage_schedule_form( $schedule_id, $setup ) {
 
@@ -837,8 +837,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Include Exclude Dropdown
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function include_exclude_dropdown( $name = '', $id = '', $selected = '' ) {
 
@@ -861,8 +861,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Preference for recurring payouts
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -904,8 +904,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $post ) {
 
@@ -915,8 +915,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Payouts' ) ) :
 
 		/**
 		 * Ajax Handler
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function ajax_handler() {
 

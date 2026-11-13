@@ -2,15 +2,15 @@
 
 /**
  * GD Star Rating
- * @since 1.2
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( defined( 'boniPS_VERSION' ) ) {
 
 	/**
 	 * Register Hook
-	 * @since 1.2
-	 * @version 1.0
+	 * @since 1.0.0
+	 * @version 1.0.0
 	 */
 	add_filter( 'bonips_setup_hooks', 'GD_Star_boniPS_Hook' );
 	function GD_Star_boniPS_Hook( $installed ) {
@@ -24,8 +24,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 	/**
 	 * GD Star Rating Hook
-	 * @since 1.2
-	 * @version 1.0
+	 * @since 1.0.0
+	 * @version 1.0.0
 	 */
 	if ( ! class_exists( 'boniPS_Hook_GD_Star_Rating' ) && class_exists( 'boniPS_Hook' ) ) {
 		class boniPS_Hook_GD_Star_Rating extends boniPS_Hook {
@@ -51,8 +51,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Run
-			 * @since 1.2
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function run() {
 				add_action( 'gdsr_vote', array( $this, 'vote' ), 10, 4 );
@@ -60,8 +60,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Vote
-			 * @since 1.2
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function vote( $vote_value, $post_id, $vote_tpl, $vote_size ) {
 				if ( ! is_user_logged_in() ) return;
@@ -94,8 +94,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Preferences for GD Star Rating
-			 * @since 1.2
-			 * @version 1.0.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function preferences() {
 				$prefs = $this->prefs; ?>

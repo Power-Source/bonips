@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Widget: Leaderboard
- * @since 0.1
- * @version 1.3.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Widget_Leaderboard' ) ) :
     class boniPS_Widget_Leaderboard extends WP_Widget {

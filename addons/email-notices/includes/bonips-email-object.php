@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Email class
  * @see http://codex.bonips.me/classes/bonips_email/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Email' ) ) :
 	class boniPS_Email extends boniPS_Object {
@@ -63,8 +63,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 
 		/**
 		 * Populate
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function populate( $notice_id = NULL ) {
 
@@ -96,8 +96,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 
 		/**
 		 * Save Settings
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_settings( $setup = array() ) {
 
@@ -121,8 +121,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 
 		/**
 		 * Get Trigger
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_trigger() {
 
@@ -132,8 +132,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 
 		/**
 		 * Set Trigger
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function set_trigger( $instance = '' ) {
 
@@ -162,8 +162,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 
 		/**
 		 * Schedule Email
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function schedule( $event = array(), $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
 
@@ -187,8 +187,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 
 		/**
 		 * Send Email
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function send( $event = array(), $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
 
@@ -219,8 +219,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 
 		/**
 		 * Update Last Run
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_last_run( $timestamp = NULL ) {
 
@@ -242,8 +242,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 
 		/**
 		 * Get Email Styling
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_email_styling() {
 
@@ -263,8 +263,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 		 * Get Recipients
 		 * Returns an array of email addresses that this email should be sent to, based on our setup.
 		 * Returns false if used incorrectly.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_recipients( $user = '', $admin = '' ) {
 
@@ -288,8 +288,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 		/**
 		 * Get Headers
 		 * Returns a header array based on our setup.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_headers() {
 
@@ -321,8 +321,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 		/**
 		 * Get Subject
 		 * Returns the email notices subject.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_subject( $event = array(), $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
 
@@ -352,8 +352,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 		/**
 		 * Get Body
 		 * Returns the email notices body.
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_body( $event = array(), $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
 
@@ -406,8 +406,8 @@ if ( ! class_exists( 'boniPS_Email' ) ) :
 		/**
 		 * Get Message
 		 * Returns the email message with HTML formatting (if used).
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_message( $event = array(), $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
 

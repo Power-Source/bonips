@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_sharethis_hook', 80 );
 function bonips_register_sharethis_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_sharethis_hook( $installed ) {
 
 /**
  * ShareThis Hook
- * @since 1.5
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_sharethis_hook', 80 );
 function bonips_load_sharethis_hook() {
@@ -49,8 +49,8 @@ function bonips_load_sharethis_hook() {
 
 		/**
 		 * Run
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -62,8 +62,8 @@ function bonips_load_sharethis_hook() {
 
 		/**
 		 * Parse ShareThis Tags
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_tags( $content, $log ) {
 
@@ -86,8 +86,8 @@ function bonips_load_sharethis_hook() {
 
 		/**
 		 * Detect Shares
-		 * @since 1.5
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function detect_shares() {
 
@@ -157,8 +157,8 @@ jQuery(function($) {
 
 		/**
 		 * Ajax Handler
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax() {
 
@@ -202,8 +202,8 @@ jQuery(function($) {
 
 		/**
 		 * Preferences for ShareThis Hook
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -286,8 +286,8 @@ jQuery(function($) {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 
@@ -323,8 +323,8 @@ jQuery(function($) {
 
 /**
  * ShareThis Service Names
- * @since 1.7.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_share_service_names' ) ) :
 	function bonips_get_share_service_names() {

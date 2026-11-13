@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Hook class
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips_hook/
- * @since 0.1
- * @version 1.3.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook' ) ) :
 	abstract class boniPS_Hook {
@@ -90,8 +90,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 		/**
 		 * Run
 		 * Must be over-ridden by sub-class!
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -101,8 +101,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -112,8 +112,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 
 		/**
 		 * Sanitise Preference
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 
@@ -124,8 +124,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 		/**
 		 * Get Field Name
 		 * Returns the field name for the current hook
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function field_name( $field = '' ) {
 
@@ -161,8 +161,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 		/**
 		 * Get Field ID
 		 * Returns the field id for the current hook
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function field_id( $field = '' ) {
 
@@ -206,8 +206,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 
 		/**
 		 * Check Limit
-		 * @since 1.6
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function over_hook_limit( $instance = '', $reference = '', $user_id = NULL, $ref_id = NULL ) {
 
@@ -315,8 +315,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 
 		/**
 		 * Get Limit Types
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_limit_types() {
 
@@ -332,8 +332,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 
 		/**
 		 * Select Limit
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function hook_limit_setting( $name = '', $id = '', $selected = '' ) {
 
@@ -386,8 +386,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 
 		/**
 		 * Impose Limits Dropdown
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function impose_limits_dropdown( $pref_id = '', $use_select = true ) {
 
@@ -430,8 +430,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 		/**
 		 * Has Entry
 		 * Moved to boniPS_Settings
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function has_entry( $action = '', $ref_id = '', $user_id = '', $data = '', $point_type = '' ) {
 
@@ -447,8 +447,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 
 		/**
 		 * Available Template Tags
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function available_template_tags( $available = array(), $custom = '' ) {
 
@@ -458,8 +458,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 
 		/**
 		 * Over Daily Limit
-		 * @since 1.0
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_over_daily_limit( $ref = '', $user_id = 0, $max = 0, $ref_id = NULL ) {
 
@@ -482,8 +482,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 		/**
 		 * Include Post Type
 		 * Checks if a given post type should be excluded
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function include_post_type( $post_type ) {
 
@@ -505,8 +505,8 @@ if ( ! class_exists( 'boniPS_Hook' ) ) :
 		 * @param $end (int) unix timestamp for the end date, required
 		 * @param $ref_id (int) optional reference id to include in search
 		 * @returns number of entries found (int) or NULL if required params are missing
-		 * @since 1.4
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function limit_query( $ref = '', $user_id = 0, $start = 0, $end = 0, $ref_id = NULL ) {
 

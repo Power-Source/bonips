@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * Have Ranks
  * Checks if there are any rank posts.
  * @returns (bool) true or false
- * @since 1.1
- * @version 1.6
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_have_ranks' ) ) :
 	function bonips_have_ranks( $point_type = '' ) {
@@ -29,8 +29,8 @@ endif;
  * Have Published Ranks
  * Checks if there are any published rank posts.
  * @returns (int) the number of published ranks found.
- * @since 1.3.2
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_published_ranks_count' ) ) :
 	function bonips_get_published_ranks_count( $point_type = NULL ) {
@@ -73,8 +73,8 @@ endif;
 /**
  * Get Rank Object ID
  * Makes sure a given post ID is a rank post ID or converts a rank title into a rank ID.
- * @since 1.7
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_rank_object_id' ) ) :
 	function bonips_get_rank_object_id( $identifier = NULL ) {
@@ -102,8 +102,8 @@ endif;
 /**
  * Get Rank
  * Returns the rank object.
- * @since 1.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_rank' ) ) :
 	function bonips_get_rank( $rank_identifier = NULL ) {
@@ -132,8 +132,8 @@ endif;
 /**
  * Rank Has Logo
  * Checks if a given rank has a logo.
- * @since 1.1
- * @version 1.5
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_rank_has_logo' ) ) :
 	function bonips_rank_has_logo( $rank_identifier = NULL ) {
@@ -169,8 +169,8 @@ endif;
 /**
  * Get Rank Logo
  * Returns the given ranks logo.
- * @since 1.1
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_rank_logo' ) ) :
 	function bonips_get_rank_logo( $rank_identifier = NULL, $size = 'post-thumbnail', $attr = NULL ) {
@@ -204,8 +204,8 @@ endif;
 
 /**
  * Count Users with Rank
- * @since 1.6
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_count_users_with_rank' ) ) :
 	function bonips_count_users_with_rank( $rank_identifier = NULL ) {
@@ -238,8 +238,8 @@ endif;
 /**
  * Get Users Rank ID
  * Returns the rank post ID for the given point type.
- * @since 1.6
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_rank_id' ) ) :
 	function bonips_get_users_rank_id( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -276,8 +276,8 @@ endif;
 /**
  * Save Users Rank
  * Saves a given rank for a user.
- * @since 1.7.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_save_users_rank' ) ) :
 	function bonips_save_users_rank( $user_id = NULL, $rank_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -303,8 +303,8 @@ endif;
 /**
  * Get My Rank
  * Returns the current users rank
- * @since 1.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_my_rank' ) ) :
 	function bonips_get_my_rank( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -324,8 +324,8 @@ endif;
  * Get Users Rank
  * Retreaves the users current saved rank or if rank is missing
  * finds the appropriate rank and saves it.
- * @since 1.1
- * @version 1.7
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_rank' ) ) :
 	function bonips_get_users_rank( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -370,8 +370,8 @@ endif;
  * Attenots to find a particular users rank for a particular point type.
  * @uses bonips_user_got_demoted if user got demoted to a lower rank.
  * @uses bonips_user_got_promoted if user got promoted to a higher rank.
- * @since 1.1
- * @version 1.7
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_find_users_rank' ) ) :
 	function bonips_find_users_rank( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY, $act = true ) {
@@ -467,8 +467,8 @@ endif;
  * Runs though all user balances and assigns each users their
  * appropriate ranks.
  * @returns count
- * @since 1.3.2
- * @version 1.7
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_assign_ranks' ) ) :
 	function bonips_assign_ranks( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -521,8 +521,8 @@ endif;
  * @param $order (string) option to return ranks ordered Ascending or Descending
  * @param $type (string) optional point type
  * @returns (array) empty if no ranks are found or associative array with post ID as key and title as value
- * @since 1.1
- * @version 1.6
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_ranks' ) ) :
 	function bonips_get_ranks( $status = 'publish', $number = '-1', $order = 'DESC', $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -577,8 +577,8 @@ endif;
  * @param $rank (int|string) either a rank id or rank name
  * @param $number (int) number of users to return
  * @returns (array) empty if no users were found or associative array with user ID as key and display name as value
- * @since 1.1
- * @version 1.6
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_of_rank' ) ) :
 	function bonips_get_users_of_rank( $rank_identifier = NULL, $number = 25, $order = 'DESC', $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -625,8 +625,8 @@ endif;
 
 /**
  * Manual Ranks
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_manual_ranks' ) ) :
 	function bonips_manual_ranks( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -646,8 +646,8 @@ endif;
  * Rank Based on Total
  * Checks if ranks for a given point type are based on total or current
  * balance.
- * @since 1.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_rank_based_on_total' ) ) :
 	function bonips_rank_based_on_total( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -666,8 +666,8 @@ endif;
 /**
  * Rank Shown in BuddyPress
  * Returns either false or the location where the rank is to be shown in BuddyPress.
- * @since 1.6
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_show_rank_in_buddypress' ) ) :
 	function bonips_show_rank_in_buddypress( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -686,8 +686,8 @@ endif;
 /**
  * Rank Shown in PSForum
  * Returns either false or the location where the rank is to be shown in PSForum.
- * @since 1.6
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_show_rank_in_psforum' ) ) :
 	function bonips_show_rank_in_psforum( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {

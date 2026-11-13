@@ -3,9 +3,9 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Protect class
- * Will be replaced by openssl_encrypt() in 1.8
- * @since 0.1
- * @version 1.3
+ * Legacy encryption.
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Protect' ) ) :
 	class boniPS_Protect {
@@ -106,8 +106,8 @@ endif;
 
 /**
  * Load boniPS Protect
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_protect' ) ) :
 	function bonips_protect() {
@@ -127,8 +127,8 @@ endif;
 /**
  * Create Encrypted Token
  * Converts an array of data into an encrypted string.
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_create_token' ) ) :
 	function bonips_create_token( $string = '' ) {
@@ -151,8 +151,8 @@ endif;
  * Verify Encrypted Token
  * Will either return an array of data that have been decrypted or
  * false if the string is invalid. Also checks the number of variables in the array.
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_verify_token' ) ) :
 	function bonips_verify_token( $string = '', $length = 1 ) {

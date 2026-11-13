@@ -1,8 +1,8 @@
 /**
  * boniPS Editor
  * Handles the product type editor in the WordPress admin area on the "Users" page.
- * @since 1.0
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 jQuery(function($) {
 

@@ -2,7 +2,7 @@
 /**
  * Addon: Import
  * Addon URI: http://bonips.me/add-ons/import/
- * Version: 1.0.2
+ * Version: 1.0.0
  * Description: With the Import add-on you can import CSV files, CubePoints or existing points under any custom user meta values.
  * Author: DerN3rd
  * Author URI: http://www.merovingi.com
@@ -16,13 +16,13 @@ $bonips_addon_header_translate = array(
 if ( !defined( 'boniPS_VERSION' ) ) exit;
 
 define( 'boniPS_IMPORT',         __FILE__ );
-define( 'boniPS_IMPORT_VERSION', boniPS_VERSION . '.1' );
+define( 'boniPS_IMPORT_VERSION', '1.0.0' );
 /**
  * boniPS_Import class
  *
  * Manages all available imports.
- * @since 0.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( !class_exists( 'boniPS_Import' ) ) {
 	class boniPS_Import extends boniPS_Module {
@@ -52,8 +52,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		/**
 		 * Module Init
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 			$installed = $this->get();
@@ -72,8 +72,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 		/**
 		 * Adjust Accordion
 		 * Marks the given import as active.
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function accordion() {
 			$key = array_search(trim($_REQUEST['selected-import']), array_keys( $this->installed ) );
@@ -82,8 +82,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		/**
 		 * Get Imports
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get( $save = false ) {
 			// Defaults
@@ -108,8 +108,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 		/**
 		 * Update Users
 		 * @param $data (array), required associative array of users and amounts to be added to their account.
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_users( $data = array(), $verify = true ) {
 			// Prep
@@ -208,8 +208,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 		 * Based on the csv-importer plugin. Thanks for teaching me something new.
 		 *
 		 * @see http://wordpress.org/extend/plugins/csv-importer/
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function import_csv() {
 			// We need a file. or else...
@@ -281,8 +281,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		/**
 		 * Import CubePoints
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function import_cubepoints() {
 			$delete = false;
@@ -363,8 +363,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		/**
 		 * Import Custom User Meta
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function import_custom() {
 			if ( !isset( $_POST['meta_key'] ) || empty( $_POST['meta_key'] ) ) {
@@ -450,8 +450,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		/**
 		 * Admin Page
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page() {
 			// Security
@@ -492,8 +492,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		/**
 		 * CSV Import Form
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function csv_form( $data ) {
 			$max_upload = (int) ( ini_get( 'upload_max_filesize' ) );
@@ -564,8 +564,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 		
 		/**
 		 * CubePoints Import Form
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cubepoints_form( $data ) {
 			$quick_check = get_users( array(
@@ -638,8 +638,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		/**
 		 * Custom User Meta Import Form
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function custom_form( $data ) { ?>
 
@@ -730,8 +730,8 @@ if ( !class_exists( 'boniPS_Import' ) ) {
 
 		/**
 		 * Contextual Help
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function help( $screen_id, $screen ) {
 			if ( $screen_id != 'bonips_page_boniPS_page_import' ) return;

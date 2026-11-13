@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for registrations
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Registration' ) ) :
 	class boniPS_Hook_Registration extends boniPS_Hook {
@@ -26,8 +26,8 @@ if ( ! class_exists( 'boniPS_Hook_Registration' ) ) :
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -37,8 +37,8 @@ if ( ! class_exists( 'boniPS_Hook_Registration' ) ) :
 
 		/**
 		 * Registration Hook
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function registration( $user_id ) {
 
@@ -65,8 +65,8 @@ if ( ! class_exists( 'boniPS_Hook_Registration' ) ) :
 
 		/**
 		 * Preference for Registration Hook
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 

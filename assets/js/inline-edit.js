@@ -1,7 +1,7 @@
 /**
  * boniPS Inline Edit
- * @since 1.2
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 jQuery(function($) {
 

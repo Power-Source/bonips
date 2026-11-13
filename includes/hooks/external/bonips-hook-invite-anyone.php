@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_invite_anyone_hook', 70 );
 function bonips_register_invite_anyone_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_invite_anyone_hook( $installed ) {
 
 /**
  * Invite Anyone Hook
- * @since 0.1
- * @version 1.4.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_invite_anyone_hook', 70 );
 function bonips_load_invite_anyone_hook() {
@@ -60,8 +60,8 @@ function bonips_load_invite_anyone_hook() {
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -82,8 +82,8 @@ function bonips_load_invite_anyone_hook() {
 
 		/**
 		 * Sending Invites
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function send_invite( $user_id, $email, $group ) {
 
@@ -109,8 +109,8 @@ function bonips_load_invite_anyone_hook() {
 		/**
 		 * Verified Signup
 		 * If signups needs to be verified, award points first when they are.
-		 * @since 1.4.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function verified_signup( $user_id ) {
 
@@ -141,8 +141,8 @@ function bonips_load_invite_anyone_hook() {
 
 		/**
 		 * Accepting Invites
-		 * @since 0.1
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function accept_invite( $invited_user_id, $inviters = array() ) {
 
@@ -193,8 +193,8 @@ function bonips_load_invite_anyone_hook() {
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -255,8 +255,8 @@ function bonips_load_invite_anyone_hook() {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

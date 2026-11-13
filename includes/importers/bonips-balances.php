@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Import: Balances
- * @since 1.2
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 	class boniPS_Importer_Balances extends WP_Importer {
@@ -20,7 +20,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 
 		/**
 		 * Construct
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function __construct() {
 
@@ -33,7 +33,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 		/**
 		 * Registered callback function for the WordPress Importer
 		 * Manages the three separate stages of the CSV import process
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -79,7 +79,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 
 		/**
 		 * UTF-8 encode the data if `$enc` value isn't UTF-8.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function format_data_from_csv( $data, $enc ) {
 			return ( $enc == 'UTF-8' ) ? $data : utf8_encode( $data );
@@ -89,7 +89,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 		 * Handles the CSV upload and initial parsing of the file to prepare for
 		 * displaying author import options
 		 * @return bool False if error uploading or invalid file, true otherwise
-		 * @version 1.1
+		 * @version 1.0.0
 		 */
 		public function handle_upload() {
 
@@ -128,7 +128,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 		/**
 		 * Import Function
 		 * Handles the actual import based on a given file.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function import( $file ) {
 
@@ -238,7 +238,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 
 		/**
 		 * Render Screen Header
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function header() {
 
@@ -252,7 +252,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 
 		/**
 		 * Render Screem Fppter
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function footer() {
 
@@ -262,7 +262,7 @@ if ( ! class_exists( 'boniPS_Importer_Balances' ) ) :
 
 		/**
 		 * Greet Screen
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function greet() {
 

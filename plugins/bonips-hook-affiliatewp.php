@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_affiliatewp_hook', 10 );
 function bonips_register_affiliatewp_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_affiliatewp_hook( $installed ) {
 
 /**
  * Affiliate WP Hook
- * @since 1.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_affiliatewp_hook', 10 );
 function bonips_load_affiliatewp_hook() {
@@ -128,8 +128,8 @@ function bonips_load_affiliatewp_hook() {
 
 		/**
 		 * Run
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -148,8 +148,8 @@ function bonips_load_affiliatewp_hook() {
 
 		/**
 		 * Affiliate-Anmeldung
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function affiliate_signup( $affiliate_id, $status, $args ) {
 
@@ -177,8 +177,8 @@ function bonips_load_affiliatewp_hook() {
 
 		/**
 		 * Neuer Besuch
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_visit( $insert_id, $data ) {
 
@@ -206,8 +206,8 @@ function bonips_load_affiliatewp_hook() {
 
 		/**
 		 * Empfehlungsauszahlung
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function referral_payouts( $referral_id, $new_status, $old_status ) {
 
@@ -275,8 +275,8 @@ function bonips_load_affiliatewp_hook() {
 
 		/**
 		 * Einstellungen
-		 * @since 1.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -386,8 +386,8 @@ function bonips_load_affiliatewp_hook() {
 		
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $data ) {
 

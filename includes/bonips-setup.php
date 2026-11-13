@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * boniPS_Setup class
  * Used when the plugin has been activated for the first time. Handles the setup
  * wizard along with temporary admin menus.
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Setup' ) ) :
 	class boniPS_Setup {
@@ -25,8 +25,8 @@ if ( ! class_exists( 'boniPS_Setup' ) ) :
 
 		/**
 		 * Load Class
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -39,8 +39,8 @@ if ( ! class_exists( 'boniPS_Setup' ) ) :
 
 		/**
 		 * Setup Setup Nag
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_notice() {
 
@@ -53,8 +53,8 @@ if ( ! class_exists( 'boniPS_Setup' ) ) :
 
 		/**
 		 * Add Setup page under "Plugins"
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function setup_menu() {
 
@@ -73,8 +73,8 @@ if ( ! class_exists( 'boniPS_Setup' ) ) :
 
 		/**
 		 * Setup Header
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_header() {
 
@@ -87,8 +87,8 @@ if ( ! class_exists( 'boniPS_Setup' ) ) :
 		/**
 		 * Setup Screen
 		 * Outputs the setup page.
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function setup_page() {
 
@@ -261,8 +261,8 @@ jQuery(function($) {
 
 		/**
 		 * New Point Type Form
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function new_point_type( $posted = array() ) {
 
@@ -372,8 +372,8 @@ jQuery(function($) {
 
 		/**
 		 * Process Setup Steps
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_setup() {
 

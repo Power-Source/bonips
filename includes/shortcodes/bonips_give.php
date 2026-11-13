@@ -8,8 +8,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * or in a template file. Note that users are awarded/deducted points each time
  * this shortcode exectutes!
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_give/
- * @since 1.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_give' ) ) :
 	function bonips_render_shortcode_give( $atts, $content = '' ) {

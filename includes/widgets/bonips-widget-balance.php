@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Widget: boniPS Balance
- * @since 0.1
- * @version 1.4.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Widget_Balance' ) ) :
 	class boniPS_Widget_Balance extends WP_Widget {

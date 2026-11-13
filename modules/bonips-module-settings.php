@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Settings_Module class
- * @since 0.1
- * @version 1.5
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 	class boniPS_Settings_Module extends boniPS_Module {
@@ -31,8 +31,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 		/**
 		 * Init
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -50,8 +50,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 		/**
 		 * Admin Init
-		 * @since 1.3
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -62,8 +62,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 		/**
 		 * Empty Log Action
-		 * @since 1.3
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_empty_log() {
 
@@ -105,8 +105,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 		/**
 		 * Reset All Balances Action
-		 * @since 1.3
-		 * @version 1.4.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_reset_balance() {
 
@@ -148,8 +148,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 		/**
 		 * Export User Balances
 		 * @filter bonips_export_raw
-		 * @since 1.3
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_export_balances() {
 
@@ -218,8 +218,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 		/**
 		 * Generate Key Action
-		 * @since 1.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_generate_key() {
 
@@ -234,8 +234,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 		/**
 		 * Update Log Cred Format Action
 		 * Will attempt to modify the boniPS log's cred column format.
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_update_log_cred_format() {
 
@@ -299,8 +299,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 		/**
 		 * Load Export
 		 * Creates a CSV export file of the 'bonips-export-raw' transient.
-		 * @since 1.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load_export() {
 
@@ -330,8 +330,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 		/**
 		 * Delete Users Log Entries
 		 * Will remove a given users log entries.
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_delete_users_log_entries( $user_id ) {
 
@@ -347,8 +347,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 		/**
 		 * Scripts & Styles
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function scripts_and_styles() {
 
@@ -365,8 +365,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 		/**
 		 * Settings Header
 		 * Inserts the export styling
-		 * @since 1.3
-		 * @version 1.2.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_header() {
 
@@ -451,8 +451,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 		/**
 		 * Adjust Decimal Places Settings
-		 * @since 1.6
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_decimal_places() {
 
@@ -506,8 +506,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 
 		/**
 		 * Admin Page
-		 * @since 0.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page() {
 
@@ -876,8 +876,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 		 * Maybe Whitespace
 		 * Since we want to allow a single whitespace in the string and sanitize_text_field() removes this whitespace
 		 * this little method will make sure that whitespace is still there and that we still can sanitize the field.
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function maybe_whitespace( $string ) {
 
@@ -891,8 +891,8 @@ if ( ! class_exists( 'boniPS_Settings_Module' ) ) :
 		/**
 		 * Sanititze Settings
 		 * @filter 'bonips_save_core_prefs'
-		 * @since 0.1
-		 * @version 1.5.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_settings( $post ) {
 

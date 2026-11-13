@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Events Manager Pro Gateway
- * @since 1.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 	class EM_Gateway_boniPS extends EM_Gateway {
@@ -81,8 +81,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		/**
 		 * Add Currency
 		 * Adds "Points" as a form of currency
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_currency( $currencies ) {
 			$currencies->names['XMY'] = $this->core->plural();
@@ -100,8 +100,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		
 		/**
 		 * Check if using Single Currency
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function single_currency() {
 			if ( $this->prefs['setup'] == 'single' ) return true;
@@ -110,8 +110,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 
 		/**
 		 * Format Price
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function format_price( $formatted_price, $price, $currency, $format ) {
 			if ( $currency == 'XMY' )
@@ -122,8 +122,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		
 		/**
 		 * Adjust Ticket Columns
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ticket_columns( $columns, $EM_Event ) {
 			if ( ! $EM_Event->is_free() ) {
@@ -149,8 +149,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 
 		/**
 		 * Adjust Ticket Column Content
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ticket_col( $EM_Ticket, $EM_Event ) {
 			$ticket_price = $EM_Ticket->get_price( false );
@@ -168,8 +168,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		
 		/**
 		 * Shows button, not needed if using the new form display
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function booking_form_button() {
 			if ( ! is_user_logged_in() ) return;
@@ -196,8 +196,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		
 		/**
 		 * Add Booking
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function booking_add( $EM_Event, $EM_Booking, $post_validation = false ) {
 			parent::booking_add( $EM_Event, $EM_Booking, $post_validation );
@@ -212,8 +212,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		
 		/**
 		 * Booking Payment
-		 * @since 1.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function booking_payment( $result, $EM_Booking ) {
 			global $wpdb, $wp_rewrite, $EM_Notices;
@@ -319,8 +319,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		
 		/**
 		 * Refunds
-		 * @since 1.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function refunds( $result, $EM_Booking ) {
 			// Cancellation = refund
@@ -358,8 +358,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		
 		/**
 		 * Customize Booking Table Actions
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function bookings_table_actions( $actions, $EM_Booking ) {
 			if ( $EM_Booking->booking_status == 1 && $this->uses_gateway( $EM_Booking ) ) {
@@ -386,8 +386,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		/**
 		 * Can Pay Check
 		 * Checks if the user can pay for their booking.
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function can_pay( $EM_Booking ) {
 			$EM_Event = $EM_Booking->get_event();
@@ -412,8 +412,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		/**
 		 * Has Paid
 		 * Checks if the user has paid for booking
-		 * @since 1.3
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function has_paid( $EM_Booking ) {
 			if ( $this->core->has_entry(
@@ -433,8 +433,8 @@ if ( ! class_exists( 'EM_Gateway_boniPS' ) ) {
 		
 		/**
 		 * Getway Settings
-		 * @since 1.3
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function mysettings() {
 			global $page, $action;
@@ -578,8 +578,8 @@ jQuery(function($){
 		
 		/**
 		 * Update Getway Settings
-		 * @since 1.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function update() {
 			parent::update();

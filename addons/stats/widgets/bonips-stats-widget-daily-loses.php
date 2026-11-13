@@ -3,7 +3,7 @@ if ( ! defined( 'boniPS_STATS_VERSION' ) ) exit;
 
 /**
  * Stats Widget: 
- * @version 1.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Loses' ) ) :
 	class boniPS_Stats_Widget_Daily_Loses extends boniPS_Statistics_Widget {
@@ -21,7 +21,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Loses' ) ) :
 
 		/**
 		 * Get Data
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function get_data() {
 
@@ -43,7 +43,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Loses' ) ) :
 
 		/**
 		 * Get Spending
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function get_spending() {
 
@@ -111,7 +111,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Daily_Loses' ) ) :
 
 		/**
 		 * Display
-		 * @version 1.0.1
+		 * @version 1.0.0
 		 */
 		function widget() {
 

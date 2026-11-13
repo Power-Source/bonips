@@ -3,8 +3,8 @@ if ( ! defined( 'BONIPS_MARKET_VERSION' ) ) exit;
 
 /**
  * MarketPress Gateway
- * @since 1.0
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_marketpress_load_gateway' ) ) :
 	function bonips_marketpress_load_gateway() {
@@ -21,8 +21,8 @@ endif;
 /**
  * Filter the boniPS Log
  * Parses the %order_id% and %order_link% template tags.
- * @since 1.0
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_marketpress_parse_log' ) ) :
 	function bonips_marketpress_parse_log( $content, $log_entry ) {
@@ -64,8 +64,8 @@ endif;
 
 /**
  * Parse Email Notice
- * @since 1.0
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_marketpress_parse_email' ) ) :
 	function bonips_marketpress_parse_email( $email ) {

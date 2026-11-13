@@ -1,8 +1,8 @@
 /**
  * boniPS Hook Management
  * Clone of the WordPress Widget management script with the ajax actions changed.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 /*global ajaxurl, isRtl */
 var wpWidgets;

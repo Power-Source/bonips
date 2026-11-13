@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Addons_Module class
- * @since 0.1
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 	class boniPS_Addons_Module extends boniPS_Module {
@@ -35,8 +35,8 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 		/**
 		 * Admin Init
 		 * Catch activation and deactivations
-		 * @since 0.1
-		 * @version 1.2.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -90,8 +90,8 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 		/**
 		 * Run Addons
 		 * Catches all add-on activations and deactivations and loads addons
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run_addons() {
 
@@ -136,8 +136,8 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 
 		/**
 		 * Is Activation
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_activation( $key ) {
 
@@ -150,8 +150,8 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 
 		/**
 		 * Is Deactivation
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_deactivation( $key ) {
 
@@ -164,8 +164,8 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 
 		/**
 		 * Get Addons
-		 * @since 0.1
-		 * @version 1.7.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get( $save = false ) {
 
@@ -176,7 +176,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Abzeichen',
 				'description' => __( 'Verleihe Deinen Benutzern Abzeichen basierend auf ihrer Interaktion mit Deiner Webseite.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-abzeichen/',
-				'version'     => '1.4',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/badges-addon.png', boniPS_THIS ),
@@ -188,7 +188,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Banking',
 				'description' => __( 'Richte wiederkehrende Auszahlungen oder Angebots-/Gebührenzinsen für Benutzerkontoguthaben ein.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-banking/',
-				'version'     => '2.0',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/banking-addon.png', boniPS_THIS ),
@@ -200,7 +200,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Kreditkauf',
 				'description' => __( 'Mit der <strong>Kreditkauf</strong> Erweiterung können Deine Benutzer Punkte mit PayPal, Skrill (Moneybookers) oder NETbilling kaufen. Mit <strong>Kreditkauf</strong> können Deine Benutzer auch Punkte für andere Mitglieder kaufen.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterung-kreditkauf/',
-				'version'     => '1.5',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/buy-creds-addon.png', boniPS_THIS ),
@@ -212,7 +212,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Gutscheine',
 				'description' => __( 'Mit der Gutschein-Erweiterung kannst Du Gutscheine erstellen, mit denen Benutzer ihren Konten Punkte hinzufügen können.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-gutscheine/',
-				'version'     => '1.4',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/coupons-addon.png', boniPS_THIS ),
@@ -224,7 +224,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'E-Mail Benachrichtigungen',
 				'description' => __( 'Erstelle E-Mail-Benachrichtigungen für jede Art von boniPS-Instanz.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-e-mail-benachrichtigungen/',
-				'version'     => '1.4',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/email-notifications-addon.png', boniPS_THIS ),
@@ -236,7 +236,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Gateway',
 				'description' => __( 'Lasse Deine Benutzer mit ihrem <strong>BoniPress</strong> Punkteguthaben bezahlen. Unterstützte Einkaufswagen: WooCommerce, PSeCommerce und WP E-Commerce. Unterstützte Eventbuchungen: Event Espresso und Events Manager (kostenlos&pro).', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-gateway/',
-				'version'     => '1.4',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/gateway-addon.png', boniPS_THIS ),
@@ -248,7 +248,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Benachrichtigungen',
 				'description' => __( 'Erstelle Popup-Benachrichtigungen, wenn Benutzer Punkte gewinnen oder verlieren.', 'bonips' ),
 				'addon_url'   => 'http://codex.bonips.me/chapter-iii/notifications/',
-				'version'     => '1.1.2',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				//'pro_url'     => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-benachrichtigungen/',
@@ -261,7 +261,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Ränge',
 				'description' => __( 'Erstelle Ränge für Benutzer, die eine bestimmte Anzahl von %_plural% erreichen, mit der Option, Logos für jeden Rang hinzuzufügen.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-raenge/',
-				'version'     => '1.6',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/ranks-addon.png', boniPS_THIS ),
@@ -273,7 +273,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Inhalt verkaufen',
 				'description' => __( 'Mit dieser Erweiterung kannst Du Beiträge, Seiten oder andere öffentliche Beitragstypen auf Deiner Webseite verkaufen. Du kannst entweder den gesamten Inhalt verkaufen oder mit unserem Shortcode Teile Deines Inhalts verkaufen, um "Teaser" anzubieten.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-inhalt-verkaufen/',
-				'version'     => '2.0.1',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/sell-content-addon.png', boniPS_THIS ),
@@ -285,7 +285,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Statistiken',
 				'description' => __( 'Ermöglicht Dir den Zugriff auf Deine BoniPress-Statistiken basierend auf den Gewinnen und Verlusten Deiner Benutzer.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-stastiken/',
-				'version'     => '2.0',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'assets/images/statistics-addon.png', boniPS_THIS )
@@ -296,7 +296,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'MarketPress',
 				'description' => __( 'Ermögliche Zahlungen mit BoniPress-Punkten in MarketPress und belohne Einkäufe mit Punkten.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/psource/ps-marketpress/',
-				'version'     => '1.0',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				'screenshot'  => plugins_url( 'addons/marketpress/assets/images/marketpress-addon.svg', boniPS_THIS ),
@@ -308,7 +308,7 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 				'name'        => 'Transaktionen',
 				'description' => __( 'Ermögliche Deinen Benutzern, Punkte an andere Mitglieder zu senden oder zu "spenden", indem Du entweder den Shortcode bonips_transfer oder das Widget BoniPress Transfer verwendest.', 'bonips' ),
 				'addon_url'   => 'https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-transaktionen/',
-				'version'     => '1.6',
+				'version'     => '1.0.0',
 				'author'      => 'DerN3rd',
 				'author_url'  => 'https://n3rds.work',
 				//'pro_url'     => 'https://bonips.me/store/transfer-plus/',
@@ -333,8 +333,8 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 
 		/**
 		 * Admin Page
-		 * @since 0.1
-		 * @version 1.2.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page() {
 
@@ -434,8 +434,8 @@ if ( ! class_exists( 'boniPS_Addons_Module' ) ) :
 
 		/**
 		 * Activate / Deactivate Button
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function activate_deactivate( $addon_id = NULL ) {
 
@@ -459,8 +459,8 @@ endif;
 
 /**
  * Get Activate Add-on Link
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'get_bonips_addon_activation_url' ) ) :
 	function get_bonips_addon_activation_url( $addon_id = NULL, $deactivate = false ) {
@@ -481,8 +481,8 @@ endif;
 
 /**
  * Get Deactivate Add-on Link
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'get_bonips_addon_deactivation_url' ) ) :
 	function get_bonips_addon_deactivation_url( $addon_id = NULL ) {

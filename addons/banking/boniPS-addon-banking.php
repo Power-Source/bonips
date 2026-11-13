@@ -3,7 +3,7 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Addon: Banking
- * Version: 2.0
+ * Version: 1.0.0
  */
 define( 'boniPS_BANK',              __FILE__ );
 define( 'boniPS_BANK_DIR',          boniPS_ADDONS_DIR . 'banking/' );
@@ -21,8 +21,8 @@ require_once boniPS_BANK_SERVICES_DIR . 'bonips-service-payouts.php';
 
 /**
  * boniPS_Banking_Module class
- * @since 0.1
- * @version 2.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 	class boniPS_Banking_Module extends boniPS_Module {
@@ -54,8 +54,8 @@ if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 
 		/**
 		 * Load Services
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -77,8 +77,8 @@ if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 
 		/**
 		 * Module Admin Init
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -90,8 +90,8 @@ if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 		/**
 		 * Call
 		 * Either runs a given class method or function.
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function call( $call, $callback, $return = NULL ) {
 
@@ -130,8 +130,8 @@ if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 
 		/**
 		 * Get Bank Services
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get( $save = false ) {
 
@@ -180,8 +180,8 @@ if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 
 		/**
 		 * Page Header
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_header() {
 
@@ -233,8 +233,8 @@ if ( ! class_exists( 'boniPS_Banking_Module' ) ) :
 
 		/**
 		 * Admin Page
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page() {
 
@@ -307,8 +307,8 @@ body .ui-dialog.ui.widget { height: auto !important; }
 
 		/**
 		 * Sanititze Settings
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_settings( $post ) {
 
@@ -363,8 +363,8 @@ body .ui-dialog.ui.widget { height: auto !important; }
 
 		/**
 		 * User Screen
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function banking_user_screen( $user ) {
 
@@ -384,8 +384,8 @@ body .ui-dialog.ui.widget { height: auto !important; }
 
 		/**
 		 * Ajax Handler
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_handler() {
 
@@ -414,8 +414,8 @@ endif;
 
 /**
  * Load Banking Module
- * @since 1.2
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_banking_addon' ) ) :
 	function bonips_load_banking_addon( $modules, $point_types ) {

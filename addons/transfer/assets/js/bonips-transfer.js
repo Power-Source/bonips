@@ -5,8 +5,8 @@
  * @requires jQuery
  * @requires jQuery UI
  * @requires jQuery Autocomplete
- * @since 0.1
- * @version 1.5.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 (function($) {
 
@@ -56,7 +56,7 @@
 	});
 
 	// Transfer form submissions
-	// @since 1.6.3
+	// @since 1.0.0
 	$( 'html body' ).on( 'submit', 'form.bonips-transfer-form', function(e){
 
 		console.log( 'new transfer' );

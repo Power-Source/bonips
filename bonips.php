@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: BoniPress
- * Plugin URI: https://bonips.me
+ * Plugin URI: 
  * Description: Ein adaptives Punkteverwaltungssystem für WordPress-basierte Webseiten, Basiscode von myCred.
- * Version: 1.8.8
+ * Version: 1.0.0
  * Tags: point, credit, loyalty program, engagement, reward, woocommerce rewards
  * Author: DerN3rd
  * Author URI: https://n3rds.work
@@ -19,7 +19,7 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 	final class boniPS_Core {
 
 		// Plugin Version
-		public $version             = '1.8.8';
+		public $version             = '1.0.0';
 
 		// Instnace
 		protected static $_instance = NULL;
@@ -38,8 +38,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Setup Instance
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function instance() {
 			if ( is_null( self::$_instance ) ) {
@@ -50,22 +50,22 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Not allowed
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
-		public function __clone() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.7' ); }
+		public function __clone() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.0.0' ); }
 
 		/**
 		 * Not allowed
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
-		public function __wakeup() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.7' ); }
+		public function __wakeup() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.0.0' ); }
 
 		/**
 		 * Get
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function __get( $key ) {
 			if ( in_array( $key, array( 'point_types', 'modules', 'account' ) ) )
@@ -74,32 +74,32 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Define
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function define( $name, $value, $definable = true ) {
 			if ( ! defined( $name ) )
 				define( $name, $value );
 			elseif ( ! $definable && defined( $name ) )
-				_doing_it_wrong( 'boniPS_Core->define()', 'Konnte nicht definieren: ' . $name . ' wie es schon woanders definiert ist!', '1.7' );
+				_doing_it_wrong( 'boniPS_Core->define()', 'Konnte nicht definieren: ' . $name . ' wie es schon woanders definiert ist!', '1.0.0' );
 		}
 
 		/**
 		 * Require File
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function file( $required_file ) {
 			if ( file_exists( $required_file ) )
 				require_once $required_file;
 			else
-				_doing_it_wrong( 'boniPS_Core->file()', 'Angeforderte Datei ' . $required_file . ' nicht gefunden.', '1.7' );
+				_doing_it_wrong( 'boniPS_Core->file()', 'Angeforderte Datei ' . $required_file . ' nicht gefunden.', '1.0.0' );
 		}
 
 		/**
 		 * Construct
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function __construct() {
 
@@ -149,8 +149,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * Define Constants
 		 * First, we start with defining all requires constants if they are not defined already.
-		 * @since 1.7
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function define_constants() {
 
@@ -193,8 +193,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Include Plugin Files
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function includes() {
 
@@ -243,8 +243,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Internal Setup
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function include_hooks() {
 
@@ -286,8 +286,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Internal Setup
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function internal() {
 
@@ -304,8 +304,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * Pre Init Globals
 		 * Globals that does not reply on external sources and can be loaded before init.
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function pre_init_globals() {
 
@@ -323,8 +323,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * WordPress
 		 * Next we hook into WordPress
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function wordpress() {
 
@@ -343,8 +343,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * After Plugins Loaded
 		 * Used to setup modules that are not replacable.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_plugin() {
 
@@ -357,8 +357,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * After Themes Loaded
 		 * Used to load internal features via modules.
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_theme() {
 
@@ -450,8 +450,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Load Shortcodes
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load_shortcodes() {
 
@@ -497,8 +497,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * Init
 		 * General plugin setup during the init hook.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function init() {
 
@@ -532,8 +532,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * Post Init Globals
 		 * Globals that needs to be defined after init. Mainly used for user related globals.
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function post_init_globals() {
 
@@ -549,8 +549,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Load Plugin Textdomain
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load_plugin_textdomain() {
 
@@ -564,8 +564,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Register Assets
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_assets() {
 
@@ -594,8 +594,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Setup Cron Jobs
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function setup_cron_jobs() {
 
@@ -614,15 +614,15 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Register Importers
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function register_importers() {
 
 			/**
 			 * Register Importer: Log Entries
-			 * @since 1.4
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			register_importer(
 				BONIPS_SLUG . '-import-log',
@@ -633,8 +633,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 			/**
 			 * Register Importer: Balances
-			 * @since 1.4.2
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			register_importer(
 				BONIPS_SLUG . '-import-balance',
@@ -645,8 +645,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 			/**
 			 * Register Importer: CubePoints
-			 * @since 1.4
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			register_importer(
 				BONIPS_SLUG . '-import-cp',
@@ -660,8 +660,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * Front Enqueue Before
 		 * Enqueues scripts and styles that must run before content is loaded.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_front_before() {
 
@@ -677,8 +677,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 		/**
 		 * Front Enqueue After
 		 * Enqueuest that must run after content has loaded.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_front_after() {
 
@@ -713,8 +713,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Admin Enqueue
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_admin_before() {
 
@@ -728,8 +728,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Widgets Init
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function widgets_init() {
 
@@ -756,8 +756,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Admin Init
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_init() {
 
@@ -789,8 +789,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Load Importer: Log Entries
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function import_log_entries() {
 
@@ -808,8 +808,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Load Importer: Point Balances
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function import_balances() {
 
@@ -827,8 +827,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Load Importer: CubePoints
-		 * @since 1.4
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function import_cubepoints() {
 
@@ -846,8 +846,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Admin Menu
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_admin_menu() {
 
@@ -900,8 +900,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Toolbar
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_toolbar( $wp_admin_bar ) {
 
@@ -999,8 +999,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Cron: Reset Encryption Key
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cron_reset_key() {
 
@@ -1012,8 +1012,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Cron: Delete Leaderboard Cache
-		 * @since 1.7.9.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cron_delete_leaderboard_cache() {
 
@@ -1033,8 +1033,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * FIX: Add admin page style
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function fix_admin_page_styles() {
 
@@ -1044,8 +1044,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Plugin Links
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function plugin_links( $actions, $plugin_file, $plugin_data, $context ) {
 
@@ -1062,8 +1062,8 @@ if ( ! class_exists( 'boniPS_Core' ) ) :
 
 		/**
 		 * Plugin Description Links
-		 * @since 1.7
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function plugin_description_links( $links, $file ) {
 

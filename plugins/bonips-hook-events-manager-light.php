@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.1
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_events_manager_light_hook', 55 );
 function bonips_register_events_manager_light_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_events_manager_light_hook( $installed ) {
 
 /**
  * Events Manager Hook
- * @since 1.1
- * @version 1.3.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_events_manager_light_hook', 55 );
 function bonips_load_events_manager_light_hook() {
@@ -59,8 +59,8 @@ function bonips_load_events_manager_light_hook() {
 
 		/**
 		 * Run
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -77,8 +77,8 @@ function bonips_load_events_manager_light_hook() {
 		/**
 		 * New Booking
 		 * When users can make their own bookings.
-		 * @since 1.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_booking( $result, $booking ) {
 
@@ -108,8 +108,8 @@ function bonips_load_events_manager_light_hook() {
 
 		/**
 		 * New Multiple Bookings
-		 * @since 1.5.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function multiple_bookings( $bookings ) {
 
@@ -138,8 +138,8 @@ function bonips_load_events_manager_light_hook() {
 		 * Adjust Booking
 		 * Incase an administrator needs to approve bookings first or if booking gets
 		 * cancelled.
-		 * @since 1.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_booking( $result, $booking ) {
 
@@ -189,8 +189,8 @@ function bonips_load_events_manager_light_hook() {
 
 		/**
 		 * Preferences for Events Manager
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -245,8 +245,8 @@ function bonips_load_events_manager_light_hook() {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

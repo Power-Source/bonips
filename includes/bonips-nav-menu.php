@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * BoniPress Menu
  * Menu Items in Wordpress menu
- * @since 1.9
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 
 if ( ! class_exists( 'boniPS_Nav_Menu' ) ) :
@@ -16,8 +16,8 @@ if ( ! class_exists( 'boniPS_Nav_Menu' ) ) :
 
 		/**
 		 * Setup Instance
-		 * @since 1.9
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function instance() {
 			if ( is_null( self::$_instance ) ) {

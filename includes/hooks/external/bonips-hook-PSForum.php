@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_psforum_hook', 20 );
 function bonips_register_psforum_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_psforum_hook( $installed ) {
 
 /**
  * PSForum Hook
- * @since 0.1
- * @version 1.4.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_psforum_hook', 20 );
 function bonips_load_psforum_hook() {
@@ -88,8 +88,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -132,8 +132,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Exclude PSForum Post Types
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exclude_post_type( $excludes ) {
 
@@ -147,8 +147,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Insert Balance in PSForum Profiles
-		 * @since 1.1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_balance_profile() {
 
@@ -165,8 +165,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Insert Balance
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_balance_reply() {
 
@@ -190,8 +190,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * New Forum
-		 * @since 1.1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_forum( $forum ) {
 
@@ -225,8 +225,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Delete Forum
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_forum( $forum_id ) {
 
@@ -253,8 +253,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * New Topic
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_topic( $topic_id, $forum_id, $anonymous_data, $topic_author ) {
 
@@ -287,8 +287,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Delete Topic
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_topic( $topic_id ) {
 
@@ -316,8 +316,8 @@ function bonips_load_psforum_hook() {
 		/**
 		 * Topic Added to Favorites
 		 * @by Fee (http://wordpress.org/support/profile/wdfee)
-		 * @since 1.1.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function fav_topic( $user_id, $topic_id ) {
 
@@ -349,8 +349,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * New Reply
-		 * @since 0.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_reply( $reply_id, $topic_id, $forum_id, $anonymous_data, $reply_author ) {
 
@@ -381,8 +381,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Delete Reply
-		 * @since 1.2
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_reply( $reply_id ) {
 
@@ -409,8 +409,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -617,8 +617,8 @@ function bonips_load_psforum_hook() {
 
 		/**
 		 * Sanitise Preference
-		 * @since 1.1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

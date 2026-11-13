@@ -1,7 +1,7 @@
 /**
  * boniPS Sell Content
- * @since 1.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 jQuery(function($) {
 	var bonips_buy_content = function( button, label ) {

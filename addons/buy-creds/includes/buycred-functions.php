@@ -3,8 +3,8 @@ if ( ! defined( 'BONIPS_PURCHASE' ) ) exit;
 
 /**
  * Get buyCRED Setup
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_buycred_settings' ) ) :
 	function bonips_get_buycred_settings() {
@@ -42,8 +42,8 @@ endif;
 
 /**
  * Get Gateways
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_buycred_gateways' ) ) :
 	function bonips_get_buycred_gateways() {
@@ -112,8 +112,8 @@ endif;
 
 /**
  * Get buyCRED Setup
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_requested_gateway_id' ) ) :
 	function bonips_get_requested_gateway_id() {
@@ -133,8 +133,8 @@ endif;
 
 /**
  * Get buyCRED Setup
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_buycred_sale_setup' ) ) :
 	function bonips_get_buycred_sale_setup( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -155,8 +155,8 @@ endif;
 
 /**
  * Get Gateway References
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_buycred_gateway_refs' ) ) :
 	function bonips_get_buycred_gateway_refs( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -176,8 +176,8 @@ endif;
 
 /**
  * Purchase Limit Dropdown
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_purchase_limit_dropdown' ) ) :
 	function bonips_purchase_limit_dropdown( $name = '', $id = '', $selected = '' ) {
@@ -207,8 +207,8 @@ endif;
  * Returns false if the user is excluded or when using this function with invalid values.
  * Else returns true if the user can buy as much as they wish else a point value if a max limit is enforced.
  * Note that this can result in a zero value being returned, if the user has reached their purchase limit but are not excluded.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_user_can_buycred' ) ) :
 	function bonips_user_can_buycred( $user_id = 0, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -256,8 +256,8 @@ endif;
  * Is Gateway Usable
  * Checks if a gateway (based on it's ID) is "usable" as in it is installed and active.
  * Note that this will not take into account if sandbox mode is used or not.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_buycred_gateway_is_usable' ) ) :
 	function bonips_buycred_gateway_is_usable( $gateway_id ) {
@@ -275,8 +275,8 @@ endif;
 
 /**
  * Get Users Total Purchase
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_total_purchase' ) ) :
 	function bonips_get_users_total_purchase( $user_id = false, $point_type = BONIPS_DEFAULT_TYPE_KEY, $timeframe = 'all' ) {
@@ -354,8 +354,8 @@ endif;
 
 /**
  * Get Pending Payment
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_get_pending_payment_id' ) ) :
 	function buycred_get_pending_payment_id( $payment_id = NULL ) {
@@ -383,8 +383,8 @@ endif;
 
 /**
  * Get Pending Payment
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_get_pending_payment' ) ) :
 	function buycred_get_pending_payment( $payment_id = NULL ) {
@@ -444,8 +444,8 @@ endif;
 
 /**
  * Add Pending Comment
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_add_pending_comment' ) ) :
 	function buycred_add_pending_comment( $payment_id = NULL, $comment = NULL, $time = NULL ) {
@@ -486,8 +486,8 @@ endif;
 
 /**
  * Get Cancel URL
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_get_cancel_transaction_url' ) ) :
 	function buycred_get_cancel_transaction_url( $transaction_id = NULL ) {
@@ -526,8 +526,8 @@ endif;
 
 /**
  * Get Users Pending Payments
- * @since 1.7
- * @version 1.0.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_get_users_pending_payments' ) ) :
 	function buycred_get_users_pending_payments( $user_id = NULL, $point_type = '' ) {
@@ -589,8 +589,8 @@ endif;
 
 /**
  * buyCRED Gateway Constructor
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_gateway' ) ) :
 	function buycred_gateway( $gateway_id = NULL ) {
@@ -622,8 +622,8 @@ endif;
 
 /**
  * Delete Pending Payment
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_trash_pending_payment' ) ) :
 	function buycred_trash_pending_payment( $payment_id = NULL ) {
@@ -640,8 +640,8 @@ endif;
 
 /**
  * Complete Pending Payment
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_complete_pending_payment' ) ) :
 	function buycred_complete_pending_payment( $pending_id ) {
@@ -665,8 +665,8 @@ endif;
 
 /**
  * Checkout Title
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_checkout_title' ) ) :
 	function buycred_checkout_title() {
@@ -681,8 +681,8 @@ endif;
 
 /**
  * Checkout Body
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_checkout_body' ) ) :
 	function buycred_checkout_body() {
@@ -697,8 +697,8 @@ endif;
 
 /**
  * Checkout Logo
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_checkout_logo' ) ) :
 	function buycred_checkout_logo() {
@@ -713,8 +713,8 @@ endif;
 
 /**
  * Checkout Order
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_checkout_order' ) ) :
 	function buycred_checkout_order() {
@@ -729,8 +729,8 @@ endif;
 
 /**
  * Checkout Cancel
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_checkout_cancel' ) ) :
 	function buycred_checkout_cancel() {
@@ -745,8 +745,8 @@ endif;
 
 /**
  * Checkout Footer
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'buycred_checkout_footer' ) ) :
 	function buycred_checkout_footer() {

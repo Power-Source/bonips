@@ -3,8 +3,8 @@ if ( ! defined( 'BONIPS_MARKET_VERSION' ) ) exit;
 
 /**
  * MarketPress Gateway
- * @since 1.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gateway_API' ) ) :
 	class MP_Gateway_boniPS_MarketPress extends MP_Gateway_API {
@@ -21,8 +21,8 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 
 		/**
 		 * Custom Constructor
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function on_creation() {
 
@@ -39,8 +39,8 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 		/**
 		 * Use Exchange
 		 * Checks to see if exchange is needed.
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function use_exchange() {
 
@@ -51,8 +51,8 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 		/**
 		 * Get Points Cost
 		 * Returns the carts total cost in points.
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function get_point_cost( $cart_total ) {
 
@@ -69,8 +69,8 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 		/**
 		 * Payment Form
 		 * Used to show a user how much their order would cost in points, assuming the can use the selected point type.
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function payment_form( $cart, $shipping_info ) {
 
@@ -133,8 +133,8 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 		 * Process Payment
 		 * Will check a buyers eligibility to use this gateway, their account solvency and charge the payment
 		 * if the user can afford it.
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function process_payment( $cart, $billing_info, $shipping_info ) {
 
@@ -226,8 +226,8 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 		/**
 		 * Process Profit Sharing
 		 * If used.
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function process_profit_sharing( $cart = NULL, $order_id = 0 ) {
 
@@ -325,15 +325,15 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 		/**
 		 * Order Confirmation
 		 * Not used
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function order_confirmation( $order ) { }
 
 		/**
 		 * Email Confirmation Message
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function order_confirmation_email( $msg, $order ) {
 
@@ -347,8 +347,8 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 
 		/**
 		 * Setup Gateway Settings
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function init_settings_metabox() {
 
@@ -440,8 +440,8 @@ if ( ! class_exists( 'MP_Gateway_boniPS_MarketPress' ) && class_exists( 'MP_Gate
 		/**
 		 * IPN Return
 		 * not used
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function process_ipn_return() { }
 

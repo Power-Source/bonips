@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_contact_form_seven_hook', 50 );
 function bonips_register_contact_form_seven_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_contact_form_seven_hook( $installed ) {
 
 /**
  * Contact Form 7 Hook
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_contact_form_seven_hook', 50 );
 function bonips_load_contact_form_seven_hook() {
@@ -49,8 +49,8 @@ function bonips_load_contact_form_seven_hook() {
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -61,8 +61,8 @@ function bonips_load_contact_form_seven_hook() {
 		/**
 		 * Get Forms
 		 * Queries all Contact Form 7 forms.
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_forms() {
 
@@ -87,8 +87,8 @@ function bonips_load_contact_form_seven_hook() {
 
 		/**
 		 * Successful Form Submission
-		 * @since 0.1
-		 * @version 1.4.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function form_submission( $form_object ) {
 
@@ -120,8 +120,8 @@ function bonips_load_contact_form_seven_hook() {
 
 		/**
 		 * Preferences for Contact Form 7 Hook
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -191,8 +191,8 @@ function bonips_load_contact_form_seven_hook() {
 		
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

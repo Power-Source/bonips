@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_buddypress_hook', 40 );
 function bonips_register_buddypress_hook( $installed ) {
@@ -36,8 +36,8 @@ function bonips_register_buddypress_hook( $installed ) {
 /**
  * boniPS_BuddyPress_Profile class
  * Creds for profile updates
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_buddypress_profile_hook', 40 );
 function bonips_load_buddypress_profile_hook() {
@@ -121,8 +121,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -171,8 +171,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * New Profile Update
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_update( $content, $user_id, $activity_id ) {
 
@@ -200,8 +200,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Removing Profile Update
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function remove_update( $args ) {
 
@@ -230,8 +230,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Avatar Upload
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function avatar_upload() {
 
@@ -258,8 +258,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Cover Upload
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cover_change( $user_id = NULL ) {
 
@@ -286,8 +286,8 @@ function bonips_load_buddypress_profile_hook() {
 		 * AJAX: Add/Remove Friend
 		 * Intercept addremovefriend ajax call and block
 		 * action if the user can not afford new friendship.
-		 * @since 1.5.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_addremove_friend() {
 
@@ -317,8 +317,8 @@ function bonips_load_buddypress_profile_hook() {
 		 * Disable Friendship
 		 * If we deduct points from a user for new friendships
 		 * we disable the friendship button if the user ca not afford it.
-		 * @since 1.5.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function disable_friendship( $button ) {
 
@@ -348,8 +348,8 @@ function bonips_load_buddypress_profile_hook() {
 		 * Count Pending Friendship Requests
 		 * Counts the given users pending friendship requests sent to
 		 * other users.
-		 * @since 1.5.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function count_pending_requests( $user_id ) {
 
@@ -365,8 +365,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * New Friendship
-		 * @since 0.1
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function friendship_join( $friendship_id, $initiator_user_id, $friend_user_id ) {
 
@@ -398,8 +398,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Ending Friendship
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function friendship_leave( $friendship_id, $initiator_user_id, $friend_user_id ) {
 
@@ -429,8 +429,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * New Comment
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_comment( $comment_id, $params ) {
 
@@ -460,8 +460,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Comment Deletion
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_comment( $activity_id, $user_id ) {
 
@@ -486,8 +486,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Add to Favorites
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_to_favorites( $activity_id, $user_id ) {
 
@@ -513,8 +513,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Remove from Favorites
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function removed_from_favorites( $activity_id, $user_id ) {
 
@@ -539,8 +539,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * New Message
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function messages( $message ) {
 
@@ -568,8 +568,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Send Gift
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function send_gifts( $to_user_id, $from_user_id ) {
 
@@ -595,8 +595,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -895,8 +895,8 @@ function bonips_load_buddypress_profile_hook() {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 
@@ -976,8 +976,8 @@ function bonips_load_buddypress_profile_hook() {
 /**
  * boniPS_BuddyPress_Groups class
  * Creds for groups actions such as joining / leaving, creating / deleting, new topics / edit topics or new posts / edit posts
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_buddypress_groups_hook', 45 );
 function bonips_load_buddypress_groups_hook() {
@@ -1055,8 +1055,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -1103,8 +1103,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Creating Group
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function create_group( $group_id ) {
 
@@ -1129,8 +1129,8 @@ function bonips_load_buddypress_groups_hook() {
 		/**
 		 * Restrict Group Creation
 		 * If creating a group costs and the user does not have enough points, we restrict creations.
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function restrict_group_creation( $can_create, $restricted ) {
 
@@ -1151,8 +1151,8 @@ function bonips_load_buddypress_groups_hook() {
 		/**
 		 * Restrict Group Join
 		 * If joining a group costs and the user does not have enough points, we restrict joining of groups.
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function restrict_joining_group( $button ) {
 
@@ -1172,8 +1172,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Deleting Group
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_group( $group_id ) {
 
@@ -1209,8 +1209,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * New Group Forum Topic
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_topic( $topic_id ) {
 
@@ -1240,8 +1240,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Edit Group Forum Topic
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function edit_topic( $topic_id ) {
 
@@ -1268,8 +1268,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * New Group Forum Post
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_post( $post_id ) {
 
@@ -1299,8 +1299,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Edit Group Forum Post
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function edit_post( $post_id ) {
 
@@ -1327,8 +1327,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Joining Group
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function join_group( $group_id, $user_id ) {
 
@@ -1377,8 +1377,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Leaving Group
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function leave_group( $group_id, $user_id ) {
 
@@ -1403,8 +1403,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Avatar Upload for Group
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function avatar_upload_group( $group_id ) {
 
@@ -1434,8 +1434,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Group Cover Upload
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cover_change( $group_id ) {
 
@@ -1462,8 +1462,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * New Group Comment
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_group_comment( $content, $user_id, $group_id, $activity_id ) {
 
@@ -1491,8 +1491,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -1759,8 +1759,8 @@ function bonips_load_buddypress_groups_hook() {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

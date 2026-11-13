@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Admin class
  * Manages everything concerning the WordPress admin area.
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Admin' ) ) {
 	class boniPS_Admin {
@@ -15,8 +15,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Construct
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function __construct( $settings = array() ) {
 			$this->core = bonips();
@@ -24,8 +24,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Load
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 			// Admin Styling
@@ -64,8 +64,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Profile Actions
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function edit_profile_actions() {
 
@@ -180,8 +180,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Admin Notices
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_notices() {
 
@@ -212,8 +212,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Ajax: Inline Edit Users Balance
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function inline_edit_user_balance() {
 			// Security
@@ -267,8 +267,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Admin Header
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_header() {
 			global $wp_version;
@@ -298,8 +298,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Customize Users Column Headers
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function custom_user_column( $columns ) {
 			global $bonips_types;
@@ -318,8 +318,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Sortable User Column
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sortable_points_column( $columns ) {
 			$bonips_types = bonips_get_types();
@@ -336,8 +336,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Sort by Points
-		 * @since 1.2
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sort_by_points( $query ) {
 			if ( ! is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) || ! function_exists( 'get_current_screen' ) ) return;
@@ -390,8 +390,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 		/**
 		 * Customize User Columns Content
 		 * @filter 'bonips_user_row_actions'
-		 * @since 0.1
-		 * @version 1.3.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function custom_user_column_content( $value, $column_name, $user_id ) {
 			global $bonips_types;
@@ -430,8 +430,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * User Row Actions
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function row_actions( $actions, $always_visible = false ) {
 			$action_count = count( $actions );
@@ -453,8 +453,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * Add Admin Page
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function edit_profile_menu( $pages = array() ) {
 			$pages[] = add_users_page(
@@ -469,8 +469,8 @@ if ( ! class_exists( 'boniPS_Admin' ) ) {
 
 		/**
 		 * User Nav
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_nav( $user, $current = NULL ) {
 			$types = bonips_get_types();
@@ -527,8 +527,8 @@ ul#profile-nav li a:hover, ul#profile-nav li.nav-tab-active a {text-decoration: 
 
 		/**
 		 * BuddyPress User Nav
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bp_user_nav( $active, $user ) {
 			$types = bonips_get_types();
@@ -553,8 +553,8 @@ ul#profile-nav li a:hover, ul#profile-nav li.nav-tab-active a {text-decoration: 
 
 		/**
 		 * Edit Profile Screen
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function edit_profile_screen() {
 			if ( ! isset( $_GET['user_id'] ) ) return;
@@ -649,8 +649,8 @@ jQuery(function($) {
 
 		/**
 		 * Get Users Total Accumulated
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_total_accumulated( $user_id, $type ) {
 			global $wpdb;
@@ -665,8 +665,8 @@ jQuery(function($) {
 
 		/**
 		 * Get Users Total Spending
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_total_spent( $user_id, $type ) {
 			global $wpdb;
@@ -681,8 +681,8 @@ jQuery(function($) {
 
 		/**
 		 * Insert Ballance into Profile
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function show_my_balance( $user ) {
 			$user_id = $user->ID;
@@ -705,8 +705,8 @@ jQuery(function($) {
 
 		/**
 		 * Adjust Users Balance
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_users_balance( $user ) {
 			if ( ! isset( $_GET['ctype'] ) )
@@ -746,8 +746,8 @@ jQuery(function($) {
 		/**
 		 * Admin Footer
 		 * Inserts the Inline Edit Form modal.
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_footer() {
 			$screen = get_current_screen();

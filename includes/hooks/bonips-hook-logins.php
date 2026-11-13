@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for loggins
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Logging_In' ) ) :
 	class boniPS_Hook_Logging_In extends boniPS_Hook {
@@ -27,8 +27,8 @@ if ( ! class_exists( 'boniPS_Hook_Logging_In' ) ) :
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -44,8 +44,8 @@ if ( ! class_exists( 'boniPS_Hook_Logging_In' ) ) :
 		/**
 		 * Social Login
 		 * Adds support for Social Connect plugin
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function social_login( $user_login = 0 ) {
 
@@ -76,8 +76,8 @@ if ( ! class_exists( 'boniPS_Hook_Logging_In' ) ) :
 
 		/**
 		 * Login Hook
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function logging_in( $user_login, $user = '' ) {
 
@@ -114,8 +114,8 @@ if ( ! class_exists( 'boniPS_Hook_Logging_In' ) ) :
 
 		/**
 		 * Preference for Login Hook
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -151,8 +151,8 @@ if ( ! class_exists( 'boniPS_Hook_Logging_In' ) ) :
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $data ) {
 

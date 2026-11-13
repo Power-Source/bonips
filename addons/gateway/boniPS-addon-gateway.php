@@ -2,7 +2,7 @@
 /**
  * Addon: Gateway
  * Addon URI: http://codex.bonips.me/chapter-iii/gateway/
- * Version: 1.4
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 

@@ -3,8 +3,8 @@ if ( ! defined( 'BONIPS_PURCHASE' ) ) exit;
 
 /**
  * buyCRED_Pending_Payments class
- * @since 1.7
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 	class buyCRED_Pending_Payments extends boniPS_Module {
@@ -28,7 +28,7 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Load
-		 * @version 1.0.1
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -39,8 +39,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Module Init
-		 * @since 1.7
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -57,8 +57,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Intercept Cancellations
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function intercept_cancellations() {
 
@@ -83,8 +83,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Pending Transitions
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function pending_transitions( $new_status, $old_status, $post ) {
 
@@ -98,8 +98,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Module Admin Init
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -144,8 +144,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Register Pending Payments
-		 * @since 1.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function register_pending_payments() {
 
@@ -185,8 +185,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Adjust Post Updated Messages
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function post_updated_messages( $messages ) {
 
@@ -210,8 +210,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Add Comment
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_comment( $post_id, $event = '', $time = NULL ) {
 
@@ -221,8 +221,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Admin Notices
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_notices() {
 
@@ -240,8 +240,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Add Admin Menu Item
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_to_menu() {
 
@@ -257,8 +257,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Parent File
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parent_file( $parent = '' ) {
 
@@ -273,8 +273,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Sub Parent File
-		 * @since 1.7.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function subparent_file( $subparent = '', $parent = '' ) {
 
@@ -298,8 +298,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Pending Payment Column Headers
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_headers( $columns ) {
 
@@ -319,8 +319,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Pending Payment Column Content
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_content( $column_name, $post_id ) {
 
@@ -382,8 +382,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Adjust Bulk Actions
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bulk_actions( $actions ) {
 
@@ -394,8 +394,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Pending Payment Row Actions
-		 * @since 1.5
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_row_actions( $actions, $post ) {
 
@@ -419,8 +419,8 @@ if ( ! class_exists( 'buyCRED_Pending_Payments' ) ) :
 
 		/**
 		 * Edit Pending Payment Style
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function edit_pending_payment_style() {
 
@@ -451,8 +451,8 @@ jQuery(function($){
 
 		/**
 		 * Pending Payment Style
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function pending_payments_style() {
 
@@ -476,8 +476,8 @@ jQuery(function($){
 
 		/**
 		 * Add Metaboxes
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_metaboxes() {
 
@@ -517,8 +517,8 @@ jQuery(function($){
 
 		/**
 		 * Metabox: Pending Actions
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_pending_actions( $post ) {
 
@@ -563,8 +563,8 @@ jQuery(function($){
 
 		/**
 		 * Metabox: Pending Payment
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_pending_payment( $post ) {
 
@@ -700,8 +700,8 @@ jQuery(function($){
 
 		/**
 		 * Metabox: Pending Payment Comments
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_pending_comments( $post ) {
 
@@ -738,8 +738,8 @@ jQuery(function($){
 
 		/**
 		 * Save Pending Payment
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_pending_payment( $post_id, $post ) {
 
@@ -771,8 +771,8 @@ endif;
 
 /**
  * Load buyCRED Pending Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_buycred_pending_addon' ) ) :
 	function bonips_load_buycred_pending_addon( $modules, $point_types ) {

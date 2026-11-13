@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hooks for Clicking on Links
- * @since 1.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 	class boniPS_Hook_Click_Links extends boniPS_Hook {
@@ -27,8 +27,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -45,8 +45,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 
 		/**
 		 * Customize Limit Options
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function custom_limit() {
 
@@ -60,8 +60,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 
 		/**
 		 * Parse Custom Tags in Log
-		 * @since 1.1
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_custom_tags( $content, $log_entry ) {
 
@@ -78,8 +78,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 
 		/**
 		 * Register Script
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_script() {
 
@@ -99,8 +99,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 
 		/**
 		 * WP Fotter
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_footer() {
 
@@ -126,8 +126,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 
 		/**
 		 * Custom Has Entry Check
-		 * @since 1.1
-		 * @version 1.1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function has_entry( $action = '', $reference = '', $user_id = '', $data = '', $type = '' ) {
 
@@ -152,8 +152,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 
 		/**
 		 * AJAX Call Handler
-		 * @since 1.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_call_link_points() {
 
@@ -232,8 +232,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 		 * Has Clicked
 		 * Checks if a user has received points for a link based on either
 		 * an ID or URL.
-		 * @since 1.3.3.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function has_clicked( $user_id = NULL, $by = '', $check = '' ) {
 
@@ -261,8 +261,8 @@ if ( ! class_exists( 'boniPS_Hook_Click_Links' ) ) :
 
 		/**
 		 * Preference for Link Click Hook
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 

@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Log_Module class
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 	class boniPS_Log_Module extends boniPS_Module {
@@ -35,8 +35,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Init
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -64,8 +64,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Admin Init
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -84,8 +84,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Populate Current Account
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_current_account() {
 
@@ -111,8 +111,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Populate Account
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_account() {
 
@@ -139,8 +139,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 		/**
 		 * Set Columns
 		 * Sets the table columns that are shown in the log.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function set_columns() {
 
@@ -167,8 +167,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 		/**
 		 * Delete Point Type
 		 * Deletes log entries for a particular point type when the point type is deleted.
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_point_type( $point_type = NULL ) {
 
@@ -195,8 +195,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 		/**
 		 * Update User References
 		 * Removes the saved reference count and sum for re-calculation at earliest convinience.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_user_references( $result, $request ) {
 
@@ -214,8 +214,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Delete Log Entry Action
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_delete_log_entry() {
 
@@ -259,8 +259,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Update Log Entry Action
-		 * @since 1.4
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_update_log_entry() {
 
@@ -357,8 +357,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 		 * Add Users Verlauf
 		 * Adds in a dedicated log page where the current user can view their points
 		 * history, if allowed in the wp-admin area.
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function my_history_menu() {
 
@@ -382,8 +382,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Admin Notices
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_notices() {
 
@@ -398,8 +398,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Log Columns
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function log_columns() {
 
@@ -409,8 +409,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Screen Actions
-		 * @since 1.7
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function screen_actions() {
 
@@ -503,8 +503,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Screen Options
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function screen_options() {
 
@@ -522,8 +522,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Log Header
-		 * @since 0.1
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_header() {
 
@@ -572,8 +572,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Page Title
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function page_title( $title = 'Log' ) {
 
@@ -598,8 +598,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Admin Page
-		 * @since 0.1
-		 * @version 1.4.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page() {
 
@@ -708,8 +708,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * My Verlauf Page
-		 * @since 0.1
-		 * @version 1.3.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function my_history_page() {
 
@@ -803,8 +803,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 		 * Handle Post Deletions
 		 * When a post is deleted in WordPress, we need to update all log entries
 		 * that might be using post related template tags so we have something to show.
-		 * @since 1.0.9.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function post_deletions( $post_id ) {
 
@@ -855,8 +855,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Handle User Deletions
-		 * @since 1.0.9.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_deletions( $user_id ) {
 
@@ -907,8 +907,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 
 		/**
 		 * Handle Comment Deletions
-		 * @since 1.0.9.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function comment_deletions( $comment_id ) {
 
@@ -959,8 +959,8 @@ if ( ! class_exists( 'boniPS_Log_Module' ) ) :
 		/**
 		 * Log Editor
 		 * Renders the log editor modal that is controlled by the log-editor js script.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function log_editor() {
 

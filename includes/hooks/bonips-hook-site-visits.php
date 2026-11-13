@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for site visits
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Site_Visits' ) ) :
 	class boniPS_Hook_Site_Visits extends boniPS_Hook {
@@ -26,8 +26,8 @@ if ( ! class_exists( 'boniPS_Hook_Site_Visits' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.5
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -40,8 +40,8 @@ if ( ! class_exists( 'boniPS_Hook_Site_Visits' ) ) :
 
 		/**
 		 * Visit Hook
-		 * @since 1.5
-		 * @version 1.1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function site_visit() {
 
@@ -80,8 +80,8 @@ if ( ! class_exists( 'boniPS_Hook_Site_Visits' ) ) :
 
 		/**
 		 * Preference for Site Visit Hook
-		 * @since 1.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 

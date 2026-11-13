@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Shortcode: bonips_my_badges
  * Allows you to show the current users earned badges.
- * @since 1.5
- * @version 1.2.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_my_badges' ) ) :
 	function bonips_render_my_badges( $atts, $content = '' ) {
@@ -86,8 +86,8 @@ endif;
 /**
  * Shortcode: bonips_badges
  * Allows you to show all published badges
- * @since 1.5
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_badges' ) ) :
 	function bonips_render_badges( $atts, $template = '' ) {

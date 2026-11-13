@@ -4,8 +4,8 @@ if ( ! defined( 'BONIPS_PURCHASE' ) ) exit;
 /**
  * Shortcode: bonips_buy
  * @see http://codex.bonips.me/shortcodes/bonips_buy/
- * @since 1.0
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_buy_points' ) ) :
 	function bonips_render_buy_points( $atts = array(), $button_label = '' ) {
@@ -90,8 +90,8 @@ endif;
 /**
  * Shortcode: bonips_buy_form
  * @see http://codex.bonips.me/shortcodes/bonips_buy_form/
- * @since 1.0
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_buy_form_points' ) ) :
 	function bonips_render_buy_form_points( $atts = array(), $content = '' ) {
@@ -319,8 +319,8 @@ endif;
 /**
  * Shortcode: bonips_buy_pending
  * @see http://codex.bonips.me/shortcodes/bonips_buy_pending/
- * @since 1.5
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_pending_purchases' ) ) :
 	function bonips_render_pending_purchases( $atts = array(), $content = '' ) {

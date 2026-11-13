@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Importer: Log Entries
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 register_importer(
 	'bonips_import_log',
@@ -15,8 +15,8 @@ register_importer(
 
 /**
  * Load Importer: Log Entries
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 function bonips_importer_log_entries() {
 	require_once( ABSPATH . 'wp-admin/includes/import.php' );
@@ -35,8 +35,8 @@ function bonips_importer_log_entries() {
 
 /**
  * Register Importer: Balances
- * @since 1.4.2
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 register_importer(
 	'bonips_import_balance',
@@ -47,8 +47,8 @@ register_importer(
 
 /**
  * Load Importer: Point Balances
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 function bonips_importer_point_balances() {
 	require_once( ABSPATH . 'wp-admin/includes/import.php' );
@@ -67,8 +67,8 @@ function bonips_importer_point_balances() {
 
 /**
  * Register Importer: CubePoints
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 register_importer(
 	'bonips_import_cp',
@@ -79,8 +79,8 @@ register_importer(
 
 /**
  * Load Importer: CubePoints
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 function bonips_importer_cubepoints() {
 	require_once( ABSPATH . 'wp-admin/includes/import.php' );

@@ -1,7 +1,7 @@
 /**
  * boniPS Rank Tweaks
- * @since 1.6
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 (function($) {
 

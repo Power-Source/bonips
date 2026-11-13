@@ -22,8 +22,8 @@ jQuery(function($){
 	/**
 	 * Get Badge Requirements Template
 	 * Creates a template of the top-level badge's set requirements.
-	 * @since 1.7
-	 * @version 1.0
+	 * @since 1.0.0
+	 * @version 1.0.0
 	 */
 	var bonips_get_badge_requirement_template = function( badgelevel ) {
 

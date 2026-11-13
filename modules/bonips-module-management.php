@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * boniPS_Management_Module class
  * This module is responsible for all point management in the WordPress admin areas Users section.
  * Replaces the bonips-admin.php file.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 	class boniPS_Management_Module extends boniPS_Module {
@@ -27,8 +27,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * Module Init
-		 * @since 1.0
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -59,8 +59,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * AJAX: Update Balance
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_editor_balance_update() {
 
@@ -196,8 +196,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * AJAX: Recent Activity
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_get_recent_activity() {
 
@@ -290,8 +290,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * Enqueue Scripts & Styles
-		 * @since 0.1
-		 * @version 1.4.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_header() {
 
@@ -340,8 +340,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * Customize Users Column Headers
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function custom_user_column( $columns ) {
 
@@ -365,8 +365,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * Sortable User Column
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sortable_points_column( $columns ) {
 
@@ -386,8 +386,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * Sort by Points
-		 * @since 1.2
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sort_by_points( $query ) {
 
@@ -438,8 +438,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 		/**
 		 * Customize User Columns Content
 		 * @filter 'bonips_user_row_actions'
-		 * @since 0.1
-		 * @version 1.3.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function custom_user_column_content( $value, $column_name, $user_id ) {
 
@@ -482,8 +482,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * User Row Actions
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function row_actions( $actions, $always_visible = false ) {
 
@@ -507,8 +507,8 @@ if ( ! class_exists( 'boniPS_Management_Module' ) ) :
 
 		/**
 		 * Insert Ballance into Profile
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function show_my_balance( $user ) {
 
@@ -671,8 +671,8 @@ jQuery(function($){
 
 		/**
 		 * Save Balance Changes
-		 * @since 1.7.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_balance_adjustments( $user_id ) {
 
@@ -708,8 +708,8 @@ jQuery(function($){
 		/**
 		 * Admin Footer
 		 * Inserts the Inline Edit Form modal.
-		 * @since 1.2
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_footer() {
 

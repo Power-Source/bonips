@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Transfer Shortcode Render
  * Renders a transfer form that allows users to send points to other users.
- * @since 0.1
- * @version 1.8
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_transfer_render' ) ) :
 	function bonips_transfer_render( $atts, $content = NULL ) {

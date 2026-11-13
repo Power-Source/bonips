@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_PayPal class
  * PayPal Payments Standard - Payment Gateway
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 	class boniPS_PayPal_Standard extends boniPS_Payment_Gateway {
@@ -39,8 +39,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 		/**
 		 * IPN - Is Valid Call
 		 * Replaces the default check
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function IPN_is_valid_call() {
 
@@ -121,8 +121,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 
 		/**
 		 * Process Handler
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() {
 
@@ -183,8 +183,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 
 		/**
 		 * Results Handler
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function returning() {
 
@@ -199,8 +199,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 
 		/**
 		 * Prep Sale
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function prep_sale( $new_transaction = false ) {
 
@@ -236,8 +236,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 
 		/**
 		 * AJAX Buy Handler
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_buy() {
 
@@ -256,8 +256,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 		/**
 		 * Checkout Page Body
 		 * This gateway only uses the checkout body.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_body() {
 
@@ -273,8 +273,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -319,8 +319,8 @@ if ( ! class_exists( 'boniPS_PayPal_Standard' ) ) :
 
 		/**
 		 * Sanatize Prefs
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Get Next Payout
  * Adds seconds to a given time based on the payout period set.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_banking_addon_settings' ) ) :
 	function bonips_get_banking_addon_settings( $service = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -34,8 +34,8 @@ endif;
 /**
  * Get Next Payout
  * Adds seconds to a given time based on the payout period set.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_banking_get_next_payout' ) ) :
 	function bonips_banking_get_next_payout( $prefs = '', $time = 0 ) {
@@ -68,8 +68,8 @@ endif;
 
 /**
  * Get Timeframes
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_banking_get_timeframes' ) ) :
 	function bonips_banking_get_timeframes() {
@@ -120,8 +120,8 @@ endif;
 /**
  * Get Time Options
  * Returns an array of 24 hours with support for either 24 or 12 hour formats.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_banking_get_time_options' ) ) :
 	function bonips_banking_get_time_options( $twelve_hour = false ) {
@@ -189,8 +189,8 @@ endif;
 
 /**
  * Get Recurring Payout Schedules
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_recurring_payout_schedules' ) ) :
 	function bonips_get_recurring_payout_schedules( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -213,8 +213,8 @@ endif;
 
 /**
  * Get Recurring Payout Defaults
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_recurring_payout_defaults' ) ) :
 	function bonips_get_recurring_payout_defaults() {
@@ -247,8 +247,8 @@ endif;
 /**
  * Get Recurring Payout
  * Returns the settings of a specific recurring payout.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_recurring_payout' ) ) :
 	function bonips_get_recurring_payout( $schedule_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -266,8 +266,8 @@ endif;
 
 /**
  * Add New Recurring Payout
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_add_new_recurring_payout' ) ) :
 	function bonips_add_new_recurring_payout( $new_id = '', $schedule_setup = array(), $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -326,8 +326,8 @@ endif;
 
 /**
  * Update Recurring Payout
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_update_recurring_payout' ) ) :
 	function bonips_update_recurring_payout( $schedule_id = '', $schedule_setup = array(), $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -354,8 +354,8 @@ endif;
 
 /**
  * Delete Recurring Payout
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_delete_recurring_payout' ) ) :
 	function bonips_delete_recurring_payout( $id_to_remove = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {

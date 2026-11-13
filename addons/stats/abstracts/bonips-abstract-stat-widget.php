@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Statistics_Widget class
  * @see http://codex.bonips.me/
- * @since 1.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 	abstract class boniPS_Statistics_Widget {
@@ -49,7 +49,7 @@ if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 
 		/**
 		 * Get Data
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function get_data() {
 			return array();
@@ -57,7 +57,7 @@ if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 
 		/**
 		 * Widget
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function widget() {
 			wp_die( 'function boniPS_Statistics_Widget::widget() must be over-ridden in a sub-class.' );
@@ -65,7 +65,7 @@ if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 
 		/**
 		 * Preferences
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function preferences() {
 		
@@ -73,7 +73,7 @@ if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 
 		/**
 		 * Sanitize Preferences
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $data ) {
 			return $data;
@@ -83,7 +83,7 @@ if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 
 		/**
 		 * Action Buttons
-		 * @version 1.0.1
+		 * @version 1.0.0
 		 */
 		function action_buttons() {
 
@@ -121,7 +121,7 @@ if ( ! class_exists( 'boniPS_Statistics_Widget' ) ) :
 		 * Attempts to combine all decimal type setups when displaying
 		 * an overall value. Otherwise the give value will be formatted
 		 * according to the selected point type.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function format_number( $value = 0 ) {
 

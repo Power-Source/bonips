@@ -6,8 +6,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * This shortcode allows points to be given to the current user
  * for watchinga YouTube video.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcode-bonips_video/
- * @since 1.2
- * @version 1.2.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_video' ) ) :
 	function bonips_render_shortcode_video( $atts ) {

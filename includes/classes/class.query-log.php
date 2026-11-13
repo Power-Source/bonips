@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Query Log
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-bonips_query_log/ 
- * @since 0.1
- * @version 1.8
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 	class boniPS_Query_Log {
@@ -77,7 +77,7 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 			/**
 			 * Results Return Option
-			 * Added in 1.7.5, this allows us to use this class to return specific sets of information.
+			 * This allows us to use this class to return specific sets of information.
 			 * If fields is set to anything but "all", the results table can not be used.
 			 *
 
@@ -251,8 +251,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		 * Parse Arguments
 		 * We have two jobs: Make sure we provide arguments we can understand and
 		 * that the arguments we provided are valid.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_args( $args = array() ) {
 
@@ -274,7 +274,7 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 				'offset'        => '',
 				'orderby'       => 'time',
 				'order'         => 'DESC',
-				'ids'           => false,  // depreciated as of 1.7.5
+				'ids'           => false,  // deprecated
 				'fields'        => 'all',  // in favor for fields
 				'cache_results' => true,
 				'paged'         => $this->get_pagenum()
@@ -954,8 +954,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Get Cached Results
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_cache() {
 
@@ -979,8 +979,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Cache Results
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cache_result( $data ) {
 
@@ -996,8 +996,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		 * Table Headers
 		 * Returns all table column headers.
 		 * @filter bonips_log_column_headers
-		 * @since 0.1
-		 * @version 1.1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function table_headers() {
 
@@ -1042,8 +1042,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		/**
 		 * Has Entries
 		 * @returns true or false
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function have_entries() {
 
@@ -1054,8 +1054,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * No Entries
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function no_entries() {
 
@@ -1065,8 +1065,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Get No Entries
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_no_entries() {
 
@@ -1076,8 +1076,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Get Page Number
-		 * @since 1.4
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_pagenum() {
 
@@ -1100,8 +1100,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Table Nav
-		 * @since 0.1
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function table_nav( $location = 'top', $is_profile = false ) {
 
@@ -1124,8 +1124,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Bulk Actions
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bulk_actions() {
 
@@ -1158,8 +1158,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Filter Log options
-		 * @since 0.1
-		 * @version 1.3.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function filter_options( $is_profile = false ) {
 
@@ -1225,8 +1225,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		/**
 		 * Front Navigation
 		 * Renders navigation with bootstrap support
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function front_navigation( $location = 'top', $pagination = 10 ) {
 
@@ -1246,8 +1246,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Navigation Wrapper
-		 * @since 0.1
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function navigation( $location = 'top', $id = '' ) {
 
@@ -1267,8 +1267,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Front Pagination
-		 * @since 1.7
-		 * @version 1.0.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function front_pagination( $pages_to_show = 5 ) {
 
@@ -1366,8 +1366,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Pagination
-		 * @since 1.4
-		 * @version 1.1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function pagination( $location = 'top', $id = '' ) {
 
@@ -1478,8 +1478,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Display
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function display() {
 
@@ -1491,8 +1491,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		/**
 		 * Get Display
 		 * Generates a table for our results.
-		 * @since 0.1
-		 * @version 1.1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_display() {
 
@@ -1592,8 +1592,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * The Entry
-		 * @since 0.1
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function the_entry( $log_entry, $wrap = 'td' ) {
 
@@ -1606,8 +1606,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		 * Get The Entry
 		 * Generated a single entry row depending on the columns used / requested.
 		 * @filter bonips_log_date
-		 * @since 0.1
-		 * @version 1.4.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_the_entry( $log_entry, $wrap = 'td' ) {
 
@@ -1718,8 +1718,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 
 		/**
 		 * Row Actions
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_row_actions( $entry, $user ) {
 
@@ -1762,8 +1762,8 @@ if ( ! class_exists( 'boniPS_Query_Log' ) ) :
 		/**
 		 * Exporter
 		 * Displays all available export options.
-		 * @since 0.1
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exporter( $title = '', $is_profile = false ) {
 
@@ -1826,8 +1826,8 @@ jQuery(function($) {
 
 		/**
 		 * Log Search
-		 * @since 0.1
-		 * @version 1.0.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function search() {
 
@@ -1850,8 +1850,8 @@ jQuery(function($) {
 
 		/**
 		 * Filter by Dates
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function filter_dates( $url = '' ) {
 
@@ -1920,8 +1920,8 @@ jQuery(function($) {
 
 		/**
 		 * Get Time from Filter
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function get_time_for_filter( $timestamp ) {
 
@@ -1935,8 +1935,8 @@ jQuery(function($) {
 		/**
 		 * Get User ID
 		 * Converts username, email or userlogin into an ID if possible
-		 * @since 1.6.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function get_user_id( $string = '' ) {
 
@@ -1963,8 +1963,8 @@ jQuery(function($) {
 
 		/**
 		 * Get Time from Keyword
-		 * @since 1.7.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function get_time_from_keyword( $keyword = '' ) {
 
@@ -2011,8 +2011,8 @@ jQuery(function($) {
 
 		/**
 		 * Get Timestamp
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function get_timestamp( $string = '' ) {
 
@@ -2031,8 +2031,8 @@ jQuery(function($) {
 
 		/**
 		 * Get Timestamps
-		 * @since 1.7.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function get_timestamps( $value = NULL ) {
 
@@ -2087,8 +2087,8 @@ jQuery(function($) {
 
 		/**
 		 * Reset Query
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function reset_query() {
 
@@ -2105,8 +2105,8 @@ jQuery(function($) {
 
 		/**
 		 * Get Cache Key
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_cache_key() {
 
@@ -2135,8 +2135,8 @@ endif;
  * @param $user_id (int|NULL) user id to filter by.
  * @param $type (string) point type to filer by.
  * @returns total points (int|float) or error message (string)
- * @since 1.1.1
- * @version 1.4.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_total_by_time' ) ) :
 	function bonips_get_total_by_time( $from = 'today', $to = 'now', $ref = NULL, $user_id = NULL, $type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -2226,8 +2226,8 @@ endif;
  * @param $user_id (int), required user id
  * @param $type (string), optional cred type to check for
  * @returns zero if user id is not set or if no total were found, else returns creds
- * @since 1.2
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_total' ) ) :
 	function bonips_get_users_total( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -2254,8 +2254,8 @@ endif;
  *
  * @param $user_id (int), required user id
  * @param $type (string), required point type
- * @since 1.4.7
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_query_users_total' ) ) :
 	function bonips_query_users_total( $user_id, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -2296,8 +2296,8 @@ endif;
  * Get All References
  * Returns an array of references currently existing in the log
  * for a particular point type. Will return false if empty.
- * @since 1.5
- * @version 1.3.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_all_references' ) ) :
 	function bonips_get_all_references() {
@@ -2466,8 +2466,8 @@ endif;
  * Get Used References
  * Returns an array of references currently existing in the log
  * for a particular point type. Will return false if empty.
- * @since 1.5
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_used_references' ) ) :
 	function bonips_get_used_references( $point_type = array() ) {
@@ -2487,8 +2487,8 @@ endif;
 
 /**
  * Get Used Log Entry Count
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_user_has_log_entries' ) ) :
 	function bonips_user_has_log_entries( $user_id = NULL ) {
@@ -2520,8 +2520,8 @@ endif;
  * @param $number (int) number of references to return. Defaults to 5. Use '-1' for all.
  * @param $order (string) order to return ASC or DESC
  * @filter bonips_count_all_refs
- * @since 1.3.3
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_count_all_ref_instances' ) ) :
 	function bonips_count_all_ref_instances( $number = 5, $order = 'DESC', $type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -2573,8 +2573,8 @@ endif;
  * @param $reference (string) required reference to check
  * @param $user_id (int) option to check references for a specific user
  * @uses get_var()
- * @since 1.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_count_ref_instances' ) ) :
 	function bonips_count_ref_instances( $reference = '', $user_id = NULL, $type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -2608,8 +2608,8 @@ endif;
  * @param $reference (string) required reference to check
  * @param $user_id (int) option to check references for a specific user
  * @uses get_var()
- * @since 1.5.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_count_ref_id_instances' ) ) :
 	function bonips_count_ref_id_instances( $reference = '', $ref_id = NULL, $user_id = NULL, $type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -2640,8 +2640,8 @@ endif;
 
 /**
  * Get Users Reference Count
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_reference_count' ) ) :
 	function bonips_get_users_reference_count( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -2673,8 +2673,8 @@ endif;
 
 /**
  * Get Users Reference Sum
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_reference_sum' ) ) :
 	function bonips_get_users_reference_sum( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY, $force = false ) {
@@ -2710,8 +2710,8 @@ endif;
 /**
  * Get Search Args
  * Converts URL arguments into an array of log query friendly arguments.
- * @since 1.7
- * @version 1.0.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_search_args' ) ) :
 	function bonips_get_search_args( $exclude = NULL ) {
@@ -2809,8 +2809,8 @@ endif;
 
 /**
  * Get Users Verlauf Data
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_history' ) ) :
 	function bonips_get_users_history( $user_id = false, $point_type = BONIPS_DEFAULT_TYPE_KEY, $orderby = 'time', $order = 'DESC', $force = false ) {
@@ -2855,8 +2855,8 @@ endif;
 
 /**
  * Save Users Verlauf Data
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_update_users_history' ) ) :
 	function bonips_update_users_history( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY, $reference = '', $ref_id = 0, $amount = 0 ) {

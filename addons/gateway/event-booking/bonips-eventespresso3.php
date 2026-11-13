@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Event Espresso Payment Gateway
- * @since 1.2
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 	class boniPS_Espresso_Gateway {
@@ -48,8 +48,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 		/**
 		 * Load Gateway
 		 * Hook in on init and setup our gateway.
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -60,8 +60,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 		/**
 		 * Gateway Active
 		 * Checks to see if a given gateway is active.
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function gateway_active( $id = 'bonips' ) {
 
@@ -77,8 +77,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Gateway Setup
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function gateway_setup() {
 
@@ -111,8 +111,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Is Payment Request?
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_payment() {
 
@@ -126,8 +126,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Formal Name
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function formal_name( $gateway_formal_names ) {
 
@@ -139,8 +139,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Payment Type
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function paymenttype_name( $gateway_payment_types ) {
 
@@ -152,8 +152,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Set Attendee ID
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function set_attendee_id( $attendee_id ) {
 
@@ -166,8 +166,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Process Payment
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process_payment( $payment_data ) {
 
@@ -245,8 +245,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Payment Page
-		 * @since 1.2
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function payment_page( $payment_data ) {
 
@@ -360,8 +360,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Gateway Settings Page
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function gateway_settings_page( ) {
 
@@ -431,8 +431,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 		/**
 		 * Gateway Settings
 		 * Included first when the gateway is activated.
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function gateway_settings() {
 
@@ -556,8 +556,8 @@ if ( ! class_exists( 'boniPS_Espresso_Gateway' ) ) :
 
 		/**
 		 * Update Settings
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_settings() {
 

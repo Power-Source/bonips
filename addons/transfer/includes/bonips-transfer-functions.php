@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Get The Transfer Object
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_transfer' ) ) :
 	function bonips_transfer( $transfer_id = false ) {
@@ -33,8 +33,8 @@ endif;
  * Get Transfer
  * @param $transfer_id (string) required transfer id to retreave.
  * @returns boniPS_Transfer object on success else false.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_transfer' ) ) :
 	function bonips_get_transfer( $transfer_id = false ) {
@@ -61,8 +61,8 @@ endif;
  * @param $request (array) the required transfer request array.
  * @param $post (array) optional posted data from the transfer form.
  * @returns error code if transfer failed else an array or transfer details.
- * @since 1.7.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_new_transfer' ) ) :
 	function bonips_new_transfer( $request = array(), $post = array() ) {
@@ -84,8 +84,8 @@ endif;
  * Refund Transfer
  * @param $transfer_id (string) required transfer id to refund.
  * @returns error message (string) or true on success.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_refund_transfer' ) ) :
 	function bonips_refund_transfer( $transfer_id = false ) {
@@ -111,8 +111,8 @@ endif;
  * Get Transfer Limits
  * @param $settings (array) optional transfer settings.
  * @returns array of limits.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_transfer_limits' ) ) :
 	function bonips_get_transfer_limits( $settings = false ) {
@@ -136,8 +136,8 @@ endif;
  * Get Transfer Limits
  * @param $settings (array) optional transfer settings.
  * @returns array of autofill options.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_transfer_autofill_by' ) ) :
 	function bonips_get_transfer_autofill_by( $settings = false ) {
@@ -159,8 +159,8 @@ endif;
  * Get Transfer Recipient
  * @param $value (int|string) a value that identifies a particular user in WordPress.
  * @returns false if no recipient was found else the users id (int).
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_transfer_recipient' ) ) :
 	function bonips_get_transfer_recipient( $value = '' ) {
@@ -209,8 +209,8 @@ endif;
  * @param $user_id (int) requred user id
  * @param $amount (int) optional amount to check against balance
  * @returns true if no limit is set, 'limit' (string) if user is over limit else the amount of creds left
- * @since 0.1
- * @version 1.4.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_user_can_transfer' ) ) :
 	function bonips_user_can_transfer( $user_id = NULL, $amount = NULL, $type = BONIPS_DEFAULT_TYPE_KEY, $reference = NULL ) {
@@ -298,8 +298,8 @@ endif;
 
 /**
  * Render Transfer Message
- * @since 1.7.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_transfer_render_message' ) ) :
 	function bonips_transfer_render_message( $original = '', $data = array() ) {
@@ -322,8 +322,8 @@ endif;
 
 /**
  * Get Users Transfer Verlauf
- * @since 1.3.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_transfer_history' ) ) :
 	function bonips_get_users_transfer_history( $user_id, $type = BONIPS_DEFAULT_TYPE_KEY, $key = NULL ) {
@@ -345,8 +345,8 @@ endif;
 
 /**
  * Update Users Transfer Verlauf
- * @since 1.3.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_update_users_transfer_history' ) ) :
 	function bonips_update_users_transfer_history( $user_id, $history, $type = BONIPS_DEFAULT_TYPE_KEY, $key = NULL ) {

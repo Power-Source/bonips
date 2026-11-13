@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.4
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_gravity_forms_hook', 65 );
 function bonips_register_gravity_forms_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_gravity_forms_hook( $installed ) {
 
 /**
  * Gravity Forms Hook
- * @since 1.4
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_gravity_forms_hook', 65 );
 function bonips_load_gravity_forms_hook() {
@@ -49,8 +49,8 @@ function bonips_load_gravity_forms_hook() {
 
 		/**
 		 * Run
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -60,8 +60,8 @@ function bonips_load_gravity_forms_hook() {
 
 		/**
 		 * Successful Form Submission
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function form_submission( $lead, $form ) {
 
@@ -117,8 +117,8 @@ function bonips_load_gravity_forms_hook() {
 
 		/**
 		 * Preferences for Gravityforms Hook
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -184,8 +184,8 @@ function bonips_load_gravity_forms_hook() {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

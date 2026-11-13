@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Zombaio class
  * Zombaio Payment Gateway
- * @since 1.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 	class boniPS_Zombaio extends boniPS_Payment_Gateway {
@@ -42,8 +42,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 
 		/**
 		 * Verify Z-script
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function returning() {
 
@@ -62,8 +62,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 
 		/**
 		 * Process
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() {
 
@@ -90,8 +90,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 
 		/**
 		 * Verify IPN IP
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function verify_zombaio_call() {
 
@@ -116,8 +116,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 		/**
 		 * IPN - Is Valid Call
 		 * Replaces the default check
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function IPN_is_valid_call() {
 
@@ -157,8 +157,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 
 		/**
 		 * Handle IPN Call
-		 * @since 1.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function handle_call() {
 
@@ -258,8 +258,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 
 		/**
 		 * Prep Sale
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function prep_sale( $new_transaction = false ) {
 
@@ -288,8 +288,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 
 		/**
 		 * AJAX Buy Handler
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_buy() {
 
@@ -308,8 +308,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 		/**
 		 * Checkout Page Body
 		 * This gateway only uses the checkout body.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_body() {
 
@@ -325,8 +325,8 @@ if ( ! class_exists( 'boniPS_Zombaio' ) ) :
 
 		/**
 		 * Preferences
-		 * @since 1.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function preferences() {
 
@@ -433,8 +433,8 @@ jQuery(function($){
 
 		/**
 		 * Sanatize Prefs
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 
@@ -465,8 +465,8 @@ jQuery(function($){
 
 		/**
 		 * Currency Dropdown
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function currencies_dropdown( $name = '', $js = '' ) {
 
@@ -491,8 +491,8 @@ jQuery(function($){
 
 		/**
 		 * Language Dropdown
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function lang_dropdown( $name ) {
 
@@ -523,8 +523,8 @@ jQuery(function($){
 
 		/**
 		 * First Comment
-		 * @since 1.7.3
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function first_comment( $comment ) {
 
@@ -534,8 +534,8 @@ jQuery(function($){
 
 		/**
 		 * Load IPN IP List
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_zombaio_ips() {
 

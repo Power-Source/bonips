@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Load Referral Program
- * @since 1.5.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_referral_program' ) ) :
 	function bonips_load_referral_program() {
@@ -28,8 +28,8 @@ add_action( 'bonips_init', 'bonips_load_referral_program' );
 
 /**
  * Detect Referred Visits
- * @since 1.5.3
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_detect_referred_visits' ) ) :
 	function bonips_detect_referred_visits() {
@@ -47,8 +47,8 @@ endif;
 
 /**
  * Detect Referred Signups
- * @since 1.5.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_detect_referred_signups' ) ) :
 	function bonips_detect_referred_signups( $new_user_id ) {
@@ -60,8 +60,8 @@ endif;
 
 /**
  * Detect Referred BP User Activation
- * @since 1.5.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_detect_bp_user_activation' ) ) :
 	function bonips_detect_bp_user_activation( $user_id ) {

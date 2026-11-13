@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.3.3
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_simplepress_hook', 85 );
 function bonips_register_simplepress_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_simplepress_hook( $installed ) {
 
 /**
  * Simple:Press Hook
- * @since 1.3.3
- * @version 1.2.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_simplepress_hook', 85 );
 function bonips_load_simplepress_hook() {
@@ -69,8 +69,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * Run
-		 * @since 1.3.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -96,8 +96,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * Custom Template Tags
-		 * @since 1.3.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_log_templates( $content, $log_entry ) {
 
@@ -126,8 +126,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * New Topic
-		 * @since 1.3.3
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_topic( $post ) {
 
@@ -163,8 +163,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * Delete Topic
-		 * @since 1.3.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_topic( $topic ) {
 
@@ -194,8 +194,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * New Post
-		 * @since 1.3.3
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_post( $post ) {
 
@@ -233,8 +233,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * Delete Post
-		 * @since 1.3.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_post( $target ) {
 
@@ -264,8 +264,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * Get SimplePress Topic Author ID
-		 * @since 1.3.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_topic_author( $topic_id = '' ) {
 
@@ -279,8 +279,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * Preferences
-		 * @since 1.3.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -386,8 +386,8 @@ function bonips_load_simplepress_hook() {
 
 		/**
 		 * Sanitise Preference
-		 * @since 1.3.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

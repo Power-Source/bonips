@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for Anniversary
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Anniversary' ) ) :
 	class boniPS_Hook_Anniversary extends boniPS_Hook {
@@ -26,8 +26,8 @@ if ( ! class_exists( 'boniPS_Hook_Anniversary' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -37,8 +37,8 @@ if ( ! class_exists( 'boniPS_Hook_Anniversary' ) ) :
 
 		/**
 		 * Page Load
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function page_load() {
 
@@ -92,8 +92,8 @@ if ( ! class_exists( 'boniPS_Hook_Anniversary' ) ) :
 
 		/**
 		 * Preference for Anniversary Hook
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 

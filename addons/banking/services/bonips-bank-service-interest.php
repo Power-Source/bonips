@@ -1,8 +1,8 @@
 <?php
 /**
  * boniPS Bank Service - Interest
- * @since 1.2
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
@@ -31,8 +31,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 
 		/**
 		 * Run
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 			add_action( 'wp_loaded',                        array( $this, 'process' ) );
@@ -45,8 +45,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 
 		/**
 		 * Deactivation
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function deactivate() {
 			// Unschedule compounding
@@ -64,8 +64,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 		 * Process
 		 * Determines if we should run a payout or not and schedule the daily
 		 * compounding.
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() {
 			// Unschedule if amount is set to zero
@@ -110,8 +110,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 		 * Do Compound
 		 * Either runs compounding on every single user in one go, or split the users
 		 * up into groups of 2000 IDs and do them in batches.
-		 * @since 1.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function do_compound() {
 			if ( $this->prefs['rate']['amount'] == $this->core->zero() ) return;
@@ -140,8 +140,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 		/**
 		 * Do Compound Batch
 		 * Compounds interest for each user ID given in batch.
-		 * @since 1.2
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function do_compound_batch( $batch ) {
 			if ( !empty( $batch ) && is_array( $batch ) ) {
@@ -182,8 +182,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 		 * Payout
 		 * Will either payout to all users in one go or if there is more then
 		 * 2000 members, do them in batches of 2000 at a time.
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function do_payouts() {
 			// Make sure to clear any stray schedules to prevent duplicates
@@ -214,8 +214,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 		/**
 		 * Do Payout
 		 * Runs though all user compounded interest and pays.
-		 * @since 1.2
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function do_interest_batch( $batch ) {
 			if ( !empty( $batch ) && is_array( $batch ) ) {
@@ -247,8 +247,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 		 * Save
 		 * Saves the given preference id for rates.
 		 * from the active list.
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save( $id, $now ) {
 			if ( !isset( $this->prefs[ $id ] ) ) return;
@@ -266,8 +266,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 
 		/**
 		 * Preference for Savings
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 			$prefs = $this->prefs; ?>
@@ -315,8 +315,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $post ) {
 			$new_settings = $post;

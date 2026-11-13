@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Get Coupon
  * Returns a coupon object based on the post ID.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon' ) ) :
 	function bonips_get_coupon( $coupon_id = NULL ) {
@@ -33,8 +33,8 @@ endif;
 /**
  * Get Coupon Value
  * @filter bonips_coupon_value
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon_value' ) ) :
 	function bonips_get_coupon_value( $post_id = 0 ) {
@@ -47,8 +47,8 @@ endif;
 /**
  * Get Coupon Expire Date
  * @filter bonips_coupon_max_balance
- * @since 1.4
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon_expire_date' ) ) :
 	function bonips_get_coupon_expire_date( $post_id = 0, $unix = false ) {
@@ -69,8 +69,8 @@ endif;
  * Get Coupon User Max
  * The maximum number a user can use this coupon.
  * @filter bonips_coupon_user_max
- * @since 1.4
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon_user_max' ) ) :
 	function bonips_get_coupon_user_max( $post_id = 0 ) {
@@ -83,8 +83,8 @@ endif;
 /**
  * Get Coupons Global Max
  * @filter bonips_coupon_global_max
- * @since 1.4
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon_global_max' ) ) :
 	function bonips_get_coupon_global_max( $post_id = 0 ) {
@@ -101,8 +101,8 @@ endif;
  * @filter bonips_create_new_coupon
  * @returns false if data is missing, post ID on success or wp_error / 0 if 
  * post creation failed.
- * @since 1.4
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_create_new_coupon' ) ) :
 	function bonips_create_new_coupon( $data = array() ) {
@@ -160,8 +160,8 @@ endif;
  * Get Unique Coupon Code
  * Generates a unique 12 character alphanumeric coupon code.
  * @filter bonips_get_unique_coupon_code
- * @since 1.4
- * @version 1.0.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_unique_coupon_code' ) ) :
 	function bonips_get_unique_coupon_code() {
@@ -185,8 +185,8 @@ endif;
 /**
  * Get Coupon Post
  * @filter bonips_get_coupon_by_code
- * @since 1.4
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon_post' ) ) :
 	function bonips_get_coupon_post( $code = '' ) {
@@ -203,8 +203,8 @@ endif;
  * Will attempt to use a given coupon and award it's value
  * to a given user. Requires you to provide a log entry template.
  * @action bonips_use_coupon
- * @since 1.4
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_use_coupon' ) ) :
 	function bonips_use_coupon( $code = '', $user_id = 0 ) {
@@ -226,8 +226,8 @@ endif;
  * Was Coupon Successfully Used?
  * Checks to see if bonips_use_coupon() successfully paid out or if
  * we ran into issues.
- * @since 1.7.5
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_coupon_was_successfully_used' ) ) :
 	function bonips_coupon_was_successfully_used( $code = '' ) {
@@ -247,8 +247,8 @@ endif;
  * Coupon Error Message
  * Translates a coupon error code into a readable message.
  * we ran into issues.
- * @since 1.7.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon_error_message' ) ) :
 	function bonips_get_coupon_error_message( $code = '', $coupon = NULL ) {
@@ -282,8 +282,8 @@ endif;
  * Get Users Coupon Count
  * Counts the number of times a user has used a given coupon.
  * @filter bonips_get_users_coupon_count
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_coupon_count' ) ) :
 	function bonips_get_users_coupon_count( $code = '', $user_id = '' ) {
@@ -306,8 +306,8 @@ endif;
 /**
  * Get Coupons Global Count
  * @filter bonips_get_global_coupon_count
- * @since 1.4
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_global_coupon_count' ) ) :
 	function bonips_get_global_coupon_count( $coupon_id = 0 ) {
@@ -323,8 +323,8 @@ endif;
 /**
  * Get Coupons Minimum Balance Requirement
  * @filter bonips_coupon_min_balance
- * @since 1.4
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon_min_balance' ) ) :
 	function bonips_get_coupon_min_balance( $post_id = 0 ) {
@@ -346,8 +346,8 @@ endif;
 /**
  * Get Coupons Maximum Balance Requirement
  * @filter bonips_coupon_max_balance
- * @since 1.4
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_coupon_max_balance' ) ) :
 	function bonips_get_coupon_max_balance( $post_id = 0 ) {

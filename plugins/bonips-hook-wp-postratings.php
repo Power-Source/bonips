@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_wp_postratings_hook', 110 );
 function bonips_register_wp_postratings_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_wp_postratings_hook( $installed ) {
 
 /**
  * WP Postratings Hook
- * @since 1.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_wp_postratings_hook', 110 );
 function bonips_load_wp_postratings_hook() {
@@ -62,8 +62,8 @@ function bonips_load_wp_postratings_hook() {
 
 		/**
 		 * Run
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -74,8 +74,8 @@ function bonips_load_wp_postratings_hook() {
 
 		/**
 		 * Table Amount
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function table_amount( $amount, $id, $prefs ) {
 
@@ -90,8 +90,8 @@ function bonips_load_wp_postratings_hook() {
 
 		/**
 		 * Successful Form Submission
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_rating( $user_id, $post_id, $rating_value ) {
 
@@ -149,8 +149,8 @@ function bonips_load_wp_postratings_hook() {
 
 		/**
 		 * Preferences for WP Postratings Hook
-		 * @since 1.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -224,8 +224,8 @@ function bonips_load_wp_postratings_hook() {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

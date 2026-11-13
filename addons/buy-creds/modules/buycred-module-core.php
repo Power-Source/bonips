@@ -3,8 +3,8 @@ if ( ! defined( 'BONIPS_PURCHASE' ) ) exit;
 
 /**
  * boniPS_buyCRED_Module class
- * @since 0.1
- * @version 1.4.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 	class boniPS_buyCRED_Module extends boniPS_Module {
@@ -41,7 +41,7 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Load
-		 * @version 1.0.2
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -68,8 +68,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 		/**
 		 * Init
 		 * Register shortcodes.
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -85,8 +85,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Register Assets
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_assets() {
 
@@ -97,8 +97,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Setup Purchase Instance
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function setup_instance() {
 
@@ -118,8 +118,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 		/**
 		 * Get Payment Gateways
 		 * Retreivs all available payment gateways that can be used to buyCRED
-		 * @since 0.1
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get() {
 
@@ -145,8 +145,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 		/**
 		 * Run
 		 * Runs a gateway if requested.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_run() {
 
@@ -214,8 +214,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Process New Request
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process_new_request() {
 
@@ -255,8 +255,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Checkout Page
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page( $template ) {
 
@@ -277,8 +277,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Enqueue Footer
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_footer() {
 
@@ -329,8 +329,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Admin Init
-		 * @since 1.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -356,8 +356,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Add to General Settings
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -584,8 +584,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Save Settings
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 
@@ -642,8 +642,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Render Gift Tags
-		 * @since 1.4.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function render_gift_tags( $content, $log ) {
 
@@ -654,8 +654,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Add Admin Menu Item
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_to_menu() {
 
@@ -700,8 +700,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Page Header
-		 * @since 1.3
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function settings_header() {
 
@@ -713,8 +713,8 @@ if ( ! class_exists( 'boniPS_buyCRED_Module' ) ) :
 
 		/**
 		 * Payment Gateways Page
-		 * @since 0.1
-		 * @version 1.2.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page() {
 
@@ -824,8 +824,8 @@ jQuery(function($) {
 
 		/**
 		 * Sanititze Settings
-		 * @since 0.1
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_settings( $data ) {
 
@@ -851,8 +851,8 @@ jQuery(function($) {
 
 		/**
 		 * Purchase Log Screen Options
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function screen_options() {
 
@@ -882,8 +882,8 @@ jQuery(function($) {
 		 * Purchase Log
 		 * Render the dedicated admin screen where all point purchases are shown from the boniPS Log.
 		 * This screen is added in for each point type that is set to be for sale.
-		 * @since 1.4
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function purchase_log_page() {
 
@@ -1156,8 +1156,8 @@ jQuery(function($) {
 
 		/**
 		 * Get Sales Data from Log Data
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_sales_data_from_log_data( $log_data = '' ) {
 
@@ -1183,8 +1183,8 @@ jQuery(function($) {
 
 		/**
 		 * User Rates Admin Screen
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exchange_rates_user_screen( $user ) {
 
@@ -1350,8 +1350,8 @@ jQuery(function($) {
 
 		/**
 		 * Save Override
-		 * @since 1.5
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_manual_exchange_rates( $user_id ) {
 
@@ -1393,8 +1393,8 @@ jQuery(function($) {
 
 		/**
 		 * Hide Comments
-		 * @since 1.8.9
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function hide_buycred_transactions( $query ) {
 
@@ -1407,8 +1407,8 @@ endif;
 
 /**
  * Load buyCRED Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_buycred_core_addon' ) ) :
 	function bonips_load_buycred_core_addon( $modules, $point_types ) {

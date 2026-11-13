@@ -6,8 +6,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * This shortcode will return an exchange form allowing users to
  * exchange one point type for another.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_exchange/
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_exchange' ) ) :
 	function bonips_render_shortcode_exchange( $atts, $content = '' ) {
@@ -101,8 +101,8 @@ add_shortcode( BONIPS_SLUG . '_exchange', 'bonips_render_shortcode_exchange' );
 /**
  * Catch Exchange
  * Intercepts and executes exchange requests.
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_catch_exchange_requests' ) ) :
 	function bonips_catch_exchange_requests() {

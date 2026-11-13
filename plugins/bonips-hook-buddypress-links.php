@@ -2,15 +2,15 @@
 
 /**
  * BuddyPress Links Hook
- * @since 0.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( defined( 'boniPS_VERSION' ) ) {
 
 	/**
 	 * Register Hook
-	 * @since 0.1
-	 * @version 1.0
+	 * @since 1.0.0
+	 * @version 1.0.0
 	 */
 	add_filter( 'bonips_setup_hooks', 'BuddyPress_Links_boniPS_Hook' );
 	function BuddyPress_Links_boniPS_Hook( $installed ) {
@@ -27,8 +27,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 	/**
 	 * boniPS_BuddyPress_Links class
 	 * Creds for new links, voting on links, updating links and deleting links
-	 * @since 0.1
-	 * @version 1.1
+	 * @since 1.0.0
+	 * @version 1.0.0
 	 */
 	if ( ! class_exists( 'boniPS_BuddyPress_Links' ) && class_exists( 'boniPS_Hook' ) ) {
 		class boniPS_BuddyPress_Links extends boniPS_Hook {
@@ -70,8 +70,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Run
-			 * @since 0.1
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function run() {
 				if ( $this->prefs['new_link']['creds'] != 0 )
@@ -88,8 +88,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * New Link
-			 * @since 0.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function create_link( $link_id ) {
 				global $bp;
@@ -114,8 +114,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Vote on Link
-			 * @since 0.1
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function vote_link( $link_id ) {
 				global $bp;
@@ -187,8 +187,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Update Link
-			 * @since 0.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function update_link( $content, $user_id, $link_id, $activity_id ) {
 				// Check if user is excluded
@@ -211,8 +211,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Delete Link
-			 * @since 0.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function delete_link( $link_id ) {
 				global $bp;
@@ -237,8 +237,8 @@ if ( defined( 'boniPS_VERSION' ) ) {
 
 			/**
 			 * Preferences
-			 * @since 0.1
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			public function preferences() {
 				$prefs = $this->prefs; ?>

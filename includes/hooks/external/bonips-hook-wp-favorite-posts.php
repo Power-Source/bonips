@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_wp_favorite_posts_hook', 100 );
 function bonips_register_wp_favorite_posts_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_wp_favorite_posts_hook( $installed ) {
 
 /**
  * WP Favorite Hook
- * @since 1.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_wp_favorite_posts_hook', 100 );
 function bonips_load_wp_favorite_posts_hook() {
@@ -68,8 +68,8 @@ function bonips_load_wp_favorite_posts_hook() {
 
 		/**
 		 * Run
-		 * @since 1.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -80,8 +80,8 @@ function bonips_load_wp_favorite_posts_hook() {
 
 		/**
 		 * Add Favorite
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_favorite( $post_id ) {
 
@@ -151,8 +151,8 @@ function bonips_load_wp_favorite_posts_hook() {
 
 		/**
 		 * Remove Favorite
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function remove_favorite( $post_id ) {
 
@@ -206,8 +206,8 @@ function bonips_load_wp_favorite_posts_hook() {
 
 		/**
 		 * Preferences for WP-Polls
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -298,8 +298,8 @@ function bonips_load_wp_favorite_posts_hook() {
 		
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

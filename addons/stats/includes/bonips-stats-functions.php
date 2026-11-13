@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_STATS_VERSION' ) ) exit;
 
 /**
  * Get Type Color
- * @since 1.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_color_sets' ) ) :
 	function bonips_get_color_sets() {
@@ -70,8 +70,8 @@ endif;
 
 /**
  * Get Type Color
- * @since 1.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_type_color' ) ) :
 	function bonips_get_type_color( $point_type = NULL ) {
@@ -115,8 +115,8 @@ endif;
 
 /**
  * Create Chart
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_create_chart' ) ) :
 	function bonips_create_chart( $args = array() ) {
@@ -143,8 +143,8 @@ endif;
 
 /**
  * Get Stats Days
- * @since 1.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_stat_dates' ) ) :
 	function bonips_get_stat_dates( $instance = 'x_dates', $value = 0 ) {
@@ -282,8 +282,8 @@ endif;
 
 /**
  * RGB to HEX
- * @since 1.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_rgb_to_hex' ) ) :
 	function bonips_rgb_to_hex( $rgb = '' ) {
@@ -306,8 +306,8 @@ endif;
 
 /**
  * HEX to RGB
- * @since 1.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_hex_to_rgb' ) ) :
 	function bonips_hex_to_rgb( $hex = '', $rgba = true, $opacity = 1 ) {
@@ -342,8 +342,8 @@ endif;
 
 /**
  * Inverse HEX colors
- * @since 1.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_inverse_hex_color' ) ) :
 	function bonips_inverse_hex_color( $color = '' ) {
@@ -376,8 +376,8 @@ endif;
 
 /**
  * Inverse RGB color
- * @since 1.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_inverse_rgb_color' ) ) :
 	function bonips_inverse_rgb_color( $color = '' ) {
@@ -393,8 +393,8 @@ endif;
 
 /**
  * Get Stats Cache Times
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_stats_cache_times' ) ) :
 	function bonips_get_stats_cache_times() {
@@ -415,8 +415,8 @@ endif;
 /**
  * Maybe Clear Stats Data
  * Checks to see if the statistics data should be cleared based on our settings.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_maybe_clear_stats_data' ) ) :
 	function bonips_maybe_clear_stats_data() {
@@ -458,8 +458,8 @@ endif;
 /**
  * Maybe Clear Users Stats Data
  * Checks to see if the statistics data should be cleared based on our settings for a user.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_maybe_clear_user_stats_data' ) ) :
 	function bonips_maybe_clear_user_stats_data( $user_id = false ) {
@@ -501,8 +501,8 @@ endif;
 
 /**
  * Delete Stats Data
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_delete_stats_data' ) ) :
 	function bonips_delete_stats_data( $force = false ) {
@@ -533,8 +533,8 @@ endif;
 
 /**
  * Delete User Stats Data
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_delete_user_stats_data' ) ) :
 	function bonips_delete_user_stats_data( $user_id = false, $force = false ) {
@@ -564,8 +564,8 @@ endif;
 
 /**
  * Data: Balance Circulation
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_circulation_data' ) ) :
 	function bonips_get_circulation_data() {
@@ -595,8 +595,8 @@ endif;
 
 /**
  * Data: Gains vs. Losses
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_gains_vs_losses_data' ) ) :
 	function bonips_get_gains_vs_losses_data( $point_type = '' ) {
@@ -659,8 +659,8 @@ endif;
 
 /**
  * Data: Top Balances
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_top_balances_data' ) ) :
 	function bonips_get_top_balances_data( $point_type = BONIPS_DEFAULT_TYPE_KEY, $number = 10, $order = 'DESC' ) {
@@ -694,8 +694,8 @@ endif;
 
 /**
  * Data: Top Instances
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_top_instances_data' ) ) :
 	function bonips_get_top_instances_data( $point_type = BONIPS_DEFAULT_TYPE_KEY, $number = 10, $order = 'DESC' ) {
@@ -728,8 +728,8 @@ endif;
 
 /**
  * Data: Get Verlauf
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_history_data' ) ) :
 	function bonips_get_history_data( $point_type = BONIPS_DEFAULT_TYPE_KEY, $period = 'days', $number = 10, $order = 'DESC' ) {
@@ -805,8 +805,8 @@ endif;
 
 /**
  * Data: Get Users Verlauf
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_history_data' ) ) :
 	function bonips_get_users_history_data( $user_id = 0, $point_type = BONIPS_DEFAULT_TYPE_KEY, $period = 'days', $number = 10, $order = 'DESC' ) {
@@ -885,8 +885,8 @@ endif;
 
 /**
  * Data: Get Reference Verlauf
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_ref_history_data' ) ) :
 	function bonips_get_ref_history_data( $reference = '', $point_type = BONIPS_DEFAULT_TYPE_KEY, $period = 'days', $number = 10, $order = 'DESC' ) {

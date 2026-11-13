@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * Hide IF
  * Allows content to be shown if a user does not fulfil the set points
  * requirements set for this shortcode.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_hide_if' ) ) :
 	function bonips_render_shortcode_hide_if( $atts, $content = '' ) {

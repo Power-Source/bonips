@@ -6,8 +6,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * Gibt das aktuelle Benutzerguthaben zurück.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_my_balance/
  * @contributor DerN3rd
- * @since 1.0.9
- * @version 1.2.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_my_balance' ) ) :
 	function bonips_render_shortcode_my_balance( $atts )
@@ -82,8 +82,8 @@ endif;
  * BoniPress Shortcode: bonips_history
  * Returns the points history.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_history/
- * @since 1.0.9
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_history' ) ) :
 	function bonips_render_shortcode_history( $atts )
@@ -136,8 +136,8 @@ endif;
 /**
  * BoniPress Shortcode: bonips_leaderboard
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_leaderboard//
- * @since 0.1
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_leaderboard' ) ) :
 	function bonips_render_shortcode_leaderboard( $atts, $content = '' )
@@ -330,8 +330,8 @@ endif;
 /**
  * BoniPress Shortcode: bonips_my_ranking
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_my_ranking/
- * @since 0.1
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_my_ranking' ) ) :
 	function bonips_render_shortcode_my_ranking( $atts )
@@ -403,8 +403,8 @@ endif;
  * or in a template file. Note that users are awarded/deducted points each time
  * this shortcode exectutes!
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_give/
- * @since 1.1
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_give' ) ) :
 	function bonips_render_shortcode_give( $atts )
@@ -461,8 +461,8 @@ endif;
  * available if the hook is enabled!
  *
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_link/
- * @since 1.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_link' ) ) :
 	function bonips_render_shortcode_link( $atts, $content = ''	 )
@@ -526,8 +526,8 @@ endif;
  * This shortcode allows the current user to send a pre-set amount of points
  * to a pre-set user. A simpler version of the bonips_transfer shortcode.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_send/ 
- * @since 1.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_send' ) ) :
 	function bonips_render_shortcode_send( $atts, $content = NULL )
@@ -585,8 +585,8 @@ endif;
 
 /**
  * Load boniPS Send Points Footer
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_send_shortcode_footer' ) ) :
 	add_action( 'wp_footer', 'bonips_send_shortcode_footer' );
@@ -618,8 +618,8 @@ endif;
 
 /**
  * boniPS Send Points Ajax
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_shortcode_send_points_ajax' ) ) :
 	add_action( 'wp_ajax_bonips-send-points', 'bonips_shortcode_send_points_ajax' );
@@ -691,8 +691,8 @@ endif;
  * This shortcode allows points to be given to the current user
  * for watchinga YouTube video.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcode-bonips_video/
- * @since 1.2
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_video' ) ) :
 	function bonips_render_shortcode_video( $atts )
@@ -773,8 +773,8 @@ endif;
  * total balance based on either all point types or a comma seperated list
  * of types.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_total_balance/
- * @since 1.4.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_total' ) ) :
 	function bonips_render_shortcode_total( $atts, $content = '' )
@@ -840,8 +840,8 @@ endif;
  * This shortcode will return an exchange form allowing users to
  * exchange one point type for another.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_exchange/
- * @since 1.5
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_exchange' ) ) :
 	function bonips_render_shortcode_exchange( $atts, $content = '' )
@@ -931,8 +931,8 @@ endif;
 /**
  * Run Exchange
  * Intercepts and executes exchange requests.
- * @since 1.5
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_run_exchange' ) ) :
 	add_filter( 'bonips_init', 'bonips_run_exchange' );

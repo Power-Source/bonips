@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * PSeCommerce Payment Gateway
- * @since 1.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 	add_action( 'mp_load_gateway_plugins', 'bonips_init_psecommerce_gateway' );
@@ -55,8 +55,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 			/**
 			 * Use Exchange
 			 * Checks to see if exchange is needed.
-			 * @since 1.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function use_exchange() {
 				global $mp;
@@ -68,8 +68,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 
 			/**
 			 * Returns the current carts total.
-			 * @since 1.2
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function get_cart_total( $cart = NULL ) {
 				global $mp;
@@ -110,8 +110,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 			 *
 			 * @param array $cart. Contains the cart contents for the current blog, global cart if $mp->global_cart is true
 			 * @param array $shipping_info. Contains shipping info and email in case you need it
-			 * @since 1.1
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function payment_form( $cart, $shipping_info ) {
 				global $mp;
@@ -165,8 +165,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 			 *
 			 * @param array $cart. Contains the cart contents for the current blog, global cart if $mp->global_cart is true
 			 * @param array $shipping_info. Contains shipping info and email in case you need it
-			 * @since 1.1
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function confirm_payment_form( $cart, $shipping_info ) {
 				global $mp;
@@ -198,8 +198,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 			 *
 			 * @param array $cart. Contains the cart contents for the current blog, global cart if $mp->global_cart is true
 			 * @param array $shipping_info. Contains shipping info and email in case you need it
-			 * @since 1.1
-			 * @version 1.2.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function process_payment( $cart, $shipping_info ) {
 				global $mp;
@@ -302,8 +302,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 			/**
 			 * Filters the order confirmation email message body. You may want to append something to
 			 * the message. Optional
-			 * @since 1.1
-			 * @version 1.0
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function order_confirmation_email( $msg, $order ) {
 				global $mp;
@@ -320,8 +320,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 			/**
 			 * Return any html you want to show on the confirmation screen after checkout. This
 			 * should be a payment details box and message.
-			 * @since 1.1
-			 * @version 1.1
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function order_confirmation_msg( $content, $order ) {
 				global $mp;
@@ -339,8 +339,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 
 			/**
 			 * boniPS Gateway Settings
-			 * @since 1.1
-			 * @version 1.3
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function gateway_settings_box( $settings ) {
 				global $mp;
@@ -478,8 +478,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 
 			/**
 			 * Filter Gateway Settings
-			 * @since 1.1
-			 * @version 1.3
+			 * @since 1.0.0
+			 * @version 1.0.0
 			 */
 			function process_gateway_settings( $settings ) {
 				// Name (no html)
@@ -525,8 +525,8 @@ if ( ! function_exists( 'bonips_init_psecommerce_gateway' ) ) {
 /**
  * Filter the boniPS Log
  * Parses the %order_id% and %order_link% template tags.
- * @since 1.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_psecommerce_parse_log' ) ) {
 	add_filter( 'bonips_parse_log_entry_psecommerce_payment', 'bonips_psecommerce_parse_log', 90, 2 );
@@ -557,8 +557,8 @@ if ( ! function_exists( 'bonips_psecommerce_parse_log' ) ) {
 
 /**
  * Parse Email Notice
- * @since 1.2.2
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_market_parse_email' ) ) {
 	add_filter( 'bonips_email_before_send', 'bonips_market_parse_email' );

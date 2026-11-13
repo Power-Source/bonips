@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * BoniPress Shortcode: bonips_my_rank
  * Returns a given users rank
  * @see http://codex.bonips.me/shortcodes/bonips_my_rank/
- * @since 1.1
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_my_rank' ) ) :
 	function bonips_render_my_rank( $atts, $content = '' ) {
@@ -59,8 +59,8 @@ endif;
  * BoniPress Shortcode: bonips_my_ranks
  * Returns the given users ranks.
  * @see http://codex.bonips.me/shortcodes/bonips_my_ranks/
- * @since 1.6
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_my_ranks' ) ) :
 	function bonips_render_my_ranks( $atts, $content = '' ) {
@@ -122,8 +122,8 @@ endif;
  * BoniPress Shortcode: bonips_users_of_rank
  * Returns all users who have the given rank with the option to show the rank logo and optional content.
  * @see http://codex.bonips.me/shortcodes/bonips_users_of_rank/
- * @since 1.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_users_of_rank' ) ) :
 	function bonips_render_users_of_rank( $atts, $row_template = NULL ) {
@@ -204,8 +204,8 @@ endif;
  * BoniPress Shortcode: bonips_users_of_all_ranks
  * Returns all users fore every registered rank in order.
  * @see http://codex.bonips.me/shortcodes/bonips_users_of_all_ranks/
- * @since 1.1
- * @version 1.2.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_users_of_all_ranks' ) ) :
 	function bonips_render_users_of_all_ranks( $atts, $row_template = NULL ) {
@@ -277,8 +277,8 @@ endif;
  * BoniPress Shortcode: bonips_list_ranks
  * Returns a list of ranks with minimum and maximum point requirements.
  * @see http://codex.bonips.me/shortcodes/bonips_list_ranks/
- * @since 1.1.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_rank_list' ) ) :
 	function bonips_render_rank_list( $atts, $row_template = NULL ) {

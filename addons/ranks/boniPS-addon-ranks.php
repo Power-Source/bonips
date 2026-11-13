@@ -2,13 +2,13 @@
 /**
  * Addon: Ranks
  * Addon URI: https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-raenge/
- * Version: 1.6
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 define( 'boniPS_RANKS',         __FILE__ );
 define( 'boniPS_RANKS_DIR',     boniPS_ADDONS_DIR . 'ranks/' );
-define( 'boniPS_RANKS_VERSION', '1.6' );
+define( 'boniPS_RANKS_VERSION', '1.0.0' );
 
 // Rank key
 if ( ! defined( 'BONIPS_RANK_KEY' ) )
@@ -31,8 +31,8 @@ require_once boniPS_RANKS_DIR . 'includes/bonips-rank-shortcodes.php';
  * While boniPS rankings just ranks users according to users total amount of
  * points, ranks are titles that can be given to users when their reach a certain
  * amount.
- * @since 1.1
- * @version 1.6
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 	class boniPS_Ranks_Module extends boniPS_Module {
@@ -84,8 +84,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 		/**
 		 * Load
 		 * Custom module load for multiple point type support.
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -97,8 +97,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Hook into Init
-		 * @since 1.4.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_pre_init() {
 
@@ -112,8 +112,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Hook into Init
-		 * @since 1.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -156,8 +156,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Hook into Admin Init
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -187,8 +187,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Is Manual Mode
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_manual_mode( $type_id ) {
 
@@ -210,8 +210,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Add Multiple Point Types Support
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_multiple_point_types_support() {
 
@@ -240,8 +240,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Register Rank Post Type
-		 * @since 1.1
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_ranks() {
 
@@ -306,8 +306,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Populate Current Account
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_current_account() {
 
@@ -338,8 +338,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Populate Account
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_account() {
 
@@ -370,8 +370,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Adjust Post Updated Messages
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function post_updated_messages( $messages ) {
 
@@ -395,8 +395,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Replace Add New Rank URL
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function replace_add_new_rank_url( $url, $path, $blog_id ) {
 
@@ -418,8 +418,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Add Admin Menu Item
-		 * @since 1.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_menus() {
 
@@ -447,8 +447,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Parent File
-		 * @since 1.6
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parent_file( $parent = '' ) {
 
@@ -486,8 +486,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Sub Parent File
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function subparent_file( $subparent = '', $parent = '' ) {
 
@@ -525,8 +525,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Exclude Ranks from Publish Content Hook
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exclude_ranks( $excludes ) {
 
@@ -537,8 +537,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * AJAX: Calculate Totals
-		 * @since 1.2
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function calculate_totals() {
 
@@ -578,8 +578,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 		/**
 		 * Balance Adjustment
 		 * Check if users rank should change.
-		 * @since 1.1
-		 * @version 1.6
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function balance_adjustment( $result, $request, $bonips ) {
 
@@ -610,8 +610,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 		/**
 		 * Publishing Content
 		 * Check if users rank should change.
-		 * @since 1.1
-		 * @version 1.6
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function post_status_change( $new_status, $old_status, $post ) {
 
@@ -645,8 +645,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 		/**
 		 * User Related Template Tags
 		 * Adds support for ranks of custom point types.
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_tags( $tags ) {
 
@@ -669,8 +669,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 		/**
 		 * Parse Rank
 		 * Parses the %rank% and %rank_logo% template tags.
-		 * @since 1.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_rank( $content, $user = '', $data = '' ) {
 
@@ -734,8 +734,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Insert Rank In Profile Header
-		 * @since 1.1
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_rank_header() {
 
@@ -782,8 +782,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Insert Rank In Profile Details
-		 * @since 1.1
-		 * @version 1.4.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_rank_profile() {
 
@@ -844,8 +844,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Insert Rank In PSForum Reply
-		 * @since 1.6
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_rank_bb_reply() {
 
@@ -894,8 +894,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Insert Rank In PSForum Profile
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_rank_bb_profile() {
 
@@ -944,8 +944,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 		 * Add Default Rank
 		 * Adds the default "Newbie" rank and adds all non-exluded user to this rank.
 		 * Note! This method is only called when there are zero ranks as this will create the new default rank.
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_default_rank() {
 
@@ -978,8 +978,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 		/**
 		 * Custom User Balance Content
 		 * Inserts a users rank for each point type.
-		 * @since 1.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function custom_user_column_content( $balance, $user_id, $type ) {
 
@@ -996,8 +996,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Show Rank in User Editor
-		 * @since 1.7
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function show_rank_in_user_editor( $point_type, $user, $data ) {
 
@@ -1046,8 +1046,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Save Users Rank
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_manual_rank( $user_id ) {
 
@@ -1091,15 +1091,15 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Register Scripts & Styles
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function scripts_and_styles() { }
 
 		/**
 		 * Enqueue Scripts & Styles
-		 * @since 1.1
-		 * @version 1.3.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_scripts() {
 
@@ -1181,8 +1181,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 		/**
 		 * Adjust Rank Sort Order
 		 * Adjusts the wp query when viewing ranks to order by the min. point requirement.
-		 * @since 1.1.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_wp_query( $query ) {
 
@@ -1249,8 +1249,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Adjust Rank Column Header
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_headers( $defaults ) {
 
@@ -1273,8 +1273,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Adjust Rank Column Content
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_content( $column_name, $post_id ) {
 
@@ -1334,8 +1334,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Adjust Row Actions
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_row_actions( $actions, $post ) {
 
@@ -1352,8 +1352,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Adjust Enter Title Here
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enter_title_here( $title ) {
 
@@ -1367,8 +1367,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Add Meta Boxes
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_metaboxes() {
 
@@ -1385,8 +1385,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Rank Settings Metabox
-		 * @since 1.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function rank_settings( $post ) {
 
@@ -1485,8 +1485,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Save Rank Details
-		 * @since 1.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_rank( $post_id, $post ) {
 
@@ -1523,8 +1523,8 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 
 		/**
 		 * Add to General Settings
-		 * @since 1.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -1599,7 +1599,7 @@ if ( ! class_exists( 'boniPS_Ranks_Module' ) ) :
 				<select name="<?php echo $this->field_name( 'order' ); ?>" id="<?php echo $this->field_id( 'order' ); ?>" class="form-control">
 <?php
 
-			// Order added in 1.1.1
+			// Order
 			$options = array(
 				'ASC'  => __( 'Aufsteigend - Vom niedrigsten zum höchsten Rang', 'bonips' ),
 				'DESC' => __( 'Absteigend - Vom höchsten Rang zum niedrigsten', 'bonips' )
@@ -1804,8 +1804,8 @@ jQuery(function($){
 
 		/**
 		 * Save Settings
-		 * @since 1.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 
@@ -1831,8 +1831,8 @@ jQuery(function($){
 
 		/**
 		 * Management
-		 * @since 1.3.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function rank_management( $bonips ) {
 
@@ -1872,8 +1872,8 @@ jQuery(function($){
 		 * Zero Balance Action
 		 * When an admin selects to zero out all balances
 		 * we want to remove all ranks as well.
-		 * @since 1.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function zero_balance_action( $point_type = '' ) {
 
@@ -1892,8 +1892,8 @@ jQuery(function($){
 
 		/**
 		 * Delete Ranks
-		 * @since 1.3.2
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_delete_ranks() {
 
@@ -1964,8 +1964,8 @@ jQuery(function($){
 
 		/**
 		 * Assign Ranks
-		 * @since 1.3.2
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_assign_ranks() {
 
@@ -1985,8 +1985,8 @@ endif;
 
 /**
  * Load Ranks Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_ranks_addon' ) ) :
 	function bonips_load_ranks_addon( $modules, $point_types ) {

@@ -1,8 +1,8 @@
 /**
  * boniPS Points for Link Clicks jQuery Scripts
  * @contributors Kevin Reeves
- * @since 0.1
- * @version 1.7.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 jQuery(function($) {
 

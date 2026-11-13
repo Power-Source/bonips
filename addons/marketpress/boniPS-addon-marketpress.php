@@ -2,7 +2,7 @@
 /**
  * MarketPress add-on bootstrap.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 
 if ( ! defined( 'boniPS_VERSION' ) ) {

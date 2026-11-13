@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Caching_Module class
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 	class boniPS_Caching_Module extends boniPS_Module {
@@ -31,8 +31,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Load
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -55,8 +55,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Admin Init
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -71,8 +71,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Get Leaderboard
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_leaderboard( $data, $leaderboard ) {
 
@@ -86,8 +86,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Cache Leaderboard
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cache_leaderboard( $data, $leaderboard ) {
 
@@ -101,8 +101,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Get Log
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_log( $data, $log ) {
 
@@ -116,8 +116,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Cache Log
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cache_log( $data, $log ) {
 
@@ -131,8 +131,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Balance Change
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function balance_change( $user_id, $current_balance, $amount, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
 
@@ -152,8 +152,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Cron Tasks
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function cron_tasks() {
 
@@ -188,8 +188,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Action: Clear Cache
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_clear_cache() {
 
@@ -209,8 +209,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Clear Cache
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function clear_cache( $cache_type = '' ) {
 
@@ -242,8 +242,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Settings
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -327,8 +327,8 @@ if ( ! class_exists( 'boniPS_Caching_Module' ) ) :
 
 		/**
 		 * Sanitize Settings
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 

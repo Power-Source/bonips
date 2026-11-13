@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Query Export
  * @see http://codex.bonips.me/classes/bonips_query_export/ 
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 	class boniPS_Query_Export {
@@ -52,7 +52,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Set Export File Name
 		 * Sets the file name we will use when we export.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function set_export_file_name( $name = '' ) {
 
@@ -88,7 +88,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Get Data by IDs
 		 * Retreaves log entries based on a set of entry ids.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function get_data_by_ids( $ids = array() ) {
 
@@ -124,7 +124,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Get Data by User
 		 * Retreaves log entries based on a given user ID.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function get_data_by_user( $user_id = NULL ) {
 
@@ -160,7 +160,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Get Data by Type
 		 * Retreaves log entries based on a given point type.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function get_data_by_type( $point_type = NULL ) {
 
@@ -197,7 +197,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Get Data by Query
 		 * Retreaves log entries based on an array of query arguments.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function get_data_by_query( $args = array() ) {
 
@@ -214,7 +214,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		 * Set Orderby
 		 * Converts a valid set of order arguments into the order arguments the export
 		 * db queries will use.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		protected function set_orderby() {
 
@@ -239,7 +239,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Set Limit
 		 * Sets the limit argument to be used in the db queries based on the argument we gave.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		protected function set_limit() {
 
@@ -255,7 +255,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Set Column Headers
 		 * Sets a valid set of column headers for the export.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		protected function set_column_headers( $headers = array() ) {
 
@@ -281,7 +281,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		 * Clean IDs
 		 * Sanitization function for array of entry ids. Also eliminates duplicates.
 		 * @returns array of intregers or false
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		protected function clean_ids( $data = array() ) {
 
@@ -301,7 +301,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Set Point Types
 		 * Populates $this->types with all the point types found int the data.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		protected function set_point_types( $data ) {
 
@@ -320,7 +320,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Get Raw Entry
 		 * Returns the values for all columns in the current export row in raw format.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		protected function get_raw_entry( $entry ) {
 
@@ -344,7 +344,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Get Rendered Entry
 		 * Returns the values for all columns in the current export row formatted.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		protected function get_rendered_entry( $entry ) {
 
@@ -431,7 +431,7 @@ if ( ! class_exists( 'boniPS_Query_Export' ) ) :
 		/**
 		 * Do Export
 		 * If data is available for export, we run the export tool.
-		 * @version 1.0.1
+		 * @version 1.0.0
 		 */
 		public function do_export() {
 
@@ -454,8 +454,8 @@ endif;
 /**
  * Get Export Formats
  * Returns an arry of supported formats.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_export_formats' ) ) :
 	function bonips_get_export_formats() {
@@ -471,8 +471,8 @@ endif;
 /**
  * Get Log Exports
  * Returns an associative array of log export options.
- * @since 1.4
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_log_exports' ) ) :
 	function bonips_get_log_exports() {
@@ -503,8 +503,8 @@ endif;
 /**
  * Get Export URL
  * Returns the URL for triggering an export (if allowed).
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_export_url' ) ) :
 	function bonips_get_export_url( $set = 'all', $raw = false ) {
@@ -561,8 +561,8 @@ endif;
 /**
  * Is Valid Export URL
  * Checks if a valid export URL is present.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_is_valid_export_url' ) ) :
 	function bonips_is_valid_export_url( $admin = false ) {

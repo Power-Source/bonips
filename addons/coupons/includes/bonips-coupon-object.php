@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Coupon class
  * @see http://codex.bonips.me/classes/bonips_coupon/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Coupon' ) ) :
 	class boniPS_Coupon extends boniPS_Object {
@@ -114,8 +114,8 @@ if ( ! class_exists( 'boniPS_Coupon' ) ) :
 
 		/**
 		 * Populate
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function populate( $coupon_id = NULL, $code = '' ) {
 
@@ -181,8 +181,8 @@ if ( ! class_exists( 'boniPS_Coupon' ) ) :
 
 		/**
 		 * Get Usage Count
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_usage_count() {
 
@@ -208,8 +208,8 @@ if ( ! class_exists( 'boniPS_Coupon' ) ) :
 
 		/**
 		 * Update Usage Count
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_usage_count() {
 
@@ -221,8 +221,8 @@ if ( ! class_exists( 'boniPS_Coupon' ) ) :
 
 		/**
 		 * Use Coupon
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function use_coupon( $user_id = false ) {
 

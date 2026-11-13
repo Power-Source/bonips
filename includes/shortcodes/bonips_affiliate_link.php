@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Affiliate Link
- * @since 1.5.3
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_affiliate_link' ) ) :
 	function bonips_render_affiliate_link( $atts, $content = '' ) {

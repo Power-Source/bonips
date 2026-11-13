@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Dashboard Widget: Overview
  * @see https://codex.wordpress.org/Example_Dashboard_Widget
- * @since 1.3.3
- * @version 1.3.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Dashboard_Widget_Overview' ) ) :
 	class boniPS_Dashboard_Widget_Overview {

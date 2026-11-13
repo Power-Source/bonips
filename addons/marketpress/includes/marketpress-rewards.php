@@ -3,8 +3,8 @@ if ( ! defined( 'BONIPS_MARKET_VERSION' ) ) exit;
 
 /**
  * MarketPress Setup
- * @since 1.0
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_marketpress_load_rewards' ) ) :
 	function bonips_marketpress_load_rewards() {
@@ -22,8 +22,8 @@ endif;
 
 /**
  * Add Reward Metabox
- * @since 1.0
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_markpress_add_product_metabox' ) ) :
 	function bonips_markpress_add_product_metabox() {
@@ -42,8 +42,8 @@ endif;
 
 /**
  * Product Metabox
- * @since 1.0
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_markpress_product_metabox' ) ) :
 	function bonips_markpress_product_metabox( $post ) {
@@ -103,8 +103,8 @@ endif;
 
 /**
  * Save Reward Setup
- * @since 1.0
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_markpress_save_reward_settings' ) ) :
 	function bonips_markpress_save_reward_settings( $post_id ) {
@@ -128,8 +128,8 @@ endif;
 
 /**
  * Payout Rewards
- * @since 1.0
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_markpress_payout_rewards' ) ) :
 	function bonips_markpress_payout_rewards( $order ) {

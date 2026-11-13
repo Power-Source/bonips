@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Network class
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Network_Module' ) ) {
 	class boniPS_Network_Module {
@@ -22,8 +22,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) {
 
 		/**
 		 * Load
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 			add_action( 'admin_init',         array( $this, 'module_admin_init' ) );
@@ -35,8 +35,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) {
 
 		/**
 		 * Init
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 			register_setting( 'bonips_network', 'bonips_network', array( $this, 'save_network_prefs' ) );
@@ -44,8 +44,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) {
 
 		/**
 		 * Add Network Menu Items
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_menu() {
 			$pages[] = add_menu_page(
@@ -73,8 +73,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) {
 		 * Network Check
 		 * Blocks bonips from being used if the plugin is network wide
 		 * enabled.
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function network_check( $value ) {
 			global $current_blog;
@@ -92,8 +92,8 @@ if ( ! class_exists( 'boniPS_Network_Module' ) ) {
 
 		/**
 		 * Add Admin Menu Styling
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_menu_styling() {
 			global $wp_version;
@@ -111,8 +111,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Load Admin Page Styling
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_print_styles() {
 			if ( ! wp_style_is( 'bonips-admin', 'registered' ) ) {
@@ -141,8 +141,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Network Settings Page
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_page_settings() {
 			// Security
@@ -225,8 +225,8 @@ h4.ui-accordion-header:before { content: "<?php _e( 'Klicke zum Öffnen', 'bonip
 
 		/**
 		 * Save Network Settings
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_network_prefs( $settings ) {
 

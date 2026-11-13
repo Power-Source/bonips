@@ -6,8 +6,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * This shortcode allows the current user to send a pre-set amount of points
  * to a pre-set user. A simpler version of the bonips_transfer shortcode.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_send/ 
- * @since 1.1
- * @version 1.3.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_send' ) ) :
 	function bonips_render_shortcode_send( $atts, $content = '' ) {
@@ -70,8 +70,8 @@ add_shortcode( BONIPS_SLUG . '_send', 'bonips_render_shortcode_send' );
 
 /**
  * boniPS Send Points Ajax
- * @since 0.1
- * @version 1.4.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_shortcode_send_points_ajax' ) ) :
 	function bonips_shortcode_send_points_ajax() {

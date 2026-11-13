@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Widget: boniPS Balance
- * @since 0.1
- * @version 1.4.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Widget_Balance' ) ) :
 	class boniPS_Widget_Balance extends WP_Widget {
@@ -266,8 +266,8 @@ endif;
 
 /**
  * Widget: Leaderboard
- * @since 0.1
- * @version 1.3.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Widget_Leaderboard' ) ) :
 	class boniPS_Widget_Leaderboard extends WP_Widget {
@@ -453,8 +453,8 @@ endif;
 
 /**
  * Widget: boniPS Wallet
- * @since 1.4
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Widget_Wallet' ) ) :
 	class boniPS_Widget_Wallet extends WP_Widget {

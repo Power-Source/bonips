@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * BoniPress Shortcode: bonips_history
  * Returns the points history.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_history/
- * @since 1.0.9
- * @version 1.3.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_history' ) ) :
 	function bonips_render_shortcode_history( $atts, $content = '' ) {

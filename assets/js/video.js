@@ -1,7 +1,7 @@
 /**
  * Viewing Videos Core
- * @since 1.2
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 var timer    = 0;
 
@@ -15,8 +15,8 @@ var done     = {};
 
 /**
  * View Handler
- * @since 1.2
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 function bonips_view_video( id, state, custom_logic, custom_interval, key, ctype ) {
 
@@ -121,8 +121,8 @@ function bonips_view_video( id, state, custom_logic, custom_interval, key, ctype
 
 /**
  * AJAX call handler
- * @since 1.2
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 function bonips_video_call( id, key, state, actions, seconds, pointtype ) {
 

@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Query Statistics
  * @see http://codex.bonips.me/classes/bonips_query_stats/ 
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Query_Stats' ) ) :
 	class boniPS_Query_Stats {

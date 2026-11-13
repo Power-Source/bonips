@@ -2,11 +2,11 @@
 /**
  * Addon: Stats
  * Addon URI: http://bonips.me/add-ons/stats/
- * Version: 2.0
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
-define( 'boniPS_STATS_VERSION',     '2.0' );
+define( 'boniPS_STATS_VERSION',     '1.0.0' );
 define( 'boniPS_STATS',             __FILE__ );
 define( 'boniPS_STATS_DIR',         boniPS_ADDONS_DIR . 'stats/' );
 
@@ -22,8 +22,8 @@ do_action( 'bonips_stats_load_widgets' );
 
 /**
  * boniPS_Stats_Module class
- * @since 1.6
- * @version 2.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 	class boniPS_Stats_Module extends boniPS_Module {
@@ -51,8 +51,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 
 		/**
 		 * Load
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -81,8 +81,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 
 		/**
 		 * Init
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -94,8 +94,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 
 		/**
 		 * Register Shortcodes
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_shortcodes() {
 
@@ -113,8 +113,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 
 		/**
 		 * Init
-		 * @since 1.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -146,8 +146,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 
 		/**
 		 * Register Assets
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_assets() {
 
@@ -168,8 +168,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 
 		/**
 		 * Maybe Enqueue Scripts
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function maybe_enqueue_scripts() {
 
@@ -195,8 +195,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 		/**
 		 * Clear Data
 		 * Will attempt to clear the stats data, assuming we can based on our setup.
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function clear_data( $value ) {
 
@@ -215,8 +215,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 		/**
 		 * Clear User Data
 		 * Will attempt to clear the stats data for a user, assuming we can based on our setup.
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function clear_user_data( $user_id ) {
 
@@ -236,8 +236,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 		 * Force Clear Data
 		 * Situations where stats data must be cleared no matter what we set for our setup.
 		 * Mainly used when admin edits / deletes log entries in the wp-admin area.
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function force_clear_data() {
 
@@ -249,8 +249,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 		 * Force Clear User Data
 		 * Situations where stats data must be cleared no matter what we set for our setup.
 		 * Mainly used when admin edits / deletes log entries in the wp-admin area.
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function force_clear_user_data( $user_id ) {
 
@@ -260,8 +260,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 
 		/**
 		 * Overview Total
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function overview_total( $point_type, $total, $data ) {
 
@@ -284,8 +284,8 @@ if ( ! class_exists( 'boniPS_Stats_Module' ) ) :
 
 		/**
 		 * Overview After
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function overview_after() {
 
@@ -317,8 +317,8 @@ jQuery(function($){
 
 		/**
 		 * Admin Enqueue
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_enqueue( $hook ) {
 
@@ -334,8 +334,8 @@ jQuery(function($){
 
 		/**
 		 * Add-on Settings
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -455,8 +455,8 @@ jQuery(document).ready(function($){
 
 		/**
 		 * Sanitize Settings
-		 * @since 2.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 
@@ -488,8 +488,8 @@ endif;
 
 /**
  * Load Statistics Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_statistics_addon' ) ) :
 	function bonips_load_statistics_addon( $modules, $point_types ) {

@@ -1,7 +1,7 @@
 /**
  * buyCRED Checkout
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 jQuery(function($){
 

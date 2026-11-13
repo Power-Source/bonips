@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Import: CubePoint Balances
- * @since 1.2
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 	class boniPS_Importer_CubePoints extends WP_Importer {
@@ -20,7 +20,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 
 		/**
 		 * Construct
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function __construct() {
 
@@ -33,7 +33,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 		/**
 		 * Registered callback function for the WordPress Importer
 		 * Manages the three separate stages of the CSV import process
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -66,7 +66,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 
 		/**
 		 * UTF-8 encode the data if `$enc` value isn't UTF-8.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function format_data_from_csv( $data, $enc ) {
 			return ( $enc == 'UTF-8' ) ? $data : utf8_encode( $data );
@@ -74,7 +74,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 
 		/**
 		 * Checks CubePoints Installation
-		 * @version 1.1
+		 * @version 1.0.0
 		 */
 		public function check_cubepoints() {
 
@@ -93,7 +93,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 		/**
 		 * Import Function
 		 * Handles the actual import based on a given file.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function import() {
 
@@ -298,7 +298,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 
 		/**
 		 * Render Screen Header
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function header() {
 
@@ -312,7 +312,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 
 		/**
 		 * Render Screen Footer
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function footer() {
 
@@ -322,7 +322,7 @@ if ( ! class_exists( 'boniPS_Importer_CubePoints' ) ) :
 
 		/**
 		 * Greet Screen
-		 * @version 1.1
+		 * @version 1.0.0
 		 */
 		public function greet() {
 

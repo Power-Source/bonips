@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hooks for Viewing Videos
- * @since 1.2
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 	class boniPS_Hook_Video_Views extends boniPS_Hook {
@@ -29,8 +29,8 @@ if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.2
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -43,8 +43,8 @@ if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 
 		/**
 		 * Populate JS
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_js( $js ) {
 
@@ -64,8 +64,8 @@ if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 
 		/**
 		 * View Video Request
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function video_view( $setup = array() ) {
 
@@ -247,8 +247,8 @@ if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 		/**
 		 * Get Users Video Log
 		 * Returns the log for a given video id.
-		 * @since 1.2
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_video_log( $video_id, $user_id ) {
 
@@ -260,8 +260,8 @@ if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 
 		/**
 		 * Update Points
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_creds( $row_id, $user_id, $amount ) {
 
@@ -294,8 +294,8 @@ if ( ! class_exists( 'boniPS_Hook_Video_Views' ) ) :
 
 		/**
 		 * Preference for Viewing Videos
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -389,8 +389,8 @@ endif;
 
 /**
  * Load Video Viewing Program
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_video_view_program' ) ) :
 	function bonips_load_video_view_program() {
@@ -412,8 +412,8 @@ add_action( 'bonips_init', 'bonips_load_video_view_program', 91 );
 
 /**
  * Register Scripts
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_video_register_scripts' ) ) :
 	function bonips_video_register_scripts() {
@@ -451,8 +451,8 @@ endif;
 
 /**
  * Detect Video View AJAX Calls
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_video_detect_views' ) ) :
 	function bonips_video_detect_views() {
@@ -498,8 +498,8 @@ endif;
 
 /**
  * Enqueue Scripts
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_video_enqueue_footer' ) ) :
 	function bonips_video_enqueue_footer() {

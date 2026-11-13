@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * WooCommerce Setup
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_woocommerce_reward' ) ) :
 	function bonips_load_woocommerce_reward() {
@@ -27,8 +27,8 @@ add_action( 'bonips_load_hooks', 'bonips_load_woocommerce_reward', 90 );
 /**
  * Remove Reviews from Comment Hook
  * Prevents the comment hook from granting points twice for a review.
- * @since 1.6.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_remove_review_from_comments' ) ) :
 	function bonips_woo_remove_review_from_comments( $reply, $comment ) {
@@ -42,8 +42,8 @@ endif;
 
 /**
  * Add Reward Metabox
- * @since 1.5
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_add_product_metabox' ) ) :
 	function bonips_woo_add_product_metabox() {
@@ -62,8 +62,8 @@ endif;
 
 /**
  * Product Metabox
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_product_metabox' ) ) :
 	function bonips_woo_product_metabox( $post ) {
@@ -127,8 +127,8 @@ endif;
 
 /**
  * Add Reward details for Variations
- * @since 1.7.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_add_product_variation_detail' ) ) :
 	function bonips_woo_add_product_variation_detail( $loop, $variation_data, $variation ) {
@@ -173,8 +173,8 @@ endif;
 
 /**
  * WooCommerce Points Refund
- * @since 1.7.9.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_refund_points' ) ) :
 	function bonips_woo_refund_points( $request ) {
@@ -188,8 +188,8 @@ endif;
 
 /**
  * Save Reward Setup
- * @since 1.5
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_save_reward_settings' ) ) :
 	function bonips_woo_save_reward_settings( $post_id ) {
@@ -217,8 +217,8 @@ endif;
 
 /**
  * Save Reward for Variations
- * @since 1.7.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_save_product_variation_detail' ) ) :
 	function bonips_woo_save_product_variation_detail( $post_id ) {
@@ -249,8 +249,8 @@ endif;
 
 /**
  * Payout Rewards
- * @since 1.5
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_woo_payout_rewards' ) ) :
 	function bonips_woo_payout_rewards( $order_id ) {
@@ -327,8 +327,8 @@ endif;
  * Get Product Reward
  * Returns either an array of point types and the reward value set for each or
  * the value set for a given point type. Will check for variable product rewards as well.
- * @since 1.7.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_woo_product_reward' ) ) :
 	function bonips_get_woo_product_reward( $product_id = NULL, $variation_id = NULL, $requested_type = false ) {
@@ -395,8 +395,8 @@ endif;
 
 /**
  * Register Hook
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 function bonips_register_woocommerce_hook( $installed ) {
 
@@ -416,8 +416,8 @@ add_filter( 'bonips_setup_hooks', 'bonips_register_woocommerce_hook', 95 );
 
 /**
  * WooCommerce Product Review Hook
- * @since 1.5
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_woocommerce_hook', 95 );
 function bonips_load_woocommerce_hook() {
@@ -445,8 +445,8 @@ function bonips_load_woocommerce_hook() {
 
 		/**
 		 * Run
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -457,8 +457,8 @@ function bonips_load_woocommerce_hook() {
 
 		/**
 		 * New Review
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_review( $comment_id, $comment_status ) {
 
@@ -470,8 +470,8 @@ function bonips_load_woocommerce_hook() {
 
 		/**
 		 * Review Transitions
-		 * @since 1.5
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function review_transitions( $new_status, $old_status, $comment ) {
 
@@ -511,8 +511,8 @@ function bonips_load_woocommerce_hook() {
 
 		/**
 		 * Preferences for WooCommerce Product Reviews
-		 * @since 1.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -548,8 +548,8 @@ function bonips_load_woocommerce_hook() {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

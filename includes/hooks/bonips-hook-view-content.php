@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for viewing content
- * @since 1.5.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 	class boniPS_Hook_View_Contents extends boniPS_Hook {
@@ -47,8 +47,8 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.5.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -59,8 +59,8 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 
 		/**
 		 * Content Loaded
-		 * @since 1.5.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function content_loading() {
 
@@ -132,8 +132,8 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 
 		/**
 		 * Preference for read content hook
-		 * @since 1.5.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -329,8 +329,8 @@ if ( ! class_exists( 'boniPS_Hook_View_Contents' ) ) :
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $data ) {
 

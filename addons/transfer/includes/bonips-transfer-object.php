@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Rank class
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Transfer' ) ) :
 	class boniPS_Transfer extends boniPS_Object {
@@ -134,8 +134,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Populate
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function populate() {
 
@@ -175,8 +175,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Generate New Transfer ID
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function generate_new_transfer_id( $sender_id = 0, $recipient_id = 0 ) {
 
@@ -188,8 +188,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer( $transfer_id = false ) {
 
@@ -246,8 +246,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Statuses
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_statuses() {
 
@@ -262,8 +262,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Status
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_status() {
 
@@ -273,8 +273,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Display Transfer Status
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function display_transfer_status( $status = NULL ) {
 
@@ -292,8 +292,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 		/**
 		 * New Transfer Instance
 		 * Creates a new transfer instance.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_instance( $request = array() ) {
 
@@ -405,8 +405,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 		/**
 		 * User Can Transfer Minimum
 		 * Checks if a user can transfer the minimum requirement.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_can_transfer_minimum() {
 
@@ -447,8 +447,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Limit
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_limit() {
 
@@ -485,8 +485,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Limit Description
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_limit_desc( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
 
@@ -512,8 +512,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 		/**
 		 * User is Over Limit
 		 * Checks if the sender is over the transfer limit (if used).
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_is_over_limit() {
 
@@ -570,8 +570,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 		/**
 		 * Is Valid Transfer Request
 		 * Checks if a given request is valid and can be executed.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_valid_transfer_request( $request = array(), $posted = array() ) {
 
@@ -685,8 +685,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Total Sent
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function total_sent( $reference = 'transfer', $user_id = false, $point_type = '', $period_start = 0, $period_end = 0 ) {
 
@@ -713,8 +713,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 		/**
 		 * New Transfer
 		 * Attepmts to execute a transfer request that has been validated.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_transfer() {
 
@@ -789,8 +789,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 		/**
 		 * Refund
 		 * Attempts to refund a transfer.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function refund() {
 
@@ -806,8 +806,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 		/**
 		 * Get Transfer Form
 		 * Renders the transfer form based on our setup.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_form( $args = array() ) {
 
@@ -876,8 +876,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Recipient Field
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_recipient_field( $return = false ) {
 
@@ -974,8 +974,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Points Field
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_points_field( $return = false ) {
 
@@ -1011,8 +1011,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Amount Field
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_amount_field( $return = false ) {
 
@@ -1060,8 +1060,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Point Type Field
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_point_type_field( $return = false ) {
 
@@ -1090,8 +1090,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Message Field
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_message_field( $return = false ) {
 
@@ -1122,8 +1122,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Transfer Extra Fields
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_transfer_extra_fields( $return = false ) {
 
@@ -1193,8 +1193,8 @@ if ( ! class_exists( 'boniPS_Transfer' ) ) :
 
 		/**
 		 * Get Error Message
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_error_message( $return = false ) {
 

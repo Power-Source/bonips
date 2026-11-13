@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_STATS_VERSION' ) ) exit;
 /**
  * boniPS_Chart class
  * @see http://codex.bonips.me/objects/bonips_chart/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Chart' ) ) :
 	class boniPS_Chart extends boniPS_Object {
@@ -55,8 +55,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Populate
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function populate() {
 
@@ -83,8 +83,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Apply Defaults
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function apply_defaults( $args = array() ) {
 
@@ -107,8 +107,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Parse Arguments
-		 * @since 1.8
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_args( $args = array() ) {
 
@@ -177,8 +177,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Get Chart Options Object
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_chart_options() {
 
@@ -238,8 +238,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 		/**
 		 * Generate Element ID
 		 * Each chart element needs a unique HTML id.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function generate_element_id() {
 
@@ -251,8 +251,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Get Canvas Styling
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_canvas_styling() {
 
@@ -275,8 +275,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Get Reference Label
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_reference_label( $reference = '' ) {
 
@@ -310,8 +310,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Generate Chart.js Canvas
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function generate_canvas( $type = '', $input = array() ) {
 
@@ -419,8 +419,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Generate Pie Chart
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function pie_chart( $input = array() ) {
 
@@ -430,8 +430,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Generate Doughnut Chart
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function doughnut_chart( $input = array() ) {
 
@@ -441,8 +441,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Generate Line Chart
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function line_chart( $input = array() ) {
 
@@ -452,8 +452,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Generate Bar Chart
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bar_chart( $input = array() ) {
 
@@ -463,8 +463,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Generate Polar Chart
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function polar_chart( $input = array() ) {
 
@@ -474,8 +474,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Generate Radar Chart
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function radar_chart( $input = array() ) {
 
@@ -485,8 +485,8 @@ if ( ! class_exists( 'boniPS_Chart' ) ) :
 
 		/**
 		 * Is Chart
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function is_chart( $args = array() ) {
 

@@ -2,12 +2,12 @@
 /**
  * Addon: Sell Content
  * Addon URI: https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-erweiterungen-inhalt-verkaufen/
- * Version: 2.0.1
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 define( 'boniPS_SELL',              __FILE__ );
-define( 'boniPS_SELL_VERSION',      '1.5' );
+define( 'boniPS_SELL_VERSION',      '1.0.0' );
 define( 'BONIPS_SELL_DIR',          boniPS_ADDONS_DIR . 'sell-content/' );
 define( 'BONIPS_SELL_ASSETS_DIR',   BONIPS_SELL_DIR . 'assets/' );
 define( 'BONIPS_SELL_INCLUDES_DIR', BONIPS_SELL_DIR . 'includes/' );
@@ -17,8 +17,8 @@ require_once BONIPS_SELL_INCLUDES_DIR . 'bonips-sell-shortcodes.php';
 
 /**
  * boniPS_Sell_Content_Module class
- * @since 0.1
- * @version 2.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 	class boniPS_Sell_Content_Module extends boniPS_Module {
@@ -57,8 +57,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Module Init
-		 * @since 0.1
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -89,8 +89,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Module Admin Init
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -115,8 +115,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Register Assets
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_assets() {
 
@@ -132,8 +132,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Load Script
-		 * @since 1.7
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_footer() {
 
@@ -166,9 +166,9 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 		 * Setup Content Filter
 		 * We are using the template_redirect action to prevent this add-on having to run anywhere else but
 		 * in the front-end of our website, since the the_content filter is used in soooo many places.
-		 * As of 1.7.6, purchases are made via front-end submissions and not via admin-ajax.php
-		 * @since 1.7
-		 * @version 1.0.1
+		 * Purchases are made via front-end submissions and not via admin-ajax.php
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function template_redirect() {
 
@@ -187,8 +187,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 		/**
 		 * Maybe Buy Content
 		 * Check if a purchase request has been made either via an AJAX submission.
-		 * @since 1.7.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function maybe_buy_content() {
 
@@ -259,8 +259,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 		 * The Content Overwrite
 		 * Handles content sales by replacing the posts content with the appropriate template
 		 * for those who have not paid. Admins and authors are excluded.
-		 * @since 0.1
-		 * @version 1.2.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function the_content( $content ) {
 
@@ -440,8 +440,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * User Level Override
-		 * @since 1.5
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sell_content_user_screen( $user ) {
 
@@ -557,8 +557,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Save Override
-		 * @since 1.5
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function save_manual_profit_share( $user_id ) {
 
@@ -583,8 +583,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Enabled / Disabled Select Options
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function enabled_options( $selected = '' ) {
 
@@ -606,8 +606,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Settings Page
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -968,8 +968,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Sanitize & Save Settings
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $general ) {
 
@@ -1081,8 +1081,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Scripts & Styles
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function scripts_and_styles() {
 
@@ -1097,8 +1097,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Add Meta Box to Content
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_metabox( $post ) {
 
@@ -1122,8 +1122,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Sell Meta Box
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox( $post ) {
 
@@ -1227,8 +1227,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Save Sell Meta Box
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_metabox( $post_id ) {
 
@@ -1283,8 +1283,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Add Email Notice Instance
-		 * @since 1.5.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function email_notice_instance( $events, $request ) {
 
@@ -1301,8 +1301,8 @@ if ( ! class_exists( 'boniPS_Sell_Content_Module' ) ) :
 
 		/**
 		 * Support for Email Notices
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function email_notices( $data ) {
 
@@ -1321,8 +1321,8 @@ endif;
 
 /**
  * Load Sell Content Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_sell_content_addon' ) ) :
 	function bonips_load_sell_content_addon( $modules, $point_types ) {

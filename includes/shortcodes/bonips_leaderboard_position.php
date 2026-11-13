@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * BoniPress Shortcode: bonips_leaderboard_position
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_leaderboard/_position/
  * Replaces the bonips_my_ranking shortcode.
- * @since 1.7
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_leaderbaord_position' ) ) :
 	function bonips_render_shortcode_leaderbaord_position( $atts, $content = '' ) {

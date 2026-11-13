@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * boniPS_NETbilling class
  * NETbilling Payment Gateway
  * @see http://secure.netbilling.com/public/docs/merchant/public/directmode/directmode3protocol.html
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 	class boniPS_NETbilling extends boniPS_Payment_Gateway {
@@ -46,8 +46,8 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 		/**
 		 * IPN - Is Valid Call
 		 * Replaces the default check
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function IPN_is_valid_call() {
 
@@ -69,8 +69,8 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 
 		/**
 		 * Process
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() {
 
@@ -125,8 +125,8 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 
 		/**
 		 * Returns
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function returning() {
 
@@ -137,8 +137,8 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 
 		/**
 		 * Prep Sale
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function prep_sale( $new_transaction = false ) {
 
@@ -170,8 +170,8 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 
 		/**
 		 * AJAX Buy Handler
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_buy() {
 
@@ -190,8 +190,8 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 		/**
 		 * Checkout Page Body
 		 * This gateway only uses the checkout body.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_body() {
 
@@ -207,8 +207,8 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -265,8 +265,8 @@ if ( ! class_exists( 'boniPS_NETbilling' ) ) :
 
 		/**
 		 * Sanatize Prefs
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

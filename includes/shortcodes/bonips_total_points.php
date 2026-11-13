@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * Total Points
  * Allows to show total points of a specific point type or add up
  * points from the log based on reference, reference id or user id.
- * @since 1.6.6
- * @version 1.1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_total_points' ) ) :
 	function bonips_render_shortcode_total_points( $atts ) {

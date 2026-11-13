@@ -3,7 +3,7 @@ if ( ! defined( 'boniPS_STATS_VERSION' ) ) exit;
 
 /**
  * Stats Widget: Circulation
- * @version 1.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 	class boniPS_Stats_Widget_Circulation extends boniPS_Statistics_Widget {
@@ -21,7 +21,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 
 		/**
 		 * Get Data
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function get_data() {
 
@@ -57,7 +57,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 
 		/**
 		 * Get Gains and Loses
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function gains_and_loses() {
 
@@ -108,7 +108,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 
 		/**
 		 * Get Total
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function get_total( $ctype = '', $positive = true ) {
 
@@ -128,7 +128,7 @@ if ( ! class_exists( 'boniPS_Stats_Widget_Circulation' ) ) :
 
 		/**
 		 * Front Widget
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		function front_widget() {
 
@@ -256,7 +256,7 @@ jQuery(function($) {
 
 		/**
 		 * Display
-		 * @version 1.0.2
+		 * @version 1.0.0
 		 */
 		function widget() {
 

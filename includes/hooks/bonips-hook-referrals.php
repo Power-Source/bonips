@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for affiliations
- * @since 1.4
- * @version 1.3.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 	class boniPS_Hook_Affiliate extends boniPS_Hook {
@@ -61,8 +61,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.4
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -96,8 +96,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 		/**
 		 * Parse Log Entry
 		 * Add support for user related template tags in signup referrals.
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_log_entry( $content, $entry ) {
 
@@ -108,8 +108,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 		/**
 		 * Add Referral Key
-		 * @since 1.5.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_key( $keys ) {
 
@@ -128,8 +128,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 		 * URL or if not set, the current URL. If user is not logged in,
 		 * the set URL is returned. If this is not set, the shortcode
 		 * will return an empty string.
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function shortcode_affiliate_link( $atts, $content = '' ) {
 
@@ -156,8 +156,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 		 * Shortcode: Affiliate ID
 		 * Returns the current users affiliate ID. Returns an empty
 		 * string if the user is not logged in.
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function shortcode_affiliate_id( $atts, $content = '' ) {
 
@@ -183,8 +183,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 		/**
 		 * BuddyPress Profile
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function buddypress_profile() {
 
@@ -234,8 +234,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 		/**
 		 * Visits
-		 * @since 1.4
-		 * @version 1.3.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function site_visits() {
 
@@ -286,8 +286,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 		/**
 		 * Signups
-		 * @since 1.4
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function site_signup( $new_user_id ) {
 
@@ -359,8 +359,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 		/**
 		 * Verified Signup
 		 * If signups need to be verified, award points now.
-		 * @since 1.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function verified_signup( $user_id ) {
 
@@ -394,8 +394,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 		/**
 		 * Get Ref Link
 		 * Returns a given users referral id with optional url appended.
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_ref_link( $user_id = '', $url = '' ) {
 
@@ -421,8 +421,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 		/**
 		 * Get Ref ID
 		 * Returns a given users referral ID.
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_ref_id( $user_id ) {
 
@@ -466,8 +466,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 		/**
 		 * Get User ID from Ref ID
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_user_id_from_ref_id( $string = '' ) {
 
@@ -507,8 +507,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 		/**
 		 * Ref Counts
 		 * Checks to see if this referral counts.
-		 * @since 1.4
-		 * @version 1.2.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ref_counts( $user_id, $IP = '', $instance = 'visit' ) {
 
@@ -543,8 +543,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 		/**
 		 * Preference for Affiliate Hook
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -700,8 +700,8 @@ if ( ! class_exists( 'boniPS_Hook_Affiliate' ) ) :
 
 		/**
 		 * Sanitise Preference
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $data ) {
 
@@ -730,8 +730,8 @@ endif;
 
 /**
  * Load Referral Program
- * @since 1.5.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_referral_program' ) ) :
 	function bonips_load_referral_program() {
@@ -755,8 +755,8 @@ add_action( 'bonips_init', 'bonips_load_referral_program', 90 );
 
 /**
  * Detect Referred Visits
- * @since 1.5.3
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_detect_referred_visits' ) ) :
 	function bonips_detect_referred_visits() {
@@ -774,8 +774,8 @@ endif;
 
 /**
  * Detect Referred Signups
- * @since 1.5.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_detect_referred_signups' ) ) :
 	function bonips_detect_referred_signups( $new_user_id ) {
@@ -787,8 +787,8 @@ endif;
 
 /**
  * Detect Referred BP User Activation
- * @since 1.5.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_detect_bp_user_activation' ) ) :
 	function bonips_detect_bp_user_activation( $user_id ) {

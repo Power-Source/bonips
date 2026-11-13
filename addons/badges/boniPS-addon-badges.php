@@ -1,12 +1,12 @@
 <?php
 /**
  * Addon: Abzeichen
- * Version: 1.3
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 define( 'boniPS_BADGE',              __FILE__ );
-define( 'boniPS_BADGE_VERSION',      '1.2' );
+define( 'boniPS_BADGE_VERSION',      '1.0.0' );
 define( 'BONIPS_BADGE_DIR',          boniPS_ADDONS_DIR . 'badges/' );
 define( 'BONIPS_BADGE_INCLUDES_DIR', BONIPS_BADGE_DIR . 'includes/' );
 
@@ -29,8 +29,8 @@ require_once BONIPS_BADGE_INCLUDES_DIR . 'bonips-badge-secondary.php';
 
 /**
  * boniPS_buyCRED_Module class
- * @since 1.5
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 	class boniPS_Badge_Module extends boniPS_Module {
@@ -57,8 +57,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Module Pre Init
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_pre_init() {
 
@@ -68,8 +68,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Module Init
-		 * @since 1.0
-		 * @version 1.0.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -111,8 +111,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Module Admin Init
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -145,8 +145,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Register Badge Post Type
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function register_badges() {
 
@@ -188,8 +188,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Populate Current Account
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_current_account() {
 
@@ -225,8 +225,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Populate Account
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_account() {
 
@@ -263,8 +263,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 		/**
 		 * Delete Point Type
 		 * When a point type is deleted, we want to remove any data saved for this point type.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_point_type( $point_type = NULL ) {
 
@@ -281,8 +281,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 		/**
 		 * Delete Badge
 		 * When a badge is deleted, we want to delete connections as well.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_badge( $post_id ) {
 
@@ -305,8 +305,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Adjust Post Updated Messages
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function post_updated_messages( $messages ) {
 
@@ -332,8 +332,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Add Admin Menu Item
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_to_menu() {
 
@@ -353,8 +353,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Parent File
-		 * @since 1.6
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parent_file( $parent = '' ) {
 
@@ -378,8 +378,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Sub Parent File
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function subparent_file( $subparent = '', $parent = '' ) {
 
@@ -403,8 +403,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Add Finished
-		 * @since 1.0
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_finished( $result, $request, $bonips ) {
 
@@ -441,8 +441,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Adjust Badge Column Header
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_headers( $defaults ) {
 
@@ -463,8 +463,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Adjust Badge Column Content
-		 * @since 1.0
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_content( $column_name, $badge_id ) {
 
@@ -515,8 +515,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Adjust Row Actions
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_row_actions( $actions, $post ) {
 
@@ -531,8 +531,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Adjust Enter Title Here
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enter_title_here( $title ) {
 
@@ -547,8 +547,8 @@ if ( ! class_exists( 'boniPS_Badge_Module' ) ) :
 
 		/**
 		 * Enqueue Scripts
-		 * @since 1.0
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_scripts() {
 
@@ -619,8 +619,8 @@ th#badge-users { width: 10%; }
 
 		/**
 		 * Add Meta Boxes
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_metaboxes() {
 
@@ -646,8 +646,8 @@ th#badge-users { width: 10%; }
 
 		/**
 		 * Level Template
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function level_template( $level = 0 ) {
 
@@ -660,8 +660,8 @@ th#badge-users { width: 10%; }
 
 		/**
 		 * Get Level Image
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_level_image( $setup, $level = 0 ) {
 
@@ -687,8 +687,8 @@ th#badge-users { width: 10%; }
 
 		/**
 		 * Requirements Template
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function requirements_template( $level = 0 ) {
 
@@ -703,8 +703,8 @@ th#badge-users { width: 10%; }
 
 		/**
 		 * Rewards Template
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function rewards_template() {
 
@@ -714,8 +714,8 @@ th#badge-users { width: 10%; }
 
 		/**
 		 * Badge Publishing Actions
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function publishing_actions() {
 
@@ -779,8 +779,8 @@ jQuery(function($) {
 
 		/**
 		 * Default Image Metabox
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_badge_default( $post ) {
 
@@ -817,8 +817,8 @@ jQuery(function($) {
 
 		/**
 		 * Badge Setup Metabox
-		 * @since 1.7
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_badge_setup( $post ) {
 
@@ -1034,8 +1034,8 @@ var BadgeRequirement   = '<?php echo $js_requirement_clone; ?>';
 
 		/**
 		 * Save Badge Details
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_badge( $post_id, $post = NULL ) {
 
@@ -1176,8 +1176,8 @@ var BadgeRequirement   = '<?php echo $js_requirement_clone; ?>';
 
 		/**
 		 * Add to General Settings
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -1276,8 +1276,8 @@ var BadgeRequirement   = '<?php echo $js_requirement_clone; ?>';
 
 		/**
 		 * Save Settings
-		 * @since 1.0
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 
@@ -1293,8 +1293,8 @@ var BadgeRequirement   = '<?php echo $js_requirement_clone; ?>';
 
 		/**
 		 * User Badges Admin Screen
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function badge_user_screen( $user ) {
 
@@ -1402,8 +1402,8 @@ jQuery(function($) {
 
 		/**
 		 * Save Manual Badges
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_manual_badges( $user_id ) {
 
@@ -1469,8 +1469,8 @@ jQuery(function($) {
 
 		/**
 		 * AJAX: Assign Badge
-		 * @since 1.0
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_assign_badge() {
 
@@ -1496,8 +1496,8 @@ jQuery(function($) {
 
 		/**
 		 * AJAX: Remove Badge Connections
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function action_remove_connections() {
 
@@ -1523,8 +1523,8 @@ jQuery(function($) {
 
 		/**
 		 * Insert Badges into PSForum profile
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_into_psforum_profile() {
 
@@ -1544,8 +1544,8 @@ jQuery(function($) {
 
 		/**
 		 * Insert Badges into PSForum
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_into_psforum_reply() {
 
@@ -1569,8 +1569,8 @@ jQuery(function($) {
 
 		/**
 		 * Insert Badges in BuddyPress
-		 * @since 1.0
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_into_buddypress() {
 
@@ -1593,8 +1593,8 @@ endif;
 
 /**
  * Load Badges Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_badges_addon' ) ) :
 	function bonips_load_badges_addon( $modules, $point_types ) {

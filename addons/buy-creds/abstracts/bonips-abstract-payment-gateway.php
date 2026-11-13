@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Payment_Gateway class
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 	abstract class boniPS_Payment_Gateway {
@@ -148,8 +148,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Request Validator
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function valid_request() {
 
@@ -214,8 +214,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Populate Transaction
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_transaction() {
 
@@ -263,15 +263,15 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Prep Sale
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function prep_sale( $new_transaction = false ) { }
 
 		/**
 		 * Send JSON
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function send_json( $content = '' ) {
 
@@ -284,8 +284,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * Request Exceeds Limit Check
 		 * Checks if a requested amount of points exceeds the "maximum" limit (if used).
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exceeds_limit() {
 
@@ -334,43 +334,43 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Process Purchase
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function process() { }
 
 		/**
 		 * Results Handler
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function returning() { }
 
 		/**
 		 * AJAX Buy Handler
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function ajax_buy() { }
 
 		/**
 		 * Buy Handler
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function buy() { }
 
 		/**
 		 * Admin Init Handler
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_init() { }
 
 		/**
 		 * Preferences
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -380,8 +380,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Sanatize Prefs
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 
@@ -391,8 +391,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Checkout Header
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_header() {
 
@@ -409,8 +409,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Checkout Footer
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_footer( $button_label = '' ) {
 
@@ -450,8 +450,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Checkout Logo
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_logo( $title = '' ) {
 
@@ -480,8 +480,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Checkout: Order
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_order() {
 
@@ -515,8 +515,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Checkout: Transaction ID
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_transaction_id() {
 
@@ -528,8 +528,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Checkout: Cancel
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_cancel() {
 
@@ -541,29 +541,29 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Checkout Page Title
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_title() { }
 
 		/**
 		 * Checkout Page Body
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_body() { }
 
 		/**
 		 * Checkout Page Footer
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function checkout_page_footer() { }
 
 		/**
 		 * Exchange Rate Setup
-		 * @since 1.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exchange_rate_setup( $default = 'USD' ) {
 
@@ -608,8 +608,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Add Pending Payment
-		 * @since 1.5
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_pending_payment( $data ) {
 
@@ -752,8 +752,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * First Comment
 		 * Used to allow a gateway to adjust the first comment with pending payments.
-		 * @since 1.7.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function first_comment( $comment ) {
 
@@ -763,8 +763,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Pending Payment
-		 * @since 1.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_pending_payment( $post_id = NULL ) {
 
@@ -777,8 +777,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * Get Recipient ID
 		 * Returns the numeric ID of the user that is nominated to receive the purchased points.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_recipient_id() {
 
@@ -827,8 +827,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Amount
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_amount() {
 
@@ -853,8 +853,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Point Type
-		 * @since 1.5
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_point_type() {
 
@@ -874,8 +874,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Cost
-		 * @since 1.3.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_cost( $amount = 0, $point_type = BONIPS_DEFAULT_TYPE_KEY, $raw = false, $custom_rate = 0 ) {
 
@@ -922,8 +922,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Thank You Page
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_thankyou() {
 
@@ -955,8 +955,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * Get Entry
 		 * Returns the appropriate log entry template.
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_entry( $recipient_id = false, $buyer_id = false ) {
 
@@ -979,8 +979,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Cancelled Page
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_cancelled( $transaction_id = NULL ) {
 
@@ -995,8 +995,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Log Gateway Call
-		 * @since 1.5
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function log_call( $payment_id, $log ) {
 
@@ -1009,8 +1009,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Decode Log Entries
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function log_entry( $content, $log_entry ) {
 
@@ -1020,8 +1020,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Log Entry
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_log_entry( $from = 0, $to = 0 ) {
 
@@ -1038,8 +1038,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * Get Field Name
 		 * Returns the field name for the current gateway
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function field_name( $field = '' ) {
 
@@ -1069,8 +1069,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * Get Field ID
 		 * Returns the field id for the current gateway
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function field_id( $field = '' ) {
 
@@ -1099,8 +1099,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Callback URL
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function callback_url() {
 
@@ -1112,8 +1112,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Start Log
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function start_log() {
 
@@ -1125,8 +1125,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * New Log Entry
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_log_entry( $entry = '' ) {
 
@@ -1139,8 +1139,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Save Log Entry
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_log_entry( $id = '', $outcome = '' ) {
 
@@ -1156,9 +1156,9 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Payment Page Header
-		 * Pre 1.8 setup. Will be removed as of version 1.9
-		 * @since 0.1
-		 * @version 1.2
+		 * Legacy setup.
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_page_header( $site_title = '', $reload = false ) {
 
@@ -1223,8 +1223,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Payment Page Footer
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_page_footer() {
 
@@ -1242,9 +1242,9 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Billing Address Form
-		 * Depreciated as of 1.7. This should be added by the gateway.
-		 * @since 1.4
-		 * @version 1.0
+		 * Deprecated. This should be added by the gateway.
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_billing_address_form( $country_dropdown = false ) {
 
@@ -1385,8 +1385,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Buyers Name
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_buyers_name( $user_id = NULL ) {
 
@@ -1410,8 +1410,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Debug
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_debug() {
 
@@ -1446,8 +1446,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Get Errors
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_errors() {
 
@@ -1466,8 +1466,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * Form Builder with Redirect
 		 * Used by gateways that redirects users to a remote processor.
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_page_redirect( $hidden_fields = array(), $location = '' ) {
 
@@ -1501,8 +1501,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * POST to data
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function POST_to_data( $unset = false ) {
 
@@ -1522,8 +1522,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		 * Searches the Log for a given transaction.
 		 *
 		 * @returns (bool) true if transaction id is unique or false
-		 * @since 0.1
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function transaction_id_is_unique( $transaction_id = '' ) {
 
@@ -1552,8 +1552,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * Create Unique Transaction ID
 		 * Returns a unique transaction ID that has no been used by buyCRED yet.
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function create_unique_transaction_id() {
 
@@ -1573,8 +1573,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		/**
 		 * Create Token
 		 * Returns a wp nonce
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function create_token( $user_id = NULL ) {
 
@@ -1590,8 +1590,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 		 * @param $user_id (int) required user id
 		 * @param $nonce (string) required nonce to check
 		 * @returns true or false
-		 * @since 0.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function verify_token( $user_id, $nonce ) {
 
@@ -1609,8 +1609,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Encode Sales Data
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function encode_sales_data( $data ) {
 
@@ -1624,8 +1624,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Decode Sales Data
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function decode_sales_data( $data ) {
 
@@ -1639,8 +1639,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Currencies Dropdown
-		 * @since 0.1
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function currencies_dropdown( $name = '', $js = '' ) {
 
@@ -1689,8 +1689,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Item Type Dropdown
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function item_types_dropdown( $name = '' ) {
 
@@ -1714,8 +1714,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Countries Dropdown Options
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function list_option_countries( $selected = '' ) {
 
@@ -1973,8 +1973,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * US States Dropdown Options
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function list_option_us_states( $selected = '', $non_us = false ) {
 
@@ -2046,8 +2046,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Months Dropdown Options
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function list_option_months( $selected = '' ) {
 
@@ -2076,8 +2076,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Years Dropdown Options
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function list_option_card_years( $selected = '', $number = 16 ) {
 
@@ -2106,8 +2106,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * IPN - Has Required Fields
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function IPN_has_required_fields( $required_fields = array(), $method = 'REQUEST' ) {
 
@@ -2144,8 +2144,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * IPN - Is Valid Call
-		 * @since 1.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function IPN_is_valid_call() {
 
@@ -2155,8 +2155,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * IPN - Is Valid Sale
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function IPN_is_valid_sale( $sales_data_key = '', $cost_key = '', $transactionid_key = '', $method = '' ) {
 
@@ -2209,8 +2209,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Complete Payment
-		 * @since 1.4
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function complete_payment( $pending_payment = NULL, $transaction_id = '' ) {
 
@@ -2252,8 +2252,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Email Notice Add-on Support
-		 * @since 1.5.4
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function email_notice( $events, $request ) {
 
@@ -2266,8 +2266,8 @@ if ( ! class_exists( 'boniPS_Payment_Gateway' ) ) :
 
 		/**
 		 * Trash Pending Payment
-		 * @since 1.5.3
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function trash_pending_payment( $payment_id ) {
 

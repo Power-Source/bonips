@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Badge class
  * @see http://codex.bonips.me/classes/bonips_badge/
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Badge' ) ) :
 	class boniPS_Badge extends boniPS_Object {
@@ -62,8 +62,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Populate
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function populate( $object = NULL, $level_id = NULL ) {
 
@@ -110,8 +110,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get User Count
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_user_count( $level_id = NULL ) {
 
@@ -138,8 +138,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get Level
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_level( $level_id = false ) {
 
@@ -151,8 +151,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get Level Requirements
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_level_requirements( $level_id = false ) {
 
@@ -164,8 +164,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get Level Reward
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_level_reward( $level_id = false ) {
 
@@ -177,8 +177,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * User Has Badge
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_has_badge( $user_id = false, $level_id = 0 ) {
 
@@ -203,8 +203,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get Users Current Level
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_current_level( $user_id = false ) {
 
@@ -226,8 +226,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get Level Reached
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function query_users_level( $user_id = false ) {
 
@@ -293,8 +293,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get Users Next Level ID
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_next_level_id( $user_id = false ) {
 
@@ -311,8 +311,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get Users Next Level
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_next_level( $user_id = false ) {
 
@@ -327,8 +327,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Assign Badge to User
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function assign( $user_id = false, $level_id = 0 ) {
 
@@ -381,8 +381,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Payout Rewards
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function payout_reward( $previous_level = -1, $new_level = 0 ) {
 
@@ -463,8 +463,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Assign Badge to All
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function assign_all() {
 
@@ -614,8 +614,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Divest Badge from user
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function divest( $user_id = false ) {
 
@@ -634,8 +634,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Divest Badge from Everyone
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function divest_all() {
 
@@ -660,8 +660,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Delete Badge
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete( $delete_post = false ) {
 
@@ -685,8 +685,8 @@ if ( ! class_exists( 'boniPS_Badge' ) ) :
 
 		/**
 		 * Get Badge Image
-		 * @since 1.0
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_image( $image = NULL ) {
 

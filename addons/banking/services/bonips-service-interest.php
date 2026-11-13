@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS Bank Service - Interest
- * @since 1.2
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 	class boniPS_Banking_Service_Interest extends boniPS_Service {
@@ -43,8 +43,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		 * Deactivate Service
 		 * Used if the service is no longer reach the minimum requirements or when the
 		 * service is disabled in the admin area.
-		 * @since 1.5.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function deactivate() {
 
@@ -62,8 +62,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		 * Is Ready
 		 * Checks to make sure the most common "bugs" users experience with this service
 		 * are taken care of. An empty log or empty interest rate will not work.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function is_ready() {
 
@@ -81,8 +81,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		 * Run
 		 * Actions taken during WordPress init. Hooks into the cron jobs and schedules
 		 * the cron jobs if not scheduled. Will only run if service is enabled.
-		 * @since 1.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -121,8 +121,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		/**
 		 * Do Interest Compounding
 		 * Compounds interest on balances each day.
-		 * @since 1.5.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function do_compounding() {
 
@@ -267,8 +267,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		/**
 		 * Do Interest Payout
 		 * Handles payouts of pending compounded interests.
-		 * @since 1.5.2
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function do_interest_payout() {
 
@@ -348,8 +348,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		/**
 		 * Get Pending Interest
 		 * Returns the total amount of points that have been compounded but not yet paid out.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function get_pending_interest() {
 
@@ -365,8 +365,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		/**
 		 * Get Users Interet Rate
 		 * Takes into account any custom rates that might have been saved for the given user.
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_interest_rate( $user_id = 0, $default = 0 ) {
 
@@ -382,8 +382,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 		/**
 		 * Settings Screen
 		 * Renders the service settings on the Banking page in the admin area.
-		 * @since 1.2
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -564,8 +564,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.2
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $post ) {
 
@@ -636,8 +636,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 
 		/**
 		 * User Screen
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_screen( $user ) {
 
@@ -662,8 +662,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Interest' ) ) :
 
 		/**
 		 * Save User Override
-		 * @since 1.5.2
-		 * @version 1.0.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function save_custom_rate( $user_id ) {
 

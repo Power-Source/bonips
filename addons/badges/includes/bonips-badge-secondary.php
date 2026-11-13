@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for site visits
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Badge_Secondary' ) ) :
 	class boniPS_Badge_Secondary {
@@ -23,8 +23,8 @@ if ( ! class_exists( 'boniPS_Badge_Secondary' ) ) :
 
 		/**
 		 * Setup Instance
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function instance() {
 			if ( is_null( self::$_instance ) ) {

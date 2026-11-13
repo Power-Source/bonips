@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Import: Log Entries
- * @since 1.2
- * @version 1.3.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 	class boniPS_Importer_Log_Entires extends WP_Importer {
@@ -20,7 +20,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 		/**
 		 * Construct
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function __construct() {
 
@@ -33,7 +33,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 		/**
 		 * Registered callback function for the WordPress Importer
 		 * Manages the three separate stages of the CSV import process
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -79,7 +79,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 		/**
 		 * UTF-8 encode the data if `$enc` value isn't UTF-8.
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function format_data_from_csv( $data, $enc ) {
 			return ( $enc == 'UTF-8' ) ? $data : utf8_encode( $data );
@@ -89,7 +89,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 		 * Handles the CSV upload and initial parsing of the file to prepare for
 		 * displaying author import options
 		 * @return bool False if error uploading or invalid file, true otherwise
-		 * @version 1.1
+		 * @version 1.0.0
 		 */
 		public function handle_upload() {
 
@@ -222,7 +222,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 		/**
 		 * Log Time
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function log_time( $time ) {
 
@@ -232,7 +232,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 		/**
 		 * Render Screen Header
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function header() {
 
@@ -246,7 +246,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 		/**
 		 * Render Screem Fppter
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function footer() {
 
@@ -256,7 +256,7 @@ if ( ! class_exists( 'boniPS_Importer_Log_Entires' ) ) :
 
 		/**
 		 * Greet Screen
-		 * @version 1.0
+		 * @version 1.0.0
 		 */
 		public function greet() {
 

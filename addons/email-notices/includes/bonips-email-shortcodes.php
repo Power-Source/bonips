@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * BoniPress Shortcode: bonips_email_subscriptions
  * Returns a given users rank
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-bonips_email_subscriptions/
- * @since 1.4.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_email_subscriptions' ) ) :
 	function bonips_render_email_subscriptions( $atts = array(), $content = '' ) {

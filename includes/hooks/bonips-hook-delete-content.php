@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for deleting content
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Delete_Content' ) ) :
 	class boniPS_Hook_Delete_Content extends boniPS_Hook {
@@ -39,8 +39,8 @@ if ( ! class_exists( 'boniPS_Hook_Delete_Content' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -53,8 +53,8 @@ if ( ! class_exists( 'boniPS_Hook_Delete_Content' ) ) :
 
 		/**
 		 * Delete Content Hook
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_content( $post_id ) {
 
@@ -95,8 +95,8 @@ if ( ! class_exists( 'boniPS_Hook_Delete_Content' ) ) :
 
 		/**
 		 * Preference for Delete Content Hook
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -215,8 +215,8 @@ if ( ! class_exists( 'boniPS_Hook_Delete_Content' ) ) :
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $data ) {
 

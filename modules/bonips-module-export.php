@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS_Export_Module class
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 	class boniPS_Export_Module extends boniPS_Module {
@@ -33,8 +33,8 @@ if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 
 		/**
 		 * Load
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load() {
 
@@ -57,8 +57,8 @@ if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 
 		/**
 		 * Adjust Bulk Actions
-		 * @since 1.7.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_log_bulk_actions( $actions ) {
 
@@ -88,8 +88,8 @@ if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 
 		/**
 		 * Insert Export Front
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function insert_export_front( $user_id ) {
 
@@ -123,8 +123,8 @@ if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 
 		/**
 		 * Front-end export handler
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function catch_front_end_exports() {
 
@@ -159,8 +159,8 @@ if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 
 		/**
 		 * Back-end export handler
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function catch_admin_log_actions( $point_type ) {
 
@@ -219,8 +219,8 @@ if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 
 		/**
 		 * Back-end My export handler
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function catch_my_back_end_exports( $point_type ) {
 
@@ -250,8 +250,8 @@ if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 
 		/**
 		 * Add Export Trigger to Title
-		 * @since 1.7
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_export_trigger_to_title( $title, $log_module ) {
 
@@ -265,8 +265,8 @@ if ( ! class_exists( 'boniPS_Export_Module' ) ) :
 
 		/**
 		 * Add Export Buttons
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_export_buttons( $log_module ) {
 
@@ -321,8 +321,8 @@ jQuery(function($) {
 
 		/**
 		 * Add My Export Buttons
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_my_export_buttons( $log_module ) {
 
@@ -368,8 +368,8 @@ jQuery(function($) {
 
 		/**
 		 * Settings Page
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -489,8 +489,8 @@ jQuery(function($) {
 
 		/**
 		 * Sanitize & Save Settings
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $general ) {
 

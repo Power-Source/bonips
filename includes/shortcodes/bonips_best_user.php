@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * Best User
  * Allows database queries in the history table to determen the
  * "best user" based on references, time and point types.
- * @since 1.6.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_best_user' ) ) :
 	function bonips_render_shortcode_best_user( $attr, $content = '' ) {

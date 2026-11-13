@@ -5,8 +5,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * BoniPress Shortcode: my_balance
  * Returns the current users balance.
  * @see http://codex.bonips.me/shortcodes/bonips_my_balance/
- * @since 1.0.9
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_my_balance' ) ) :
 	function bonips_render_shortcode_my_balance( $atts, $content = '' ) {

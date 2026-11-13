@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * boniPS Bank Service - Central Bank
- * @since 1.5.2
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Banking_Service_Central' ) ) :
 	class boniPS_Banking_Service_Central extends boniPS_Service {
@@ -26,8 +26,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Central' ) ) :
 
 		/**
 		 * Run
-		 * @since 1.5.2
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -37,8 +37,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Central' ) ) :
 
 		/**
 		 * Add
-		 * @since 1.5.2
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function bonips_add( $reply, $request, $bonips ) {
 
@@ -94,8 +94,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Central' ) ) :
 
 		/**
 		 * Preference for Central Bank
-		 * @since 1.5.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -128,8 +128,8 @@ if ( ! class_exists( 'boniPS_Banking_Service_Central' ) ) :
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.5.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $post ) {
 

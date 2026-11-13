@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Hook for publishing content
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Hook_Publishing_Content' ) ) :
 	class boniPS_Hook_Publishing_Content extends boniPS_Hook {
@@ -39,8 +39,8 @@ if ( ! class_exists( 'boniPS_Hook_Publishing_Content' ) ) :
 
 		/**
 		 * Run
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -50,8 +50,8 @@ if ( ! class_exists( 'boniPS_Hook_Publishing_Content' ) ) :
 
 		/**
 		 * Publish Content Hook
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function publishing_content( $new_status, $old_status, $post ) {
 
@@ -97,8 +97,8 @@ if ( ! class_exists( 'boniPS_Hook_Publishing_Content' ) ) :
 
 		/**
 		 * Preference for Publish Content Hook
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -217,8 +217,8 @@ if ( ! class_exists( 'boniPS_Hook_Publishing_Content' ) ) :
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function sanitise_preferences( $data ) {
 

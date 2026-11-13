@@ -11,8 +11,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * available if the hook is enabled!
  *
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_link/
- * @since 1.1
- * @version 1.4
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_link' ) ) :
 	function bonips_render_shortcode_link( $atts, $link_title = '' ) {

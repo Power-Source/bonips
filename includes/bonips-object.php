@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Account class
  * @see http://codex.bonips.me/objects/bonips_account/
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Account' ) ) :
 	class boniPS_Account extends boniPS_Object {
@@ -112,8 +112,8 @@ endif;
 /**
  * boniPS_Balance class
  * @see http://codex.bonips.me/objects/bonips_balance/
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Balance' ) ) :
 	class boniPS_Balance extends boniPS_Object {
@@ -178,8 +178,8 @@ endif;
 /**
  * boniPS_Point_Type class
  * @see http://codex.bonips.me/objects/bonips_point_type/
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Point_Type' ) ) :
 	class boniPS_Point_Type extends boniPS_Object {
@@ -334,8 +334,8 @@ endif;
 /**
  * boniPS_History class
  * @see http://codex.bonips.me/objects/bonips_history-2/
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_History' ) ) :
 	class boniPS_History extends boniPS_Object {

@@ -2,13 +2,13 @@
 /**
  * MarketPress integration for boniPS.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 
 if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 	final class boniPS_MarketPress_Plugin {
 
-		public $version             = '1.0';
+		public $version             = '1.0.0';
 
 		// Instnace
 		protected static $_instance = NULL;
@@ -18,8 +18,8 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Setup Instance
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public static function instance() {
 			if ( is_null( self::$_instance ) ) {
@@ -30,22 +30,22 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Not allowed
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
-		public function __clone() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.0' ); }
+		public function __clone() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.0.0' ); }
 
 		/**
 		 * Not allowed
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
-		public function __wakeup() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.0' ); }
+		public function __wakeup() { _doing_it_wrong( __FUNCTION__, 'Cheatin&#8217; huh?', '1.0.0' ); }
 
 		/**
 		 * Define
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		private function define( $name, $value, $definable = true ) {
 			if ( ! defined( $name ) )
@@ -54,8 +54,8 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Require File
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function file( $required_file ) {
 			if ( file_exists( $required_file ) )
@@ -64,8 +64,8 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Construct
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function __construct() {
 
@@ -88,8 +88,8 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Define Constants
-		 * @since 1.0
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function define_constants() {
 
@@ -106,8 +106,8 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Includes
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function includes() {
 
@@ -118,8 +118,8 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Includes
-		 * @since 1.0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function load_gateway( $list ) {
 
@@ -137,7 +137,7 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 		/**
 		 * Load the gateway implementation after MarketPress has loaded its API.
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function load_gateway_class() {
 
@@ -151,8 +151,8 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Adjust Currency Format
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_currency_format( $formatted, $currency, $symbol, $amount ) {
 
@@ -171,8 +171,8 @@ if ( ! class_exists( 'boniPS_MarketPress_Plugin' ) ) :
 
 		/**
 		 * Add Badge Support
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_badge_support( $references ) {
 

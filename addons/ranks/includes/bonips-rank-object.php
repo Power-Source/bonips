@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Rank class
  * @see http://codex.bonips.me/classes/bonips_rank/
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Rank' ) ) :
 	class boniPS_Rank extends boniPS_Object {
@@ -96,8 +96,8 @@ if ( ! class_exists( 'boniPS_Rank' ) ) :
 
 		/**
 		 * Populate
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function populate( $rank_id = NULL ) {
 
@@ -124,8 +124,8 @@ if ( ! class_exists( 'boniPS_Rank' ) ) :
 
 		/**
 		 * Checks if a user has this rank
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_has_rank( $user_id = false ) {
 
@@ -146,8 +146,8 @@ if ( ! class_exists( 'boniPS_Rank' ) ) :
 
 		/**
 		 * Assign Rank to User
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function assign( $user_id = false ) {
 
@@ -168,8 +168,8 @@ if ( ! class_exists( 'boniPS_Rank' ) ) :
 		/**
 		 * Assign All
 		 * Assigns all users that meet the requirements for this rank.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function assign_all() {
 
@@ -204,8 +204,8 @@ if ( ! class_exists( 'boniPS_Rank' ) ) :
 
 		/**
 		 * Divest User
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function divest( $user_id = false ) {
 
@@ -233,8 +233,8 @@ if ( ! class_exists( 'boniPS_Rank' ) ) :
 
 		/**
 		 * Divest All Users
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function divest_all() {
 
@@ -261,8 +261,8 @@ if ( ! class_exists( 'boniPS_Rank' ) ) :
 
 		/**
 		 * Delete Rank
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete( $delete_post = true ) {
 
@@ -279,8 +279,8 @@ if ( ! class_exists( 'boniPS_Rank' ) ) :
 
 		/**
 		 * Get Image
-		 * @since 1.0
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_image( $image = 'logo' ) {
 

@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * Get Email Notice
  * Returns the email notice object.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_email_notice' ) ) :
 	function bonips_get_email_notice( $notice_id = false ) {
@@ -33,8 +33,8 @@ endif;
 /**
  * User Wants Email Notice
  * Returns true if user has not selected to unsubscribe from this email address else false if they did.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_user_wants_email' ) ) :
 	function bonips_user_wants_email( $user_id = false, $notice_id = false ) {
@@ -63,8 +63,8 @@ endif;
 /**
  * Get Email Notice Instances
  * Returns an array of supported instances where an email can be sent by this add-on.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_email_instances' ) ) :
 	function bonips_get_email_instances( $none = true ) {
@@ -104,8 +104,8 @@ endif;
 /**
  * Get Email Triggers
  * Retreaves the saved email triggers for a given point type.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_email_triggers' ) ) :
 	function bonips_get_email_triggers( $point_type = BONIPS_DEFAULT_TYPE_KEY, $force = false ) {
@@ -142,8 +142,8 @@ endif;
 /**
  * Add Email Trigger
  * Adds an email post to the nominated instance for a particular point type.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_add_email_trigger' ) ) :
 	function bonips_add_email_trigger( $event_type = '', $instance = '', $notice_id = false, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -191,8 +191,8 @@ endif;
 /**
  * Add Email Trigger
  * Adds an email post to the nominated instance for a particular point type.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_delete_email_trigger' ) ) :
 	function bonips_delete_email_trigger( $notice_id = false, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -285,8 +285,8 @@ endif;
 /**
  * Get Email Triggers
  * Retreaves the saved email triggers for a given point type.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_triggered_emails' ) ) :
 	function bonips_get_triggered_emails( $bonips_event = array(), $new_balance = 0 ) {
@@ -401,8 +401,8 @@ endif;
 /**
  * Get Event Emails
  * Returns all the notice IDs that exists for a given event type + instance.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_event_emails' ) ) :
 	function bonips_get_event_emails( $point_type = BONIPS_DEFAULT_TYPE_KEY, $event_type = '', $instance = '' ) {
@@ -424,8 +424,8 @@ endif;
 
 /**
  * Send New Email
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_send_new_email' ) ) :
 	function bonips_send_new_email( $notice_id = false, $event = array(), $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -458,20 +458,14 @@ endif;
 
 /**
  * Get Email Content Type
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_email_content_type' ) ) :
 	function bonips_get_email_content_type() {
 
 		$format   = 'text/plain';
-		$bonips_version = (float) explode(' ', boniPS_VERSION)[0];
-			if( $bonips_version >= 1.8 ){
-				$settings = bonips_get_addon_settings( 'emailnotices' );
-			}else{
-				$settings = bonips_get_addon_settings( 'emails' );
-
-			}
+		$settings = bonips_get_addon_settings( 'emailnotices' );
 		if ( $settings['use_html'] )
 			$format = 'text/html';
 
@@ -482,8 +476,8 @@ endif;
 
 /**
  * Cron Schedule Handler
- * @since 1.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_email_notice_cron_job' ) ) :
 	function bonips_email_notice_cron_job() {
@@ -518,8 +512,8 @@ endif;
 
 /**
  * Get Email Settings
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_email_subscriptions' ) ) :
 	function bonips_get_email_settings( $post_id ) {

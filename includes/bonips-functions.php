@@ -4,8 +4,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 /**
  * boniPS_Settings class
  * @see http://codex.bonips.me/classes/bonips_settings/
- * @since 0.1
- * @version 1.6
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Settings' ) ) :
 	class boniPS_Settings {
@@ -68,8 +68,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * Construct
-		 * @since 1.0
-		 * @version 1.8
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function __construct( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
 
@@ -105,8 +105,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * Default Settings
-		 * @since 1.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function defaults() {
 
@@ -147,8 +147,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * Get Point Type Settings
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_point_type_settings() {
 
@@ -161,8 +161,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * Default Settings
-		 * @since 1.8
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_log_table() {
 
@@ -198,8 +198,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * The Point Types Name - Singular form
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function singular() {
 
@@ -209,8 +209,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * The Point Types Name - Plural form
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function plural() {
 
@@ -221,8 +221,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		/**
 		 * Zero
 		 * Returns zero formated with or without decimals.
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function zero() {
 
@@ -238,8 +238,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 *
 		 * @param $number (int|float) the initial number
 		 * @returns the given number formated either as an integer or float
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function number( $value = NULL ) {
 
@@ -264,8 +264,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $number (int|float) the initial number
 		 * @returns the given number formated either as an integer or float
 		 * @filter 'bonips_format_number'
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function format_number( $value = NULL ) {
 
@@ -293,8 +293,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $force_in (boolean) option to force $before after prefix and $after before suffix
 		 * @filter 'bonips_format_creds'
 		 * @returns formated string
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function format_creds( $value = 0, $before = '', $after = '', $force_in = false ) {
 
@@ -321,8 +321,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $up_down (string|boolean) choice of rounding up or down. using false bypasses this function
 		 * @param $precision (int) the optional number of decimal digits to round to. defaults to 0
 		 * @returns rounded int or float
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function round_value( $value = NULL, $up_down = false, $precision = 0 ) {
 
@@ -359,8 +359,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * Get Lowest Value
 		 * Returns the lowest point value available based on the number of decimal places
 		 * we use. So with 1 decimal = 0.1, 2 decimals 0.01 etc. Defaults to 1.
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_lowest_value() {
 
@@ -385,8 +385,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $amount (int|float) the initial amount
 		 * @param $rate (int|float) the exchange rate to devide by
 		 * @param $round (bool) option to round values, defaults to yes.
-		 * @since 0.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function apply_exchange_rate( $amount = 0, $rate = 1 ) {
 
@@ -410,8 +410,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		/**
 		 * Parse Template Tags
 		 * Parses template tags in a given string by checking for the 'ref_type' array key under $log_entry->data.
-		 * @since 0.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parse_template_tags( $log_entry, $content = '' ) {
 
@@ -459,8 +459,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		/**
 		 * General Template Tags
 		 * Replaces the general template tags in a given string.
-		 * @since 0.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function template_tags_general( $content = '' ) {
 
@@ -498,8 +498,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		/**
 		 * Amount Template Tags
 		 * Replaces the amount template tags in a given string.
-		 * @since 0.1
-		 * @version 1.0.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function template_tags_amount( $content = '', $amount = 0 ) {
 
@@ -522,8 +522,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $data (object) Log entry data object
 		 * @param $link_target (string) Optional link target to add to any links
 		 * @return (string) parsed string
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function template_tags_post( $content = '', $ref_id = NULL, $data = '', $link_target = '' ) {
 
@@ -588,8 +588,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $data (object) Log entry data object
 		 * @param $link_target (string) Optional link target to add to any links
 		 * @return (string) parsed string
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function template_tags_user( $content = '', $ref_id = NULL, $data = '', $link_target = '' ) {
 
@@ -665,8 +665,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $data (object) Log entry data object
 		 * @param $link_target (string) Optional link target to add to any links
 		 * @return (string) parsed string
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function template_tags_comment( $content = '', $ref_id = NULL, $data = '', $link_target = '' ) {
 
@@ -728,8 +728,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @filter 'bonips_has_tags'
 		 * @filter 'bonips_has_tags_{$type}'
 		 * @returns (boolean) true or false
-		 * @since 1.2.2
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function has_tags( $type = '', $tags = '', $content = '' ) {
 
@@ -746,8 +746,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * Available Template Tags
 		 * Based on an array of template tag types, a list of codex links
 		 * are generted for each tag type.
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function available_template_tags( $available = array(), $custom = '' ) {
 
@@ -824,8 +824,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $allow (string) allows you to overwrite the default filter with a custom set of tags to strip
 		 * @filter 'bonips_allowed_tags'
 		 * @returns (string) string stripped of tags
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function allowed_tags( $data = '', $allow = '' ) {
 
@@ -843,8 +843,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * Allowed HTML Tags
 		 * Used for settings that support HTML. These settings are
 		 * sanitized using wp_kses() where these tags are used.
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function allowed_html_tags() {
 
@@ -865,8 +865,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * Get Point Admin Capability
 		 * Returns the set WordPress capability that defines who is considered a "Point Administrator".
 		 * @returns capability (string)
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_point_admin_capability() {
 
@@ -888,7 +888,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		// Backwards comp
 		public function edit_creds_cap() {
 
-			_deprecated_function( __FUNCTION__, 'get_point_admin_capability', '1.8' );
+			_deprecated_function( __FUNCTION__, 'get_point_admin_capability', '1.0.0' );
 
 			return $this->get_point_admin_capability();
 
@@ -899,15 +899,15 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * Check if a given user or the current user is a Point Administrator.
 		 * @param $user_id (int) user id
 		 * @returns true or false
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_is_point_admin( $user_id = NULL ) {
 
 			$result = false;
 
 			if ( ! did_action( 'init' ) ) {
-				_doing_it_wrong( __FUNCTION__, 'Capability should not be checked before wp init', '1.8' );
+				_doing_it_wrong( __FUNCTION__, 'Capability should not be checked before wp init', '1.0.0' );
 				return $result;
 			}
 
@@ -925,7 +925,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		// Backwards comp
 		public function can_edit_creds( $user_id = NULL ) {
 
-			_deprecated_function( __FUNCTION__, 'user_is_point_admin', '1.8' );
+			_deprecated_function( __FUNCTION__, 'user_is_point_admin', '1.0.0' );
 
 			return $this->user_is_point_admin( $user_id );
 
@@ -935,8 +935,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * Get Point Editor Capability
 		 * Returns the set WordPress capability that defines who is considered a "Point Editor".
 		 * @returns capability (string)
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_point_editor_capability() {
 
@@ -951,7 +951,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		// Backwards comp
 		public function edit_plugin_cap() {
 
-			_deprecated_function( __FUNCTION__, 'get_point_editor_capability', '1.8' );
+			_deprecated_function( __FUNCTION__, 'get_point_editor_capability', '1.0.0' );
 
 			return $this->get_point_admin_capability();
 
@@ -962,15 +962,15 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * Check if a given user or the current user is a Point Editor.
 		 * @param $user_id (int) user id
 		 * @returns true or false
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function user_is_point_editor( $user_id = NULL ) {
 
 			$result = false;
 
 			if ( ! did_action( 'init' ) ) {
-				_doing_it_wrong( __FUNCTION__, 'Capability should not be checked before wp init', '1.8' );
+				_doing_it_wrong( __FUNCTION__, 'Capability should not be checked before wp init', '1.0.0' );
 				return $result;
 			}
 
@@ -988,7 +988,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		// Backwards comp
 		public function can_edit_plugin( $user_id = '' ) {
 
-			_deprecated_function( __FUNCTION__, 'user_is_point_editor', '1.8' );
+			_deprecated_function( __FUNCTION__, 'user_is_point_editor', '1.0.0' );
 
 			return $this->user_is_point_editor( $user_id );
 
@@ -997,8 +997,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		/**
 		 * Check if user id is in exclude list
 		 * @return true or false
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function in_exclude_list( $user_id = '' ) {
 
@@ -1022,8 +1022,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		/**
 		 * Exclude Point Administrators?
 		 * @return true or false
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exclude_point_admins() {
 
@@ -1033,7 +1033,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		// Backwards comp
 		public function exclude_plugin_editors() {
 
-			_deprecated_function( __FUNCTION__, 'exclude_point_admins', '1.8' );
+			_deprecated_function( __FUNCTION__, 'exclude_point_admins', '1.0.0' );
 
 			return $this->exclude_point_admins();
 
@@ -1042,8 +1042,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		/**
 		 * Exclude Point Editors?
 		 * @return true or false
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exclude_point_editors() {
 
@@ -1053,7 +1053,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		// Backwards comp
 		public function exclude_creds_editors() {
 
-			_deprecated_function( __FUNCTION__, 'exclude_point_editors', '1.8' );
+			_deprecated_function( __FUNCTION__, 'exclude_point_editors', '1.0.0' );
 
 			return $this->exclude_point_editors();
 
@@ -1064,8 +1064,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * Checks is a given user or the current user is excluded from using this point type.
 		 * @param $user_id (int), the users numeric ID
 		 * @returns boolean true on user should be excluded else false
-		 * @since 0.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function exclude_user( $user_id = NULL ) {
 
@@ -1090,8 +1090,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * Count Members
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function count_members() {
 
@@ -1107,8 +1107,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		/**
 		 * Get Point Type Key
 		 * Returns the default cred id.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_point_type_key() {
 
@@ -1118,7 +1118,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		// Backwards comp
 		public function get_cred_id() {
 
-			_deprecated_function( __FUNCTION__, 'get_point_type_key', '1.8' );
+			_deprecated_function( __FUNCTION__, 'get_point_type_key', '1.0.0' );
 
 			return $this->get_point_type_key();
 
@@ -1126,8 +1126,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * Get Max
-		 * @since 1.3
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function max() {
 
@@ -1140,8 +1140,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 
 		/**
 		 * Enforce Max
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enforce_max( $user_id = NULL, $amount = NULL ) {
 
@@ -1169,8 +1169,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $user_id (int), required user id
 		 * @param $type (string), optional cred type to check for
 		 * @returns zero if user id is not set or if no creds were found, else returns amount
-		 * @since 0.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_balance( $user_id = NULL, $point_type = NULL ) {
 
@@ -1196,7 +1196,7 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		// Backwards comp
 		public function get_users_cred( $user_id = NULL, $type = NULL ) {
 
-			_deprecated_function( __FUNCTION__, 'get_users_balance', '1.8' );
+			_deprecated_function( __FUNCTION__, 'get_users_balance', '1.0.0' );
 
 			return $this->get_users_balance( $user_id, $type );
 
@@ -1208,8 +1208,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $user_id (int), required user id
 		 * @param $type (string), optional cred type to check for
 		 * @returns zero if user id is not set or if no creds were found, else returns amount
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function get_users_total_balance( $user_id = NULL, $point_type = NULL ) {
 
@@ -1254,8 +1254,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $amount (int|float), amount to add/deduct from users balance. This value must be pre-formated.
 		 * @param $type (string), optional point type key to adjust instead of the current one.
 		 * @returns the new balance.
-		 * @since 0.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_users_balance( $user_id = NULL, $amount = NULL, $point_type = NULL ) {
 
@@ -1298,8 +1298,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $amount (int|float), required amount to add to the total
 		 * @param $type (string), optional cred type to check for
 		 * @returns zero if user id is not set or if no creds were found, else returns amount
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_users_total_balance( $user_id = NULL, $amount = 0, $point_type = NULL ) {
 
@@ -1336,8 +1336,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $user_id (int), required user id
 		 * @param $new_balance (int|float), amount to add/deduct from users balance. This value must be pre-formated.
 		 * @returns (bool) true on success or false on fail.
-		 * @since 1.7.3
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function set_users_balance( $user_id = NULL, $new_balance = NULL ) {
 
@@ -1371,8 +1371,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $user_id (int), required user id
 		 * @param $new_balance (int|float), amount to add/deduct from users balance. This value must be pre-formated.
 		 * @returns (bool) true on success or false on fail.
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function set_users_total_balance( $user_id = NULL, $new_balance = NULL ) {
 
@@ -1408,8 +1408,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $data (object|array|string|int), optional extra data to save in the log. Note that arrays gets serialized!
 		 * @param $type (string), optional point name, defaults to BONIPS_DEFAULT_TYPE_KEY
 		 * @returns boolean true on success or false on fail
-		 * @since 0.1
-		 * @version 1.7
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_creds( $ref = '', $user_id = '', $amount = '', $entry = '', $ref_id = '', $data = '', $type = NULL ) {
 
@@ -1486,8 +1486,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $ref_id (array), optional array of reference IDs allowing the use of content specific keywords in the log entry
 		 * @param $data (object|array|string|int), optional extra data to save in the log. Note that arrays gets serialized!
 		 * @returns false if requirements are not set or db insert id if successful.
-		 * @since 0.1
-		 * @version 1.5
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_to_log( $ref = '', $user_id = '', $amount = '', $entry = '', $ref_id = '', $data = '', $type = NULL ) {
 
@@ -1553,8 +1553,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $data (array), required column data to update
 		 * @param $prep (array), required column prep
 		 * @returns false if requirements are not met or true
-		 * @since 1.6.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function update_log_entry( $entry_id = NULL, $data = array(), $prep = array() ) {
 
@@ -1586,8 +1586,8 @@ if ( ! class_exists( 'boniPS_Settings' ) ) :
 		 * @param $ref_id (int) optional reference id
 		 * @param $user_id (int) optional user id
 		 * @param $data (array|string) option data to search
-		 * @since 0.1
-		 * @version 1.4
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function has_entry( $reference = NULL, $ref_id = NULL, $user_id = NULL, $data = NULL, $type = NULL ) {
 
@@ -1654,8 +1654,8 @@ endif;
 /**
  * boniPS Label
  * Returns the boniPS Label
- * @since 1.3.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_label' ) ) :
 	function bonips_label( $trim = false ) {
@@ -1678,8 +1678,8 @@ endif;
  * Get boniPS
  * Returns boniPS's general settings and core functions.
  * Replaces bonips_get_settings()
- * @since 1.4
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips' ) ) :
 	function bonips( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -1710,8 +1710,8 @@ endif;
 /**
  * Get Network Settings
  * Returns boniPS's network settings or false if multisite is not enabled.
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_settings_network' ) ) :
 	function bonips_get_settings_network() {
@@ -1742,8 +1742,8 @@ endif;
  * Is Main Site
  * In Multisite installs, this function will check if the current site or
  * a given site is the main site in the network.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_is_main_site' ) ) :
 	function bonips_is_main_site( $site_id = NULL ) {
@@ -1763,8 +1763,8 @@ endif;
 
 /**
  * Check if site is blocked
- * @since 1.5.4
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_is_site_blocked' ) ) :
 	function bonips_is_site_blocked( $blog_id = NULL ) {
@@ -1796,8 +1796,8 @@ endif;
 /**
  * Override Settings
  * Checks if the Master Template feature is enabled on a Multisite install.
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_override_settings' ) ) :
 	function bonips_override_settings() {
@@ -1815,8 +1815,8 @@ endif;
 /**
  * Centralize Log
  * Checks if the Central Logging feature is enabled on a Multisite install.
- * @since 1.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_centralize_log' ) ) :
 	function bonips_centralize_log() {
@@ -1833,8 +1833,8 @@ endif;
 
 /**
  * Get Module
- * @since 1.7.3
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_module' ) ) :
 	function bonips_get_module( $module = '', $type = 'solo' ) {
@@ -1860,8 +1860,8 @@ endif;
 
 /**
  * Get Addon Settings
- * @since 1.7.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_addon_settings' ) ) :
 	function bonips_get_addon_settings( $addon = '', $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -1890,8 +1890,8 @@ endif;
 
 /**
  * Get Remote API Settings
- * @since 1.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_remote' ) ) :
 	function bonips_get_remote() {
@@ -1910,8 +1910,8 @@ endif;
 
 /**
  * Is boniPS Ready
- * @since 1.3
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'is_bonips_ready' ) ) :
 	function is_bonips_ready() {
@@ -1926,8 +1926,8 @@ endif;
 /**
  * Is boniPS Installed
  * Returns either false (setup has not been run) or the timestamp when it was completed.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_is_installed' ) ) :
 	function bonips_is_installed() {
@@ -1940,8 +1940,8 @@ endif;
 /**
  * Maybe Install boniPS Table
  * Check to see if maybe the boniPS table needs to be installed.
- * @since 1.7.6
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'maybe_install_bonips_table' ) ) :
 	function maybe_install_bonips_table() {
@@ -1966,8 +1966,8 @@ endif;
 /**
  * Install Log
  * Installs the log for a site.
- * @since 1.3
- * @version 1.4.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_install_log' ) ) :
 	function bonips_install_log( $decimals = NULL, $force = false ) {
@@ -2045,8 +2045,8 @@ endif;
 /**
  * Get Post Types
  * Returns an array of post types that boniPS uses.
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'get_bonips_post_types' ) ) :
 	function get_bonips_post_types() {
@@ -2077,8 +2077,8 @@ endif;
  * - "author" string - returns the post authors user ID. Requires use inside the loop.
  * - "replyauthor" string - returns the PSForum reply authors ID. Requires use in PSForum forums topics.
  *
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_user_id' ) ) :
 	function bonips_get_user_id( $requested = '' ) {
@@ -2170,8 +2170,8 @@ endif;
 /**
  * Get Users Profile URL
  * Returns a given users profile URL.
- * @since 1.7.4
- * @version 1.0.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_users_profile_url' ) ) :
 	function bonips_get_users_profile_url( $user_id = NULL ) {
@@ -2194,8 +2194,8 @@ endif;
 /**
  * Get Users Account
  * Returns either the current users or the given users account object.
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_account' ) ) :
 	function bonips_get_account( $user_id = NULL ) {
@@ -2206,7 +2206,7 @@ if ( ! function_exists( 'bonips_get_account' ) ) :
 
 			if ( ! did_action( 'init' ) ) {
 
-				_doing_it_wrong( __FUNCTION__, 'This function should not be used before init.', '1.8' );
+				_doing_it_wrong( __FUNCTION__, 'This function should not be used before init.', '1.0.0' );
 
 				return false;
 
@@ -2242,8 +2242,8 @@ endif;
 /**
  * Get Account
  * Check if the account global is available based on a given user id.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_is_account' ) ) :
 	function bonips_is_account( $user_id = NULL ) {
@@ -2269,8 +2269,8 @@ endif;
 /**
  * Get Current Account
  * Returns the current account object (if one exists) else false.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_current_account' ) ) :
 	function bonips_get_current_account() {
@@ -2288,8 +2288,8 @@ endif;
 /**
  * Set Current Account
  * Sets the current account object.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_set_current_account' ) ) :
 	function bonips_set_current_account( $user_id = NULL ) {
@@ -2318,8 +2318,8 @@ endif;
 /**
  * Get Current Account
  * Check if the current account global is available based on a given user id.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_is_current_account' ) ) :
 	function bonips_is_current_account( $user_id = NULL ) {
@@ -2346,8 +2346,8 @@ endif;
  * Get Cred Types
  * Returns an associative array of registered point types.
  * @param $name_first (bool) option to replace "boniPS" with the point type name set.
- * @since 1.4
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_types' ) ) :
 	function bonips_get_types( $name_first = false ) {
@@ -2392,8 +2392,8 @@ endif;
 
 /**
  * Get Point Type
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_point_type' ) ) :
 	function bonips_get_point_type( $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -2423,8 +2423,8 @@ endif;
 /**
  * Get Usable Point Types
  * Returns an array of point type keys that a given user is allowed to use.
- * @since 1.7
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_usable_types' ) ) :
 	function bonips_get_usable_types( $user_id = NULL ) {
@@ -2485,8 +2485,8 @@ endif;
 
 /**
  * Point Type Exists
- * @since 1.6.8
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_point_type_exists' ) ) :
 	function bonips_point_type_exists( $type = NULL ) {
@@ -2516,8 +2516,8 @@ endif;
  * Get Point Type Name
  * Returns the name given to a particular point type.
  * @param $signular (boolean) option to return the plural version, returns singular by default
- * @since 0.1
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_point_type_name' ) ) :
 	function bonips_get_point_type_name( $point_type = BONIPS_DEFAULT_TYPE_KEY, $singular = true ) {
@@ -2534,8 +2534,8 @@ endif;
 
 /**
  * Select Point Type from Select Dropdown
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_types_select_from_dropdown' ) ) :
 	function bonips_types_select_from_dropdown( $name = '', $id = '', $selected = '', $return = false, $extra = '' ) {
@@ -2577,8 +2577,8 @@ endif;
 
 /**
  * Select Point Type from Checkboxes
- * @since 1.4
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_types_select_from_checkboxes' ) ) :
 	function bonips_types_select_from_checkboxes( $name = '', $id = '', $selected_values = array(), $return = false ) {
@@ -2610,8 +2610,8 @@ endif;
  * Get DB Column
  * Helper function to return the correct database tabel based on
  * our multisite setup.
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_db_column' ) ) :
 	function bonips_get_db_column( $column = '' ) {
@@ -2636,8 +2636,8 @@ endif;
 
 /**
  * Add Option
- * @since 1.7.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_add_option' ) ) :
 	function bonips_add_option( $option_id, $value = '' ) {
@@ -2659,8 +2659,8 @@ endif;
 
 /**
  * Get Option
- * @since 1.4
- * @version 1.0.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_option' ) ) :
 	function bonips_get_option( $option_id, $default = array() ) {
@@ -2685,8 +2685,8 @@ endif;
 
 /**
  * Update Option
- * @since 1.4
- * @version 1.0.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_update_option' ) ) :
 	function bonips_update_option( $option_id, $value = '' ) {
@@ -2709,8 +2709,8 @@ endif;
 
 /**
  * Delete Option
- * @since 1.5.2
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_delete_option' ) ) :
 	function bonips_delete_option( $option_id ) {
@@ -2733,8 +2733,8 @@ endif;
 
 /**
  * Get Meta Key
- * @since 1.6.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_meta_key' ) ) :
 	function bonips_get_meta_key( $key = '', $end = '' ) {
@@ -2761,8 +2761,8 @@ endif;
 
 /**
  * Add User Meta
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_add_user_meta' ) ) :
 	function bonips_add_user_meta( $user_id, $key = '', $end = '', $value = '', $unique = false ) {
@@ -2776,8 +2776,8 @@ endif;
 
 /**
  * Get User Meta
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_user_meta' ) ) :
 	function bonips_get_user_meta( $user_id, $key = '', $end = '', $unique = false ) {
@@ -2791,8 +2791,8 @@ endif;
 
 /**
  * Update User Meta
- * @since 1.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_update_user_meta' ) ) :
 	function bonips_update_user_meta( $user_id, $key = '', $end = '', $value = '', $previous = '' ) {
@@ -2806,8 +2806,8 @@ endif;
 
 /**
  * Delete User Meta
- * @since 1.5
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_delete_user_meta' ) ) :
 	function bonips_delete_user_meta( $user_id, $key = '', $end = '', $value = '' ) {
@@ -2824,8 +2824,8 @@ endif;
 
 /**
  * Add Post Meta
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_add_post_meta' ) ) :
 	function bonips_add_post_meta( $post_id, $key = '', $value = '', $unique = false ) {
@@ -2847,8 +2847,8 @@ endif;
 
 /**
  * Get Post Meta
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_post_meta' ) ) :
 	function bonips_get_post_meta( $post_id, $key = '', $unique = false ) {
@@ -2870,8 +2870,8 @@ endif;
 
 /**
  * Update Post Meta
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_update_post_meta' ) ) :
 	function bonips_update_post_meta( $post_id, $key = '', $value = '', $previous = '' ) {
@@ -2893,8 +2893,8 @@ endif;
 
 /**
  * Delete Post Meta
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_delete_post_meta' ) ) :
 	function bonips_delete_post_meta( $post_id, $key = '', $value = '' ) {
@@ -2916,8 +2916,8 @@ endif;
 
 /**
  * Get Post
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_post' ) ) :
 	function bonips_get_post( $post_id = NULL ) {
@@ -2939,8 +2939,8 @@ endif;
 
 /**
  * Get Post
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_permalink' ) ) :
 	function bonips_get_permalink( $post_id = NULL ) {
@@ -2962,8 +2962,8 @@ endif;
 
 /**
  * Get Post Type
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_post_type' ) ) :
 	function bonips_get_post_type( $post_id = NULL ) {
@@ -2985,8 +2985,8 @@ endif;
 
 /**
  * Get Post Title
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_the_title' ) ) :
 	function bonips_get_the_title( $post_id = NULL ) {
@@ -3008,8 +3008,8 @@ endif;
 
 /**
  * Get Page by Title
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_page_by_title' ) ) :
 	function bonips_get_page_by_title( $post_id, $type, $post_type ) {
@@ -3031,8 +3031,8 @@ endif;
 
 /**
  * Trash Post
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_trash_post' ) ) :
 	function bonips_trash_post( $post_id = NULL ) {
@@ -3054,8 +3054,8 @@ endif;
 
 /**
  * Get Attachment URL
- * @since 1.8.11
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_attachment_url' ) ) :
 	function bonips_get_attachment_url( $post_id = NULL ) {
@@ -3077,8 +3077,8 @@ endif;
 
 /**
  * Delete Post
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_delete_post' ) ) :
 	function bonips_delete_post( $post_id = NULL, $force = false ) {
@@ -3104,8 +3104,8 @@ endif;
  * can either edit the plugin or creds.
  * @param $user_id (int), optional user id to check, defaults to current user
  * @returns true or false
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_is_admin' ) ) :
 	function bonips_is_admin( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3124,8 +3124,8 @@ endif;
  * Exclude User
  * Checks if a given user is excluded from using boniPS.
  * @param $user_id (int), optional user to check, defaults to current user
- * @since 0.1
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_exclude_user' ) ) :
 	function bonips_exclude_user( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3141,8 +3141,8 @@ endif;
  * Get Users Point Balance
  * Retreaves a given users point balance.
  * @returns false if user is excluded or if invalid values are provided, else returns the raw balance.
- * @since 1.7.4
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */ 
 if ( ! function_exists( 'bonips_get_users_balance' ) ) :
 	function bonips_get_users_balance( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3166,8 +3166,8 @@ endif;
 
 /**
  * Get Users Total Balance
- * @since 1.7.6
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */ 
 if ( ! function_exists( 'bonips_get_users_total_balance' ) ) :
 	function bonips_get_users_total_balance( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3187,8 +3187,8 @@ endif;
  * this function will return false!
  * @param $user_id (int), required user id
  * @return users balance (string) or false if no user id is given
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_display_users_balance' ) ) :
 	function bonips_display_users_balance( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3214,8 +3214,8 @@ endif;
 
 /**
  * Display Users Total Balance
- * @since 1.7.6
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */ 
 if ( ! function_exists( 'bonips_display_users_total_balance' ) ) :
 	function bonips_display_users_total_balance( $user_id = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3233,8 +3233,8 @@ endif;
 
 /**
  * Format Number
- * @since 1.3.3
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_format_number' ) ) :
 	function bonips_format_number( $value = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3250,8 +3250,8 @@ endif;
 
 /**
  * Format Points
- * @since 1.8
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_format_points' ) ) :
 	function bonips_format_points( $value = NULL, $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3284,8 +3284,8 @@ endif;
  * @param $ref_id (array), optional array of reference IDs allowing the use of content specific keywords in the log entry
  * @param $data (object|array|string|int), optional extra data to save in the log. Note that arrays gets serialized!
  * @returns boolean true on success or false on fail
- * @since 0.1
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_add' ) ) :
 	function bonips_add( $ref = '', $user_id = '', $amount = '', $entry = '', $ref_id = '', $data = '', $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3304,8 +3304,8 @@ endif;
  * Subtract Creds
  * Subtracts creds from a given user. Works just as bonips_add() but the creds are converted into a negative value.
  * @uses bonips_add()
- * @since 0.1
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_subtract' ) ) :
 	function bonips_subtract( $ref = '', $user_id = '', $amount = '', $entry = '', $ref_id = '', $data = '', $point_type = BONIPS_DEFAULT_TYPE_KEY ) {
@@ -3320,8 +3320,8 @@ endif;
 
 /**
  * Plugin Activation
- * @since 1.3
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_plugin_activation' ) ) :
 	function bonips_plugin_activation() {
@@ -3346,8 +3346,8 @@ endif;
 
 /**
  * Runs when the plugin is deactivated
- * @since 1.3
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_plugin_deactivation' ) ) :
 	function bonips_plugin_deactivation() {
@@ -3365,8 +3365,8 @@ endif;
 
 /**
  * Runs when the plugin is deleted
- * @since 1.3
- * @version 1.0.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_plugin_uninstall' ) ) :
 	function bonips_plugin_uninstall() {
@@ -3389,8 +3389,8 @@ endif;
  * Apply Defaults
  * Based on the shortcode_atts() function with support for
  * multidimentional arrays.
- * @since 1.1.2
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_apply_defaults' ) ) :
 	function bonips_apply_defaults( &$pref, $set ) {
@@ -3424,8 +3424,8 @@ endif;
  * Strippes HTML tags from a given string.
  * @param $string (string) string to stip
  * @param $overwrite (string), optional HTML tags to allow
- * @since 0.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_strip_tags' ) ) :
 	function bonips_strip_tags( $string = '', $overwride = '' ) {
@@ -3439,8 +3439,8 @@ endif;
 
 /**
  * Flush Widget Cache
- * @since 0.1
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_flush_widget_cache' ) ) :
 	function bonips_flush_widget_cache( $id = NULL ) {
@@ -3454,8 +3454,8 @@ endif;
 /**
  * Get Exchange Rates
  * Returns the exchange rates for point types
- * @since 1.5
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_get_exchange_rates' ) ) :
 	function bonips_get_exchange_rates( $point_type = '' ) {
@@ -3478,8 +3478,8 @@ endif;
 
 /**
  * Is Float?
- * @since 1.5
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'isfloat' ) ) :
 	function isfloat( $f ) {
@@ -3491,8 +3491,8 @@ endif;
 
 /**
  * Translate Limit Code
- * @since 1.6
- * @version 1.0.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_translate_limit_code' ) ) :
 	function bonips_translate_limit_code( $id, $bonips, $code = '' ) {
@@ -3533,8 +3533,8 @@ endif;
 
 /**
  * Ordinal Suffix
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_ordinal_suffix' ) ) :
 	function bonips_ordinal_suffix( $num = 0, $depreciated = true ) {
@@ -3563,8 +3563,8 @@ endif;
 /**
  * Date to Timestamp
  * Converts a well formatted date string into GMT unixtimestamp.
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_date_to_gmt_timestamp' ) ) :
 	function bonips_date_to_gmt_timestamp( $string = '' ) {
@@ -3577,8 +3577,8 @@ endif;
 /**
  * Timestamp to Date
  * Converts a GMT unixtimestamp to local timestamp
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_gmt_timestamp_to_local' ) ) :
 	function bonips_gmt_timestamp_to_local( $string = '' ) {
@@ -3593,8 +3593,8 @@ endif;
  * Used to prevent multiple simultaneous AJAX calls from any one user.
  * The $timelimit sets the minimum amount of seconds that must have passed between
  * two AJAX requests.
- * @since 1.7
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_force_singular_session' ) ) :
 	function bonips_force_singular_session( $user_id = NULL, $key = NULL, $timelimit = BONIPS_MIN_TIME_LIMIT ) {
@@ -3625,8 +3625,8 @@ endif;
 
 /**
  * Locate Template
- * @since 1.0
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_locate_template' ) ) :
 	function bonips_locate_template( $template_name, $template_path = 'bonips', $default_path = '' ) {

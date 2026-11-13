@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.4
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_buddypress_media_hook', 35 );
 function bonips_register_buddypress_media_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_buddypress_media_hook( $installed ) {
 
 /**
  * rtMedia Hook
- * @since 1.4
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_buddypress_media_hook', 35 );
 function bonips_load_buddypress_media_hook() {
@@ -69,8 +69,8 @@ function bonips_load_buddypress_media_hook() {
 
 		/**
 		 * Run
-		 * @since 1.4
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -81,8 +81,8 @@ function bonips_load_buddypress_media_hook() {
 
 		/**
 		 * New Media
-		 * @since 1.4
-		 * @version 1.2.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function new_media( $media_ids ) {
 
@@ -128,8 +128,8 @@ function bonips_load_buddypress_media_hook() {
 
 		/**
 		 * Delete Media
-		 * @since 1.4
-		 * @version 1.1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function delete_media( $media_id ) {
 
@@ -167,8 +167,8 @@ function bonips_load_buddypress_media_hook() {
 
 		/**
 		 * Check Limit
-		 * @since 1.6
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		function over_hook_limit( $instance = '', $reference = '', $user_id = NULL, $ref_id = NULL ) {
 
@@ -233,8 +233,8 @@ function bonips_load_buddypress_media_hook() {
 
 		/**
 		 * Adjust Limit Name
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function hook_limit_name( $name ) {
 
@@ -247,8 +247,8 @@ function bonips_load_buddypress_media_hook() {
 
 		/**
 		 * Adjust Limit ID
-		 * @since 1.6
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function hook_limit_id( $id ) {
 
@@ -261,8 +261,8 @@ function bonips_load_buddypress_media_hook() {
 
 		/**
 		 * Preferences for rtMedia Gallery Hook
-		 * @since 1.4
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 
@@ -418,8 +418,8 @@ function bonips_load_buddypress_media_hook() {
 
 		/**
 		 * Sanitise Preferences
-		 * @since 1.6
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitise_preferences( $data ) {
 

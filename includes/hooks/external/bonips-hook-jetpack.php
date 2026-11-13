@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.0.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_jetpack_hook', 75 );
 function bonips_register_jetpack_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_jetpack_hook( $installed ) {
 
 /**
  * Jetpack Hook
- * @since 1.0.5
- * @version 1.1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_jetpack_hook', 75 );
 function bonips_load_jetpack_hook() {
@@ -58,8 +58,8 @@ function bonips_load_jetpack_hook() {
 
 		/**
 		 * Run
-		 * @since 1.0.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -81,8 +81,8 @@ function bonips_load_jetpack_hook() {
 		 * and no previous points have been awarded we do that here. Else if the email is marked
 		 * as pending we save it for a later try.
 		 *
-		 * @since 1.0.5
-		 * @version 1.1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_init() {
 
@@ -222,8 +222,8 @@ function bonips_load_jetpack_hook() {
 		/**
 		 * Submit Redirect
 		 * Checks if Jetpack signup has been executed by parsing the redirect URL.
-		 * @since 1.0.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function submit_redirect( $location ) {
 
@@ -259,8 +259,8 @@ function bonips_load_jetpack_hook() {
 		 * Manage the request to subscribe to comments and/or to the blog
 		 * Based on Jetpack Subscriptions
 		 * @see jetpack/modules/subscriptions.php
-		 * @since 1.0.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function comment_subscribe_submit( $comment_id, $approved ) {
 
@@ -304,8 +304,8 @@ function bonips_load_jetpack_hook() {
 		 * Awards points for active subscriptions or adds email and comment id to the pending array.
 		 * Note! This methods should only be called once the primary checks have been made, including making sure
 		 * the user exist, is not excluded and that this is a unique event!
-		 * @since 1.0.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function comment_subscribe( $email = '', $post_ids = '', $user_id = 0, $comment_id = 0 ) {
 
@@ -345,8 +345,8 @@ function bonips_load_jetpack_hook() {
 		 * Awards points for active site subscriptions or adds email to the pending array.
 		 * Note! This methods should only be called once the primary checks have been made, including making sure
 		 * the user exist, is not excluded and that this is a unique event!
-		 * @since 1.0.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function site_subscribe( $email = '', $user_id = 0 ) {
 
@@ -383,8 +383,8 @@ function bonips_load_jetpack_hook() {
 
 		/**
 		 * Check Jetpack Subscription
-		 * @since 1.0.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function check_jetpack_subscription( $email = NULL, $post_ids = NULL ) {
 
@@ -450,8 +450,8 @@ function bonips_load_jetpack_hook() {
 		 * @param $email (string) required email to check
 		 * @param $section (string|int) either 'site' for site subscriptions or comment id, defaults to site
 		 * @returns (bool) true or false
-		 * @since 1.0.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function is_pending( $email = NULL, $section = 'site' ) {
 
@@ -489,8 +489,8 @@ function bonips_load_jetpack_hook() {
 		 * Adds a given email to the pending array.
 		 * @param $email (string) required email to check
 		 * @param $section (string|int) either 'site' for site subscriptions or comment id, defaults to site
-		 * @since 1.0.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function add_to_pending( $email = NULL, $section = 'site' ) {
 
@@ -527,8 +527,8 @@ function bonips_load_jetpack_hook() {
 
 		/**
 		 * Preferences
-		 * @since 1.0.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 

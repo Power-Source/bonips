@@ -7,8 +7,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
  * total balance based on either all point types or a comma seperated list
  * of types.
  * @see https://psource.eimen.net/wiki/ps-bonipress-dokumentation/bonips-shortcodes-bonips_total_balance/
- * @since 1.4.3
- * @version 1.3
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_render_shortcode_total' ) ) :
 	function bonips_render_shortcode_total( $atts, $content = '' ) {

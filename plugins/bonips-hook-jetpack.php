@@ -3,8 +3,8 @@ if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 /**
  * Register Hook
- * @since 1.0.5
- * @version 1.1
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_filter( 'bonips_setup_hooks', 'bonips_register_jetpack_hook', 75 );
 function bonips_register_jetpack_hook( $installed ) {
@@ -24,8 +24,8 @@ function bonips_register_jetpack_hook( $installed ) {
 
 /**
  * Jetpack Hook
- * @since 1.0.5
- * @version 1.2
+ * @since 1.0.0
+ * @version 1.0.0
  */
 add_action( 'bonips_load_hooks', 'bonips_load_jetpack_hook', 75 );
 function bonips_load_jetpack_hook() {
@@ -58,8 +58,8 @@ function bonips_load_jetpack_hook() {
 
 		/**
 		 * Run
-		 * @since 1.0.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function run() {
 
@@ -75,8 +75,8 @@ function bonips_load_jetpack_hook() {
 
 		/**
 		 * Site Subscriptions
-		 * @since 1.0.5
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function subscriptions_submit( $result = '' ) {
 
@@ -106,8 +106,8 @@ function bonips_load_jetpack_hook() {
 
 		/**
 		 * Comment Subscription
-		 * @since 1.0.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function comment_submit( $result, $post_ids ) {
 
@@ -142,8 +142,8 @@ function bonips_load_jetpack_hook() {
 
 		/**
 		 * Preferences
-		 * @since 1.0.5
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function preferences() {
 

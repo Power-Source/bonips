@@ -2,12 +2,12 @@
 /**
  * Addon: buyCRED
  * Addon URI: http://codex.bonips.me/chapter-iii/buycred/
- * Version: 1.6
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 define( 'BONIPS_PURCHASE',              __FILE__ );
-define( 'BONIPS_PURCHASE_VERSION',      '1.6' );
+define( 'BONIPS_PURCHASE_VERSION',      '1.0.0' );
 define( 'BONIPS_PURCHASE_DIR',          boniPS_ADDONS_DIR . 'buy-creds/' );
 define( 'BONIPS_BUYCRED_ABSTRACT_DIR',  BONIPS_PURCHASE_DIR . 'abstracts/' );
 define( 'BONIPS_BUYCRED_GATEWAYS_DIR',  BONIPS_PURCHASE_DIR . 'gateways/' );
@@ -32,8 +32,8 @@ require_once BONIPS_BUYCRED_INCLUDES_DIR . 'buycred-reward.php';
 
 /**
  * Load Built-in Gateways
- * @since 1.4
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 require_once BONIPS_BUYCRED_GATEWAYS_DIR . 'paypal-standard.php';
 require_once BONIPS_BUYCRED_GATEWAYS_DIR . 'bitpay.php';
@@ -45,8 +45,8 @@ do_action( 'bonips_buycred_load_gateways' );
 
 /**
  * Load Modules
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 require_once BONIPS_BUYCRED_MODULES_DIR . 'buycred-module-core.php';
 require_once BONIPS_BUYCRED_MODULES_DIR . 'buycred-module-pending.php';

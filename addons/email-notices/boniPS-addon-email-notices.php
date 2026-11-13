@@ -2,14 +2,14 @@
 /**
  * Addon: Email Notices
  * Addon URI: http://codex.bonips.me/chapter-iii/email-notice/
- * Version: 1.4
+ * Version: 1.0.0
  */
 if ( ! defined( 'boniPS_VERSION' ) ) exit;
 
 // Define constants
 define( 'boniPS_EMAIL',         __FILE__ );
 define( 'boniPS_EMAIL_DIR',     boniPS_ADDONS_DIR . 'email-notices/' );
-define( 'boniPS_EMAIL_VERSION', '1.4' );
+define( 'boniPS_EMAIL_VERSION', '1.0.0' );
 
 // Coupon Key
 if ( ! defined( 'BONIPS_EMAIL_KEY' ) )
@@ -22,8 +22,8 @@ require_once boniPS_EMAIL_DIR . 'includes/bonips-email-shortcodes.php';
 
 /**
  * boniPS_Email_Notice_Module class
- * @since 1.1
- * @version 2.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 	class boniPS_Email_Notice_Module extends boniPS_Module {
@@ -60,8 +60,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Hook into Init
-		 * @since 1.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_init() {
 
@@ -88,8 +88,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Hook into Admin Init
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function module_admin_init() {
 
@@ -114,8 +114,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Setup Cron Jobs
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function setup_cron_jobs() {
 
@@ -135,8 +135,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Register Email Notice Post Type
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		protected function register_email_notices() {
 
@@ -177,8 +177,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Register Scripts & Styles
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function scripts_and_styles() {
 
@@ -204,8 +204,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Populate Current Account
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_current_account() {
 
@@ -222,8 +222,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Populate Account
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function populate_account() {
 
@@ -240,8 +240,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Adjust Post Updated Messages
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function post_updated_messages( $messages ) {
 
@@ -265,8 +265,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Add Admin Menu Item
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_to_menu() {
 
@@ -286,8 +286,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Parent File
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function parent_file( $parent = '' ) {
 
@@ -305,8 +305,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Sub Parent File
-		 * @since 1.7
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function subparent_file( $subparent = '', $parent = '' ) {
 
@@ -330,8 +330,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Adjust Enter Title Here
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enter_title_here( $title ) {
 
@@ -346,8 +346,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Adjust Column Header
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_headers( $defaults ) {
 
@@ -369,8 +369,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Adjust Column Content
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_column_content( $column_name, $post_id ) {
 
@@ -454,8 +454,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Adjust Row Actions
-		 * @since 1.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function adjust_row_actions( $actions, $post ) {
 
@@ -470,8 +470,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Add Meta Boxes
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function add_metaboxes() {
 
@@ -506,8 +506,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Enqueue Scripts & Styles
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function enqueue_scripts() {
 
@@ -539,8 +539,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Admin Header
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function admin_header() {
 
@@ -554,8 +554,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Disable WYSIWYG Editor
-		 * @since 1.1
-		 * @version 1.0.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function disable_richedit( $default ) {
 
@@ -570,8 +570,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Apply Default Content
-		 * @since 1.1
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function default_content( $content ) {
 
@@ -586,8 +586,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Email Settings Metabox
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_email_setup( $post ) {
 
@@ -702,8 +702,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Email Details Metabox
-		 * @since 1.8
-		 * @version 1.0
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_email_details( $post ) {
 
@@ -757,8 +757,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Template Tags Metabox
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function metabox_template_tags( $post ) {
 
@@ -854,8 +854,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Save Email Notice Details
-		 * @since 1.1
-		 * @version 1.2
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function save_email_notice( $post_id, $post = NULL ) {
 
@@ -979,8 +979,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Email Notice Check
-		 * @since 1.1
-		 * @version 1.6
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function email_check( $ran, $request, $bonips ) {
 
@@ -1015,8 +1015,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Badge Check
-		 * @since 1.7
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function badge_check( $user_id, $badge_id, $level_reached ) {
 
@@ -1069,8 +1069,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Rank Promotions
-		 * @since 1.7.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function rank_promotion( $user_id, $rank_id, $query, $point_type ) {
 
@@ -1104,8 +1104,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Rank Demotions
-		 * @since 1.7.6
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function rank_demotion( $user_id, $rank_id, $query, $point_type ) {
 
@@ -1139,8 +1139,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Add to General Settings
-		 * @since 1.1
-		 * @version 1.1
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function after_general_settings( $bonips = NULL ) {
 
@@ -1257,8 +1257,8 @@ if ( ! class_exists( 'boniPS_Email_Notice_Module' ) ) :
 
 		/**
 		 * Save Settings
-		 * @since 1.1
-		 * @version 1.3
+		 * @since 1.0.0
+		 * @version 1.0.0
 		 */
 		public function sanitize_extra_settings( $new_data, $data, $core ) {
 
@@ -1287,8 +1287,8 @@ endif;
 
 /**
  * Load Email Notice Module
- * @since 1.7
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 if ( ! function_exists( 'bonips_load_email_notice_addon' ) ) :
 	function bonips_load_email_notice_addon( $modules, $point_types ) {
